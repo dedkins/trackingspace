@@ -101,6 +101,7 @@ GEM
       multi_json (>= 1.0.2)
 
 PLATFORMS
+  x86-mingw32
 
 DEPENDENCIES
   coffee-rails (~> 3.2.1)
