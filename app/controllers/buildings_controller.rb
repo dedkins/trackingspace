@@ -1,6 +1,9 @@
 class BuildingsController < ApplicationController
   # GET /buildings
   # GET /buildings.json
+  
+  @json = User.all.to_gmaps4rails
+  
   def index
     @buildings = Building.all
 
