@@ -11,35 +11,30 @@
     </div>
   <% end %>
   
+  <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
   <script>
-          $(function() {
-              var addresspicker = $( "#addresspicker" ).addresspicker();
-              var addresspickerMap = $( "#addresspicker_map" ).addresspicker({
-                  regionBias: "fr",
-                elements: {
-                  map:      "#map",
-                  lat:      "#lat",
-                  lng:      "#lng",
-                  locality: '#locality',
-                  country:  '#country'
-                }
-              });
-              var gmarker = addresspickerMap.addresspicker( "marker");
-              gmarker.setVisible(true);
-              addresspickerMap.addresspicker( "updatePosition");
-  
-          });
-      </script>
-  
-  
+      	$(function() {
+      		var addresspicker = $( "#addresspicker" ).addresspicker();
+      		var addresspickerMap = $( "#addresspicker_map" ).addresspicker({
+      			regionBias: "fr",
+      		  elements: {
+      		    map:      "#map",
+      		    lat:      "#latitude",
+      		    lng:      "#longitude",
+      		    address:  "#address"
+      		  }
+      		});
+      		var gmarker = addresspickerMap.addresspicker( "marker");
+      		gmarker.setVisible(true);
+      		addresspickerMap.addresspicker( "updatePosition");
+      
+      	});
+  	</script>
+  	
   <div>
       <div class='input'>
         <%= f.label :address %><br />
         <%= f.text_field :address, :id => "addresspicker_map" %>
-        <%= f.label :locality %><br />
-        <%= f.text_field :locality, :id => "locality", :disabled => "true" %>
-        <%= f.label :country %><br />
-        <%= f.text_field :country, :id => "country", :disabled => "true" %>
         ...
       </div>
       <div id="map"></div>
