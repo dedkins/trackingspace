@@ -1,4 +1,8 @@
 Trackingspace::Application.routes.draw do
+  resources :buildings
+
+  resources :spaces
+
   resources :users
 
   # The priority is based upon order of creation:

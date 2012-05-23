@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Lat:</b>
+  <%= @building.lat %>
+</p>
+
+<p>
+  <b>Long:</b>
+  <%= @building.long %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @building.address %>
+</p>
+
+
+<%= link_to 'Edit', edit_building_path(@building) %> |
+<%= link_to 'Back', buildings_path %>
