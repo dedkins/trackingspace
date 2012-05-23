@@ -12,8 +12,8 @@
 
 <% @buildings.each do |building| %>
   <tr>
-    <td><%= building.lat %></td>
-    <td><%= building.long %></td>
+    <td><%= building.latitude %></td>
+    <td><%= building.longitude %></td>
     <td><%= building.address %></td>
     <td><%= link_to 'Show', building %></td>
     <td><%= link_to 'Edit', edit_building_path(building) %></td>
