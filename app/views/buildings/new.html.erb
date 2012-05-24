@@ -1,5 +1,29 @@
 <h1>New building</h1>
 
+<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    
+    <script src="/assets/jquery-1.4.4.min.js"></script>
+    <script src="/assets/jquery-ui-1.8.7.min.js"></script>
+    <script src="/assets/jquery.ui.addresspicker.js"></script>
+    
+    <script>
+        	$(function() {
+        		var addresspicker = $( "#addresspicker" ).addresspicker();
+        		var addresspickerMap = $( "#addresspicker_map" ).addresspicker({
+        			regionBias: "fr",
+        		  elements: {
+        		    map:      "#map",
+        		    lat:      "#lat",
+        		    lng:      "#lng"
+        		  }
+        		});
+        		var gmarker = addresspickerMap.addresspicker( "marker");
+        		gmarker.setVisible(true);
+        		addresspickerMap.addresspicker( "updatePosition");
+        
+        	});
+  	</script>
+
 <%= render 'form' %>
 
 <%= link_to 'Back', buildings_path %>
