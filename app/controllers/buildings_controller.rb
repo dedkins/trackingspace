@@ -18,7 +18,6 @@ class BuildingsController < ApplicationController
     @building = Building.find(params[:id])
     @json = Building.all.to_gmaps4rails
 
-
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @building }
@@ -45,7 +44,7 @@ class BuildingsController < ApplicationController
   # POST /buildings.json
   def create
     @building = Building.new(params[:building])
-
+    
     respond_to do |format|
       if @building.save
         format.html { redirect_to @building, notice: 'Building was successfully created.' }

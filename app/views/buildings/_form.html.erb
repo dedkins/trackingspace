@@ -12,6 +12,10 @@
   <% end %>
   
   <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+  
+  <script src="../assets/jquery-1.4.4.min.js"></script>
+  <script src="../assets/jquery-ui-1.8.7.min.js"></script>
+  <script src="../assets/jquery.ui.addresspicker.js"></script>
   <script>
       	$(function() {
       		var addresspicker = $( "#addresspicker" ).addresspicker();
@@ -19,9 +23,8 @@
       			regionBias: "fr",
       		  elements: {
       		    map:      "#map",
-      		    lat:      "#latitude",
-      		    lng:      "#longitude",
-      		    address:  "#address"
+      		    lat:      "#lat",
+      		    lng:      "#lng"
       		  }
       		});
       		var gmarker = addresspickerMap.addresspicker( "marker");
@@ -35,24 +38,10 @@
       <div class='input'>
         <%= f.label :address %><br />
         <%= f.text_field :address, :id => "addresspicker_map" %>
-        ...
-      </div>
-      <div id="map"></div>
-      <div id="legend">You can drag and drop the marker to the correct location</div>
-  </div>
-  
-
-  <div class="field">
     <%= f.label :latitude %><br />
-    <%= f.text_field :latitude %>
-  </div>
-  <div class="field">
-    <%= f.label :longitude %><br />
-    <%= f.text_field :longitude %>
-  </div>
-  <div class="field">
-    <%= f.label :address %><br />
-    <%= f.text_field :address %>
+    <%= f.text_field :latitude, :id => "lat"  %>
+    <%= f.label :longitude %>
+    <%= f.text_field :longitude, :id => "lng" %>
   </div>
   <div class="actions">
     <%= f.submit %>
