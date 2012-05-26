@@ -5,6 +5,7 @@ class BuildingsController < ApplicationController
   
   def index
     @buildings = Building.all
+    @json = Building.all.to_gmaps4rails
 
     respond_to do |format|
       format.html # index.html.erb
@@ -16,7 +17,7 @@ class BuildingsController < ApplicationController
   # GET /buildings/1.json
   def show
     @building = Building.find(params[:id])
-    @json = Building.all.to_gmaps4rails
+    @json = Building.find(@building.id).to_gmaps4rails
 
     respond_to do |format|
       format.html # show.html.erb
