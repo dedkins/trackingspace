@@ -39,21 +39,28 @@ class BuildingsController < ApplicationController
   def edit
     @building = Building.find(params[:id])
   end
-
+  
+  
   # POST /buildings
   # POST /buildings.json
+  
   def create
-    @building = Building.new(params[:building])
+    @building = Building.new
+    @building.address = params[:building][:address]
+    @building.latitude = params[:building][:latitude]
+    @building.longitude = params[:building][:longitude]
     
-    respond_to do |format|
-      if @building.save
-        format.html { redirect_to @building, notice: 'Building was successfully created.' }
-        format.json { render json: @building, status: :created, location: @building }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @building.errors, status: :unprocessable_entity }
+    @building = Building.find_or_initialize_by_address(:address => @building.address,:latitude => @building.latitude,:longitude => @building.longitude)
+    
+      respond_to do |format|
+        if @building.save
+          format.html { redirect_to @building, notice: 'Building was successfully created.' }
+          format.json { render json: @building, status: :created, location: @building }
+        else
+          format.html { render action: "new" }
+          format.json { render json: @building.errors, status: :unprocessable_entity }
+        end
       end
-    end
   end
 
   # PUT /buildings/1
