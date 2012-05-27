@@ -1,10 +1,18 @@
 Trackingspace::Application.routes.draw do
+
+
+  match 'auth/:provider/callback' => 'authentications#create'
+    
+  resources :authentications
+
   resources :buildings
 
   resources :spaces
+  
+  resource :session
 
-  resources :users
-
+  root :to => 'home#index'
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

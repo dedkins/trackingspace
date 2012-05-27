@@ -1,8 +1,8 @@
 # Be sure to restart your server when you modify this file.
 
-Trackingspace::Application.config.session_store :cookie_store, key: '_trackingspace_session'
+#Trackingspace::Application.config.session_store :cookie_store, key: '_trackingspace_session'
 
 # Use the database for sessions instead of the cookie-based default,
 # which shouldn't be used to store highly confidential information
 # (create the session table with "rails generate session_migration")
-# Trackingspace::Application.config.session_store :active_record_store
+ Trackingspace::Application.config.session_store :active_record_store

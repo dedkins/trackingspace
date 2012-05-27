@@ -21,10 +21,10 @@
         draggableMarker: true,
         regionBias: null,
         mapOptions: {
-            zoom: 5, 
+            zoom: 7, 
             center: new google.maps.LatLng(46, 2), 
-            scrollwheel: false,
-            mapTypeId: google.maps.MapTypeId.ROADMAP
+            scrollwheel: true,
+            mapTypeId: google.maps.MapTypeId.SATELLITE
         },
         elements: {
             map: false,
