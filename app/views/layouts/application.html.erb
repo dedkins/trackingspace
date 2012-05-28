@@ -33,6 +33,23 @@
 </head>
 <body>
 
+<p class="notice"><%= notice %>
+<p class="alert"><%= alert %>
+
+<div id="container">
+  <div id="user_nav">
+    <% if user_signed_in? %>
+      Signed in as <%= current_user.email %>. Not You?
+      <%= link_to "Sign Out", destroy_user_session_path, :method => 'delete' %>
+    <% else %>
+      <%= link_to "Sign Up", new_user_registration_path %> or <%= link_to "Sign In", new_user_session_path %>.
+    <% end %>
+  </div>
+  
+  <% flash.each do |name, msg| %>
+    <% content_tag :div, msg, :id => "flash_#{name}" %>
+  <% end %>
+</div>
 <%= yield %>
 </body>
 </html>
