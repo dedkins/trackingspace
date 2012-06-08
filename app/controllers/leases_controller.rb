@@ -39,7 +39,6 @@ class LeasesController < ApplicationController
 
   # POST /leases
   # POST /leases.json
-  before_filter :load_space
   
   def create
     @lease = Lease.new(params[:lease]) do |l|
