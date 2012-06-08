@@ -41,8 +41,7 @@ class LeasesController < ApplicationController
   # POST /leases.json
   
   def create
-    @lease = Lease.new(params[:lease]) do |l|
-    l.user_id = current_user.id
+    @lease = Lease.new(params[:lease])
 
     respond_to do |format|
       if @lease.save
