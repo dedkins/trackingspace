@@ -1,6 +1,7 @@
 class Building < ActiveRecord::Base
+  has_many :spaces
   attr_accessible :address, :latitude, :longitude
-  
+
   acts_as_gmappable
   
   def gmaps4rails_address

@@ -13,13 +13,13 @@
   <tr>
     <td><%= space.sf %></td>
     <td><%= space.rate %></td>
-    <td><%= link_to 'Show', space %></td>
-    <td><%= link_to 'Edit', edit_space_path(space) %></td>
-    <td><%= link_to 'Destroy', space, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to 'Show', building_space_path %></td>
+    <td><%= link_to 'Edit', edit_building_space_path(space) %></td>
+    <td><%= link_to 'Destroy', building_space_path, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Space', new_space_path %>
+<%= link_to 'New Space', new_building_space_path %>

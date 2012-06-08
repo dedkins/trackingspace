@@ -13,6 +13,11 @@
 <p>
   <b><%= @building.address %></b>
 </p>
+<% if @building.spaces.any? %>
+Spaces
+<%= render 'spaces' %>
+<%= link_to 'Add New Space', new_building_space_path(@building) %>
+<% end %>
 
 
 <%= link_to 'Edit', edit_building_path(@building) %> |

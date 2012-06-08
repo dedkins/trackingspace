@@ -1,4 +1,5 @@
-<%= form_for(@space) do |f| %>
+<%= form_for ([@building,@space]) do |f| %>
+
   <% if @space.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@space.errors.count, "error") %> prohibited this space from being saved:</h2>

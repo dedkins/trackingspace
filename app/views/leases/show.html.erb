@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User:</b>
+  <%= @lease.user_id %>
+</p>
+
+<p>
+  <b>Size:</b>
+  <%= @lease.size %>
+</p>
+
+<p>
+  <b>Current rate:</b>
+  <%= @lease.current_rate %>
+</p>
+
+<p>
+  <b>Expiration:</b>
+  <%= @lease.expiration %>
+</p>
+
+<p>
+  <b>Space:</b>
+  <%= @lease.space_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_lease_path(@lease) %> |
+<%= link_to 'Back', leases_path %>

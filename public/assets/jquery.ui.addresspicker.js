@@ -21,7 +21,7 @@
         draggableMarker: true,
         regionBias: null,
         mapOptions: {
-            zoom: 7, 
+            zoom: 10, 
             center: new google.maps.LatLng(46, 2), 
             scrollwheel: true,
             mapTypeId: google.maps.MapTypeId.SATELLITE

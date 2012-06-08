@@ -1,0 +1,31 @@
+<h1>Listing leases</h1>
+
+<table>
+  <tr>
+    <th>User</th>
+    <th>Size</th>
+    <th>Current rate</th>
+    <th>Expiration</th>
+    <th>Space</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @leases.each do |lease| %>
+  <tr>
+    <td><%= lease.user_id %></td>
+    <td><%= lease.size %></td>
+    <td><%= lease.current_rate %></td>
+    <td><%= lease.expiration %></td>
+    <td><%= lease.space_id %></td>
+    <td><%= link_to 'Show', lease %></td>
+    <td><%= link_to 'Edit', edit_lease_path(lease) %></td>
+    <td><%= link_to 'Destroy', lease, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Lease', new_lease_path %>

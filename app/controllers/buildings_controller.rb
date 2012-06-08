@@ -1,7 +1,5 @@
 class BuildingsController < ApplicationController
-  # GET /buildings
-  # GET /buildings.json
-  
+
   
   def index
     @buildings = Building.all
@@ -13,10 +11,10 @@ class BuildingsController < ApplicationController
     end
   end
 
-  # GET /buildings/1
-  # GET /buildings/1.json
   def show
     @building = Building.find(params[:id])
+    @spaces = Space.find_all_by_building_id(@building.id)
+    @new_space = @building.spaces.build
     @json = Building.find(@building.id).to_gmaps4rails
 
     respond_to do |format|
@@ -25,8 +23,6 @@ class BuildingsController < ApplicationController
     end
   end
 
-  # GET /buildings/new
-  # GET /buildings/new.json
   def new
     @building = Building.new
 
@@ -36,14 +32,9 @@ class BuildingsController < ApplicationController
     end
   end
 
-  # GET /buildings/1/edit
   def edit
     @building = Building.find(params[:id])
   end
-  
-  
-  # POST /buildings
-  # POST /buildings.json
   
   def create
     @building = Building.new
@@ -64,8 +55,6 @@ class BuildingsController < ApplicationController
       end
   end
 
-  # PUT /buildings/1
-  # PUT /buildings/1.json
   def update
     @building = Building.find(params[:id])
 
@@ -80,8 +69,6 @@ class BuildingsController < ApplicationController
     end
   end
 
-  # DELETE /buildings/1
-  # DELETE /buildings/1.json
   def destroy
     @building = Building.find(params[:id])
     @building.destroy

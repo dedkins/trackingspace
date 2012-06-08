@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  user_id: 1
+  size: 1
+  current_rate: 9.99
+  expiration: 2012-05-30
+  space_id: 1
+
+two:
+  user_id: 1
+  size: 1
+  current_rate: 9.99
+  expiration: 2012-05-30
+  space_id: 1
