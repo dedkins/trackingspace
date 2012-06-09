@@ -1,6 +1,5 @@
 class SpacesController < ApplicationController
 
-  before_filter :load_building
 
   # GET /spaces
   # GET /spaces.json
@@ -8,6 +7,8 @@ class SpacesController < ApplicationController
   def index
     @spaces = @building.spaces.all
   end
+
+  before_filter :load_building
 
   # GET /spaces/1
   # GET /spaces/1.json
@@ -23,7 +24,7 @@ class SpacesController < ApplicationController
 
   # GET /spaces/1/edit
   def edit
-    @space = @building.spaces.find(params[:id])
+    @space = Space.find(params[:id])
   end
 
   # POST /spaces
@@ -46,7 +47,7 @@ class SpacesController < ApplicationController
   # PUT /spaces/1
   # PUT /spaces/1.json
   def update
-    @space = @building.spaces.find(params[:id])
+    @space = Space.find(params[:id])
 
     respond_to do |format|
       if @space.update_attributes(params[:space])

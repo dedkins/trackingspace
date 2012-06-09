@@ -2,6 +2,9 @@
 
 <table>
   <tr>
+    <th>Building</th>
+    <th>Space</th>
+    <th>Suite</th>
     <th>Sf</th>
     <th>Rate</th>
     <th></th>
@@ -11,6 +14,9 @@
 
 <% @spaces.each do |space| %>
   <tr>
+    <td><%= space.building_id %></td>
+    <td><%= space.id %></td>
+    <td><%= space.suite %></td>
     <td><%= space.sf %></td>
     <td><%= space.rate %></td>
     <td><%= link_to 'Show', building_space_path %></td>
