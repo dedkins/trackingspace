@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120608223711) do
+ActiveRecord::Schema.define(:version => 20120610044107) do
 
   create_table "authentications", :force => true do |t|
     t.integer  "user_id"
@@ -52,7 +52,7 @@ ActiveRecord::Schema.define(:version => 20120608223711) do
 
   create_table "spaces", :force => true do |t|
     t.integer  "sf"
-    t.decimal  "rate",        :precision => 10, :scale => 2
+    t.decimal  "monthly",     :precision => 10, :scale => 2
     t.datetime "created_at",                                 :null => false
     t.datetime "updated_at",                                 :null => false
     t.integer  "building_id"
