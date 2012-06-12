@@ -35,8 +35,8 @@ class SpacesController < ApplicationController
 
     respond_to do |format|
       if @space.save
-        format.html { redirect_to [@building, @space], notice: 'Space was successfully created.' }
-        format.json { render json: [@building, @space], status: :created, location: @space }
+        format.html { redirect_to [@building], notice: 'Space was successfully created.' }
+        format.json { render json: [@building], status: :created, location: @space }
       else
         format.html { render action: "new" }
         format.json { render json: @space.errors, status: :unprocessable_entity }
@@ -51,7 +51,7 @@ class SpacesController < ApplicationController
 
     respond_to do |format|
       if @space.update_attributes(params[:space])
-        format.html { redirect_to [@building,@space], notice: 'Space was successfully updated.' }
+        format.html { redirect_to [@building], notice: 'Space was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
