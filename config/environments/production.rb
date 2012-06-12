@@ -20,6 +20,9 @@ Trackingspace::Application.configure do
   # Generate digests for assets URLs
   config.assets.digest = true
 
+  # Catchall for css and js files
+  config.assets.precompile += %w( *.css *.js )
+  
   # Defaults to Rails.root.join("public/assets")
   # config.assets.manifest = YOUR_PATH
 
