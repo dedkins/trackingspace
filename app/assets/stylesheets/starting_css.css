@@ -1,3 +1,13 @@
+@import url(http://fonts.googleapis.com/css?family=Orbitron);
+
+#logo {
+  float:left;
+  width:200px;
+  padding:5px;
+  color:#fff;
+  font-family: 'Orbitron', sans-serif;
+}
+
 html{
   background: #000;
   opacity: 0.8;
@@ -18,7 +28,7 @@ html{
 #user_nav {
 	position: relative;
 	float: right;
-  padding: 10px;
+  padding: 5px;
   color: #EE4000;
 }
 #yield {
@@ -29,7 +39,7 @@ html{
   margin:auto;
 }
 #buildingTitle {
-  font-size:26px;
+  font-size:32px;
   padding: 5px;
 }
 body {
