@@ -1,18 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Latitude:</b>
-  <%= @building.latitude %>
-</p>
-
-<p>
-  <b>Longitude:</b>
-  <%= @building.longitude %>
-</p>
-
-<p>
+<div id="buildingtitle">
   <b><%= @building.address %></b>
-</p>
+</div>
 <% if @building.spaces.any? %>
 Spaces
 <%= render 'spaces' %>

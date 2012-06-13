@@ -28,15 +28,14 @@
   	</script>
 </head>
 <body>
-<div id="page">
-  <div id="container">
+<div id="html">
     <div id="header">
       <div id="user_nav">
         <% if user_signed_in? %>
           Signed in as <%= current_user.email %>. Not You?
           <%= link_to "Sign Out", destroy_user_session_path, :method => 'delete' %>
         <% else %>
-          <%= link_to "Sign Up", new_user_registration_path %> or <%= link_to "Sign In", authentications_path %>.
+          <%= link_to "Sign Up", new_user_registration_path %> or <%= link_to "Sign In", authentications_path %>
         <% end %>
       </div>
     </div>
@@ -44,9 +43,11 @@
     <% flash.each do |name, msg| %>
       <% content_tag :div, msg, :id => "flash_#{name}" %>
     <% end %>
+  <div id="yield">
     <%= yield %>
+    <%= debug(params) if Rails.env.development? %>
   </div>
-<%= debug(params) if Rails.env.development? %>
+  </div>
 </div>
 </body>
 </html>
