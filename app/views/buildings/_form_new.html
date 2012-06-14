@@ -4,6 +4,8 @@
   <div>
       <div class='input'>
         <%= f.text_field :address, :id => "addresspicker_map" %>
+        <%= f.hidden_field :latitude, :lat %>
+        <%= f.hidden_field :longitude, :lng %>
   </div>
   <div class="actions">
     <%= f.submit "Look Up Building"%>
