@@ -1,0 +1,11 @@
+<%= form_for Building.new do |f| %>
+  
+  	
+  <div>
+      <div class='input'>
+        <%= f.text_field :address, :id => "addresspicker_map" %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Look Up Building"%>
+  </div>
+<% end %>
