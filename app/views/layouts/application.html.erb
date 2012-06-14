@@ -31,6 +31,7 @@
 <div id="html">
     <div id="header">
       <div id="logo">
+        <%= link_to 'Start TrackingSpace:', buildings_path %>
         <%= render 'buildings/form_new' %>
       </div>
       <div id="user_nav">
@@ -46,10 +47,10 @@
     <% flash.each do |name, msg| %>
       <% content_tag :div, msg, :id => "flash_#{name}" %>
     <% end %>
-  <div id="yield">
-    <%= yield %>
-    <%= debug(params) if Rails.env.development? %>
-  </div>
+    <div id="yield">
+      <%= yield %>
+      <%= debug(params) if Rails.env.development? %>
+    </div>
   </div>
 </div>
 </body>

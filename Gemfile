@@ -9,6 +9,9 @@ gem 'pg'
 gem 'gmaps4rails'
 gem 'omniauth'
 gem 'omniauth-twitter'
+gem 'omniauth-facebook'
+gem 'omniauth-linkedin'
+gem 'omniauth-google'
 gem 'devise'
 
 
