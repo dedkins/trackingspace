@@ -1,8 +1,7 @@
 <p id="notice"><%= notice %></p>
 
-<div id="buildingtitle">
-  <b><%= @building.address %></b>
-</div>
+<h1><%= @building.address %></h1>
+
 <% if @building.spaces.any? %>
 Spaces
 <%= render 'spaces' %>

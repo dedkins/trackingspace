@@ -1,13 +1,11 @@
 <%= form_for Building.new do |f| %>
   
-  	
-  <div>
       <div class='input'>
-        <%= f.text_field :address, :id => "addresspicker_map" %>
+        <%= f.text_field :address, :id => "addresspicker_map", :placeholder => 'Enter a Complete Address'%>
         <%= f.hidden_field :latitude, :id => "lat" %>
         <%= f.hidden_field :longitude, :id => "lng" %>
-  </div>
-  <div class="actions">
-    <%= f.submit "Look Up Building"%>
-  </div>
+          <% if user_signed_in? %>
+          <%= f.hidden_field :user_id, :value => current_user.id %>
+          <% end %>
+      </div>
 <% end %>

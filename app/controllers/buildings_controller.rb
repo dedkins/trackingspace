@@ -42,8 +42,12 @@ class BuildingsController < ApplicationController
     @building.latitude = params[:building][:latitude]
     @building.longitude = params[:building][:longitude]
     
-    @building = Building.find_or_initialize_by_address(:address => @building.address,:latitude => @building.latitude,:longitude => @building.longitude)
-    
+    if user_signed_in?
+      @building = Building.find_or_initialize_by_address(:address => @building.address,:user_id => current_user.id, :latitude => @building.latitude,:longitude => @building.longitude)
+    else
+      @building = Building.find_or_initialize_by_address(:address => @building.address,:latitude => @building.latitude,:longitude => @building.longitude)
+    end
+
       respond_to do |format|
         if @building.save
           format.html { redirect_to @building, notice: 'Building was successfully created.' }

@@ -1,6 +1,6 @@
 class Building < ActiveRecord::Base
   has_many :spaces
-  attr_accessible :address, :latitude, :longitude
+  attr_accessible :address, :latitude, :longitude, :user_id
 
   acts_as_gmappable
   
