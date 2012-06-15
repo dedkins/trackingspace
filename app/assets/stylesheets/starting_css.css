@@ -1,36 +1,44 @@
 @import url(http://fonts.googleapis.com/css?family=Orbitron);
 
-#logo {
+#logo a{
+  margin: 0 0 10px 0;
   float:left;
-  width:200px;
-  padding:5px;
+  width:700px;
   color:#fff;
-  font-family: 'Orbitron', sans-serif;
+  font-size: 25px;
 }
 
-html{
-  background: #000;
-}
 #header {
-  border-radius: 10px 10px 0px 0px;
-	width:900px;
+  width:900px;
   margin:auto;
-	height:60px;
+  height:60px;
   margin-top:10px;
   background-color: #000;
 }
 #user_nav {
-	position: relative;
-	float: right;
+  position: relative;
+  float: right;
   padding: 5px;
   color: #EE4000;
+  text-align: right;
 }
+
+#user_nav a{color:#fff}
+#user_nav a:visited{color:#fff}
+#user_nav a:hover{color:#fff}
+
+#under_nav {
+  float:right;
+  margin-top:40px;
+}
+
 #yield {
   border-radius:10px;
   padding: 20px;
   width:900px;
+  height:100%;
   background-color: #fff;
-  margin:auto;
+  margin: 10px auto 10px auto;
 }
 #buildingTitle {
   font-size:32px;

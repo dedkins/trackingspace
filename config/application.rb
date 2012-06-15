@@ -56,5 +56,6 @@ module Trackingspace
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
     config.assets.initialize_on_preconfile = false
+    config.assets.precompile += %w(starting_css.css)
   end
 end
