@@ -30,8 +30,7 @@
 <body>
     <div id="header">
       <div id="logo">
-        <%= link_to 'TrackingSpace:', buildings_path %>
-        <%= render 'buildings/form_new' %>
+        <%= link_to 'TrackingSpace:', buildings_path %><br/><%= render 'buildings/form_new' %>
       </div>
       <div id="user_nav">
         <% if user_signed_in? %>
