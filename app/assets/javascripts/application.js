@@ -10,9 +10,10 @@
 // WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
 // GO AFTER THE REQUIRES BELOW.
 //
+//= require gmaps4rails.base
+//= require gmaps4rails.googlemaps
 //= require jquery
 //= require jquery_ujs
 //= require jquery-1.4.4.min
 //= require jquery-ui-1.8.7.min
-//= require jquery.ui.addresspicker.js
-//= require gmaps4rails.googlemaps
+//= require jquery.ui.addresspicker

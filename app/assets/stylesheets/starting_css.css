@@ -8,15 +8,7 @@
   font-size: 25px;
 }
 
-#header {
-  width:900px;
-  margin:auto;
-  height:60px;
-  margin-top:10px;
-  background-color: #000;
-}
 #user_nav {
-  position: relative;
   float: right;
   padding: 5px;
   color: #EE4000;
@@ -30,6 +22,14 @@
 #under_nav {
   float:right;
   margin-top:40px;
+}
+
+#header {
+  width:900px;
+  margin:auto;
+  height:60px;
+  margin-top:10px;
+  background-color: #000;
 }
 
 #yield {
