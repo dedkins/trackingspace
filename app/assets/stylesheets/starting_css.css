@@ -41,7 +41,8 @@
   margin: 10px auto 10px auto;
 }
 #buildingTitle {
-  font-size:32px;
+  font-size:20px;
+  font-weight:bold;
   padding: 5px;
 }
 #header_lower_right {
