@@ -15,3 +15,4 @@
 //= require jquery-1.4.4.min
 //= require jquery-ui-1.8.7.min
 //= require jquery.ui.addresspicker.js
+//= require gmaps4rails.googlemaps
