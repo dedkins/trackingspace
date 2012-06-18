@@ -12,5 +12,6 @@
  * = require scaffolds
  * = require starting_css
  * = require gmaps4rails
- * = require Addresspicker/jquery.ui.all
+ * = require Addresspicker/jquery.ui.autocomplete
+ * = require Addresspicker/jquery.ui.theme
 */
