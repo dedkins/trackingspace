@@ -1,4 +1,4 @@
-<%= form_for(@lease) do |f| %>
+<%= form_for(@space,@lease) do |f| %>
   <% if @lease.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@lease.errors.count, "error") %> prohibited this lease from being saved:</h2>

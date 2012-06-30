@@ -1,7 +1,8 @@
 Trackingspace::Application.routes.draw do
 
   devise_for :users, :controllers => {:registrations => 'registrations'}
-
+  resources :users, :only => [:index,:show]
+  
   match 'auth/:provider/callback' => 'authentications#create'
     
   resources :authentications
@@ -13,9 +14,12 @@ Trackingspace::Application.routes.draw do
   resources :buildings
   resources :spaces
 
-  resources :leases
+  resources :spaces do
+    resources :leases
+  end
 
   root :to => 'buildings#home'
+  
   
   end
   # The priority is based upon order of creation:

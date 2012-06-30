@@ -1,0 +1,9 @@
+development:
+	bucket: TrackingSpace_Development
+	access_key_id: AKIAIUNQBECZ24LAPWIQ
+	secret_access_key:  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
+
+production:
+	bucket: TrackingSpace_Production
+	access_key_id:  AKIAIUNQBECZ24LAPWIQ
+	secret_access_key:  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

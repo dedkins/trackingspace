@@ -15,6 +15,6 @@
   <%= @space.monthly %>
 </p>
 
-
+<%= link_to 'New Lease', new_space_lease_path(@space,@lease) %> |
 <%= link_to 'Edit', edit_building_space_path(@building,@space) %> |
 <%= link_to 'Back', building_path(@building) %>

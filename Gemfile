@@ -13,7 +13,17 @@ gem 'omniauth-facebook'
 gem 'omniauth-linkedin'
 gem 'omniauth-google'
 gem 'devise'
+gem 'aws-s3'
 
+group :development do
+	gem 'rspec-rails', '2.0.1'
+	gem 'annotate'
+	gem 'aws-s3'
+end
+
+group :test do
+	gem 'rspec-rails', '2.0.1'
+end
 
 # Gems used only for assets and not required
 # in production environments by default.
