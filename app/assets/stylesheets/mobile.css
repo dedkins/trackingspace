@@ -1,0 +1,57 @@
+html {
+    background:#000;
+  }
+
+#mobile_header {
+  position: relative;
+  margin:auto;
+  height:60px;
+  width:100%;
+  background-color: black;
+  font-size:180%;
+  color:white;
+  font-family:orbitron;
+}
+
+#user_selection {
+  position: relative;
+  float: left;
+  padding: 20px;
+  color: #EE4000;
+  text-align:center;
+}
+
+#user_selection a{color:#fff}
+#user_selection a:visited{color:#fff}
+#user_selection a:hover{color:#fff}
+
+#user_selection_right {
+  position: relative;
+  float: right;
+  padding: 20px;
+  color: #EE4000;
+}
+
+#user_selection_right a{color:#fff}
+#user_selection_right a:visited{color:#fff}
+#user_selection_right a:hover{color:#fff}
+
+#yield {
+  width:96%;
+  border-radius:10px;
+  padding: 20px;
+  height:100%;
+  background-color: #fff;
+  margin: 10px auto 10px auto;
+}
+
+  #container {
+    width: 90%;
+    min-width: none;
+    margin: 0 auto;
+    background-color: #000;
+    padding: 0;
+    border: 5px solid orange;
+    border-radius: 5px;
+    margin-top: 20px;
+  }

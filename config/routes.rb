@@ -1,7 +1,8 @@
 Trackingspace::Application.routes.draw do
 
   devise_for :users, :controllers => {:registrations => 'registrations'}
-  resources :users, :only => [:index,:show]
+  resources :users, :only => [:index,:show,:user_root]
+  #match 'home' => 'users#show', as: :user_root
   
   match 'auth/:provider/callback' => 'authentications#create'
     
