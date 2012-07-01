@@ -1,24 +1,34 @@
 html {
     background:#000;
   }
+#lookup {
+  position: relative;
+  float:left;
+}
 
 #mobile_header {
   position: relative;
   margin:auto;
-  height:60px;
+  height:90px;
   width:100%;
   background-color: black;
-  font-size:180%;
+  font-size:200%;
   color:white;
   font-family:orbitron;
 }
 
+#top {
+  margin-top:20px;
+  margin-left:20px;
+}
+
 #user_selection {
+  clear:both;
   position: relative;
   float: left;
-  padding: 20px;
+  margin-left:10px;
+  padding: 10px;
   color: #EE4000;
-  text-align:center;
 }
 
 #user_selection a{color:#fff}
@@ -28,6 +38,7 @@ html {
 #user_selection_right {
   position: relative;
   float: right;
+  margin-top:-20px;
   padding: 20px;
   color: #EE4000;
 }
