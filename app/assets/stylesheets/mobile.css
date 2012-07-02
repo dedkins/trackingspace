@@ -9,7 +9,7 @@ html {
 #mobile_header {
   position: relative;
   margin:auto;
-  height:90px;
+  height:80px;
   width:100%;
   background-color: black;
   font-size:200%;
@@ -48,7 +48,7 @@ html {
 #user_selection_right a:hover{color:#fff}
 
 #yield {
-  width:96%;
+  width:95%;
   border-radius:10px;
   padding: 20px;
   height:100%;
