@@ -1,5 +1,12 @@
 <p id="notice"><%= notice %></p>
 
 <%= @user.name %>, <%= @user.email %>
-
 <%= link_to 'Edit', edit_user_registration_path %>
+
+<% unless @user.micropost.empty? %>
+Microposts:
+	<%= render @microposts %>
+	<%= will_paginate @microposts %>
+<% end %>
+
+end
