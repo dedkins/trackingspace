@@ -7,9 +7,10 @@ html {
 }
 
 #mobile_header {
-  position: relative;
+  position: fixed;
+  top:2px;
   margin:auto;
-  height:80px;
+  height:100px;
   width:100%;
   background-color: black;
   font-size:200%;
@@ -53,7 +54,7 @@ html {
   padding: 20px;
   height:100%;
   background-color: #fff;
-  margin: 10px auto 10px auto;
+  margin: 130px auto 10px auto;
 }
 
   #container {
