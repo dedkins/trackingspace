@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
   has_many :authentications
-  has_many :microposts
+  has_many :microposts, :dependent => :destroy
+  
   
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,

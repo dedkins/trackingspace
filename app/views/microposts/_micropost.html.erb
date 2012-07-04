@@ -1,0 +1,14 @@
+<li>
+	<hr>
+	<% if micropost.typeof == 'Updated' %>
+	Suite <%= micropost.suite %> at <%= link_to micropost.address, building_path(micropost.building_id) %> was 
+	updated by <%= link_to micropost.name, user_path(micropost.user_id) %>
+	<% end %>
+	<% if micropost.typeof == 'Created' %>
+	Suite <%= micropost.suite %> at <%= link_to micropost.address, building_path(micropost.building_id) %> was 
+	created by <%= link_to micropost.name, user_path(micropost.user_id) %>
+	<% end %>
+	<br/>
+	Posted <%= time_ago_in_words(micropost.created_at) %> ago
+	<hr>
+</li>
