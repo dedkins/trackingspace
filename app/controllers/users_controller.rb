@@ -4,6 +4,7 @@ class UsersController < ApplicationController
 
   def show
   	@user = User.find(params[:id])
+  	@micropost = Micropost.new if signed_in?
   end
 
 

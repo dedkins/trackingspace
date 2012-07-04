@@ -31,10 +31,14 @@ class SpacesController < ApplicationController
   # POST /spaces.json
   
   def create
+    @user = current_user
+    @building = Building.find(params[:building_id])
     @space = @building.spaces.new(params[:space])
+    @micropost = current_user.microposts.build(typeof: 'Created', building_id: @building.id,space_id: @space.id,address: @building.address,name: @user.name, suite: @space.suite)
 
     respond_to do |format|
       if @space.save
+        @micropost.save!
         format.html { redirect_to [@building], notice: 'Space was successfully created.' }
         format.json { render json: [@building], status: :created, location: @space }
       else
@@ -47,10 +51,14 @@ class SpacesController < ApplicationController
   # PUT /spaces/1
   # PUT /spaces/1.json
   def update
+    @user = current_user
+    @building = Building.find(params[:building_id])
     @space = Space.find(params[:id])
+    @micropost = current_user.microposts.build(typeof: 'Updated', building_id: @building.id,space_id: @space.id,address: @building.address,name: @user.name, suite: @space.suite)
 
     respond_to do |format|
       if @space.update_attributes(params[:space])
+        @micropost.save!
         format.html { redirect_to [@building], notice: 'Space was successfully updated.' }
         format.json { head :no_content }
       else

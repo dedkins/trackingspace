@@ -5,7 +5,8 @@ Trackingspace::Application.routes.draw do
   #match 'home' => 'users#show', as: :user_root
   
   match 'auth/:provider/callback' => 'authentications#create'
-    
+  
+  resources :microposts, :only => [:create,:destroy]
   resources :authentications
 
   resources :buildings do

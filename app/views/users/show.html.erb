@@ -3,3 +3,13 @@
 <%= @user.name %>, <%= @user.email %>
 
 <%= link_to 'Edit', edit_user_registration_path %>
+<br/>
+<hr>
+<%= render '/shared/micropost_form' %>
+Microposts: <%= @user.microposts.count %>
+<% unless @user.microposts.empty? %>
+<br/>
+<ul>
+<%= render @user.microposts %>
+</ul>
+<% end %>
