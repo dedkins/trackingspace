@@ -2,14 +2,9 @@
 
 <%= @user.name %>, <%= @user.email %>
 <%= link_to 'Edit', edit_user_registration_path %>
-
-<% unless @user.micropost.empty? %>
-Microposts:
-	<%= render @microposts %>
-<% end %>
-
 <br/>
 <hr>
+<%= render '/shared/micropost_form' %>
 Microposts: <%= @user.microposts.count %>
 <% unless @user.microposts.empty? %>
 <br/>
