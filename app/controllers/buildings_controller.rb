@@ -17,6 +17,9 @@ class BuildingsController < ApplicationController
     @new_space = @building.spaces.build
     @json = Building.find(@building.id).to_gmaps4rails
 
+    @micropost = Micropost.new if signed_in?
+    @feed_items = @building.feed
+
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @building }

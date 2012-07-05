@@ -41,7 +41,7 @@
           Signed in as <%= current_user.email %>. Not You?
           <%= link_to "Sign Out", destroy_user_session_path, :method => 'delete' %>
         <% else %>
-          <%= link_to "Sign Up", new_user_registration_path %> or <%= link_to "Sign In", authentications_path %>
+          <%= link_to "Sign Up", new_user_registration_path %> or <%= link_to "Sign In with Twitter", 'auth/twitter' %>
         <% end %>
         <br/><br/>
         <%= link_to "Buildings", buildings_path %> | <%= link_to "Spaces", buildings_path %> | <%= link_to "Leases", buildings_path %> | <%= link_to "People", buildings_path %> 

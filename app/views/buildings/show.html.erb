@@ -1,15 +1,30 @@
-<div id="buildingTitle"><%= @building.address %></div>
+<table>
+	<tr>
+	<div id="buildingTitle"><%= @building.address %></div>
+	<hr>
+	<td width="550px">
+		<%= render '/shared/micropost_form' %>
+		Posts: <%= @building.microposts.count %>
+		<% unless @building.microposts.empty? %>
+		<br/>
+		<%= render 'shared/feed' %>
+		<% end %>
+	</td>
+	<td width="20px">
+	</td>
+	<td>
+		<%= gmaps4rails(@json) %>
+		<hr>
+		<% if @building.spaces.any? %>
+		Spaces
+		<%= render 'spaces' %>
+		<%= link_to 'Add New Space', new_building_space_path(@building) %>
+		<% end %>
 
-<% if @building.spaces.any? %>
-Spaces
-<%= render 'spaces' %>
-<%= link_to 'Add New Space', new_building_space_path(@building) %>
-<% end %>
 
-
-<%= link_to 'Edit', edit_building_path(@building) %> |
-<%= link_to 'Back', buildings_path %>
-
-<%= gmaps4rails(@json) %>
-
+		<%= link_to 'Edit', edit_building_path(@building) %> |
+		<%= link_to 'Back', buildings_path %>
+	</td>
+</tr>
 <%= yield :scripts %>
+</table>
