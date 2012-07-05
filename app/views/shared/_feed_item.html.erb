@@ -1,0 +1,25 @@
+<table>
+	<tr>
+	<td>
+		<% image_tag("buildings_icon", :size => "20x20") %>
+	</td>
+	<td>
+		<br/>
+		<div id="name"><%= link_to feed_item.user.name, user_path(feed_item.user) %></div>
+		<% if feed_item.typeof == 'Updated' %>
+		<div id="post">Suite <%= feed_item.suite %> was just added at <%= link_to feed_item.building.address, building_path(feed_item.building) %></div>
+		<% end %>
+		<% if feed_item.typeof == 'Created' %>
+		<div id="post">Suite <%= feed_item.suite %> was just updated at <%= link_to feed_item.building.address, building_path(feed_item.building_id) %></div>
+		<% end %>
+		Posted <%= time_ago_in_words(feed_item.created_at) %> ago
+		<br/>
+	</td>
+	<% if current_user == (feed_item.user) %>
+	<td>
+		<%= link_to "delete", feed_item, :method => :delete, :confirm => "Are You Sure?" %>
+	</td>
+	<% end %>
+	<hr>
+</tr>
+</table>

@@ -1,6 +1,21 @@
 html {
     background:#000;
   }
+  #name {
+  font-size:150%;
+  font-weight:bold;
+  color:orange;
+}
+#name a{color:orange;text-decoration:none;}
+#name a:visited{color:gray;text-decoration:none;}
+#name a:hover{color:gray;background:#fff;text-decoration:none;}
+
+#post {
+  color:#000;
+  font-size:200%;
+  line-height:1.25;
+  font-weight:bold;
+}
 #lookup {
   position: relative;
   float:left;
@@ -9,12 +24,12 @@ html {
 #mobile_header {
   z-index:999;
   position: fixed;
-  top:2px;
+  top:4px;
   margin:auto;
-  height:90px;
+  height:120px;
   width:100%;
   background-color: black;
-  font-size:200%;
+  font-size:250%;
   color:white;
   font-family:orbitron;
 }
@@ -36,23 +51,26 @@ html {
 #user_selection a{color:#fff}
 #user_selection a:visited{color:#fff}
 #user_selection a:hover{color:#fff}
-
-#user_selection_right {
+footer{
+  clear:both;
   position: relative;
-  float: right;
-  margin-top:-20px;
+  float: left;
+  margin:auto;
+}
+#footerlinks {
+  font-size:150%;
   padding: 20px;
   color: #EE4000;
 }
 
-#user_selection_right a{color:#fff}
-#user_selection_right a:visited{color:#fff}
-#user_selection_right a:hover{color:#fff}
+#footerlinks a{color:#fff}
+#footerlinks a:visited{color:#fff}
+#footerlinks a:hover{color:#fff}
 
 #yield {
-  width:95%;
+  width:90%;
   border-radius:10px;
-  padding: 20px;
+  padding: 40px;
   height:100%;
   background-color: #fff;
   margin: 130px auto 10px auto;
@@ -65,6 +83,5 @@ html {
     background-color: #000;
     padding: 0;
     border: 5px solid orange;
-    border-radius: 5px;
     margin-top: 20px;
   }

@@ -34,17 +34,13 @@
         <div id="lookup">
             <%= render 'buildings/form_new' %>
         </div>
-        <div id="user_selection_right">
-          <% if user_signed_in? %>
-            <%= link_to "Profile", current_user %> | 
-            <%= link_to "Sign Out", destroy_user_session_path, :method => 'delete' %>
-          <% else %>
-            <%= link_to "Sign Up", new_user_registration_path %> or <%= link_to "Sign In", authentications_path %>
-          <% end %>
-        </div>
+        
       </div>
         <div id="user_selection">
-        <%= link_to 'Home', root_path %> | <%= link_to 'Buildings', buildings_path %> | <%= link_to "Spaces", buildings_path %> | <%= link_to "Leases", buildings_path %> | <%= link_to "People", buildings_path %> 
+        <% if user_signed_in? %>
+        <%= link_to 'My Stuff', current_user %>  |  
+        <% end %>
+        <%= link_to 'Buildings', buildings_path %>  |  <%= link_to "People", buildings_path %> 
           
         </div>
     </div>
@@ -56,6 +52,15 @@
       <%= yield %>
       <%= debug(params) if Rails.env.development? %>
     </div>
-
+<footer>
+  <div id="footerlinks">
+          <% if user_signed_in? %>
+            <%= link_to "Profile", current_user %> | 
+            <%= link_to "Sign Out", destroy_user_session_path, :method => 'delete' %>
+          <% else %>
+            <%= link_to "Sign Up", new_user_registration_path %> or <%= link_to "Sign In", authentications_path %>
+          <% end %>
+  </div>
+</footer>
 <% end %>
 </html>

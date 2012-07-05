@@ -4,10 +4,16 @@
   background:url(images/SanDiegoSkyline.jpg) no-repeat center fixed;
   background-size: cover;
 }
-
 body {
   background-color: #000;
 }
+#name {
+  color:orange;
+}
+#post {
+  color:gray;
+}
+
 #logoIcon {
   position:relative;
   padding: 5px;

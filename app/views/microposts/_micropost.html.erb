@@ -1,8 +1,8 @@
 <li>
 	<hr>
 	<% if micropost.typeof == 'Updated' %>
-	Suite <%= micropost.suite %> at <%= link_to micropost.address, building_path(micropost.building_id) %> was 
-	updated by <%= link_to micropost.name, user_path(micropost.user_id) %>
+	Suite <%= micropost.suite %> at <%= link_to micropost.building.address, building_path(micropost.building_id) %> was 
+	updated by <%= link_to micropost.user.name, user_path(micropost.user_id) %>
 	<% end %>
 	<% if micropost.typeof == 'Created' %>
 	Suite <%= micropost.suite %> at <%= link_to micropost.address, building_path(micropost.building_id) %> was 

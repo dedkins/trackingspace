@@ -5,10 +5,8 @@
 <br/>
 <hr>
 <%= render '/shared/micropost_form' %>
-Microposts: <%= @user.microposts.count %>
+Posts: <%= @user.microposts.count %>
 <% unless @user.microposts.empty? %>
 <br/>
-<ul>
-<%= render @user.microposts %>
-</ul>
+<%= render 'shared/feed' %>
 <% end %>
