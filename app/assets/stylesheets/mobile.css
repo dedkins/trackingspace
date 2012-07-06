@@ -14,10 +14,10 @@ html {
 #name {
   font-size:150%;
   font-weight:bold;
-  color:#B13E0F;
+  color:#608341;
 }
-#name a{color:#B13E0F;text-decoration:none;}
-#name a:visited{color:gray;text-decoration:none;}
+#name a{color:#608341;text-decoration:none;}
+#name a:visited{color:#B13E0F;text-decoration:none;}
 #name a:hover{color:gray;background:#fff;text-decoration:none;}
 
 #building {

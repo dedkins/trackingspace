@@ -7,7 +7,7 @@
 		<tr>
 			Spaces: <%= @building.spaces.count %>
 		</tr>
-		<%= render '/shared/micropost_form', :building_id => @building.id %>
+		<%= render '/shared/micropost_form' %>
 		<% unless @building.microposts.empty? %>
 		Posts: <%= @building.microposts.count %>
 		<br/>
