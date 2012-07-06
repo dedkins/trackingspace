@@ -1,14 +1,34 @@
 html {
     background:#000;
   }
-  #name {
-  font-size:150%;
+
+.field {
+  font-size:200%;
+  height:500%;
+  width:500%;
+}
+.inputfield {
+  height:100px;
+  width:400px;
+}
+#name {
+  font-size:130%;
   font-weight:bold;
   color:orange;
 }
 #name a{color:orange;text-decoration:none;}
 #name a:visited{color:gray;text-decoration:none;}
 #name a:hover{color:gray;background:#fff;text-decoration:none;}
+
+#building {
+  font-size:150%;
+  font-weight:bold;
+  color:#BCED91;
+  line-height:1.4;
+}
+#building a{color:#BCED91;text-decoration:none;}
+#building a:visited{color:orange;text-decoration:none;}
+#building a:hover{color:gray;background:#fff;text-decoration:none;}
 
 #post {
   color:#000;

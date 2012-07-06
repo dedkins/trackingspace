@@ -1,29 +1,32 @@
 <table>
-	<tr>
+	<tr width="100%">
 	<td>
 		<% image_tag("buildings_icon", :size => "50x50") %>
 	</td>
-	<td>
-		<br/>
-		
-		<div id="name"><%= link_to feed_item.user.name, user_path(feed_item.user) %></div>
+	<td vertical-align="top">
+		<div id="building">
+		<% if feed_item.building_id? %>
+			<%= link_to feed_item.building.address, building_path(feed_item.building) %></div>
+		<% end %>
+		</div>
 		<% if feed_item.content? %>
-			<div id="post"><%= feed_item.content %></div>
+			<div id="post">"<%= feed_item.content %>"</div>
 		<% end %>
 		<% if feed_item.typeof == 'Created' %>
-			<div id="post">Added Suite <%= feed_item.suite %> to <%= link_to feed_item.building.address, building_path(feed_item.building) %></div>
+			<div id="post">Added Suite <%= feed_item.suite %></div>
 		<% end %>
 		<% if feed_item.typeof == 'Updated' %>
-			<div id="post">Updated Suite <%= feed_item.suite %> at <%= link_to feed_item.building.address, building_path(feed_item.building_id) %></div>
+			<div id="post">Updated Suite <%= feed_item.suite %></div>
 		<% end %>
-		Posted <%= time_ago_in_words(feed_item.created_at) %> ago
+		<br/>
+		<div id="name"><%= link_to feed_item.user.name, user_path(feed_item.user) %></div>
+		Posted <%= time_ago_in_words(feed_item.created_at) %> ago - 
+		<% if current_user == (feed_item.user) %>
+		<%= link_to "delete", feed_item, :method => :delete, :confirm => "Are You Sure?" %>
+		<% end %>
 		<br/>
 	</td>
-	<% if current_user == (feed_item.user) %>
-	<td>
-		<%= link_to "delete", feed_item, :method => :delete, :confirm => "Are You Sure?" %>
-	</td>
-	<% end %>
+	
 	<hr>
 </tr>
 </table>

@@ -8,10 +8,27 @@ body {
   background-color: #000;
 }
 #name {
+  font-size:110%;
+  font-weight:bold;
   color:orange;
 }
+#name a{color:orange;text-decoration:none;}
+#name a:visited{color:gray;text-decoration:none;}
+#name a:hover{color:gray;background:#fff;text-decoration:none;}
+
+#building {
+  font-size:120%;
+  font-weight:bold;
+  color:#BCED91;
+  line-height:1.4;
+}
+#building a{color:#BCED91;text-decoration:none;}
+#building a:visited{color:orange;text-decoration:none;}
+#building a:hover{color:gray;background:#fff;text-decoration:none;}
+
 #post {
   color:gray;
+  font-size:120%;
 }
 
 #logoIcon {

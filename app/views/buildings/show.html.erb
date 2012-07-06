@@ -1,19 +1,41 @@
 <table>
 	<tr>
-	<div id="buildingTitle"><%= @building.address %></div>
+	<h1><%= @building.address %></h1>
 	<hr>
-	<td width="550px">
-		<%= render '/shared/micropost_form' %>
-		Posts: <%= @building.microposts.count %>
+	<% if mobile_device? %>
+	<td width="100%">
+		<tr>
+			Spaces: <%= @building.spaces.count %>
+		</tr>
+		<%= render '/shared/micropost_form', :building_id => @building.id %>
 		<% unless @building.microposts.empty? %>
+		Posts: <%= @building.microposts.count %>
 		<br/>
 		<%= render 'shared/feed' %>
 		<% end %>
 	</td>
+	<% end %>
+
+	<% if not mobile_device? %>
+	<td width="600px">
+		<%= render '/shared/micropost_form' %>
+		<% unless @building.microposts.empty? %>
+		Posts: <%= @building.microposts.count %>
+		<br/>
+		<%= render 'shared/feed' %>
+		<% end %>
+	</td>
+
+	
 	<td width="20px">
 	</td>
-	<td>
-		<%= gmaps4rails(@json) %>
+	<td width="300px" vertical-align:"top">
+		
+		<%= gmaps({
+		  "map_options" => {"auto_zoom" => false, "zoom" => 18, "type" => 'SATELLITE' },
+		  "markers" => {"data" => @json }
+		})
+		%>
 		<hr>
 		<% if @building.spaces.any? %>
 		Spaces
@@ -24,7 +46,9 @@
 
 		<%= link_to 'Edit', edit_building_path(@building) %> |
 		<%= link_to 'Back', buildings_path %>
+
 	</td>
+	<% end %>
 </tr>
 <%= yield :scripts %>
 </table>

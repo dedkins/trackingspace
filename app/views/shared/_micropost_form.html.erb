@@ -1,5 +1,7 @@
 <%= form_for @micropost do |f| %>
-Add a comment about this building<br/>
+<% if @building.present? %>
+<%= f.hidden_field :building_id, :value => @building.id %>
+<% end %>
 <%= f.text_area :content, :size => "50x5"%>
 <%= f.submit "Submit" %>
 
