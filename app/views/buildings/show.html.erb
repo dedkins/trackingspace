@@ -9,7 +9,6 @@
 		</tr>
 		<%= render '/shared/micropost_form' %>
 		<% unless @building.microposts.empty? %>
-		Posts: <%= @building.microposts.count %>
 		<br/>
 		<%= render 'shared/feed' %>
 		<% end %>
@@ -20,7 +19,6 @@
 	<td width="600px">
 		<%= render '/shared/micropost_form' %>
 		<% unless @building.microposts.empty? %>
-		Posts: <%= @building.microposts.count %>
 		<br/>
 		<%= render 'shared/feed' %>
 		<% end %>
