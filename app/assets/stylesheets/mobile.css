@@ -12,7 +12,7 @@ html {
   width:400px;
 }
 #name {
-  font-size:160%;
+  font-size:150%;
   font-weight:bold;
   color:#608341;
 }
@@ -21,7 +21,7 @@ html {
 #name a:hover{color:gray;background:#fff;text-decoration:none;}
 
 #building {
-  font-size:180%;
+  font-size:170%;
   font-weight:bold;
   color:#608341;
   line-height:1.4;
@@ -32,7 +32,7 @@ html {
 
 #post {
   color:#000;
-  font-size:230%;
+  font-size:220%;
   line-height:1.25;
   font-weight:bold;
 }

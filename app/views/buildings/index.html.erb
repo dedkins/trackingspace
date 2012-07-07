@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-
+<% unless mobile_device? %>
 <%= gmaps4rails(@json) %>
 
 <table>
@@ -19,11 +19,21 @@
   </tr>
 <% end %>
 </table>
+<% end %>
 
-<br />
+<% if mobile_device? %>
 
-<%= link_to 'LookUp a Building', new_building_path %>
+<table>
+  <% @buildings.each do |building| %>
+  <tr>
+    <div id="building"><%= link_to building.address, building_path(building.id) %></div><br/>
+    <div id="name">Spaces: <%= building.spaces.count %> | Posts: <%= building.microposts.count %></div>
+    <hr>
+  </tr>
+  <% end %>
+</table>
 
+<% end %>
 <%= yield :scripts %>
 
 
