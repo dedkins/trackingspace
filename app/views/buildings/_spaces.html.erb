@@ -11,10 +11,10 @@
 
 <% @spaces.each do |space| %>
   <tr>
-    <td><%= space.suite %></td>
-    <td><%= space.sf %></td>
-    <td><%= space.monthly %></td>
-    <td><%= link_to 'Show', building_space_path(@building,space) %></td>
+    <td align=center width=80px><%= link_to space.suite, building_space_path(@building,space) %></td>
+    <td align=right><%= number_with_delimiter(space.sf, :delimiter => ",") %></td>
+    <td align=right><%= number_to_currency(space.monthly) %></td>
+    <td width=20px></td>
     <td><%= link_to 'Edit', edit_building_space_path(@building,space) %></td>
   </tr>
 <% end %>

@@ -8,7 +8,7 @@
 			Spaces: <%= @building.spaces.count %>
 		</tr>
 		<%= render '/shared/micropost_form' %>
-		<% unless @building.microposts.blank? %>
+		<% unless @building.microposts.empty? %>
 		<%= render 'shared/feed' %>
 		<% end %>
 	</td>
@@ -18,7 +18,7 @@
 	<td width="600px" valign=top >
 		<h3>Add a comment about this building:</h3>
 		<%= render '/shared/micropost_form' %>
-		<% unless @building.microposts.blank? %>
+		<% unless @building.microposts.empty? %>
 		<%= render 'shared/feed' %>
 		<% end %>
 	</td>
