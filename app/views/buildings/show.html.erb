@@ -3,23 +3,22 @@
 	<h1><%= @building.address %></h1>
 	<hr>
 	<% if mobile_device? %>
-	<td width="100%">
+	<td width="100%" valign=top>
 		<tr>
 			Spaces: <%= @building.spaces.count %>
 		</tr>
 		<%= render '/shared/micropost_form' %>
-		<% unless @building.microposts.empty? %>
-		<br/>
+		<% unless @building.microposts.blank? %>
 		<%= render 'shared/feed' %>
 		<% end %>
 	</td>
 	<% end %>
 
 	<% if not mobile_device? %>
-	<td width="600px">
+	<td width="600px" valign=top >
+		<h3>Add a comment about this building:</h3>
 		<%= render '/shared/micropost_form' %>
-		<% unless @building.microposts.empty? %>
-		<br/>
+		<% unless @building.microposts.blank? %>
 		<%= render 'shared/feed' %>
 		<% end %>
 	</td>
@@ -27,7 +26,7 @@
 	
 	<td width="20px">
 	</td>
-	<td width="300px" vertical-align:"top">
+	<td width="300px" valign=top>
 		
 		<%= gmaps({
 		  "map_options" => {"auto_zoom" => false, "zoom" => 18, "type" => 'SATELLITE' },
