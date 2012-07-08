@@ -23,15 +23,28 @@
 
 <% if mobile_device? %>
 
+<% @buildings.each do |building| %>
 <table>
-  <% @buildings.each do |building| %>
   <tr>
-    <div id="building"><%= link_to building.address, building_path(building.id) %></div><br/>
-    <div id="name">Spaces: <%= building.spaces.count %> | Posts: <%= building.microposts.count %></div>
-    <hr>
+    <div id="building_mobile"><%= link_to building.address, building_path(building.id) %></div>
   </tr>
-  <% end %>
+  <tr>
+    <td valign=center width=100px>
+      <div id="name">Spaces:</div>
+    </td>
+    <td width=50px>
+      <div id="greenwhite"><%= building.spaces.count %></div>
+    </td>
+    <td valign=center width=100px>
+      <div id="name">Posts:</div>
+    </td>
+    <td width=50px>
+      <div id="greenwhite"><%= building.microposts.count %></div>
+    </td>
+  </tr>
 </table>
+<hr>
+<% end %>
 
 <% end %>
 <%= yield :scripts %>

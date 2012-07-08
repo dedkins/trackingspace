@@ -11,6 +11,27 @@ html {
   height:100px;
   width:400px;
 }
+#greenwhite {
+  border-radius:5px;
+  height:30px;
+  width:30px;
+  background-color: #608341;
+  color:white;
+  font-weight:bold;
+  font-size:20px;
+  text-align:center;
+  padding-top:5.5px;
+}
+#building_mobile {
+  font-size:200%;
+  font-weight:bold;
+  color:#608341;
+  line-height:2;
+}
+#building_mobile a{color:#608341;text-decoration:none;}
+#building_mobile a:visited{color:#B13E0F;text-decoration:none;}
+#building_mobile a:hover{color:gray;background:#fff;text-decoration:none;}
+
 #name {
   font-size:150%;
   font-weight:bold;
