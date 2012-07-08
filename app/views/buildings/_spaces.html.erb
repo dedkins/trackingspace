@@ -1,10 +1,14 @@
 <% if @spaces %>
+
 <table>
+  <tr>
+    Avg Rate: <%= number_to_currency(@spaces.collect(&:monthly).inject(:+)/@spaces.collect(&:sf).inject(:+)) %>
+  </tr>
   <tr>
     <th>Suite #</th>
     <th>Sf</th>
     <th>Monthly Cost</th>
-    <th></th>
+    <th>Rate</th>
     <th></th>
     <th></th>
   </tr>
@@ -14,6 +18,7 @@
     <td align=center width=80px><%= link_to space.suite, building_space_path(@building,space) %></td>
     <td align=right><%= number_with_delimiter(space.sf, :delimiter => ",") %></td>
     <td align=right><%= number_to_currency(space.monthly) %></td>
+    <td align=right><%= number_to_currency(space.monthly/space.sf) %></td>
     <td width=20px></td>
     <td><%= link_to 'Edit', edit_building_space_path(@building,space) %></td>
   </tr>
