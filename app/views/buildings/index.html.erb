@@ -23,14 +23,18 @@
 
 <% if mobile_device? %>
 
+<table>
+  <tr>
+    <th width=900px></th>
+    <th width=70px>Spaces</th>
+    <th width=70px>Posts</th>
+    <th width=70px>Avg Rate</th>
+  </tr>
+</table>
 <% @buildings.each do |building| %>
 <table>
-  <th width=900px></th>
-  <th>Spaces</th>
-  <th>Posts</th>
-  <th>Avg Rate</th>
   <tr>
-    <td><div id="building_mobile"><%= link_to truncate(building.address, :length => 35), building_path(building.id) %></div></td>
+    <td width=900px><div id="building_mobile"><%= link_to truncate(building.address, :length => 35), building_path(building.id) %></div></td>
     <td width=70px align=center>
       <div id="greenwhite"><%= building.spaces.count %></div>
     </td>
@@ -42,11 +46,10 @@
       <div id="building_mobile"><%= number_to_currency(building.spaces.collect(&:monthly).inject(:+)/building.spaces.collect(&:sf).inject(:+)) %></div>
       <% end %>
     </td>
+    <hr>
   </tr>
 </table>
-<hr>
 <% end %>
-
 <% end %>
 <%= yield :scripts %>
 
