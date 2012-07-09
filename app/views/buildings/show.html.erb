@@ -1,21 +1,28 @@
 <table>
-	<tr>
-	<h1><%= @building.address %></h1>
+	<h1><%= @building.address %> | Avg: <%= render 'avg_rate' %></h1>
 	<hr>
 	
 	<% if mobile_device? %>
-	<td width="100%" valign=top>
+	<tr>
+		<%= gmaps({
+		  "map_options" => {"auto_zoom" => false, "zoom" => 18, "type" => 'SATELLITE' },
+		  "markers" => {"data" => @json }
+		})
+		%>
+	</tr>
+	<tr width="100%" valign=top>
 		<% if user_signed_in? %>
 			<%= render '/shared/micropost_form' %>
 		<% end %>
 		<% unless @building.microposts.empty? %>
 			<%= render 'shared/feed' %>
 		<% end %>
-	</td>
+	</tr>
 	<% end %>
 
 	<% if not mobile_device? %>
-	<td width="600px" valign=top >
+	<tr>
+		<td width="600px" valign=top >
 		<% if user_signed_in? %>
 		<h3>Add a comment about this building:</h3>
 			<%= render '/shared/micropost_form' %>
@@ -29,7 +36,6 @@
 	<td width="20px">
 	</td>
 	<td width="300px" valign=top>
-		<%= @avg %>
 		<%= gmaps({
 		  "map_options" => {"auto_zoom" => false, "zoom" => 18, "type" => 'SATELLITE' },
 		  "markers" => {"data" => @json }
