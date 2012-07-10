@@ -3,8 +3,8 @@ class Building < ActiveRecord::Base
   has_many :microposts
   attr_accessible :address, :latitude, :longitude, :user_id
 
-  validates :latitude, :numericality => true
-  validates :longitude, :numericality => true
+  validates :latitude, :presence => true
+  validates :longitude, :presence => true
 
 
   acts_as_gmappable
