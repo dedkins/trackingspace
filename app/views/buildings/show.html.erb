@@ -1,6 +1,5 @@
 <table>
 	<h1><%= @building.address %> | Avg: <%= render 'avg_rate' %></h1>
-	<hr>
 	
 	<% if mobile_device? %>
 	<tr>
@@ -10,10 +9,10 @@
 		})
 		%>
 	</tr>
-	<tr width="100%" align="center" height="75px">
+	<tr width="100%" align="justify" height="75px">
 		<% if user_signed_in? %>
 		<td><div id="greenbutton">Add Comment</div></td>
-		<td><div id="greenbutton">Update Spaces</div></td>
+		<td><div id="greenbutton">See Spaces</div></td>
 		<td><div id="greenbutton">Edit Building</div></td>
 		<% end %>
 		<% unless user_signed_in? %>

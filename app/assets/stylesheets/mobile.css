@@ -4,14 +4,15 @@ html {
 #greenbutton {
   background-color: #608341;
   color:white;
-  height:50px;
-  width:300px;
+  height:40px;
+  width:200px;
   border-radius:8px;
-  border:3px solid black;
+  border:2px solid black;
   text-align:center;
-  padding-top:30px;
-  font-size:200%;
+  padding-top:25px;
+  font-size:20px;
   font-weight:bold;
+  margin:20px;
 }
 #announcement {
   background-color: #608341;
@@ -51,7 +52,7 @@ html {
   padding-top:12px;
 }
 #building_mobile {
-  font-size:230%;
+  font-size:25px;
   vertical-align: middle;
   font-weight:bold;
   color:#608341;
