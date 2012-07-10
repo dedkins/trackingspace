@@ -1,4 +1,4 @@
-<% if @spaces %>
+<% if @spaces.any? %>
 
 <%= number_to_currency(@spaces.collect(&:monthly).inject(:+)/@spaces.collect(&:sf).inject(:+)) %>
 

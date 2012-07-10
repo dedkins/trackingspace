@@ -1,5 +1,7 @@
 <table>
-	<h1><%= @building.address %> | Avg: <%= render 'avg_rate' %></h1>
+	<h1><%= @building.address %> 
+		<% unless @building.spaces.empty? %>| Avg: <%= render 'avg_rate' %><% end %>
+	</h1>
 	
 	<% if mobile_device? %>
 	<tr>
@@ -11,7 +13,7 @@
 	</tr>
 	<tr width="100%" align="justify" height="75px">
 		<% if user_signed_in? %>
-		<td><div id="greenbutton">Add Comment</div></td>
+		<td><div id="greenbutton"><%= link_to 'Add Comment', '#' %></div></td>
 		<td><div id="greenbutton">See Spaces</div></td>
 		<td><div id="greenbutton">Edit Building</div></td>
 		<% end %>
@@ -63,7 +65,5 @@
 	<% end %>
 </tr>
 <%= yield :scripts %>
-<% if user_signed_in? %>
-			<%= render '/shared/micropost_form' %>
-		<% end %>
+
 </table>

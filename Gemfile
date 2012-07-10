@@ -14,6 +14,7 @@ gem 'omniauth-linkedin'
 gem 'omniauth-google'
 gem 'devise'
 gem 'aws-s3'
+gem "dynamic_form"
 
 group :development do
 	gem 'rspec-rails', '2.0.1'

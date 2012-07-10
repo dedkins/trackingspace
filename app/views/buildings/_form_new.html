@@ -1,6 +1,7 @@
 <%= form_for Building.new do |f| %>
   
       <div class='input'>
+      	<%= f.error_messages %>
         <%= f.text_field :address, :id => "addresspicker_map", :placeholder => 'Enter a Complete Address'%>
         <%= f.hidden_field :latitude, :id => "lat" %>
         <%= f.hidden_field :longitude, :id => "lng" %>
