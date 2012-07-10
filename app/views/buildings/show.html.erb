@@ -10,14 +10,22 @@
 		})
 		%>
 	</tr>
-	<tr width="100%" valign=top>
+	<tr width="100%" align="center" height="75px">
 		<% if user_signed_in? %>
-			<%= render '/shared/micropost_form' %>
+		<td><div id="greenbutton">Add Comment</div></td>
+		<td><div id="greenbutton">Update Spaces</div></td>
+		<td><div id="greenbutton">Edit Building</div></td>
 		<% end %>
+		<% unless user_signed_in? %>
+		<div id="announcement"><%= link_to 'Click Here to Add Comments or to Update the Building/Spaces', '/auth/twitter' %></div>
+		<% end %>
+	</tr>
+	<tr width="100%" valign=top>
 		<% unless @building.microposts.empty? %>
 			<%= render 'shared/feed' %>
 		<% end %>
 	</tr>
+
 	<% end %>
 
 	<% if not mobile_device? %>
@@ -56,4 +64,7 @@
 	<% end %>
 </tr>
 <%= yield :scripts %>
+<% if user_signed_in? %>
+			<%= render '/shared/micropost_form' %>
+		<% end %>
 </table>

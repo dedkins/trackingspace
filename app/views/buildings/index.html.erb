@@ -25,28 +25,28 @@
 
 <table>
   <tr>
-    <th width=800px></th>
+    <th width=650px></th>
     <th width=70px>Spaces</th>
     <th width=70px>Posts</th>
-    <th width=140px>Avg Rate</th>
+    <th width=130px>Avg Rate</th>
   </tr>
 </table>
 <% @buildings.each do |building| %>
 <table>
   <tr>
-    <td width=800px><div id="building_mobile"><%= link_to truncate(building.address, :length => 28), building_path(building.id) %></div></td>
+    <td width=650px><div id="building_mobile"><%= link_to truncate(building.address, :length => 35), building_path(building.id) %></div></td>
     <td width=70px align=center>
       <div id="greenwhite"><%= building.spaces.count %></div>
     </td>
     <td width=70px align=center>
       <div id="greenwhite"><%= building.microposts.count %></div>
     </td>
-    <td width=140px align=center>
+    <td width=130px align=center>
       <% unless building.spaces.empty? %>
       <div id="building_mobile"><%= number_to_currency(building.spaces.collect(&:monthly).inject(:+)/building.spaces.collect(&:sf).inject(:+)) %></div>
       <% end %>
     </td>
-    <hr>
+    <hr size=2>
   </tr>
 </table>
 <% end %>
