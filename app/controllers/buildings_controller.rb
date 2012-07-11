@@ -11,11 +11,6 @@ class BuildingsController < ApplicationController
     end
   end
 
-  def mobile_post
-    @building = Building.find(params[:id])
-    @micropost = Micropost.new if signed_in?
-  end
-
   def show
     @building = Building.find(params[:id])
     @spaces = Space.find_all_by_building_id(@building.id)

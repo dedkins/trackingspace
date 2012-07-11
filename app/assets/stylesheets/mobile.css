@@ -1,7 +1,7 @@
 html {
     background:#000;
   }
-#greenbutton {
+.greenbutton {
   background-color: #608341;
   color:white;
   height:40px;
@@ -9,11 +9,39 @@ html {
   border-radius:8px;
   border:2px solid black;
   text-align:center;
-  padding-top:25px;
+  padding-top:15px;
   font-size:20px;
   font-weight:bold;
   margin:20px;
+
 }
+.greenbutton a{color:white;text-decoration:none;}
+.greenbutton a:visited{color:white;text-decoration:none;}
+.greenbutton a:hover{color:white;text-decoration:none;}
+
+.textfield {
+  font-size:200%;
+  font-weight:bold;
+  height:40%;
+  width:80%;
+}
+.bigsubmit {
+  background-color: #608341;
+  color:white;
+  height:60px;
+  width:200px;
+  border-radius:8px;
+  border:2px solid black;
+  text-align:center;
+  padding-top:8px;
+  font-size:20px;
+  font-weight:bold;
+  margin:20px 20px 20px 0px;
+}
+.bigsubmit a{color:white;text-decoration:none;}
+.bigsubmit a:visited{color:white;text-decoration:none;}
+.bigsubmit a:hover{color:white;text-decoration:none;}
+
 #announcement {
   background-color: #608341;
   color:white;

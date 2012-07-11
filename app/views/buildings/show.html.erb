@@ -13,9 +13,9 @@
 	</tr>
 	<tr width="100%" align="justify" height="75px">
 		<% if user_signed_in? %>
-		<td><div id="greenbutton"><%= link_to 'Add Comment', '#' %></div></td>
-		<td><div id="greenbutton">See Spaces</div></td>
-		<td><div id="greenbutton">Edit Building</div></td>
+		<td><div class="greenbutton"><%= link_to 'Add Comment', mobile_post_path(:building_id => @building) %></div></td>
+		<td><div class="greenbutton">See Spaces</div></td>
+		<td><div class="greenbutton">Edit Building</div></td>
 		<% end %>
 		<% unless user_signed_in? %>
 		<div id="announcement"><%= link_to 'Click Here to Add Comments or to Update the Building/Spaces', '/auth/twitter' %></div>
