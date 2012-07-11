@@ -22,8 +22,8 @@ html {
 .textfield {
   font-size:200%;
   font-weight:bold;
-  height:100px;
-  width:400px;
+  height:400px;
+  width:600px;
 }
 .bigsubmit {
   background-color: #608341;
