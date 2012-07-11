@@ -7,7 +7,6 @@ def create
 
 	if @micropost.save
 		flash[:success] = "Micropost Saved"
-		redirect_to @back_to
 	else
 		render current_user
 	end
