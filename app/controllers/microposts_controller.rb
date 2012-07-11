@@ -3,7 +3,6 @@ class MicropostsController < ApplicationController
 
 def create
 	@micropost = current_user.microposts.build(params[:micropost])
-	@back_to = params[:back_to]
 
 	if @micropost.save
 		flash[:success] = "Micropost Saved"
