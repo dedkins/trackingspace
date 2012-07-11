@@ -15,6 +15,8 @@ Trackingspace::Application.routes.draw do
     resources :spaces
   end
 
+  match 'listspace' => 'buildings#_spaces', :as => 'listspace'
+
   resources :buildings
   resources :spaces
 

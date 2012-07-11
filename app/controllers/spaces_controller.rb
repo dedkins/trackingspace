@@ -32,7 +32,6 @@ class SpacesController < ApplicationController
   
   def create
     @user = current_user
-    @building = Building.find(params[:building_id])
     @space = @building.spaces.new(params[:space])
     @micropost = current_user.microposts.build(typeof: 'Created', building_id: @building.id,space_id: @space.id,address: @building.address,name: @user.name, suite: @space.suite)
 
@@ -52,7 +51,6 @@ class SpacesController < ApplicationController
   # PUT /spaces/1.json
   def update
     @user = current_user
-    @building = Building.find(params[:building_id])
     @space = Space.find(params[:id])
     @micropost = current_user.microposts.build(typeof: 'Updated', building_id: @building.id,space_id: @space.id,address: @building.address,name: @user.name, suite: @space.suite)
 

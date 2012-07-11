@@ -1,3 +1,9 @@
+<script>
+	$(function() {
+		$( "#tabs" ).tabs();
+	});
+	</script>
+
 <table>
 	<h1><%= @building.address %> 
 		<% unless @building.spaces.empty? %>| Avg: <%= render 'avg_rate' %><% end %>
@@ -14,11 +20,11 @@
 	<tr width="100%" align="justify" height="75px">
 		<% if user_signed_in? %>
 		<td><div class="greenbutton"><%= link_to 'Add Comment', mobile_post_path(:building_id => @building) %></div></td>
-		<td><div class="greenbutton">See Spaces</div></td>
+		<td><div class="greenbutton"><%= link_to 'See Spaces', listspace_path(:building_id => @building) %></div></td>
 		<td><div class="greenbutton">Edit Building</div></td>
 		<% end %>
 		<% unless user_signed_in? %>
-		<div id="announcement"><%= link_to 'Click Here to Add Comments or to Update the Building/Spaces', '/auth/twitter' %></div>
+		<div id="announcement"><%= link_to 'Click Here to Log In With Twitter', '/auth/twitter' %></div>
 		<% end %>
 	</tr>
 	<tr width="100%" valign=top>
@@ -44,20 +50,32 @@
 	
 	<td width="20px">
 	</td>
-	<td width="300px" valign=top>
+	<td width="300px" valign="top" align="center">
 		<%= gmaps({
 		  "map_options" => {"auto_zoom" => false, "zoom" => 18, "type" => 'SATELLITE' },
 		  "markers" => {"data" => @json }
 		})
 		%>
-		<hr>
+
+		<p></p>
 		<% if @building.spaces.any? %>
-		Spaces
 		<%= render 'spaces' %>
-		<%= link_to 'Add New Space', new_building_space_path(@building) %>
 		<% end %>
+		<p></p>
+		<p></p>
+			<script type="text/javascript"><!--
+				google_ad_client = "ca-pub-5451064655705220";
+				/* First */
+				google_ad_slot = "8276506850";
+				google_ad_width = 250;
+				google_ad_height = 250;
+				//-->
+			</script>
+			<script type="text/javascript"
+				src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+			</script>
 
-
+		<p></p>
 		<%= link_to 'Edit', edit_building_path(@building) %> |
 		<%= link_to 'Back', buildings_path %>
 
