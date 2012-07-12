@@ -3,6 +3,7 @@ class Micropost < ActiveRecord::Base
 
   belongs_to :user
   belongs_to :building
+  belongs_to :space
 
   default_scope :order => 'microposts.created_at DESC'
 end

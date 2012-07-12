@@ -5,7 +5,8 @@
   background-size: cover;
 }
 body {
-  background-color: #000;
+  background-color: #3D3D3D;
+  background: -webkit-gradient(linear, left top, left bottom, from(#3D3D3D), to(#fff));
 }
 #name {
   font-size:110%;
@@ -27,7 +28,8 @@ body {
 #building a:hover{color:gray;background:#fff;text-decoration:none;}
 
 #post {
-  font-size:120%;
+  font-size:125%;
+  font-weight:bold;
 }
 
 #logoIcon {
@@ -79,12 +81,12 @@ body {
   margin:auto;
   height:60px;
   margin-top:10px;
-  background-color: #000;
+  background:transparent;
 }
 
 #yield {
   border-radius:10px;
-  padding: 20px;
+  padding: 10px 30px 20px 20px;
   width:900px;
   height:100%;
   background-color: #fff;

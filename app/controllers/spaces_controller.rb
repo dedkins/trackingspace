@@ -14,6 +14,7 @@ class SpacesController < ApplicationController
   # GET /spaces/1.json
   def show
     @space = Space.find(params[:id])
+    @micropost = Micropost.new if signed_in?
   end
 
   # GET /spaces/new

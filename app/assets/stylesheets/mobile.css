@@ -1,5 +1,5 @@
 html {
-    background:#000;
+  background: -webkit-gradient(linear, left top, left bottom, from(#3D3D3D), to(#fff));
   }
 .greenbutton {
   background-color: #608341;
@@ -121,14 +121,11 @@ html {
 }
 
 #mobile_header {
-  z-index:999;
-  position: fixed;
-  top:4px;
-  margin:auto;
-  height:120px;
+  margin:0px 40px 0px 40px;
+  height:30px;
   width:100%;
-  background-color: black;
-  font-size:270%;
+  background-color: transparent;
+  font-size:350%;
   color:white;
   font-family:orbitron;
 }
@@ -172,7 +169,7 @@ footer{
   padding: 40px;
   height:100%;
   background-color: #fff;
-  margin: 130px auto 10px auto;
+  margin: 80px auto 10px auto;
 }
 
   #container {

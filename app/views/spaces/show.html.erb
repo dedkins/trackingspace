@@ -1,5 +1,15 @@
 <p id="notice"><%= notice %></p>
-
+<table>
+	<tr>
+		<td width="600px" valign=top >
+		<% if user_signed_in? %>
+		<h3>Add a comment about this space:</h3>
+			<%= render '/shared/micropost_form' %>
+		<% end %>
+		<% unless @space.microposts.empty? %>
+			<%= render 'shared/feed' %>
+		<% end %>
+	</td>
 <p>
   <b>Suite:</b>
   <%= @space.suite %>

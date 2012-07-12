@@ -1,6 +1,10 @@
 <%= form_for @micropost do |f| %>
 <% if @building.present? %>
 <%= f.hidden_field :building_id, :value => @building.id %>
+<% if @space.present? %>
+<%= f.hidden_field :space_id, :value => @space.id %>
+<% end %>
+<%= hidden_field_tag "back_to", building_path(@building) %>
 <% end %>
 <%= f.text_area :content, :size => "50x5"%>
 <%= f.submit "Submit" %>

@@ -5,9 +5,9 @@
 	</script>
 
 <table>
-	<h1><%= @building.address %> 
+	<h2><%= @building.address %> 
 		<% unless @building.spaces.empty? %>| Avg: <%= render 'avg_rate' %><% end %>
-	</h1>
+	</h2>
 	
 	<% if mobile_device? %>
 	<tr>
@@ -19,12 +19,12 @@
 	</tr>
 	<tr width="100%" align="justify" height="75px">
 		<% if user_signed_in? %>
-		<td><div class="greenbutton"><%= link_to 'Add Comment', mobile_post_path(:building_id => @building) %></div></td>
+		<td><div class="greenbutton"><%= link_to 'Comment', mobile_post_path(:building_id => @building) %></div></td>
 		<td><div class="greenbutton"><%= link_to 'See Spaces', listspace_path(:building_id => @building) %></div></td>
 		<td><div class="greenbutton">Edit Building</div></td>
 		<% end %>
 		<% unless user_signed_in? %>
-		<div id="announcement"><%= link_to 'Click Here to Log In With Twitter', '/auth/twitter' %></div>
+		<div id="announcement"><%= link_to 'Log In To See More', '/auth/twitter' %></div>
 		<% end %>
 	</tr>
 	<tr width="100%" valign=top>
