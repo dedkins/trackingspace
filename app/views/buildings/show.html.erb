@@ -20,7 +20,7 @@
 	<tr width="100%" align="justify" height="75px">
 		<% if user_signed_in? %>
 		<td><div class="greenbutton"><%= link_to 'Comment', mobile_post_path(:building_id => @building) %></div></td>
-		<td><div class="greenbutton"><%= link_to 'See Spaces', listspace_path(:building_id => @building) %></div></td>
+		<td><div class="greenbutton"><%= link_to 'See Spaces', building_spaces_path(@building) %></div></td>
 		<td><div class="greenbutton">Edit Building</div></td>
 		<% end %>
 		<% unless user_signed_in? %>

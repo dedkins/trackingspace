@@ -51,7 +51,22 @@
     <div id="yield">
       <%= yield %>
       <%= debug(params) if Rails.env.development? %>
+    
+        <script type="text/javascript"><!--
+          google_ad_client = "ca-pub-5451064655705220";
+          /* H-Banner */
+          google_ad_slot = "4835302079";
+          google_ad_width = 468;
+          google_ad_height = 60;
+          //-->
+        </script>
+        <script type="text/javascript"
+        src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+        </script>
     </div>
+
+    
+
 <footer>
   <div id="footerlinks">
           <% if user_signed_in? %>
@@ -62,5 +77,6 @@
           <% end %>
   </div>
 </footer>
+
 <% end %>
 </html>
