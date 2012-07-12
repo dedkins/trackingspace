@@ -3,7 +3,7 @@
 		$( "#tabs" ).tabs();
 	});
 	</script>
-
+<body>
 <table>
 	<h2><%= @building.address %> 
 		<% unless @building.spaces.empty? %>| Avg: <%= render 'avg_rate' %><% end %>
@@ -85,3 +85,4 @@
 <%= yield :scripts %>
 
 </table>
+</body>
