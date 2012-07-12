@@ -16,13 +16,23 @@
 </p>
 
 <p>
+  <b>Company:</b>
+  <%= @space.company %>
+</p>
+
+<p>
   <b>Sf:</b>
   <%= @space.sf %>
 </p>
 
 <p>
   <b>Monthly Cost:</b>
-  <%= @space.monthly %>
+  <%= number_to_currency(@space.monthly) %>
+</p>
+
+<p>
+  <b>Rate:</b>
+  <%= number_to_currency(@space.monthly/@space.sf) %>
 </p>
 
 <%= link_to 'New Lease', new_space_lease_path(@space,@lease) %> |

@@ -6,8 +6,7 @@
   </tr>
   <tr>
     <th>Suite #</th>
-    <th>Sf</th>
-    <th>Monthly Cost</th>
+    <th>Company</th>
     <th>Rate</th>
     <th></th>
     <th></th>
@@ -16,14 +15,17 @@
 <% @spaces.each do |space| %>
   <tr>
     <td align=center width=80px><%= link_to space.suite, building_space_path(@building,space) %></td>
-    <td align=right><%= number_with_delimiter(space.sf, :delimiter => ",") %></td>
-    <td align=right><%= number_to_currency(space.monthly) %></td>
+    <td align=center><%= space.company %></td>
     <td align=right><%= number_to_currency(space.monthly/space.sf) %></td>
     <td width=20px></td>
     <td><%= link_to 'Edit', edit_building_space_path(@building,space) %></td>
   </tr>
 <% end %>
 </table>
+<br/>
+    <%= link_to 'Add New Space', new_building_space_path(@building) %>
 <% else %>
+  Looks like we need to add some spaces!
+  <br/>
   <%= link_to 'Add New Space', new_building_space_path(@building) %>
 <% end %>

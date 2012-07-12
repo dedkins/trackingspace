@@ -1,6 +1,6 @@
 class Building < ActiveRecord::Base
   has_many :spaces
-  has_many :microposts
+  has_many :microposts, :dependent => :destroy
   attr_accessible :address, :latitude, :longitude, :user_id
 
   validates :latitude, :presence => true

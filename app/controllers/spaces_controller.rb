@@ -1,6 +1,8 @@
 class SpacesController < ApplicationController
 
 
+  before_filter :load_building
+
   # GET /spaces
   # GET /spaces.json
 
@@ -8,13 +10,12 @@ class SpacesController < ApplicationController
     @spaces = @building.spaces.all
   end
 
-  before_filter :load_building
-
   # GET /spaces/1
   # GET /spaces/1.json
   def show
     @space = Space.find(params[:id])
     @micropost = Micropost.new if signed_in?
+    @feed_items = @space.feed
   end
 
   # GET /spaces/new
