@@ -148,20 +148,17 @@ html {
 #user_selection a:visited{color:#fff}
 #user_selection a:hover{color:#fff}
 footer{
-  clear:both;
-  position: relative;
-  float: left;
   margin:auto;
 }
 #footerlinks {
   font-size:150%;
   padding: 20px;
-  color: #EE4000;
+  color: #000;
 }
 
-#footerlinks a{color:#fff}
-#footerlinks a:visited{color:#fff}
-#footerlinks a:hover{color:#fff}
+#footerlinks a{color:#000}
+#footerlinks a:visited{color:#000}
+#footerlinks a:hover{color:#000}
 
 #yield {
   width:90%;
@@ -176,7 +173,7 @@ footer{
     width: 90%;
     min-width: none;
     margin: 0 auto;
-    background-color: #000;
+    background-color: transparent;
     padding: 0;
     border: 5px solid orange;
     margin-top: 20px;
