@@ -124,7 +124,7 @@ html {
   margin:0px 40px 0px 40px;
   height:30px;
   width:100%;
-  background-color: transparent;
+  background: transparent;
   font-size:350%;
   color:white;
   font-family:orbitron;
@@ -173,7 +173,7 @@ footer{
     width: 90%;
     min-width: none;
     margin: 0 auto;
-    background-color: transparent;
+    background: transparent;
     padding: 0;
     border: 5px solid orange;
     margin-top: 20px;
