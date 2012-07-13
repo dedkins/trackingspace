@@ -15,7 +15,7 @@ body {
   font-weight:bold;
   color:##608341;
 }
-#name a{color:##608341;text-decoration:none;}
+#name a{color:#608341;text-decoration:none;}
 #name a:visited{color:#B13E0F;text-decoration:none;}
 #name a:hover{color:gray;background:#fff;text-decoration:none;}
 
@@ -26,7 +26,7 @@ body {
   line-height:1.4;
 }
 #building a{color:#608341;text-decoration:none;}
-#building a:visited{color:##B13E0F;text-decoration:none;}
+#building a:visited{color:#B13E0F;text-decoration:none;}
 #building a:hover{color:gray;background:#fff;text-decoration:none;}
 
 #post {
