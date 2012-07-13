@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 <% unless mobile_device? %>
 <%= gmaps({
-      "map_options" => {"auto_adjust" => true, "type" => 'ROADMAP' },
+      "map_options" => {"auto_adjust" => true, "auto_zoom" => true, "type" => 'ROADMAP' },
       "markers" => {"data" => @json }
     })
     %>
