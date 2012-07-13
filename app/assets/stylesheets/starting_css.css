@@ -4,6 +4,9 @@ html {
 }
 body {
   background:transparent;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
 }
 #name {
   font-size:110%;
@@ -218,6 +221,7 @@ code {
   text-align:center;
 }
 .spacestable {
+  padding-top:20px;
   padding:10px;
   font-size:14px;
   font-weight:bold;
