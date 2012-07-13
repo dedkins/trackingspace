@@ -1,6 +1,10 @@
 <p id="notice"><%= notice %></p>
 <% unless mobile_device? %>
-<%= gmaps4rails(@json) %>
+<%= gmaps({
+      "map_options" => {"auto_adjust" => true, "type" => 'ROADMAP' },
+      "markers" => {"data" => @json }
+    })
+    %>
 
 <table>
   <tr>
