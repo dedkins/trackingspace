@@ -15,9 +15,6 @@ Trackingspace::Application.routes.draw do
     resources :spaces
   end
 
-  resources :buildings
-  resources :spaces
-
   resources :spaces do
     resources :leases
   end

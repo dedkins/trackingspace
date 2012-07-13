@@ -64,7 +64,7 @@ body {
   position: relative;
   float: right;
   padding: 5px;
-  color: #EE4000;
+  color: #608341;
   text-align: right;
 }
 
@@ -150,6 +150,31 @@ code {
   position: relative;
   float: right;
 }
+#yieldtitle {
+  border-radius: 10px 10px 0px 0px;
+  background:#608341;
+  opacity: 0.8;
+  -moz-opacity: 0.8;
+  filter:alpha(opacity=8);
+  height:20px;
+  width:103.5%;
+  margin-left:-20px;
+  margin-top:-10px;
+  padding:10px;
+  font-size:14px;
+  font-weight:bold;
+  color:white;
+}
+#avgrate {
+  position: absolute;
+  margin-top:-30px;
+  margin-left:600px;
+  float:right;
+  height:40px;
+  width:80px;
+  background:white;
+  box-shadow: 5px 5px 5px 0 #888;
+}
 #searchcontainer {
   height:30px;
   width:350px;
@@ -173,5 +198,32 @@ code {
   margin-left:5px;
   background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#608341)) no-repeat;
   color:#3D3D3D;
+  font-weight:bold;
+}
+
+#spacesbox {
+  width:290px;
+  border:1px solid #3D3D3D;
+  position: relative;
+  float: right;
+  margin-top:20px;
+  margin-right:0px;
+  box-shadow:5px 5px 5px 0 #888;
+}
+.spacestitle {
+  padding-top:5px;
+  font-weight:bold;
+  font-size:14px;
+  position: position: relative;
+  float: left;
+  width:100%;
+  height:20px;
+  background: #3D3D3D;
+  color:white;
+  text-align:center;
+}
+.spacestable {
+  padding:10px;
+  font-size:14px;
   font-weight:bold;
 }

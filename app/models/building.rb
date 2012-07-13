@@ -6,6 +6,7 @@ class Building < ActiveRecord::Base
   validates :latitude, :presence => true
   validates :longitude, :presence => true
 
+  default_scope :order => 'created_at DESC'
 
   acts_as_gmappable
   

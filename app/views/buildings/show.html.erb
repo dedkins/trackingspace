@@ -4,10 +4,12 @@
 	});
 	</script>
 <body>
-<table>
-	<h2><%= @building.address %> 
+
+	<div id="yieldtitle"><%= @building.address %> 
 		<% unless @building.spaces.empty? %>| Avg: <%= render 'avg_rate' %><% end %>
-	</h2>
+	</div>
+
+<table>
 	
 	<% if mobile_device? %>
 	<tr>
@@ -45,23 +47,26 @@
 		<% unless @building.microposts.empty? %>
 			<%= render 'shared/feed' %>
 		<% end %>
-	</td>
+		</td>
 	
 	
 	<td width="20px">
 	</td>
 	<td width="300px" valign="top" align="center">
-		<%= gmaps({
-		  "map_options" => {"auto_zoom" => false, "zoom" => 18, "type" => 'SATELLITE' },
-		  "markers" => {"data" => @json }
-		})
-		%>
 
 		<p></p>
 		<% if @building.spaces.any? %>
 		<%= render 'spaces' %>
 		<% end %>
 		<p></p>
+
+		<%= gmaps({
+		  "map_options" => {"auto_zoom" => false, "zoom" => 18, "type" => 'SATELLITE' },
+		  "markers" => {"data" => @json }
+		})
+		%>
+
+		
 		<p></p>
 			<script type="text/javascript"><!--
 				google_ad_client = "ca-pub-5451064655705220";

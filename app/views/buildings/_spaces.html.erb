@@ -1,31 +1,35 @@
 <% if @spaces.any? %>
 
+<div id="spacesbox">
+  <div class="spacestitle">
+    S P A C E S
+  </div>
+  <div class="spacestable">
 <table>
-  <tr>
-    Avg Rate: <%= number_to_currency(@spaces.collect(&:monthly).inject(:+)/@spaces.collect(&:sf).inject(:+)) %>
-  </tr>
-  <tr>
-    <th>Suite #</th>
-    <th>Company</th>
-    <th>Rate</th>
-    <th></th>
-    <th></th>
-  </tr>
 
 <% @spaces.each do |space| %>
   <tr>
-    <td align=center width=80px><%= link_to space.suite, building_space_path(@building,space) %></td>
-    <td align=center><%= space.company %></td>
-    <td align=right><%= number_to_currency(space.monthly/space.sf) %></td>
-    <td width=20px></td>
-    <td><%= link_to 'Edit', edit_building_space_path(@building,space) %></td>
+    <td align=left width=60px><%= link_to space.suite, building_space_path(@building,space) %></td>
+    <% if space.company? %>
+    <td align=left><%= space.company %></td>
+    <% end %>
+    <% unless space.company? %>
+    <td align=left>Company?</td>
+    <% end %>
   </tr>
 <% end %>
 </table>
-<br/>
+</div>
+</div>
+
+<table>
+  <tr>
+    <p></p>
     <%= link_to 'Add New Space', new_building_space_path(@building) %>
-<% else %>
-  Looks like we need to add some spaces!
+  
+  <% else %>
+    Looks like we need to add some spaces!
   <br/>
   <%= link_to 'Add New Space', new_building_space_path(@building) %>
+  </tr>
 <% end %>
