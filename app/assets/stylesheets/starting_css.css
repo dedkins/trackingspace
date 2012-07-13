@@ -1,9 +1,4 @@
 @import url(http://fonts.googleapis.com/css?family=Orbitron);
-
-.home_background {
-  background:url(images/SanDiegoSkyline.jpg) no-repeat center fixed;
-  background-size: cover;
-}
 html {
     background: -webkit-gradient(linear, left top, left bottom, from(#3D3D3D), to(#fff)) no-repeat;
 }
