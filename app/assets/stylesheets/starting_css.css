@@ -11,6 +11,15 @@ body {
   font-size: 13px;
   line-height: 18px;
 }
+a {
+  color: #000;
+  &:visited {
+    color: #666; }
+  &:hover {
+    color: #EE4000;
+    background-color: #000; }
+}
+
 #name {
   font-size:110%;
   font-weight:bold;

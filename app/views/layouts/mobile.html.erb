@@ -38,7 +38,7 @@
       </div>
         <div id="user_selection">
         <% if user_signed_in? %>
-        <%= link_to 'My Stuff', current_user %>  |  
+        <%= link_to 'Home', current_user %>  |  
         <% end %>
         <%= link_to 'Buildings', buildings_path %>  |  <%= link_to "People", buildings_path %> 
           
@@ -51,18 +51,7 @@
     <div id="yield">
       <%= yield %>
       <%= debug(params) if Rails.env.development? %>
-    
-        <script type="text/javascript"><!--
-          google_ad_client = "ca-pub-5451064655705220";
-          /* larger Mobile */
-          google_ad_slot = "5598308232";
-          google_ad_width = 728;
-          google_ad_height = 90;
-          //-->
-          </script>
-          <script type="text/javascript"
-          src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-        </script>
+
     </div>
 
     
@@ -73,7 +62,7 @@
             <%= link_to "Profile", current_user %> | 
             <%= link_to "Sign Out", destroy_user_session_path, :method => 'delete' %>
           <% else %>
-            <%= link_to "Sign Up", new_user_registration_path %> or <%= link_to "Sign In with Twitter", 'auth/twitter' %>
+            <%= link_to "Sign Up", new_user_registration_path %> or <%= link_to "Sign In with Twitter", '/auth/twitter' %>
           <% end %>
   </div>
 </footer>

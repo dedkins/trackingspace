@@ -26,7 +26,7 @@
 		<td><div class="greenbutton">Edit Building</div></td>
 		<% end %>
 		<% unless user_signed_in? %>
-		<div id="announcement"><%= link_to 'Log In To See More', '/auth/twitter' %></div>
+		<div id="announcement"><%= link_to 'Sign In To See More', new_user_session_path %></div>
 		<% end %>
 	</tr>
 	<tr width="100%" valign=top>
