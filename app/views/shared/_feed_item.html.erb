@@ -1,9 +1,4 @@
-<table>
-	<tr width="100%">
-	<td>
-		<% image_tag("buildings_icon", :size => "50x50") %>
-	</td>
-	<td vertical-align="top">
+
 		<div id="building">
 			<% unless @building.present? %>
 		<% if feed_item.building_id? %>
@@ -32,8 +27,3 @@
 		<%= link_to "delete", feed_item, :method => :delete, :confirm => "Are You Sure?" %>
 		<% end %>
 		<br/>
-	</td>
-	
-	<hr>
-</tr>
-</table>

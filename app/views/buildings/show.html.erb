@@ -1,42 +1,35 @@
-<script>
-	$(function() {
-		$( "#tabs" ).tabs();
-	});
-	</script>
-<body>
 
+<div class="yield_container">
 	<div id="yieldtitle"><%= @building.address %> 
 		<% unless @building.spaces.empty? %>| Avg: <%= render 'avg_rate' %><% end %>
 	</div>
-
-<table>
 	
 	<% if mobile_device? %>
-	<tr>
+	<div class="map"
 		<%= gmaps({
 		  "map_options" => {"auto_zoom" => false, "zoom" => 18, "type" => 'SATELLITE' },
 		  "markers" => {"data" => @json }
 		})
 		%>
-	</tr>
-	<tr width="100%" align="justify" height="75px">
+	</div>
+	<div class="buttons">
 		<% if user_signed_in? %>
-		<td><div class="greenbutton"><%= link_to 'Comment', mobile_post_path(:building_id => @building) %></div></td>
-		<td><div class="greenbutton"><%= link_to 'See Spaces', building_spaces_path(@building) %></div></td>
-		<td><div class="greenbutton">Edit Building</div></td>
+		<div class="greenbutton"><%= link_to 'Comment', mobile_post_path(:building_id => @building) %></div>
+		<div class="greenbutton"><%= link_to 'See Spaces', building_spaces_path(@building) %></div>
+		<div class="greenbutton">Edit Building</div>
 		<% end %>
 		<% unless user_signed_in? %>
 		<div id="announcement"><%= link_to 'Sign In To See More', new_user_session_path %></div>
 		<% end %>
-	</tr>
-	<tr width="100%" valign=top>
+	</div>
+	
 		<% unless @building.microposts.empty? %>
+		<div class="feed">
 			<%= render 'shared/feed' %>
+		</div>
 		<% end %>
-	</tr>
-
 	<% end %>
-
+<div class="clear"></div>
 	<% if not mobile_device? %>
 	<tr>
 		<td width="600px" valign=top >
@@ -90,4 +83,5 @@
 <%= yield :scripts %>
 
 </table>
-</body>
+
+</div>
