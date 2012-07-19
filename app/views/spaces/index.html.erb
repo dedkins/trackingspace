@@ -14,12 +14,9 @@
 <% @spaces.each do |space| %>
   <tr>
     <td><%= space.id %></td>
-    <td><%= space.suite %></td>
+    <td><%= link_to space.suite, building_space_path(@building,space) %></td>
     <td><%= space.sf %></td>
     <td><%= space.monthly %></td>
-    <td><%= link_to 'Show', building_space_path %></td>
-    <td><%= link_to 'Edit', edit_building_space_path(space) %></td>
-    <td><%= link_to 'Destroy', building_space_path, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
 </table>

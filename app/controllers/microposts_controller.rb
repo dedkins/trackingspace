@@ -14,8 +14,14 @@ def create
 end
 
 def mobile_post
-	@building = Building.find(params[:building_id])
+	@building = Building.find(params[:bid])
 	@micropost = current_user.microposts.build(params[:micropost])
+
+	if @micropost.save
+		flash[:success] = "Micropost Saved"
+	else
+		render current_user
+	end
 end
 
 def destroy
