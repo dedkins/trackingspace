@@ -14,7 +14,7 @@
 	</div>
 	<div class="buttons">
 		<% if user_signed_in? %>
-		<div class="greenbutton"><%= link_to 'Comment', mobile_post_path(:building_id => @building) %></div>
+		<div class="greenbutton"><%= link_to 'Comment', mobile_post_path(@building) %></div>
 		<div class="greenbutton"><%= link_to 'See Spaces', building_spaces_path(@building) %></div>
 		<div class="greenbutton"><%= link_to 'Edit Building', edit_building_path(@building) %></div>
 		<% end %>

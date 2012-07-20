@@ -7,7 +7,7 @@ Trackingspace::Application.routes.draw do
   match 'auth/:provider/callback' => 'authentications#create'
   
   resources :microposts, :only => [:create,:destroy,:mobile_post]
-  match 'mpost' => 'microposts#mobile_post', :as => 'mobile_post'
+  match 'buildings/:id/comment' => 'microposts#mobile_post', :as => 'mobile_post'
 
   resources :authentications
 

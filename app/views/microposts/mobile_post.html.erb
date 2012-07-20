@@ -1,9 +1,9 @@
 <%= form_for @micropost do |f| %>
+
 <div id="building">Add Comment for This Building</div>
 <%= f.hidden_field :building_id, :value => @building.id %>
 <%= hidden_field_tag "back_to", building_path(@building) %>
 <%= f.text_area :content, :class => "textfield"%>
 
 <%= f.submit "Submit", :class => "bigsubmit" %>
-
 <% end %>
