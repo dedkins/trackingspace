@@ -16,12 +16,13 @@
 		<% if user_signed_in? %>
 		<div class="greenbutton"><%= link_to 'Comment', mobile_post_path(:building_id => @building) %></div>
 		<div class="greenbutton"><%= link_to 'See Spaces', building_spaces_path(@building) %></div>
-		<div class="greenbutton">Edit Building</div>
+		<div class="greenbutton"><%= link_to 'Edit Building', edit_building_path(@building) %></div>
 		<% end %>
 		<% unless user_signed_in? %>
 		<div id="announcement"><%= link_to 'Sign In To See More', new_user_session_path %></div>
 		<% end %>
 	</div>
+
 	
 		<% unless @building.microposts.empty? %>
 		<div class="feed">

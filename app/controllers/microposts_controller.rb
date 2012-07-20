@@ -14,7 +14,7 @@ def create
 end
 
 def mobile_post
-	@building = Building.find(params[:bid])
+	@building = Building.find(params[:building_id])
 	@micropost = current_user.microposts.build(params[:micropost])
 
 	if @micropost.save
