@@ -5,7 +5,7 @@
 	</div>
 	
 	<% if mobile_device? %>
-	<div class="map"
+	<div class="map">
 		<%= gmaps({
 		  "map_options" => {"auto_zoom" => false, "zoom" => 18, "type" => 'SATELLITE' },
 		  "markers" => {"data" => @json }
@@ -30,6 +30,7 @@
 		<% end %>
 	<% end %>
 <div class="clear"></div>
+
 	<% if not mobile_device? %>
 	<tr>
 		<td width="600px" valign=top >
