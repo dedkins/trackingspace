@@ -1,0 +1,14 @@
+
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Address</th>
+  </tr>
+
+<% @buildinglist.each do |b| %>
+  <tr>
+    <td><%= b.id %></td>
+    <td><%= b.address %></td>
+  </tr>
+<% end %>
+</table>
