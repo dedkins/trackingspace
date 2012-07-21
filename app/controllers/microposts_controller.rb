@@ -13,14 +13,26 @@ def create
 	end
 end
 
-def mobile_post
-	@building = Building.find(params[:id])
+def mbuilding_post
+	@building = Building.find(params[:building_id])
+	@micropost = current_user.microposts.build(params[:micropost])
+end
+
+def mspace_post
+	@building = Building.find(params[:building_id])
+	@space = Space.find(params[:id])
 	@micropost = current_user.microposts.build(params[:micropost])
 end
 
 def destroy
 	@micropost.destroy
 	redirect_back_or current_user
+end
+
+def buildings_activity
+	@buildings = Buildings.all
+	@microposts = @buildings.microposts.scoped
+	@buildinglist = @microposts.where("created_at > ?", 30.days.ago, :order => "created_at desc")
 end
 
 def authorized_user

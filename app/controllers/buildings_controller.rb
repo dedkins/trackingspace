@@ -38,6 +38,9 @@ class BuildingsController < ApplicationController
   def edit
     @building = Building.find(params[:id])
   end
+
+  def map
+  end
   
   def create
     @building = Building.new
