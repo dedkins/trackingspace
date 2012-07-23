@@ -24,7 +24,11 @@
   </div>
 </div>
 
-    <%= link_to 'Add New Space', new_building_space_path(@building) %>
+  <% if user_signed_in? %>
+  <%= link_to 'Add New Space', new_building_space_path(@building) %>
+  <% else %>
+  <%= link_to 'Log In To Add Space', new_user_session_path %>
+  <% end %>
   
   <% else %>
     Looks like we need to add some spaces!
@@ -32,6 +36,6 @@
   <% if user_signed_in? %>
   <%= link_to 'Add New Space', new_building_space_path(@building) %>
   <% else %>
-  <%= link_to 'Log In To Add Space', new_user_session_path, back_to => @space.id %>
+  <%= link_to 'Log In To Add Space', new_user_session_path %>
   <% end %>
 <% end %>

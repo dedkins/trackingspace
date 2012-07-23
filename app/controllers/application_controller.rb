@@ -2,13 +2,6 @@ class ApplicationController < ActionController::Base
   helper :all
   protect_from_forgery
 
-
-  def redirect_back_or(default)
-      redirect_to(session[:return_to] || default)
-      clear_return_to
-  end
-
-  
 private 
 
 def store_location
