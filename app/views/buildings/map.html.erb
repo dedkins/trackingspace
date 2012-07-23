@@ -36,7 +36,8 @@ function success(position) {
   var marker = new google.maps.Marker({
       position: latlng, 
       map: map, 
-      title:"You are here! (at least within a "+position.coords.accuracy+" meter radius)"
+      title:"You are here! (at least within a "+position.coords.accuracy+" meter radius)",
+      clickable: true
   });
 }
 

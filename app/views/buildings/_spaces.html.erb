@@ -1,35 +1,37 @@
 <% if @spaces.any? %>
 
-<div id="spacesbox">
+<div class="spacesbox">
   <div class="spacestitle">
     S P A C E S
   </div>
   <div class="spacestable">
-<table>
 
-<% @spaces.each do |space| %>
-  <tr>
-    <td align=left width=60px><%= link_to space.suite, building_space_path(@building,space) %></td>
-    <% if space.company? %>
-    <td align=left><%= space.company %></td>
-    <% end %>
-    <% unless space.company? %>
-    <td align=left>Company?</td>
-    <% end %>
-  </tr>
-<% end %>
-</table>
-</div>
+  <% @spaces.each do |space| %>
+      <div class="spacestable-row">
+        <div class="spacestable-col"><%= link_to space.suite, building_space_path(@building,space) %></div>
+      <% if space.company? %>
+        <div class="spacestable-col">
+          <%= space.company %>
+        </div>
+      <% end %>
+      <% unless space.company? %>
+      <div class="spacestable-col">
+          Company?
+      </div>
+      <% end %>
+    </div>
+  <% end %>
+  </div>
 </div>
 
-<table>
-  <tr>
-    <p></p>
     <%= link_to 'Add New Space', new_building_space_path(@building) %>
   
   <% else %>
     Looks like we need to add some spaces!
   <br/>
+  <% if user_signed_in? %>
   <%= link_to 'Add New Space', new_building_space_path(@building) %>
-  </tr>
+  <% else %>
+  <%= link_to 'Log In To Add Space', new_user_session_path, back_to => @space.id %>
+  <% end %>
 <% end %>
