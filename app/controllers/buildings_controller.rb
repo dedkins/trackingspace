@@ -1,6 +1,5 @@
 class BuildingsController < ApplicationController
 
-  
   def index
     @buildings = Building.all
     @json = Building.all.to_gmaps4rails
@@ -88,4 +87,5 @@ class BuildingsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
 end

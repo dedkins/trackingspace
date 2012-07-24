@@ -19,7 +19,7 @@
 		<div class="greenbutton"><%= link_to 'Edit Building', edit_building_path(@building) %></div>
 		<% end %>
 		<% unless user_signed_in? %>
-		<div id="announcement"><%= link_to 'Sign In To See More', new_user_session_path %></div>
+		<div id="announcement"><%= link_to 'Sign In To See More', new_user_session_path(:building_id => @building) %></div>
 		<% end %>
 	</div>
 
