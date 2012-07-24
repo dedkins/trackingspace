@@ -162,6 +162,17 @@ footer{
 #footerlinks a:visited{color:#000}
 #footerlinks a:hover{color:#000}
 
+.field {
+  line-height: 1.5;
+}
+.field input {
+  font-size:24px;
+  border-radius:5px;
+  border:2px solid black;
+  box-shadow: 5px 5px 5px #888;
+  padding:10px;
+}
+
 .yield_container {
   width:100%;
   height:100%;
