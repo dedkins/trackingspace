@@ -13,10 +13,16 @@
         <div class="spacestable-col">
           <%= space.company %>
         </div>
+        <div class="spacestable-col">
+        <%= space.status %>
+        </div>
       <% end %>
       <% unless space.company? %>
       <div class="spacestable-col">
           Company?
+      </div>
+      <div class="spacestable-col">
+        <%= space.status %>
       </div>
       <% end %>
     </div>

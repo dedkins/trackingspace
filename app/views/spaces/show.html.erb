@@ -10,6 +10,12 @@
 			<%= render 'shared/feed' %>
 		<% end %>
 	</td>
+
+<p>
+  <b>Status:</b>
+  <%= @space.status %>
+</p>
+
 <p>
   <b>Suite:</b>
   <%= @space.suite %>
@@ -35,6 +41,8 @@
   <%= number_to_currency(@space.monthly/@space.sf) %>
 </p>
 
-<%= link_to 'New Lease', new_space_lease_path(@space,@lease) %> |
+
+
+<%= link_to 'New Lease', new_lease_path(@space,@lease) %> |
 <%= link_to 'Edit', edit_building_space_path(@building,@space) %> |
 <%= link_to 'Back', building_path(@building) %>

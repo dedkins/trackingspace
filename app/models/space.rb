@@ -3,7 +3,7 @@ class Space < ActiveRecord::Base
   has_many :leases, :dependent => :destroy
   has_many :microposts, :dependent => :destroy
   
-  attr_accessible :monthly, :sf, :suite, :company
+  attr_accessible :monthly, :sf, :suite, :company, :status
   
   def feed
     Micropost.where("space_id = ?", id)

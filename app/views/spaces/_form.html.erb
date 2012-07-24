@@ -32,6 +32,11 @@
     <%= f.text_field :company %>
   </div>
 
+  <div class="field">
+    <%= f.label :status %><br/>
+    <%= f.select :status, options_for_select([["Available", "Available"], ["Leased", "Leased"], ["Possible", "Possible"]]) %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
