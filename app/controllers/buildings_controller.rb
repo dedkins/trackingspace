@@ -41,6 +41,14 @@ class BuildingsController < ApplicationController
   def map
   end
   
+  def home
+    if user_signed_in?
+      redirect_to buildings_path
+    else
+      render :layout => "home_html"
+    end
+  end
+
   def create
     @building = Building.new
     @building.address = params[:building][:address]

@@ -11,6 +11,7 @@ Trackingspace::Application.routes.draw do
   match 'buildings/:building_id/spaces/:id/post' => 'microposts#mspace_post', :as => 'mspace_post'
 
   match 'map' => 'buildings#map'
+  match 'home' => 'buildings#home'
 
   resources :authentications
 
@@ -23,7 +24,8 @@ Trackingspace::Application.routes.draw do
   #  resources :leases
   #end
 
-  root :to => 'buildings#index'
+  root :to => 'buildings#home'
+  user_root :to => 'buildings#index'
   
   
   end
