@@ -1,10 +1,12 @@
 <html>
-
+<div class="logo">
+  TrackingSpace
+</div>
 <%= form_for Building.new do |f| %>
   <div class="centerbox">
   </div>
   <div class="hometitle">
-    Find Your Space...
+    Find A Space...
   </div>
       <div class='searchcontainer'>
       	<%= f.error_messages %>
@@ -16,8 +18,11 @@
           <%= f.hidden_field :user_id, :value => current_user.id %>
           <% end %>
       </div>
-      <div class="logintwitter">
+      <div class="login">
         <%= link_to "Log In", new_user_session_path %>
+      </div>
+      <div class="logintwitter">
+        <%= link_to "Log In", '/auth/twitter' %> <%= image_tag "https://github.com/intridea/authbuttons/raw/master/png/twitter_64.png", :size => "25x25", :alt => "Twitter", :align => "Top" %>
       </div>
 <% end %>
 
