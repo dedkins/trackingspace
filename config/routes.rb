@@ -25,7 +25,6 @@ Trackingspace::Application.routes.draw do
   #end
 
   root :to => 'buildings#home'
-  user_root :to => 'buildings#index'
   
   
   end
