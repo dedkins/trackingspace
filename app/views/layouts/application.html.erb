@@ -8,10 +8,7 @@
   <%= stylesheet_link_tag 'application'%>
   <%= stylesheet_link_tag 'starting_css'%>
   <%= stylesheet_link_tag 'gmaps4rails' %>
-  <% if mobile_device? %>
-  <%= stylesheet_link_tag 'mobile' %>
-  <meta name="viewport" content="width=320; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
-  <% end %>
+  <%= stylesheet_link_tag 'mobile' if mobile_device? %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
   
