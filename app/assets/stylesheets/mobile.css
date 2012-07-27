@@ -62,13 +62,6 @@ body {
 #announcement a:visited{color:white;text-decoration:none;}
 #announcement a:hover{color:white;text-decoration:none;}
 
-.field {
-  font-size:125%;
-}
-.inputfield {
-  height:100px;
-  width:500px;
-}
 #greenwhite {
   border-radius:5px;
   height:40px;
@@ -102,7 +95,7 @@ body {
 #name a:hover{color:gray;background:#fff;text-decoration:none;}
 
 #building {
-  font-size:150%;
+  font-size:120%;
   font-weight:bold;
   color:#608341;
   line-height:1.4;
@@ -266,6 +259,6 @@ footer{
   float: left;
   width:96%;
   border-radius: 10px;
-  border: 1px dashed black;
+  border: 2px dashed black;
   padding:20px;
 }
