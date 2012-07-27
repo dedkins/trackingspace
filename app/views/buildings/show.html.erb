@@ -1,36 +1,7 @@
 
 <div class="yield_container">
-	<div id="yieldtitle"><%= @building.address %> 
+	<div id="yieldtitle"><%= @building.address %> | (<%= link_to 'Edit', edit_building_path(@building) %>)
 	</div>
-	
-	<% if mobile_device? %>
-	<div class="map">
-		<%= gmaps({
-		  "map_options" => {"auto_zoom" => false, "zoom" => 18, "type" => 'SATELLITE' },
-		  "markers" => {"data" => @json }
-		})
-		%>
-	</div>
-	<div class="buttons">
-		<% if user_signed_in? %>
-		<div class="greenbutton"><%= link_to 'Comment', mbuilding_post_path(@building) %></div>
-		<div class="greenbutton"><%= link_to 'See Spaces', building_spaces_path(@building) %></div>
-		<div class="greenbutton"><%= link_to 'Edit Building', edit_building_path(@building) %></div>
-		<% end %>
-		<% unless user_signed_in? %>
-		<div id="announcement"><%= link_to 'Sign In To See More', new_user_session_path(:building_id => @building) %></div>
-		<% end %>
-	</div>
-
-		<% unless @building.microposts.empty? %>
-		<div class="feed">
-			<%= render 'shared/feed' %>
-		</div>
-		<% end %>
-
-	<% end %>
-
-	<% if not mobile_device? %>
 
 	<div class="contact_bar">
 		<div class="info_box_title">
@@ -96,6 +67,31 @@
 			Add Yourself
 		</div>
 	</div>
+	
+	<% if mobile_device? %>
+
+	<div class="buttons">
+		<% if user_signed_in? %>
+		<div class="greenbutton"><%= link_to 'Comment', mbuilding_post_path(@building) %></div>
+		<div class="greenbutton"><%= link_to 'See Spaces', building_spaces_path(@building) %></div>
+		<div class="greenbutton"><%= link_to 'Edit Building', edit_building_path(@building) %></div>
+		<% end %>
+		<% unless user_signed_in? %>
+		<div id="announcement"><%= link_to 'Sign In To See More', new_user_session_path(:building_id => @building) %></div>
+		<% end %>
+	</div>
+
+		<% unless @building.microposts.empty? %>
+		<div class="feed">
+			<%= render 'shared/feed' %>
+		</div>
+		<% end %>
+
+	<% end %>
+
+	<% if not mobile_device? %>
+
+	
 	<div class="yield_container">
 		<div class="feed_heading">
 			What's the Latest?
@@ -125,8 +121,6 @@
 			<script type="text/javascript"
 				src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 			</script>
-			<%= link_to 'Edit', edit_building_path(@building) %> |
-			<%= link_to 'Back', buildings_path %>
 		</div>
 	<div class="clear"></div>
 	</div>	

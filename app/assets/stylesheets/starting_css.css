@@ -19,6 +19,9 @@ a {
     color: #EE4000;
     background-color: #000; }
 }
+input {
+  border:1px solid black;
+}
 
 #name {
   font-size:110%;
