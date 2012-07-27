@@ -1,6 +1,5 @@
-<h1>Editing <%= @building.address %></h1>
+<%= link_to "<---Go Back", building_path(@building) %>	
+
+<h3>Editing <%= @building.address %></h3>
 
 <%= render 'form' %>
-
-<%= link_to 'Show', @building %> |
-<%= link_to 'Back', building_path(@building) %>
