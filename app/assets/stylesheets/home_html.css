@@ -85,13 +85,7 @@ html {
   width:100px;
   border-radius:5px;
   background: #70bf32;
-  background: -webkit-linear-gradient(top, #fff, #70bf32);
-  background: url('linear-gradient.png') 0 0 repeat-x;
-  background: -moz-linear-gradient(top, #fff, #70bf32);
-  background: -ms-linear-gradient(top, #fff, #70bf32);
-  background: -o-linear-gradient(top, #fff, #70bf32);
-  background: -webkit-linear-gradient(top, #fff, #70bf32);
-  background: linear-gradient(top, #fff, #70bf32);
+  background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#70bf32)) no-repeat;
   text-align:center;
   box-shadow:5px 5px 5px #000;
   border:2px solid black;
@@ -118,13 +112,7 @@ html {
   box-shadow:5px 5px 5px #000;
   border:2px solid black;
   background: #70bf32;
-  background: -webkit-linear-gradient(top, #fff, #70bf32);
-  background: url('linear-gradient.png') 0 0 repeat-x;
-  background: -moz-linear-gradient(top, #fff, #70bf32);
-  background: -ms-linear-gradient(top, #fff, #70bf32);
-  background: -o-linear-gradient(top, #fff, #70bf32);
-  background: -webkit-linear-gradient(top, #fff, #70bf32);
-  background: linear-gradient(top, #fff, #70bf32);
+  background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#70bf32)) no-repeat;
 }
 .logintwitter a {
   color:black;
