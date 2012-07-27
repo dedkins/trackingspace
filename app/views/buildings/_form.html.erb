@@ -15,10 +15,7 @@
   	
   <div>
       <div class='input'>
-        <%= f.label :address %><br />
-        <%= f.text_field :address, :id => "addresspicker_map" %><br/>
-        <%= f.hidden_field :latitude, :lat %>
-        <%= f.hidden_field :longitude, :lng %>
+        <%= f.number_field :size %>
   </div>
   <div class="actions">
     <%= f.submit %>

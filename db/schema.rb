@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120725011858) do
+ActiveRecord::Schema.define(:version => 20120727052018) do
 
   create_table "authentications", :force => true do |t|
     t.integer  "user_id"
@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(:version => 20120725011858) do
     t.boolean  "gmaps"
     t.integer  "user_id"
     t.string   "status"
+    t.decimal  "size"
   end
 
   create_table "leases", :force => true do |t|

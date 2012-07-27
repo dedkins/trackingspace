@@ -1,7 +1,6 @@
 
 <div class="yield_container">
 	<div id="yieldtitle"><%= @building.address %> 
-		<% unless @building.spaces.empty? %>| Avg: <%= render 'avg_rate' %><% end %>
 	</div>
 	
 	<% if mobile_device? %>
@@ -28,9 +27,42 @@
 			<%= render 'shared/feed' %>
 		</div>
 		<% end %>
+
 	<% end %>
 
 	<% if not mobile_device? %>
+
+	<div class="contact_bar">
+		<div class="info_box_title">
+			Est. Valuation
+		</div>
+		<div class="info_box_title">
+			Avg. Rate
+		</div>
+		<div class="info_box_title">
+			Spaces
+		</div>
+		<div class="info_box_title">
+			Posts
+		</div>
+		<div class="info_box">
+			<%= render 'est_value' %>
+		</div>
+		<div class="info_box">
+			<%= render 'avg_rate' %>
+		</div>
+		<div class="info_box">
+			<% unless @building.spaces.empty? %>
+				<%= @building.spaces.size %>
+			<% else %>
+				Add Space
+			<% end %>
+		</div>
+		<div class="info_box">
+			<%= @building.microposts.size %>
+		</div>
+	</div>
+
 	<div class="map">
 		<%= gmaps({
 		  "map_options" => {"auto_zoom" => false, "zoom" => 18, "type" => 'SATELLITE' },
@@ -38,7 +70,32 @@
 		})
 		%>
 	</div>
-
+	<div class="contact_bar">
+		<div class="contact_box_title">
+			Owner
+		</div>
+		<div class="contact_box_title">
+			Property Manager
+		</div>
+		<div class="contact_box_title">
+			Brokerage Agency
+		</div>
+		<div class="contact_box_title">
+			Landscaper
+		</div>
+		<div class="contact_box">
+			Upgrade
+		</div>
+		<div class="contact_box">
+			Add Yourself
+		</div>
+		<div class="contact_box">
+			Add Yourself
+		</div>
+		<div class="contact_box">
+			Add Yourself
+		</div>
+	</div>
 	<div class="yield_container">
 		<div class="feed_heading">
 			What's the Latest?

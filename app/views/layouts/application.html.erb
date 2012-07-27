@@ -8,7 +8,10 @@
   <%= stylesheet_link_tag 'application'%>
   <%= stylesheet_link_tag 'starting_css'%>
   <%= stylesheet_link_tag 'gmaps4rails' %>
-  <%= stylesheet_link_tag 'mobile' if mobile_device? %>
+  <% if mobile_device? %>
+  <%= stylesheet_link_tag 'mobile' %>
+  <meta name="viewport" content="width=320; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
+  <% end %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
   
@@ -60,5 +63,12 @@
       <%= yield %>
       <%= debug(params) if Rails.env.development? %>
     </div>
+    <p>
+  <% if mobile_device? %>
+    <%= link_to "Full Site", :mobile => 0 %>
+  <% else %>
+    <%= link_to "Mobile Site", :mobile => 1 %>
+  <% end %>
+</p>
 </body>
 </html>
