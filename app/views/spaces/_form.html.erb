@@ -37,6 +37,11 @@
     <%= f.select :status, options_for_select([["Available", "Available"], ["Leased", "Leased"], ["Possible", "Possible"]]) %>
   </div>
 
+  <div class='field'>
+    <%= f.label "3D Floorplan" %>
+    <%= f.text_field :_3dplanurl %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
