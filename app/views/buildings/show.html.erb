@@ -24,7 +24,7 @@
 		</div>
 		<div class="info_box">
 			<% unless @building.spaces.empty? %>
-				<%= @building.spaces.size %>
+				<%= link_to @building.spaces.size, building_spaces_path(@building) %>
 			<% else %>
 				Add Space
 			<% end %>
@@ -58,13 +58,13 @@
 			Upgrade
 		</div>
 		<div class="contact_box">
-			Add Yourself
+			<%= link_to 'Add Yourself', '' %>
 		</div>
 		<div class="contact_box">
-			Add Yourself
+			<%= link_to 'Add Yourself', '' %>
 		</div>
 		<div class="contact_box">
-			Add Yourself
+			<%= link_to 'Add Yourself', '' %>
 		</div>
 	</div>
 	
@@ -78,7 +78,7 @@
 		<div class="greenbutton"><%= link_to 'Add To Tour', '' %></div>
 		<% end %>
 		<% unless user_signed_in? %>
-		<div id="announcement"><%= link_to 'Sign In To See More', new_user_session_path(:building_id => @building) %></div>
+		<div id="announcement"><%= link_to 'Sign In To Get More Options', new_user_session_path(:building_id => @building) %></div>
 		<% end %>
 	</div>
 

@@ -2,21 +2,27 @@
 
 <table>
   <tr>
-    <th>Space</th>
+    <th>3D Plan</th>
     <th>Suite</th>
+    <th>Company</th>
     <th>Sf</th>
-    <th>Monthly Cost</th>
-    <th></th>
-    <th></th>
+    <th>Monthly Total</th>
+    <th>Est Rate</th>
+    <th>Status?</th>
     <th></th>
   </tr>
 
 <% @spaces.each do |space| %>
   <tr>
-    <td><%= space.id %></td>
+    <td><% if space._3dplanurl? %>Yes<% else %>No<% end %></td>
     <td><%= link_to space.suite, building_space_path(@building,space) %></td>
-    <td><%= space.sf %></td>
-    <td><%= space.monthly %></td>
+    <td><%= space.company %>
+    <td><%= number_with_delimiter(space.sf) %></td>
+    <td><%= number_to_currency(space.monthly) %></td>
+    <% if space.monthly? && space.sf? %>
+    <td><%= number_to_currency(space.monthly/space.sf) %></td>
+    <% end %>
+    <td><%= space.status %></td>
   </tr>
 <% end %>
 </table>
