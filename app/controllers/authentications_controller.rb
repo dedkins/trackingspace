@@ -7,6 +7,7 @@ class AuthenticationsController < ApplicationController
   def create
     omniauth = request.env["omniauth.auth"]
     authentication = Authentication.find_by_provider_and_uid(omniauth['provider'],omniauth['uid'])
+    returnaddress = request.referer
     if authentication
       sign_in_and_redirect(:user, authentication.user)
       flash[:notice] = 'Sign In Successful'

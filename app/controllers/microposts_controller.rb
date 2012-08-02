@@ -26,6 +26,7 @@ end
 
 def destroy
 	@micropost.destroy
+	session[:return_to] ||= request.referer
 	redirect_back_or current_user
 end
 

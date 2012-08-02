@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120727052018) do
+ActiveRecord::Schema.define(:version => 20120802031524) do
 
   create_table "authentications", :force => true do |t|
     t.integer  "user_id"
@@ -103,6 +103,7 @@ ActiveRecord::Schema.define(:version => 20120727052018) do
     t.datetime "updated_at",                             :null => false
     t.string   "rpx_indentifier"
     t.string   "name"
+    t.string   "username"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

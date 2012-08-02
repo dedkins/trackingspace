@@ -6,6 +6,9 @@
   <div><%= f.label :name %><br />
   <%= f.text_field :name %></div>
 
+  <div><%= f.label :username %><br />
+  <%= f.text_field :username %></div>
+
   <div><%= f.label :email %><br />
   <%= f.email_field :email %></div>
 
@@ -17,6 +20,8 @@
 
   <div><%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
   <%= f.password_field :current_password %></div>
+
+  <%= link_to 'Edit Password', edit_user_password_path(resource_name) %>
 
   <div><%= f.submit "Update" %></div>
 <% end %>
