@@ -1,9 +1,13 @@
-<%= notice %>
-<h1><%= @user.name %>'s Profile Page</h1>
-		<% if current_user == @user %>(<%= link_to 'Edit', edit_user_registration_path %>)<% end %>
-<% unless mobile_device? %>
 <div class="yield_container">
+	<%= notice %>
+
+<h1>
+	<%= gravatar_image_tag @user.email %>
+	<%= @user.name %>'s Profile Page</h1>
+		<% if current_user == @user %>(<%= link_to 'Edit', edit_user_registration_path %>)<% end %>
+		
 		<div class="feed">
+			
 			<% if user_signed_in? %>
 			<h3>Add a comment about this person:</h3>
 				<%= render '/shared/micropost_form' %>
@@ -28,6 +32,4 @@
 			</script>
 		</div>
 	<div class="clear"></div>
-
 </div>
-<% end %>

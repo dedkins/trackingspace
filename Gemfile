@@ -15,11 +15,13 @@ gem 'omniauth-google'
 gem 'devise'
 gem 'aws-s3'
 gem "dynamic_form"
+gem 'gravatar_image_tag'
 
 group :development do
 	gem 'rspec-rails', '2.0.1'
-	gem 'annotate'
+	gem 'annotate', '>=2.5.0'
 	gem 'aws-s3'
+	gem 'gravatar_image_tag'
 end
 
 group :test do
