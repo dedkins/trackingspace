@@ -1,15 +1,7 @@
 <div class="yield_container">
-	<%= notice %>
-
-<h1>
-	<%= gravatar_image_tag @user.email %>
-	<%= @user.name %>'s Profile Page</h1>
-		<% if current_user == @user %>(<%= link_to 'Edit', edit_user_registration_path %>)<% end %>
-		
 		<div class="feed">
-			
 			<% if user_signed_in? %>
-			<h3>Add a comment about this person:</h3>
+			Add a comment about this person:
 				<%= render '/shared/micropost_form' %>
 			<% end %>
 			<% unless @user.microposts.empty? %>
@@ -17,8 +9,9 @@
 			<% end %>
 		</div>
 		<div class="right">
-			Otherstuff
-			<p></p>
+			<%= gravatar_image_tag @user.email %>
+			<%= @user.name %>'s Profile Page</h1>
+			<% if current_user == @user %>(<%= link_to 'Edit', edit_user_registration_path %>)<% end %>
 			<script type="text/javascript"><!--
 					google_ad_client = "ca-pub-5451064655705220";
 					/* First */
@@ -30,6 +23,6 @@
 			<script type="text/javascript"
 				src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 			</script>
+			<div class="clear"/>
 		</div>
-	<div class="clear"></div>
 </div>

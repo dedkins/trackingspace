@@ -4,6 +4,7 @@ html {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover; 
+  font-family: Orbitron, sans-serif;
 }
 html {
   background-image: url(/assets/SanDiegoSkyline.jpg) no-repeat center center fixed;
@@ -11,6 +12,7 @@ html {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover; 
+  font-family: Orbitron, sans-serif;
 }
 .logo {
   position: absolute;
@@ -31,6 +33,7 @@ html {
   height:40px;
   width:350px;
   z-index: 9999;
+  font-family: Orbitron, sans-serif;
 }
 .search {
   position: relative;
@@ -48,11 +51,12 @@ html {
   height:35px;
   width:40px;
   border-radius: 0px 10px 10px 0px;
-  border:2px solid black;
+  border:1px solid black;
   margin-left:5px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#70bf32)) no-repeat;
-  color:#3D3D3D;
+  background: -webkit-gradient(linear, left top, left bottom, from(#dcf1cb), to(#70bf32)) no-repeat;
+  color:black;
   font-weight:bold;
+  box-shadow:1px 1px 1px #000;
 }
 
 .centerbox {
@@ -66,11 +70,11 @@ html {
   margin-left:-250px;
   border-radius:8px;
   border:2px solid black;
-  box-shadow:5px 5px 5px #000;
   background:#888;
   opacity: 0.7;
   -moz-opacity: 0.7;
-  filter:alpha(opacity=7);
+  filter:alpha(opacity=7);  
+  font-family: Orbitron, sans-serif;
 }
 
 .login {
@@ -85,10 +89,10 @@ html {
   width:100px;
   border-radius:5px;
   background: #70bf32;
-  background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#70bf32)) no-repeat;
+  background: -webkit-gradient(linear, left top, left bottom, from(#dcf1cb), to(#70bf32)) no-repeat;
   text-align:center;
-  box-shadow:5px 5px 5px #000;
-  border:2px solid black;
+  box-shadow:1px 1px 1px #000;
+  border:1px solid black;
 }
 .login a {
   color:black;
@@ -109,10 +113,10 @@ html {
   border-radius:5px;
   text-align:center;
   vertical-align: middle;
-  box-shadow:5px 5px 5px #000;
-  border:2px solid black;
+  border:1px solid black;
   background: #70bf32;
-  background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#70bf32)) no-repeat;
+  background: -webkit-gradient(linear, left top, left bottom, from(#dcf1cb), to(#70bf32)) no-repeat;
+  box-shadow:1px 1px 1px #000;
 }
 .logintwitter a {
   color:black;
@@ -134,4 +138,5 @@ html {
   height:28px;
   width:400px;
   text-align:center;
+  font-family: Orbitron, sans-serif;
 }
