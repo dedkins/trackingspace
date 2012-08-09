@@ -336,17 +336,19 @@ code {
   clear: both;
 }
 .usercontainer {
-  width:100%;
+  position: relative;
   padding:5px;
   background:white;
   border:1px solid red;
+  overflow: auto;
 }
 .lease_left {
+  float: left;
   width:500px;
   padding: 10px;
-  border:1px solid red;
 }
 .lease_right {
+  float:right;
+  width:320px;
   padding: 20px;
-  border:1px solid blue;
 }
