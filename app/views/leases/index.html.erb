@@ -2,7 +2,6 @@
 
 <table>
   <tr>
-    <th>User</th>
     <th>Size</th>
     <th>Current rate</th>
     <th>Expiration</th>
@@ -14,7 +13,6 @@
 
 <% @leases.each do |lease| %>
   <tr>
-    <td><%= lease.user_id %></td>
     <td><%= lease.size %></td>
     <td><%= lease.current_rate %></td>
     <td><%= lease.expiration %></td>
