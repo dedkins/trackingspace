@@ -19,10 +19,9 @@ Trackingspace::Application.routes.draw do
     resources :spaces
   end
 
-  resources :leases
-  #resources :spaces do
-  #  resources :leases
-  #end
+  resources :spaces do
+    resources :leases
+  end
 
   root :to => 'buildings#home'
   

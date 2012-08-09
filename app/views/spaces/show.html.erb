@@ -48,7 +48,7 @@
 <% end %>
 
 <% if user_signed_in? %>
-<%= link_to 'New Lease', new_lease_path(@space,@lease) %> |
+<%= link_to 'New Lease', new_space_lease_path(@space) %> |
 <%= link_to 'Edit', edit_building_space_path(@building,@space) %> |
 <% end %>
 

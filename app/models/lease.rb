@@ -15,6 +15,17 @@
 class Lease < ActiveRecord::Base
   has_many :users
   belongs_to :space
+
+  validates_attachment_content_type :file, :content_type => ['image/jpeg', 'image/png', 'image/gif','application/pdf']
   
-  attr_accessible :current_rate, :expiration, :size, :space_id, :user_id
+  attr_accessible :current_rate, :expiration, :size, :space_id, :user_id, :file
+
+  #paperclip
+  has_attached_file :file,
+     :storage => :s3,
+     :s3_credentials => "#{Rails.root}/config/s3.yml",
+     :path => "#{Rails.root}/public/system/:attachment/:id/:style/:filename"
+
 end
+
+

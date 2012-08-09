@@ -1,4 +1,8 @@
 class LeasesController < ApplicationController
+
+  require 'paperclip'
+  require 'aws-sdk'
+
   # GET /leases
   # GET /leases.json
   def index
@@ -24,12 +28,9 @@ class LeasesController < ApplicationController
   # GET /leases/new
   # GET /leases/new.json
   def new
+    @user = current_user.id
+    @space = Space.find(params[:space_id])
     @lease = Lease.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @lease }
-    end
   end
 
   # GET /leases/1/edit
@@ -41,11 +42,12 @@ class LeasesController < ApplicationController
   # POST /leases.json
   
   def create
+    @user = current_user.id
+    @space = Space.find(params[:space_id])
     @lease = Lease.new(params[:lease])
-
     respond_to do |format|
       if @lease.save
-        format.html { redirect_to @lease, notice: 'Lease was successfully created.' }
+        format.html { redirect_to space_lease_path(@space,@lease), notice: 'Lease was successfully created.' }
         format.json { render json: @lease, status: :created, location: @lease }
       else
         format.html { render action: "new" }

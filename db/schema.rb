@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120802031524) do
+ActiveRecord::Schema.define(:version => 20120809024505) do
 
   create_table "authentications", :force => true do |t|
     t.integer  "user_id"
@@ -36,11 +36,16 @@ ActiveRecord::Schema.define(:version => 20120802031524) do
   create_table "leases", :force => true do |t|
     t.integer  "user_id"
     t.integer  "size"
-    t.decimal  "current_rate", :precision => 10, :scale => 2
+    t.decimal  "current_rate",      :precision => 10, :scale => 2
     t.date     "expiration"
     t.integer  "space_id"
-    t.datetime "created_at",                                  :null => false
-    t.datetime "updated_at",                                  :null => false
+    t.datetime "created_at",                                       :null => false
+    t.datetime "updated_at",                                       :null => false
+    t.string   "file"
+    t.string   "file_file_name"
+    t.string   "file_content_type"
+    t.integer  "file_file_size"
+    t.datetime "file_updated_at"
   end
 
   create_table "microposts", :force => true do |t|

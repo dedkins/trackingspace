@@ -13,15 +13,17 @@ gem 'omniauth-facebook'
 gem 'omniauth-linkedin'
 gem 'omniauth-google'
 gem 'devise'
-gem 'aws-s3'
+gem 'aws-sdk'
 gem "dynamic_form"
 gem 'gravatar_image_tag'
+gem 'paperclip', '~> 3.0'
 
 group :development do
 	gem 'rspec-rails', '2.0.1'
 	gem 'annotate', '>=2.5.0'
-	gem 'aws-s3'
+	gem 'aws-sdk'
 	gem 'gravatar_image_tag'
+	gem 'paperclip', '~> 3.0'
 end
 
 group :test do

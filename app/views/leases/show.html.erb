@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>User:</b>
-  <%= @lease.user_id %>
+  <b>Lease:</b>
+  <%= image_tag @lease.file.url(:thumb) %>
 </p>
 
 <p>
@@ -26,5 +26,5 @@
 </p>
 
 
-<%= link_to 'Edit', edit_lease_path(@lease) %> |
-<%= link_to 'Back', leases_path %>
+<%= link_to 'Edit', edit_space_lease_path(@lease) %> |
+<%= link_to 'Back', space_leases_path %>

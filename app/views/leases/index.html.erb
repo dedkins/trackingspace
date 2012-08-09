@@ -19,8 +19,7 @@
     <td><%= lease.current_rate %></td>
     <td><%= lease.expiration %></td>
     <td><%= lease.space_id %></td>
-    <td><%= link_to 'Show', lease %></td>
-    <td><%= link_to 'Edit', edit_lease_path(lease) %></td>
+    <td><%= link_to 'Edit', edit_space_lease_path(lease) %></td>
     <td><%= link_to 'Destroy', lease, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
@@ -28,4 +27,4 @@
 
 <br />
 
-<%= link_to 'New Lease', new_lease_path %>
+<%= link_to 'New Lease', new_space_lease_path %>
