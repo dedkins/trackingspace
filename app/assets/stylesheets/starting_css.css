@@ -318,8 +318,8 @@ code {
   color:#707070;
 }
 .feed {
-  position: relative;
   float:left;
+  width:500px;
   padding:20px;
   margin: 10px 0px 10px 0px;
   border-radius: 8px;
@@ -327,7 +327,6 @@ code {
   background-color: #F0F0F0;
 }
 .right {
-  position: relative;
   float: right;
   width:280px;
   padding:20px;

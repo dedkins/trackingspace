@@ -1,14 +1,14 @@
 
 		<div id="building">
 			<% unless @building.present? %>
-		<% if feed_item.building_id? %>
-			<%= link_to feed_item.building.address, building_path(feed_item.building) %></div>
-		<% end %>
+				<% if feed_item.building_id? %>
+					<%= link_to feed_item.building.address, building_path(feed_item.building) %></div>
+				<% end %>
 			<% end %>
 			<% if feed_item.space_id %>
-			<div id="building">
-				Related to Suite <%= feed_item.space.suite %>
-			</div>
+				<div id="building">
+					Related to Suite <%= feed_item.space.suite %>
+				</div>
 			<% end %>
 		</div>
 		<% if feed_item.content? %>

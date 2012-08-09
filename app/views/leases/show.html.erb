@@ -2,7 +2,12 @@
 
 <div class="usercontainer">
   <div class="lease_left">
-    <iframe src="<%= @lease.file %>" width="100%" height="600px"></iframe>
+    <object data='<%= @lease.file %>' type='application/pdf' width='100%' height='600px'>
+  <p>
+    It appears your Web browser is not configured to display PDF files. 
+    No worries, just <%= link_to 'click here to download the PDF file.', @lease.file.path %>
+  </p>
+</object>
   </div>
 
   <div class="lease_right">
@@ -10,6 +15,7 @@
 <p>
   <b>Lease:</b>
   <%= image_tag @lease.file.url(:thumb) %>
+  <%= link_to 'Click Here to Download', @lease.file.url %>
 </p>
 
 <p>

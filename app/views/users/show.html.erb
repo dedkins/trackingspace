@@ -1,13 +1,16 @@
-<div class="yield_container">
+<div class="usercontainer">
+	<div class="lease_left">
 		<div class="feed">
 			<% if user_signed_in? %>
 			Add a comment about this person:
 				<%= render '/shared/micropost_form' %>
 			<% end %>
+		</div>
 			<% unless @user.microposts.empty? %>
 				<%= render 'shared/feed' %>
 			<% end %>
-		</div>
+		<div class="clear"/>
+	</div>
 		<div class="right">
 			<%= gravatar_image_tag @user.email %>
 			<%= @user.name %>'s Profile Page</h1>
