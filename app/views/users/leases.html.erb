@@ -6,7 +6,6 @@
     <th>Address</th>
     <th>Current rate</th>
     <th>Expiration</th>
-    <th>Space</th>
     <th></th>
     <th></th>
     <th></th>
@@ -18,7 +17,7 @@
     <td><%= lease.space.building.address %></td>
     <td><%= lease.current_rate %></td>
     <td><%= lease.expiration %></td>
-    <td><%= lease.space_id %></td>
+    <td><%= link_to 'Show', space_lease_path(lease.space,lease) %></td>
     <td><%= link_to 'Edit', edit_space_lease_path(lease.space,lease) %></td>
   </tr>
 <% end %>
