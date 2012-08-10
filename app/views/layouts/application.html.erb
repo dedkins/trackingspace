@@ -46,7 +46,7 @@
           <%= link_to "Sign Up", new_user_registration_path %> | <%= link_to "Sign In", new_user_session_path %> | <%= link_to "Sign In w/ Twitter", '/auth/twitter' %>
         <% end %>
         <br/><br/>
-        <%= link_to "Buildings", buildings_path %> | <%= link_to "Spaces", buildings_path %> | <%= link_to "Leases", buildings_path %> | <%= link_to "People", buildings_path %> 
+        <%= link_to "Buildings", buildings_path %> | <%= link_to "Spaces", buildings_path %> | <%= link_to "Leases", user_leases_path %> | <%= link_to "People", buildings_path %> 
         <% if user_signed_in? %>
           | <%= link_to "Profile", current_user %>
         <% end %>

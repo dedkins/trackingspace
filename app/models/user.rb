@@ -37,6 +37,10 @@ class User < ActiveRecord::Base
     Micropost.where("user_id = ?", id)
   end
 
+  def lease
+    Lease.where("user_id = ?", id)
+  end
+
   def apply_omniauth(omniauth)
   	authentications.build(:provider => omniauth['provider'], :uid => omniauth['uid'])
   end

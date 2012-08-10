@@ -19,6 +19,8 @@ Trackingspace::Application.routes.draw do
     resources :spaces
   end
 
+  match 'leases' => 'users#leases', :as => 'user_leases'
+
   resources :spaces do
     resources :leases
   end

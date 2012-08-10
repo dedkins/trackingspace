@@ -1,7 +1,8 @@
-<h1>Listing leases</h1>
+<h1>Leases I Created</h1>
 
 <table>
   <tr>
+    <th>File?</th>
     <th>Address</th>
     <th>Current rate</th>
     <th>Expiration</th>
@@ -13,16 +14,14 @@
 
 <% @leases.each do |lease| %>
   <tr>
-    <td><%= space.address %></td>
+    <td><% if lease.file? %>Yes<% else %>No<% end %></td>
+    <td><%= lease.space.building.address %></td>
     <td><%= lease.current_rate %></td>
     <td><%= lease.expiration %></td>
     <td><%= lease.space_id %></td>
-    <td><%= link_to 'Edit', edit_space_lease_path(lease) %></td>
-    <td><%= link_to 'Destroy', lease, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to 'Edit', edit_space_lease_path(lease.space,lease) %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
-
-<%= link_to 'New Lease', new_space_lease_path %>
