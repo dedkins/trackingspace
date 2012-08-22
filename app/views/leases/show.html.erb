@@ -1,32 +1,31 @@
 <%= currently_at 'Leases' %>
 
+
 <%= render 'leases/pdf' %>
 
 <% content_for :sidebar do %>
-<p>
-  <b>Lease:</b>
-  <%= image_tag @lease.file.url(:thumb) %>
-  <%= link_to 'Click Here to Download', @lease.file.url %>
-</p>
+	<p>
+	  <b>Lease:</b>
+	  <%= link_to 'Click Here to Download', @lease.file.url %>
+	</p>
 
-<p>
-  <b>Size:</b>
-  <%= @lease.size %>
-</p>
+	<p>
+	  <b>Size:</b>
+	  <%= @lease.size %>
+	</p>
 
-<p>
-  <b>Current Monthly:</b>
-  <%= number_to_currency(@lease.current_rate) %>
-</p>
+	<p>
+	  <b>Current Monthly:</b>
+	  <%= number_to_currency(@lease.current_rate) %>
+	</p>
 
-<p>
-  <b>Expiration:</b>
-  <%= @lease.expiration %>
-</p>
+	<p>
+	  <b>Expiration:</b>
+	  <%= @lease.expiration %>
+	</p>
 
 
-<%= link_to 'Edit', edit_space_lease_path(@lease) %> |
-<%= link_to 'Back', space_leases_path %>
+	<%= link_to 'Edit', edit_space_lease_path(@lease) %> |
+	<%= link_to 'Back', space_leases_path %>
 
-</div>
 <% end %>
