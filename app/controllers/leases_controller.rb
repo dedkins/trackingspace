@@ -15,11 +15,6 @@ class LeasesController < ApplicationController
     end
   end
 
-  def pdf
-    send_data(@lease.file,
-        :content => 'application/pdf',
-        :disposition => "inline")
-  end
   # GET /leases/1
   # GET /leases/1.json
   def show
