@@ -1,38 +1,7 @@
+<%= currently_at 'Buildings' %>
 
 <div class="yield_container">
-	<div id="yieldtitle"><%= @building.address %> | (<%= link_to 'Edit', edit_building_path(@building) %>)
-	</div>
-
-	<div class="contact_bar">
-		<div class="info_box_title">
-			Est. Valuation
-		</div>
-		<div class="info_box_title">
-			Avg. Rate
-		</div>
-		<div class="info_box_title">
-			Spaces
-		</div>
-		<div class="info_box_title">
-			Posts
-		</div>
-		<div class="info_box">
-			<%= render 'est_value' %>
-		</div>
-		<div class="info_box">
-			<%= render 'avg_rate' %>
-		</div>
-		<div class="info_box">
-			<% unless @building.spaces.empty? %>
-				<%= link_to @building.spaces.size, building_spaces_path(@building) %>
-			<% else %>
-				Add Space
-			<% end %>
-		</div>
-		<div class="info_box">
-			<%= @building.microposts.size %>
-		</div>
-	</div>
+	<h1><%= @building.address %> | (<%= link_to 'Edit', edit_building_path(@building) %>)</h1>
 
 	<div class="map">
 		<%= gmaps({
@@ -106,23 +75,27 @@
 				<%= render 'shared/feed' %>
 			<% end %>
 		</div>
-		<div class="right">
-			<% if @building.spaces.any? %>
-			<%= render 'spaces' %>
-			<% end %>
-			<p></p>
-			<script type="text/javascript"><!--
-					google_ad_client = "ca-pub-5451064655705220";
-					/* First */
-					google_ad_slot = "8276506850";
-					google_ad_width = 250;
-					google_ad_height = 250;
-					//-->
-			</script>
-			<script type="text/javascript"
-				src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-			</script>
-		</div>
+		
+		<%= content_for :sidebar do %>
+
+			<%= render 'buildings/building_specs' %>
+
+				<% if @building.spaces.any? %>
+				<%= render 'spaces' %>
+				<% end %>
+				<p></p>
+				<script type="text/javascript"><!--
+						google_ad_client = "ca-pub-5451064655705220";
+						/* First */
+						google_ad_slot = "8276506850";
+						google_ad_width = 250;
+						google_ad_height = 250;
+						//-->
+				</script>
+				<script type="text/javascript"
+					src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+				</script>
+		<% end %>
 	<div class="clear"></div>
 	</div>	
 	<% end %>

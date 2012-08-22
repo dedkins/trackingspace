@@ -1,7 +1,7 @@
 class BuildingsController < ApplicationController
 
   def index
-    @buildings = Building.all
+    @buildings = Building.all(:order => "created_at desc")
     @json = Building.all.to_gmaps4rails
 
     respond_to do |format|

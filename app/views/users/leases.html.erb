@@ -1,12 +1,12 @@
-<h1>Leases I Created</h1>
+<% currently_at 'Leases' %>
+
+<h1>my Leases</h1>
 
 <table>
   <tr>
-    <th>File?</th>
+    <th>Copy of Lease?</th>
     <th>Address</th>
-    <th>Current rate</th>
     <th>Expiration</th>
-    <th></th>
     <th></th>
     <th></th>
   </tr>
@@ -14,10 +14,8 @@
 <% @leases.each do |lease| %>
   <tr>
     <td><% if lease.file? %>Yes<% else %>No<% end %></td>
-    <td><%= lease.space.building.address %></td>
-    <td><%= lease.current_rate %></td>
+    <td><%= link_to truncate(lease.space.building.address, :separator => ','), space_lease_path(lease.space,lease) %></td>
     <td><%= lease.expiration %></td>
-    <td><%= link_to 'Show', space_lease_path(lease.space,lease) %></td>
     <td><%= link_to 'Edit', edit_space_lease_path(lease.space,lease) %></td>
   </tr>
 <% end %>

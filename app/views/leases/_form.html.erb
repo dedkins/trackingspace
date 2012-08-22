@@ -13,23 +13,19 @@
 
   <div class="field">
     <%= f.label :user_id %><br />
-    <%= f.number_field :user_id, :value => @current_user.id %>
+    <%= f.hidden_field :user_id, :value => @current_user.id %>
   </div>
   <div class="field">
     <%= f.label :size %><br />
     <%= f.number_field :size %>
   </div>
   <div class="field">
-    <%= f.label :current_rate %><br />
+    <%= f.label 'Monthly Total' %><br />
     <%= f.text_field :current_rate %>
   </div>
   <div class="field">
     <%= f.label :expiration %><br />
-    <%= f.date_select :expiration %>
-  </div>
-  <div class="field">
-    <%= f.label :space_id %><br />
-    <%= f.number_field :space_id, :value => @space.id %>
+    <%= f.date_select :expiration, :end_year => Time.now.year + 15, :start_year => Time.now.year %>
   </div>
   <div class="field">
   <%= f.file_field :file %>

@@ -1,17 +1,8 @@
-<p id="notice"><%= notice %></p>
+<%= currently_at 'Leases' %>
 
-<div class="usercontainer">
-  <div class="lease_left">
-    <object data='<%= @lease.file %>' type='application/pdf' width='500px' height='600px'>
-  <p>
-    It appears your Web browser is not configured to display PDF files. 
-    No worries, just <%= link_to 'click here to download the PDF file.', @lease.file.url %>
-  </p>
-</object>
-  </div>
+<%= render 'leases/pdf' %>
 
-  <div class="lease_right">
-
+<% content_for :sidebar do %>
 <p>
   <b>Lease:</b>
   <%= image_tag @lease.file.url(:thumb) %>
@@ -24,8 +15,8 @@
 </p>
 
 <p>
-  <b>Current rate:</b>
-  <%= @lease.current_rate %>
+  <b>Current Monthly:</b>
+  <%= number_to_currency(@lease.current_rate) %>
 </p>
 
 <p>
@@ -33,16 +24,9 @@
   <%= @lease.expiration %>
 </p>
 
-<p>
-  <b>Space:</b>
-  <%= @lease.space_id %>
-</p>
-
 
 <%= link_to 'Edit', edit_space_lease_path(@lease) %> |
 <%= link_to 'Back', space_leases_path %>
 
 </div>
-
-<div class="clear"/>
-</div>
+<% end %>

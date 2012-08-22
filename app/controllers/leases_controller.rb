@@ -15,12 +15,17 @@ class LeasesController < ApplicationController
     end
   end
 
+  def pdf
+    send_data(@lease.file,
+        :content => 'application/pdf',
+        :disposition => "inline")
+  end
   # GET /leases/1
   # GET /leases/1.json
   def show
     @space = Space.find(params[:space_id])
     @lease = Lease.find(params[:id])
-
+    
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @lease }

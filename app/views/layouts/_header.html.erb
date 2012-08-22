@@ -1,0 +1,48 @@
+<header id="page_header">
+
+	<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+
+	  <%= stylesheet_link_tag 'application'%>
+	  <%= stylesheet_link_tag 'starting_css'%>
+	  <%= stylesheet_link_tag 'gmaps4rails' %>
+	  <%= stylesheet_link_tag 'mobile' if mobile_device? %>
+	  <%= javascript_include_tag "application" %>
+	  <%= csrf_meta_tags %>
+	  
+    <script>
+        	$(function() {
+        		var addresspicker = $( "#addresspicker" ).addresspicker();
+        		var addresspickerMap = $( "#addresspicker_map" ).addresspicker({
+        			regionBias: "fr",
+        		  elements: {
+        		    map:      "#map",
+        		    lat:      "#lat",
+        		    lng:      "#lng"
+        		  }
+        		});
+        		var gmarker = addresspickerMap.addresspicker( "marker");
+        		gmarker.setVisible(true);
+        		addresspickerMap.addresspicker( "updatePosition");
+        
+        	});
+  	</script>
+
+  	<nav id="utility">
+        <% if user_signed_in? %>
+          Signed in as <%= current_user.email %>. Not You?
+          <%= link_to "Sign Out", destroy_user_session_path, :method => 'delete' %>
+        <% else %>
+          <%= link_to "Sign Up", new_user_registration_path %> | <%= link_to "Sign In", new_user_session_path %> | <%= link_to "Sign In w/ Twitter", '/auth/twitter' %>
+        <% end %>
+    </nav>
+
+      <div class="logo">
+        <%= link_to 'TrackingSpace:', root_path %>
+         <div class="lookup">
+            <%= render 'buildings/form_new' %>
+        </div>
+     </div>
+
+     <%= yield :main_navigation %>
+
+</header>

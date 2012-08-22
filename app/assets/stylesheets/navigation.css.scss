@@ -1,0 +1,28 @@
+nav#main_nav {
+
+clear:both;
+	postion: absolute;
+	float:right;
+	top: 10px;
+	right: 0;
+	li {
+		background: #865140;
+		display: inline-block;
+		margin: 10px 1px 0px 1px;
+		padding: 6px 12px;
+		a, a:link, a:visited {
+			color: #fff;
+			text-decoration: none;	
+		}
+		&.active {
+			background: #fff;
+			padding-bottom: 15px;
+			a,
+			a:link,
+			a:visited {
+				color: #555;
+				font-weight: bold;
+			}	
+		}
+	}
+}

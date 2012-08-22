@@ -2,4 +2,8 @@
 
 $<%= number_to_human(@building.size*(@spaces.collect(&:monthly).inject(:+)/@spaces.collect(&:sf).inject(:+))*12*0.68/0.08) %>
 
+<% else %>
+
+We need building SF
+
 <% end %>

@@ -22,9 +22,9 @@ def mobile_device?
 end
 helper_method :mobile_device?
 
-layout :which_layout
-  def which_layout
-    mobile_device? ? 'mobile' : 'application'
-  end
+#layout :which_layout
+#  def which_layout
+#    mobile_device? ? 'mobile' : 'application'
+#  end
 
 end

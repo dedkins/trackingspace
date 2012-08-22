@@ -1,0 +1,46 @@
+<table width="100%">
+	<tr>
+		<th style="background:#666;color:#fff;">
+			Estimated Valuation
+		</th>
+	</tr>
+	<tr>
+		<td style="text-align:center">
+			<%= render 'est_value' %>
+		</td>
+	</tr>
+	<tr>
+		<th style="background:#666;color:#fff;">
+			Average Rate
+		</th>
+	</tr>
+	<tr>
+		<td style="text-align:center">
+			<%= render 'avg_rate' %>
+		</td>
+	</tr>
+	<tr>
+		<th style="background:#666;color:#fff;">
+			Spaces
+		</th>
+	</tr>
+	<tr>
+		<td style="text-align:center">
+			<% unless @building.spaces.empty? %>
+				<%= link_to @building.spaces.size, building_spaces_path(@building) %> | Add Space
+			<% else %>
+				Add Space
+			<% end %>
+		</td>
+	</tr>
+	<tr>
+		<th style="background:#666;color:#fff;">
+			Posts
+		</th>
+	</tr>
+	<tr>
+		<td style="text-align:center">
+			<%= @building.microposts.size %>
+		</td>
+	</tr>
+</table>

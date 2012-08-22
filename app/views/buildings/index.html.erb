@@ -1,5 +1,9 @@
-<p id="notice"><%= notice %></p>
+<%= currently_at 'Buildings' %>
+
 <% unless mobile_device? %>
+
+<h3>Recent Buildings Touched</h3>
+
 <%= gmaps({
       "map_options" => {"auto_adjust" => true, "auto_zoom" => true, "type" => 'ROADMAP' },
       "markers" => {"data" => @json }
