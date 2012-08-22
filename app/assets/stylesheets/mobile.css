@@ -5,6 +5,27 @@ body {
   background:transparent;
   font-size:18px;
 }
+header#page_header{
+  height:150px;
+  color: #fff;
+  font-size: 0.9em;
+  overflow: hidden;
+  padding: 10px 20px;
+  a,
+  a:link,
+  a:hover {
+    color: orange;
+  }
+  a:active,
+  a:visited {
+    color: white;
+    text-decoration: none;
+  }
+  nav#utility {
+    float:right;
+    font-size: 1em;
+  }
+}
 .greenbutton {
   position: relative;
   float: left;
@@ -175,20 +196,7 @@ footer{
   width:90%;
   border-radius:10px;
   background-color: #fff;
-  margin: 100px auto 10px auto;
-}
-#yieldtitle {
-  border-radius: 10px 10px 0px 0px;
-  background:#608341;
-  opacity: 0.8;
-  -moz-opacity: 0.8;
-  filter:alpha(opacity=8);
-  height:15px;
-  width:100%;
-  padding:25px;
-  font-size:24px;
-  font-weight:bold;
-  color:white;
+  margin: 200px auto 10px auto;
 }
 .clear {
   clear: both;

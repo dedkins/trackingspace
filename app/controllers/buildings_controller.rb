@@ -1,7 +1,5 @@
 class BuildingsController < ApplicationController
 
-  caches_page :index
-
   def index
     @buildings = Building.all(:order => "created_at desc")
     @json = Building.all.to_gmaps4rails

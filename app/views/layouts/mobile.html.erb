@@ -68,24 +68,11 @@ if( !location.hash && win.addEventListener ){
         <div id="lookup">
             <%= render 'buildings/form_new' %>
         </div>
-        
       </div>
-        <div id="user_selection">
-        <% if user_signed_in? %>
-        <%= link_to 'Home', current_user %>  |  
-        <% end %>
-        <%= link_to 'Buildings', buildings_path %>  |  <%= link_to "People", buildings_path %> 
-          
-        </div>
     </div>
 
-    <% flash.each do |name, msg| %>
-      <% content_tag :div, msg, :id => "flash_#{name}" %>
-    <% end %>
     <div id="yield">
       <%= yield %>
-      <%= debug(params) if Rails.env.development? %>
-
     </div>
 
     
