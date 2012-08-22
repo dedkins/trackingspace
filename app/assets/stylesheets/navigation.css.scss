@@ -27,20 +27,20 @@ nav#main_nav {
 nav#mobile_nav {
 position:absolute;
 	float:left;
-	top: 80px;
-	font-size: 2em;
+	top: 88px;
+	font-size: 1.75em;
 	li {
 		background: #865140;
 		display: inline-block;
 		margin: 10px 1px 0px 1px;
-		padding: 16px 22px;
+		padding: 12px 18px;
 		a, a:link, a:visited {
 			color: #fff;
 			text-decoration: none;	
 		}
 		&.active {
 			background: #fff;
-			padding-bottom: 25px;
+			padding-bottom: 20px;
 			a,
 			a:link,
 			a:visited {
