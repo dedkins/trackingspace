@@ -1,8 +1,7 @@
 <%= currently_at 'Buildings' %>
 
 <div class="yield_container">
-	Office Building
-	<h1><%= @building.address %> | (<%= link_to 'Edit', edit_building_path(@building) %>)</h1>
+	<h3><%= @building.address %> | (<%= link_to 'Edit', edit_building_path(@building) %>)</h3>
 	
 	<table width="100%">
 		<tr>
@@ -26,60 +25,56 @@
 		})
 		%>
 	</div>
-	<div class="contact_bar">
-		<div class="contact_box_title">
-			Owner
-		</div>
-		<div class="contact_box_title">
-			Property Manager
-		</div>
-		<div class="contact_box_title">
-			Brokerage Agency
-		</div>
-		<div class="contact_box_title">
-			Landscaper
-		</div>
-		<div class="contact_box">
-			Upgrade
-		</div>
-		<div class="contact_box">
-			<%= link_to 'Add Yourself', '' %>
-		</div>
-		<div class="contact_box">
-			<%= link_to 'Add Yourself', '' %>
-		</div>
-		<div class="contact_box">
-			<%= link_to 'Add Yourself', '' %>
-		</div>
-	</div>
+
+	<table width="100%">
+		<tr class="contact_box_title">
+			<th>Contact</th>
+			<th>Property Manager</th>
+			<th>Brokerage Agency</th>
+			<th>Landscaper</th>
+		</tr>
+		<tr class="contact_box">
+			<td><%= link_to 'Add Yourself', '' %></td>
+			<td><%= link_to 'Add Yourself', '' %></td>
+			<td><%= link_to 'Add Yourself', '' %></td>
+			<td><%= link_to 'Add Yourself', '' %></td>
+		</tr>
+	</table>
 	
 	<% if mobile_device? %>
 
-	<div class="buttons">
+	<table width="100%">
 		<% if user_signed_in? %>
-		<div class="greenbutton"><%= link_to 'Add Comment', mbuilding_post_path(@building) %></div>
-		<div class="greenbutton"><%= link_to 'Track', '' %></div>
-		<div class="greenbutton"><%= link_to 'Share', '' %></div>
-		<div class="greenbutton"><%= link_to 'Add To Tour', '' %></div>
+		<tr>
+			<td><div class="greenbutton"><%= link_to '+ Comment', mbuilding_post_path(@building) %></div></td>
+			<td><div class="greenbutton"><%= link_to 'Track', '' %></div></td>
+			<td><div class="greenbutton"><%= link_to 'Share', '' %></div></td>
+			<td><div class="greenbutton"><%= link_to '+ 2 Tour', '' %></div></td>
+		</tr>
 		<% end %>
 		<% unless user_signed_in? %>
-		<div id="announcement"><%= link_to 'Sign In To Get More Options', new_user_session_path(:building_id => @building) %></div>
+		<tr>
+			<td>		
+				<div id="announcement"><%= link_to 'Sign In To Get More Options', new_user_session_path(:building_id => @building) %></div>
+			</td>
+		</tr>
 		<% end %>
-	
-		<script type="text/javascript"><!--
-		google_ad_client = "ca-pub-5451064655705220";
-		/* Mobile */
-		google_ad_slot = "8818781442";
-		google_ad_width = 728;
-		google_ad_height = 15;
-		//-->
-		</script>
-		<script type="text/javascript"
-			src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-		</script>
-	</div>
+		<tr height="20px"/>
 
-	
+		<tr>
+			<script type="text/javascript"><!--
+				google_ad_client = "ca-pub-5451064655705220";
+				/* Mobile */
+				google_ad_slot = "8818781442";
+				google_ad_width = 728;
+				google_ad_height = 15;
+				//-->
+			</script>
+			<script type="text/javascript"
+				src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+			</script>
+		</tr>
+	</table>
 
 		<% unless @building.microposts.empty? %>
 		<div class="feed">

@@ -4,6 +4,6 @@ $<%= number_to_human(@building.size*(@spaces.collect(&:monthly).inject(:+)/@spac
 
 <% else %>
 
-We need building SF
+<%= link_to 'Update SF', edit_building_path(@building.id) %>
 
 <% end %>

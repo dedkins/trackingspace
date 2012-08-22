@@ -135,7 +135,7 @@
 			"file": "app/assets/stylesheets/navigation.css.scss",
 			"settings":
 			{
-				"buffer_size": 793,
+				"buffer_size": 796,
 				"line_ending": "Windows"
 			}
 		},
@@ -143,7 +143,7 @@
 			"file": "app/views/buildings/show.html.erb",
 			"settings":
 			{
-				"buffer_size": 3399,
+				"buffer_size": 4699,
 				"line_ending": "Unix"
 			}
 		},
@@ -380,6 +380,7 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -387,15 +388,15 @@
 					"file": "app/assets/stylesheets/navigation.css.scss",
 					"settings":
 					{
-						"buffer_size": 793,
+						"buffer_size": 796,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								449,
-								449
+								450,
+								450
 							]
 						],
 						"settings":
@@ -404,7 +405,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 170.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -414,15 +415,15 @@
 					"file": "app/views/buildings/show.html.erb",
 					"settings":
 					{
-						"buffer_size": 3399,
+						"buffer_size": 4699,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								638,
-								638
+								2576,
+								2576
 							]
 						],
 						"settings":
@@ -431,7 +432,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 794.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
