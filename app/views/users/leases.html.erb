@@ -4,18 +4,24 @@
 
 <table>
   <tr>
-    <th>Copy of Lease?</th>
+    <th>Lease Copy</th>
+    <th width="20px"/>
     <th>Address</th>
+    <th width="20px"/>
     <th>Expiration</th>
+    <th width="20px"/>
     <th></th>
     <th></th>
   </tr>
 
 <% @leases.each do |lease| %>
-  <tr>
-    <td><% if lease.file? %>Yes<% else %>No<% end %></td>
+  <tr height="30px">
+    <td><% if lease.file? %><%= link_to 'See copy', lease.file.url %><% else %>No<% end %></td>
+    <td width="20px"/>
     <td><%= link_to truncate(lease.space.building.address, :separator => ','), space_lease_path(lease.space,lease) %></td>
+    <td width="20px"/>
     <td><%= lease.expiration %></td>
+    <td width="20px"/>
     <td><%= link_to 'Edit', edit_space_lease_path(lease.space,lease) %></td>
   </tr>
 <% end %>

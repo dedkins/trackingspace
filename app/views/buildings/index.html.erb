@@ -34,19 +34,19 @@
 <table>
   <tr>
     <th width=650px></th>
-    <th width=70px>Spaces</th>
-    <th width=70px>Posts</th>
+    <th width=50px>Spaces</th>
+    <th width=50px>Posts</th>
     <th width=130px>Avg Rate</th>
   </tr>
 </table>
 <% @buildings.each do |building| %>
 <table>
   <tr>
-    <td width=650px><div id="building_mobile"><%= link_to truncate(building.address, :length => 35), building_path(building.id) %></div></td>
-    <td width=70px align=center>
+    <td width=650px><div id="building_mobile"><%= link_to truncate(building.address, :length => 30), building_path(building.id) %></div></td>
+    <td width=50px align=center>
       <div id="greenwhite"><%= building.spaces.count %></div>
     </td>
-    <td width=70px align=center>
+    <td width=50px align=center>
       <div id="greenwhite"><%= building.microposts.count %></div>
     </td>
     <td width=130px align=center>
