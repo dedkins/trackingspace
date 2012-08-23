@@ -18,7 +18,7 @@ def clear_return_to
 end
 
 def mobile_device?
-	request.user_agent =~ /Mobile|webOS/
+	request.user_agent =~ /iP(?:hone|ad|od)/
 end
 helper_method :mobile_device?
 

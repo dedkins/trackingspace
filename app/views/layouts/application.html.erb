@@ -21,6 +21,7 @@
 
     <% unless mobile_device? %>
       <section id="sidebar">
+        <%= yield :sidebar %>
         <table>
         <tr>
           <td>
@@ -53,7 +54,7 @@
           </td>
         </tr>
       </table>
-        <%= yield :sidebar %>
+        
       </section>
     <% end %>
   </section>
