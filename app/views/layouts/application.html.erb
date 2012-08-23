@@ -15,8 +15,10 @@
 
   <div class="container">
     <section id="content">
-      <%= yield %>
-    </section>
+        <%= yield %>
+      </section>
+    
+
     <% unless mobile_device? %>
       <section id="sidebar">
         <table>
@@ -24,10 +26,10 @@
           <td>
             <script type="text/javascript"><!--
               google_ad_client = "ca-pub-5451064655705220";
-              /* Top Right Links */
-              google_ad_slot = "6090008318";
-              google_ad_width = 200;
-              google_ad_height = 90;
+              /* Half Banner */
+              google_ad_slot = "6705082897";
+              google_ad_width = 250;
+              google_ad_height = 250;
               //-->
             </script>
             <script type="text/javascript"
@@ -54,6 +56,7 @@
         <%= yield :sidebar %>
       </section>
     <% end %>
+  </section>
     <div class="clear"></div>
   </div>    
   

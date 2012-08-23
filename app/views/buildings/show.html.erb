@@ -1,147 +1,127 @@
 <%= currently_at 'Buildings' %>
 
-<div class="yield_container">
-	<h3><%= @building.address %> | (<%= link_to 'Edit', edit_building_path(@building) %>)</h3>
-	
-	<table width="100%">
-		<tr>
-			<td width="25%" style="font-size:1.2em;font-weight:bold;color:green;text-align:center"><%= render 'est_value' %></td>
-			<td width="25%" style="font-size:1.2em;font-weight:bold;color:green;text-align:center"><%= render 'avg_rate' %></td>
-			<td width="25%" style="font-size:1.2em;font-weight:bold;color:green;text-align:center">Office</td>
-			<td width="25%" style="font-size:1.2em;font-weight:bold;color:green;text-align:center">50</td>
-		</tr>
-		<tr>
-			<td width="25%" style="font-size:0.7em;text-align:center">Estimated Value</td>
-			<td width="25%" style="font-size:0.7em;text-align:center">Average Rate</td>
-			<td width="25%" style="font-size:0.7em;text-align:center">Building Type</td>
-			<td width="25%" style="font-size:0.7em;text-align:center">Activity Last 30 Days</td>
-		</tr>
-		<tr height="10px"/>
-	</table>
+<div id="yield_container">
+		<div class="pagetitle"><%= @building.address %> | (<%= link_to 'Edit', edit_building_path(@building) %>)</div>
+			
+			<table width="100%">
+				<tr>
+					<td width="25%" style="font-size:1.2em;font-weight:bold;color:green;text-align:center"><%= render 'est_value' %></td>
+					<td width="25%" style="font-size:1.2em;font-weight:bold;color:green;text-align:center"><%= render 'avg_rate' %></td>
+					<td width="25%" style="font-size:1.2em;font-weight:bold;color:green;text-align:center">Office</td>
+					<td width="25%" style="font-size:1.2em;font-weight:bold;color:green;text-align:center">50</td>
+				</tr>
+				<tr>
+					<td width="25%" style="font-size:0.7em;text-align:center">Estimated Value</td>
+					<td width="25%" style="font-size:0.7em;text-align:center">Average Rate</td>
+					<td width="25%" style="font-size:0.7em;text-align:center">Building Type</td>
+					<td width="25%" style="font-size:0.7em;text-align:center">Activity Last 30 Days</td>
+				</tr>
+			</table>
 
-	<div class="map">
-		<%= gmaps({
-		  "map_options" => {"auto_zoom" => false, "zoom" => 18, "type" => 'SATELLITE' },
-		  "markers" => {"data" => @json }
-		})
-		%>
-	</div>
+			<table width="100%">
+				<tr>
+					<td>
+						<%= gmaps({
+						  "map_options" => {"auto_zoom" => false, "zoom" => 18, "type" => 'SATELLITE' },
+						  "markers" => {"data" => @json }
+						})
+						%>
+					</td>
+				</tr>
+			</table>
 
-	<table width="100%">
-		<tr class="contact_box_title">
-			<th>Contact</th>
-			<th>Property Manager</th>
-			<th>Brokerage Agency</th>
-			<th>Landscaper</th>
-		</tr>
-		<tr class="contact_box">
-			<td><%= link_to 'Add Yourself', '' %></td>
-			<td><%= link_to 'Add Yourself', '' %></td>
-			<td><%= link_to 'Add Yourself', '' %></td>
-			<td><%= link_to 'Add Yourself', '' %></td>
-		</tr>
-	</table>
-	
+			<table width="100%">
+				<tr class="contact_box_title">
+					<th>Contact</th>
+					<th>Property Manager</th>
+					<th>Brokerage Agency</th>
+					<th>Landscaper</th>
+				</tr>
+				<tr class="contact_box">
+					<td><%= link_to 'Add Yourself', '' %></td>
+					<td><%= link_to 'Add Yourself', '' %></td>
+					<td><%= link_to 'Add Yourself', '' %></td>
+					<td><%= link_to 'Add Yourself', '' %></td>
+				</tr>
+			</table>
+
 	<% if mobile_device? %>
 
-	<table width="100%">
-		<% if user_signed_in? %>
-		<tr>
-			<td><div class="greenbutton"><%= link_to 'Add Comment', mbuilding_post_path(@building) %></div></td>
-			<td><div class="greenbutton"><%= link_to 'Track It', '' %></div></td>
-			<td><div class="greenbutton"><%= link_to 'Share It', '' %></div></td>
-			<td><div class="greenbutton"><%= link_to 'Add to Tour', '' %></div></td>
-		</tr>
-		<% end %>
-		<% unless user_signed_in? %>
-		<tr>
-			<td>		
-				<div id="announcement"><%= link_to 'Sign In To Get More Options', new_user_session_path(:building_id => @building) %></div>
-			</td>
-		</tr>
-		<% end %>
+		<table width="100%">
+			<% if user_signed_in? %>
+			<tr>
+				<td><div class="greenbutton"><%= link_to 'Add Comment', mbuilding_post_path(@building) %></div></td>
+				<td><div class="greenbutton"><%= link_to 'Track It', '' %></div></td>
+				<td><div class="greenbutton"><%= link_to 'Share It', '' %></div></td>
+				<td><div class="greenbutton"><%= link_to 'Add to Tour', '' %></div></td>
+			</tr>
+			<% end %>
+			<% unless user_signed_in? %>
+			<tr>
+				<td>		
+					<div id="announcement"><%= link_to 'Sign In To Get More Options', new_user_session_path(:building_id => @building) %></div>
+				</td>
+			</tr>
+			<% end %>
 
-		<tr>
-			<td colspan="4">
-				<script type="text/javascript"><!--
-					google_ad_client = "ca-pub-5451064655705220";
-					/* Mobile */
-					google_ad_slot = "8818781442";
-					google_ad_width = 728;
-					google_ad_height = 15;
-					//-->
-				</script>
-				<script type="text/javascript"
+			<tr>
+				<td colspan="2">
+					<script type="text/javascript"><!--
+						google_ad_client = "ca-pub-5451064655705220";
+						/* 468 Banner */
+						google_ad_slot = "5816101200";
+						google_ad_width = 468;
+						google_ad_height = 60;
+						//-->
+					</script>
+					<script type="text/javascript"
 					src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-				</script>
-			</td>
-		</tr>
-	</table>
+					</script>
+				</td>
+				<td colspan="2">
+					<script type="text/javascript"><!--
+						google_ad_client = "ca-pub-5451064655705220";
+						/* 468 Banner */
+						google_ad_slot = "5816101200";
+						google_ad_width = 468;
+						google_ad_height = 60;
+						//-->
+					</script>
+					<script type="text/javascript"
+					src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+					</script>
+				</td>
+			</tr>
+		</table>
 
 		<% unless @building.microposts.empty? %>
 		<div class="feed">
 			<%= render 'shared/feed' %>
 		</div>
 		<% end %>
-
 	<% end %>
 
 	<% if not mobile_device? %>
 
-	
-	<div class="yield_container">
-		<div class="feed_heading">
-			What's the Latest?
-		</div>
-		<div class="feed">
-			<% if user_signed_in? %>
-			<h3>Add a comment about this building:</h3>
-				<%= render '/shared/micropost_form' %>
-			<% end %>
-			<% unless @building.microposts.empty? %>
-				<%= render 'shared/feed' %>
-			<% end %>
-		</div>
-		
-		<%= content_for :sidebar do %>
-
-			<table>
-				<tr>
-					<td>
-						<script type="text/javascript"><!--
-							google_ad_client = "ca-pub-5451064655705220";
-							/* Top Right Links */
-							google_ad_slot = "6090008318";
-							google_ad_width = 200;
-							google_ad_height = 90;
-							//-->
-						</script>
-						<script type="text/javascript"
-						src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-						</script>
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<script type="text/javascript"><!--
-							google_ad_client = "ca-pub-5451064655705220";
-							/* First */
-							google_ad_slot = "8276506850";
-							google_ad_width = 250;
-							google_ad_height = 250;
-							//-->
-						</script>
-						<script type="text/javascript"
-							src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-						</script>
-					</td>
-				</tr>
-			</table>
-				
-		<% end %>
-	<div class="clear"></div>
-	</div>	
+			<div class="yield_container">
+				<div class="feed_heading">
+					What's the Latest?
+				</div>
+				<div class="feed">
+					<% if user_signed_in? %>
+					<h3>Add a comment about this building:</h3>
+						<%= render '/shared/micropost_form' %>
+					<% end %>
+					<% unless @building.microposts.empty? %>
+						<%= render 'shared/feed' %>
+					<% end %>
+				</div>
+			</div>
 	<% end %>
-<div class="clear"></div>
+
+	<%= content_for :sidebar do %>
+				
+	<% end %>
 </div>
+
 <%= yield :scripts %>
