@@ -19,7 +19,7 @@
 
 <% @leases.each do |lease| %>
   <tr height="30px">
-    <td><%= link_to 'View', lease_path(lease.id) %></td>
+    <td><%= link_to 'View', space_lease_path(lease.space,lease.id) %></td>
     <td width="20px"/>
     <td><%= link_to truncate(lease.space.building.address, :separator => ','), building_path(lease.space.building) %></td>
     <td width="20px"/>
