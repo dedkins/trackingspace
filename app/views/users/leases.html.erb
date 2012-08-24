@@ -1,6 +1,6 @@
 <% currently_at 'Leases' %>
 
-<h1>my Leases</h1>
+<div class="pagetitle">my Leases</div>
 
 <table>
   <tr>
@@ -16,7 +16,7 @@
 
 <% @leases.each do |lease| %>
   <tr height="30px">
-    <td><% if lease.file? %><%= link_to 'See copy', lease.file.url %><% else %>No<% end %></td>
+    <td><% if lease.file? %><%= link_to 'Download', lease.file.url %><% else %>No<% end %></td>
     <td width="20px"/>
     <td><%= link_to truncate(lease.space.building.address, :separator => ','), space_lease_path(lease.space,lease) %></td>
     <td width="20px"/>

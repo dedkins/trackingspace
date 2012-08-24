@@ -10,8 +10,7 @@ header#page_header{
   color: #fff;
   font-size: 0.9em;
   overflow: hidden;
-  padding: 10px 20px;
-  border: 1px dashed white;
+  padding: 10px;
   width: 700px;
   a,
   a:link,
@@ -27,6 +26,14 @@ header#page_header{
     float:right;
     font-size: 1em;
   }
+}
+.container {
+  position: relative;
+  width: 95%;
+  height:100%;
+  overflow: hidden;
+  padding: 0 20px;
+  margin-left: -10px;
 }
 section#content {
   padding: 20px;

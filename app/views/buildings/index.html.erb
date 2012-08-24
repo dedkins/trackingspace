@@ -1,53 +1,54 @@
 <%= currently_at 'Buildings' %>
 
+<div class="pagetitle">Building List</div>
+
 <% unless mobile_device? %>
 
-<h3>Recent Buildings Touched</h3>
+  <%= gmaps({
+        "map_options" => {"auto_adjust" => true, "auto_zoom" => true, "type" => 'ROADMAP' },
+        "markers" => {"data" => @json }
+      })
+      %>
 
-<%= gmaps({
-      "map_options" => {"auto_adjust" => true, "auto_zoom" => true, "type" => 'ROADMAP' },
-      "markers" => {"data" => @json }
-    })
-    %>
+  <table>
+    <tr>
+      <th>Address</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
 
-<table>
-  <tr>
-    <th>Address</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @buildings.each do |building| %>
-  <tr>
-    <td><%= building.address %></td>
-    <td><%= link_to 'Show', building %></td>
-    <td><%= link_to 'Edit', edit_building_path(building) %></td>
-    <td><%= link_to 'Destroy', building, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
-<% end %>
-</table>
+  <% @buildings.each do |building| %>
+    <tr>
+      <td><%= building.address %></td>
+      <td><%= link_to 'Show', building %></td>
+      <td><%= link_to 'Edit', edit_building_path(building) %></td>
+      <td><%= link_to 'Destroy', building, confirm: 'Are you sure?', method: :delete %></td>
+    </tr>
+  <% end %>
+  </table>
 <% end %>
 
 <% if mobile_device? %>
 
+
 <table width="100%">
   <tr>
-    <th width="60%"></th>
-    <th width="10%">Spaces</th>
-    <th width="10%">Posts</th>
-    <th width="20%">Avg Rate</th>
+    <th width="70%"></th>
+    <th width="8%">Spaces</th>
+    <th width="8%">Posts</th>
+    <th width="15%">Avg Rate</th>
   </tr>
 <% @buildings.each do |building| %>
   <tr>
-    <td width="60%"><div id="building_mobile"><%= link_to truncate(building.address, :length => 35), building_path(building.id) %></div></td>
-    <td width="10%" style="text-align:center">
+    <td width="70%"><div id="building_mobile"><%= link_to truncate(building.address, :length => 35), building_path(building.id) %></div></td>
+    <td width="8%" style="text-align:center">
       <div id="greenwhite"><%= building.spaces.count %></div>
     </td>
-    <td width="10%" style="text-align:center">
+    <td width="8%" style="text-align:center">
       <div id="greenwhite"><%= building.microposts.count %></div>
     </td>
-    <td width="20%" style="text-align:center">
+    <td width="15%" style="text-align:center">
       <% unless building.spaces.empty? %>
       <div id="building_mobile"><%= number_to_currency(building.spaces.collect(&:monthly).inject(:+)/building.spaces.collect(&:sf).inject(:+)) %></div>
       <% end %>
