@@ -69,7 +69,7 @@ class LeasesController < ApplicationController
 
     respond_to do |format|
       if @lease.update_attributes(params[:lease])
-        format.html { redirect_to @lease, notice: 'Lease was successfully updated.' }
+        format.html { redirect_to leases_path, notice: 'Lease was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
