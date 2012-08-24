@@ -7,6 +7,7 @@ class UsersController < ApplicationController
   def leases
     @user = User.find(current_user.id)
     @leases = @user.lease
+    @total = @leases.all.size*@leases.all.current_rate
   end
 
   def show

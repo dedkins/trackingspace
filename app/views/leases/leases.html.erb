@@ -8,8 +8,11 @@
     <th width="20px"/>
     <th>Address</th>
     <th width="20px"/>
+    <th>Suite</th>
+    <th width="20px"/>
     <th>Expiration</th>
     <th width="20px"/>
+    <th>Monthly</th>
     <th></th>
     <th></th>
   </tr>
@@ -18,13 +21,25 @@
   <tr height="30px">
     <td><% if lease.file? %><%= link_to 'Download', lease.file.url %><% else %>No<% end %></td>
     <td width="20px"/>
-    <td><%= link_to truncate(lease.space.building.address, :separator => ','), space_lease_path(lease.space,lease) %></td>
+    <td><%= link_to truncate(lease.space.building.address, :separator => ','), building_path(lease.space.building) %></td>
     <td width="20px"/>
-    <td><%= lease.expiration %></td>
+    <td><%= link_to lease.space.suite, building_space_path(lease.space.building,lease.space) %></td>
+    <td width="20px"/>
+    <td><%= l lease.expiration %></td>
+    <td width="20px"/>
+    <td><%= number_to_currency(lease.current_rate) %></td>
     <td width="20px"/>
     <td><%= link_to 'Edit', edit_space_lease_path(lease.space,lease) %></td>
   </tr>
 <% end %>
+
+</table>
+
+<table>
+  <tr>
+    <td>Placeholder for total</td>
+  </tr>
+
 </table>
 
 <br />

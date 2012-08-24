@@ -27,6 +27,11 @@ class LeasesController < ApplicationController
     end
   end
 
+  def leases
+    @user = User.find(current_user.id)
+    @leases = Lease.find_all_by_user_id(current_user.id)
+  end
+  
   # GET /leases/new
   # GET /leases/new.json
   def new
