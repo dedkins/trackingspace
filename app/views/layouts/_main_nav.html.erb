@@ -11,7 +11,7 @@
       <ul>
         <%= nav_tab 'Home', root_path, current: current_tab %>
         <%= nav_tab 'Buildings', buildings_path, current: current_tab%>
-        <%= nav_tab 'Leases', user_leases_path, current: current_tab %>
+        <%= nav_tab 'Spaces', user_leases_path, current: current_tab %>
         <%= nav_tab 'People', buildings_path, current: current_tab %>
         <% if user_signed_in? %>
         <%= nav_tab 'Profile', current_user, current: current_tab %></li>

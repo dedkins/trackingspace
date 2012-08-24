@@ -27,7 +27,7 @@ html {
 body {
   background:transparent;
   font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
+  font-size: 12px;
   line-height: 18px;
 }
 
@@ -37,6 +37,8 @@ input {
 
 .container {
   position: relative;
+  margin: auto;
+  width: 960px;
   height:100%;
   overflow: hidden;
   padding: 0 20px;
@@ -48,6 +50,8 @@ header#page_header{
   font-size: 0.9em;
   overflow: hidden;
   padding: 10px 20px;
+  width: 940px;
+  margin: auto;
   a,
   a:link,
   a:hover {
@@ -65,16 +69,16 @@ header#page_header{
 }
 
 section#content {
-  position: relative;
   padding: 20px;
   float:left;
+  width: 600px;
   background: #fff;
+  margin-top: 10px;
 }
 
 
 section#sidebar {
   float: right; 
-  margin-right: -20px;
   width: 260px;
 }
 
@@ -123,8 +127,9 @@ footer#page_footer {
 }
 
 #name {
-  font-size:110%;
-  font-weight:bold;
+  margin-top: 5px;
+  font-size: 0.9em;
+  font-weight: bold;
   color:#608341;
 }
 #name a{color:#608341;text-decoration:none;}
@@ -132,17 +137,18 @@ footer#page_footer {
 #name a:hover{color:gray;background:#fff;text-decoration:none;}
 
 #building {
-  font-size:110%;
+  font-size: 0.8em;
   font-weight:bold;
   color:#608341;
-  line-height:1.4;
+  line-height:1.2;
 }
 #building a{color:#608341;text-decoration:none;}
 #building a:visited{color:#B13E0F;text-decoration:none;}
 #building a:hover{color:gray;background:#fff;text-decoration:none;}
 
 #post {
-  font-size:125%;
+  margin-top: 5px;
+  font-size: 0.9em;
   font-weight:bold;
 }
 
@@ -355,12 +361,36 @@ code {
   display:table-cell;
   padding:5px;
 }
+.tabletitle {
+  background: #666;
+  color: #fff;
+  text-align:center;
+  height: 15px;
+}
+.tabletext {
+  padding: 5px 20px;
+  height: 15px;
+}
+.form_box {
+  background: #999999;
+  border: 1px solid #666;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px 0 20px 0;
+  color: #fff;
+  line-height: 1.3em;
+}
 .feed {
   padding:20px;
   border-radius: 8px;
   border: 1px dashed #707070;
   background-color: #F0F0F0;
   height:100%;
+}
+.feeditems {
+  width: 100%;
+  height: 800px;
+  overflow: scroll;
 }
 .right {
   float: right;

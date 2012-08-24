@@ -1,16 +1,37 @@
-<%= currently_at 'Profile' %>
+<% if @user.id == current_user %>
+	<%= currently_at 'Profile' %>
+<% else %>
+	<%= currently_at 'People' %>
+<% end %>
+
+<div class="pagetitle"><%= @user.name %>'s Profile</div> 
 
 	<table>
-		<div class="feed">
-			<% if user_signed_in? %>
-			Add a comment about this person:
-				<%= render '/shared/micropost_form' %>
-			<% end %>
-		</div>
-			<% unless @user.microposts.empty? %>
-				<%= render 'shared/feed' %>
-			<% end %>
-	
+		<tr>
+			<td width="50%">
+				<div class="feed">
+					<% if user_signed_in? %>
+						Add a comment about this person:
+					<%= render '/shared/micropost_form' %>
+					<% else %>
+						<%= link_to "Sign In to Add a Comment", new_user_registration_path %>
+					<% end %>
+				</div>
+			</td>
+			<td>
+				Something here
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<% unless @user.microposts.empty? %>
+					<%= render 'shared/feed' %>
+				<% end %>
+			</td>
+			<td>Something here</td>
+		</tr>
+	</table>
+
 		<%= content_for :sidebar do %>
 			<%= gravatar_image_tag @user.email %>
 			<%= @user.name %>'s Profile Page</h1>

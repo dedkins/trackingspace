@@ -1,47 +1,40 @@
 <% if @spaces.any? %>
 
-<div class="spacesbox">
-  <div class="spacestitle">
-    S P A C E S
-  </div>
-  <div class="spacestable">
-
+<table width="100%">
+  <tr class="tabletitle">
+    <th colspan="5">Spaces</th>
+  </tr>
   <% @spaces.each do |space| %>
-      <div class="spacestable-row">
-        <div class="spacestable-col"><%= link_to space.suite, building_space_path(@building,space) %></div>
-      <% if space.company? %>
-        <div class="spacestable-col">
-          <%= space.company %>
-        </div>
-        <div class="spacestable-col">
-        <%= space.status %>
-        </div>
-      <% end %>
-      <% unless space.company? %>
-      <div class="spacestable-col">
-          Company?
-      </div>
-      <div class="spacestable-col">
-        <%= space.status %>
-      </div>
-      <% end %>
-    </div>
+  <tr class="tabletext">
+    <td width="20px"/>
+    <td width="25%"><%= link_to space.suite, building_space_path(@building,space) %></td>
+    <td width="30%"><%= space.sf %>sf</td>
+    <td><%= space.status %></td>
+    <td/>
+  </tr>
   <% end %>
-  </div>
-</div>
+</table>
+<table>
+  <tr>
+    <td style="text-align:center">
 
-  <% if user_signed_in? %>
-  <%= link_to 'Add New Space', new_building_space_path(@building) %>
-  <% else %>
-  <%= link_to 'Log In To Add Space', new_user_session_path %>
-  <% end %>
-  
-  <% else %>
-    Looks like we need to add some spaces!
-  <br/>
-  <% if user_signed_in? %>
-  <%= link_to 'Add New Space', new_building_space_path(@building) %>
-  <% else %>
-  <%= link_to 'Log In To Add Space', new_user_session_path %>
-  <% end %>
+      <% if user_signed_in? %>
+      <%= link_to 'Add New Space', new_building_space_path(@building) %>
+      <% else %>
+      <%= link_to 'Log In To Add Space', new_user_session_path %>
+      <% end %>
+      
+      <% else %>
+        Looks like we need to add some spaces!
+      <br/>
+      <% if user_signed_in? %>
+      <%= link_to 'Add New Space', new_building_space_path(@building) %>
+      <% else %>
+      <%= link_to 'Log In To Add Space', new_user_session_path %>
+      <% end %>
+
+    </td>
+  </tr>
+</table>
+
 <% end %>

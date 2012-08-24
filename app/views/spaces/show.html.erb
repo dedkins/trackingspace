@@ -1,55 +1,94 @@
-<p id="notice"><%= notice %></p>
+<% currently_at 'Spaces' %>
+
+<div class="pagetitle">
+  <%= @space.building.address %> | Suite <%= @space.suite %>
+</div>
+
 <table>
+  <tr>
+    <td>
+      <% if @space._3dplanurl? %>
+        <iframe frameborder="0" height="400" scrolling="no" src="<%= @space._3dplanurl %>" width="100%"></iframe>
+        <% else %>
+        <%= link_to image_tag('/assets/threedadfplan.png', :size => '600x350'), 'http://www.propertizing.com' %>
+      <% end %>
+    </td>
+  </tr>
+
 	<tr>
 		<td width="600px" valign=top >
-		<% if user_signed_in? %>
-		<h3>Add a comment about this space:</h3>
-			<%= render '/shared/micropost_form' %>
-		<% end %>
-		<% unless @space.microposts.empty? %>
-			<%= render 'shared/feed' %>
-		<% end %>
-	</td>
+  		<% if user_signed_in? %>
+  		<h3>Add a comment about this space:</h3>
+  			<%= render '/shared/micropost_form' %>
+  		<% end %>
+  		<% unless @space.microposts.empty? %>
+  			<%= render 'shared/feed' %>
+  		<% end %>
+    </td>
+  </tr>
+</table>
 
-<p>
-  <b>Status:</b>
-  <%= @space.status %>
-</p>
+<%= content_for :sidebar do %>
 
-<p>
-  <b>Suite:</b>
-  <%= @space.suite %>
-</p>
+  <table width="100%">
+    <tr class="tabletitle">
+      <th colspan="3">Stats</th>
+    </tr>
+    <tr class="tabletext">
+      <td width="10%"/>
+      <td width="40%">Status</td>
+      <td><%= @space.status %></td>
+    </tr>
+    <tr class="tabletext">
+      <td/>
+      <td width="40%">Number</td>
+      <td><%= @space.suite %></td>
+    </tr>
+    <tr>
+      <td/>
+      <td width="40%">Size</td>
+      <td><%= @space.sf %>sf</td>
+    </tr>
+    <tr>
+      <td/>
+      <td width="40%">Monthly</td>
+      <td><%= number_to_currency(@space.monthly) %></td>
+    </tr>
+    <tr>
+      <td/>
+      <td width="40%">Rate</td>
+      <td><%= number_to_currency(@space.monthly/@space.sf) %></td>
+    </tr>
+  </table>
 
-<p>
-  <b>Company:</b>
-  <%= @space.company %>
-</p>
+  <table width="100%">
+    <tr height="15px"/>
+    <tr>
+      <th class="tabletitle">Lease on Record?</th>
+    </tr>
+    <tr class="tabletext">
+      <td style="text-align:center">
+        <% if @leases.empty? %>No
+        <% else %>Yes
+        <% end %>
+      </td>
+    </tr>
+  </table>
 
-<p>
-  <b>Sf:</b>
-  <%= @space.sf %>
-</p>
+  <table width="100%">
+    <tr height="15px"/>
+    <tr>
+      <td style="text-align:center">
+        <% if user_signed_in? %>
+          <%= link_to 'New Lease', new_space_lease_path(@space) %> |
+          <%= link_to 'Edit Stats', edit_building_space_path(@building,@space) %> |
+          <% end %>
 
-<p>
-  <b>Monthly:</b>
-  <%= number_to_currency(@space.monthly) %>
-</p>
+          <%= link_to 'Back', building_path(@building) %>      
+      </td>
+    </tr>
+  </table>
+  
 
-<p>
-  <b>Rate:</b>
-  <%= number_to_currency(@space.monthly/@space.sf) %>
-</p>
-
-<% if @space._3dplanurl? %>
-<p>
-  <iframe frameborder="0" height="400" scrolling="no" src="<%= @space._3dplanurl %>" width="100%"></iframe>
-</p>
 <% end %>
 
-<% if user_signed_in? %>
-<%= link_to 'New Lease', new_space_lease_path(@space) %> |
-<%= link_to 'Edit', edit_building_space_path(@building,@space) %> |
-<% end %>
-
-<%= link_to 'Back', building_path(@building) %>

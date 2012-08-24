@@ -16,6 +16,7 @@ class SpacesController < ApplicationController
     @space = Space.find(params[:id])
     @micropost = Micropost.new if signed_in?
     @feed_items = @space.feed
+    @leases = Lease.find_all_by_space_id(params[:id])
   end
 
   # GET /spaces/new

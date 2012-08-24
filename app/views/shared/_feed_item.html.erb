@@ -20,7 +20,6 @@
 		<% if feed_item.typeof == 'Updated' %>
 			<div id="post">Updated Suite <%= feed_item.suite %></div>
 		<% end %>
-		<br/>
 		<div id="name"><%= link_to feed_item.user.name, user_path(feed_item.user) %></div>
 		Posted <%= time_ago_in_words(feed_item.created_at) %> ago - 
 		<% if current_user == (feed_item.user) %>

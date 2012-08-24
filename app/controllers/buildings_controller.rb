@@ -74,9 +74,11 @@ class BuildingsController < ApplicationController
 
   def update
     @building = Building.find(params[:id])
+    @micropost = current_user.microposts.build(typeof: 'Updated', building_id: @building.id,name: @current_user.name)
 
     respond_to do |format|
       if @building.update_attributes(params[:building])
+        @micropost.save!
         format.html { redirect_to @building, notice: 'Building was successfully updated.' }
         format.json { head :no_content }
       else

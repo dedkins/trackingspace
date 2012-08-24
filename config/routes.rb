@@ -13,6 +13,8 @@ Trackingspace::Application.routes.draw do
   match 'map' => 'buildings#map'
   match 'home' => 'buildings#home'
 
+  match 'download' => 'leases#download', :as => 'download'
+
   resources :authentications
 
   resources :buildings do

@@ -89,4 +89,9 @@ class LeasesController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def download
+    redirect_to @lease.file.expiring_url(10)
+  end
+  
 end

@@ -1,4 +1,6 @@
-<%= form_for ([@space, @lease]), :html => { :multipart => true } do |f| %>
+<div class="form_box">
+
+  <%= form_for ([@space, @lease]), :html => { :multipart => true } do |f| %>
   <% if @lease.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@lease.errors.count, "error") %> prohibited this lease from being saved:</h2>
@@ -11,10 +13,9 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :user_id %><br />
+  
     <%= f.hidden_field :user_id, :value => @current_user.id %>
-  </div>
+  
   <div class="field">
     <%= f.label :size %><br />
     <%= f.number_field :size %>
@@ -34,3 +35,5 @@
     <%= f.submit %>
   </div>
 <% end %>
+
+</div>

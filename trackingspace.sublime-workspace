@@ -196,6 +196,10 @@
 	},
 	"file_history":
 	[
+		"/C/Users/david/trackingspace/app/models/lease.rb",
+		"/C/Users/david/trackingspace/config/routes.rb",
+		"/C/Users/david/trackingspace/app/controllers/leases_controller.rb",
+		"/C/Users/david/trackingspace/app/controllers/application_controller.rb",
 		"/C/Users/david/trackingspace/app/views/shared/_micropost_form.html.erb",
 		"/C/Users/david/trackingspace/app/assets/stylesheets/mobile.css",
 		"/C/Users/david/trackingspace/app/views/users/leases.html.erb",
@@ -216,7 +220,6 @@
 		"/C/Users/david/trackingspace/config/environments/development.rb",
 		"/C/Users/david/trackingspace/app/assets/stylesheets/starting_css.css.scss",
 		"/C/Users/david/trackingspace/app/views/users/show.html.erb",
-		"/C/Users/david/trackingspace/app/controllers/leases_controller.rb",
 		"/C/Users/david/trackingspace/app/views/shared/_feed.html.erb",
 		"/C/Users/david/trackingspace/app/assets/stylesheets/navigation.css.scss",
 		"/C/Users/david/trackingspace/app/assets/stylesheets/sidebar.css",
@@ -224,11 +227,9 @@
 		"/C/Users/david/trackingspace/app/views/leases/index.html.erb",
 		"/C/Users/david/trackingspace/app/helpers/navigation_helper.rb",
 		"/C/Users/david/trackingspace/Gemfile",
-		"/C/Users/david/trackingspace/app/controllers/application_controller.rb",
 		"/C/Users/david/trackingspace/app/assets/stylesheets/sidebar.css.scss",
 		"/C/Users/david/trackingspace/app/views/layouts/_footer.html.erb",
 		"/C/Users/david/trackingspace/app/assets/stylesheets/starting_css.css",
-		"/C/Users/david/trackingspace/app/models/lease.rb",
 		"/C/Users/david/trackingspace/app/views/leases/_form.html.erb",
 		"/C/Users/david/trackingspace/app/assets/javascripts/application.js",
 		"/C/Users/david/trackingspace/app/assets/javascripts/jquery.purr.js",
@@ -238,7 +239,6 @@
 		"/C/Users/david/trackingspace/app/views/leases/edit.html.erb",
 		"/C/Users/david/trackingspace/app/models/user.rb",
 		"/C/Users/david/trackingspace/app/controllers/users_controller.rb",
-		"/C/Users/david/trackingspace/config/routes.rb",
 		"/C/Users/david/trackingspace/config/s3.yml",
 		"/C/Users/david/trackingspace/app/views/spaces/_form.html.erb",
 		"/C/Users/david/trackingspace/app/views/spaces/show.html.erb",
@@ -381,7 +381,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 4,
 			"sheets":
 			[
 				{
@@ -423,8 +423,8 @@
 						"selection":
 						[
 							[
-								3108,
-								3108
+								84,
+								146
 							]
 						],
 						"settings":
@@ -506,8 +506,8 @@
 						"selection":
 						[
 							[
-								155,
-								155
+								180,
+								180
 							]
 						],
 						"settings":

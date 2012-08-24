@@ -5,16 +5,16 @@
 			
 			<table width="100%">
 				<tr>
-					<td width="25%" style="font-size:1.2em;font-weight:bold;color:green;text-align:center"><%= render 'est_value' %></td>
-					<td width="25%" style="font-size:1.2em;font-weight:bold;color:green;text-align:center"><%= render 'avg_rate' %></td>
-					<td width="25%" style="font-size:1.2em;font-weight:bold;color:green;text-align:center">Office</td>
-					<td width="25%" style="font-size:1.2em;font-weight:bold;color:green;text-align:center">50</td>
+					<td width="25%" style="font-size:1.25em;font-weight:bold;color:green;text-align:center"><%= render 'est_value' %></td>
+					<td width="25%" style="font-size:1.25em;font-weight:bold;color:green;text-align:center"><%= render 'avg_rate' %></td>
+					<td width="25%" style="font-size:1.25em;font-weight:bold;color:green;text-align:center">Office</td>
+					<td width="25%" style="font-size:1.25em;font-weight:bold;color:green;text-align:center">50</td>
 				</tr>
 				<tr>
-					<td width="25%" style="font-size:0.7em;text-align:center">Estimated Value</td>
-					<td width="25%" style="font-size:0.7em;text-align:center">Average Rate</td>
-					<td width="25%" style="font-size:0.7em;text-align:center">Building Type</td>
-					<td width="25%" style="font-size:0.7em;text-align:center">Activity Last 30 Days</td>
+					<td width="25%" style="font-size:0.8em;text-align:center">Estimated Value</td>
+					<td width="25%" style="font-size:0.8em;text-align:center">Average Rate</td>
+					<td width="25%" style="font-size:0.8em;text-align:center">Building Type</td>
+					<td width="25%" style="font-size:0.8em;text-align:center">Activity Last 30 Days</td>
 				</tr>
 			</table>
 
@@ -113,14 +113,16 @@
 						<%= render '/shared/micropost_form' %>
 					<% end %>
 					<% unless @building.microposts.empty? %>
-						<%= render 'shared/feed' %>
+						<div class="feeditems">
+							<%= render 'shared/feed' %>
+						</div>
 					<% end %>
 				</div>
 			</div>
 	<% end %>
 
 	<%= content_for :sidebar do %>
-				
+		<%= render 'buildings/spaces' %>	
 	<% end %>
 </div>
 
