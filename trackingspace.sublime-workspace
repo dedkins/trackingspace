@@ -159,7 +159,7 @@
 			"file": "app/assets/stylesheets/mobile.css.scss",
 			"settings":
 			{
-				"buffer_size": 4685,
+				"buffer_size": 4779,
 				"line_ending": "Windows"
 			}
 		},
@@ -167,16 +167,8 @@
 			"file": "app/views/buildings/index.html.erb",
 			"settings":
 			{
-				"buffer_size": 1665,
+				"buffer_size": 1713,
 				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/views/users/leases.html.erb",
-			"settings":
-			{
-				"buffer_size": 747,
-				"line_ending": "Windows"
 			}
 		}
 	],
@@ -204,6 +196,8 @@
 	},
 	"file_history":
 	[
+		"/C/Users/david/trackingspace/app/views/users/leases.html.erb",
+		"/C/Users/david/trackingspace/app/views/leases/_pdf.html.erb",
 		"/C/Users/david/trackingspace/app/views/leases/edit.html.erb",
 		"/C/Users/david/trackingspace/app/models/lease.rb",
 		"/C/Users/david/trackingspace/app/controllers/leases_controller.rb",
@@ -227,13 +221,11 @@
 		"/C/Users/david/trackingspace/app/views/buildings/index.html.erb",
 		"/C/Users/david/trackingspace/config/routes.rb",
 		"/C/Users/david/trackingspace/app/controllers/application_controller.rb",
-		"/C/Users/david/trackingspace/app/views/users/leases.html.erb",
 		"/C/Users/david/trackingspace/app/views/buildings/show.html.erb",
 		"/C/Users/david/trackingspace/app/views/layouts/mobile.html.erb",
 		"/C/Users/david/trackingspace/app/views/layouts/application.html.erb",
 		"/C/Users/david/trackingspace/app/views/buildings/_avg_rate.html.erb",
 		"/C/Users/david/trackingspace/app/views/buildings/_est_value.html.erb",
-		"/C/Users/david/trackingspace/app/views/leases/_pdf.html.erb",
 		"/C/Users/david/trackingspace/app/views/leases/show.html.erb",
 		"/C/Users/david/trackingspace/app/views/buildings/_building_specs.html.erb",
 		"/C/Users/david/trackingspace/app/assets/stylesheets/application.css",
@@ -389,7 +381,7 @@
 	"groups":
 	[
 		{
-			"selected": 5,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -404,8 +396,8 @@
 						"selection":
 						[
 							[
-								1577,
-								1471
+								1140,
+								1018
 							]
 						],
 						"settings":
@@ -415,7 +407,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 615.0,
+						"translation.y": 126.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -480,15 +472,15 @@
 					"file": "app/assets/stylesheets/mobile.css.scss",
 					"settings":
 					{
-						"buffer_size": 4685,
+						"buffer_size": 4779,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2187,
-								2187
+								267,
+								267
 							]
 						],
 						"settings":
@@ -498,7 +490,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1229.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -508,43 +500,15 @@
 					"file": "app/views/buildings/index.html.erb",
 					"settings":
 					{
-						"buffer_size": 1665,
+						"buffer_size": 1713,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								984,
-								984
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 282.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "app/views/users/leases.html.erb",
-					"settings":
-					{
-						"buffer_size": 747,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								359,
-								359
+								104,
+								104
 							]
 						],
 						"settings":
