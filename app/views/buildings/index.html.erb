@@ -40,7 +40,7 @@
   </tr>
 <% @buildings.each do |building| %>
   <tr>
-    <td width="70%"><div id="building_mobile"><%= link_to truncate(building.address, :length => 30), building_path(building.id) %></div></td>
+    <td width="60%"><div id="building_mobile"><%= link_to truncate(building.address, :length => 35), building_path(building.id) %></div></td>
     <td width="10%" style="text-align:center">
       <div id="greenwhite"><%= building.spaces.count %></div>
     </td>
