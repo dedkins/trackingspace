@@ -6,11 +6,13 @@ body {
   font-size:1em;
 }
 header#page_header{
-  height:150px;
+  height:100px;
   color: #fff;
   font-size: 0.9em;
   overflow: hidden;
   padding: 10px 20px;
+  border: 1px dashed white;
+  width: 700px;
   a,
   a:link,
   a:hover {
@@ -85,17 +87,17 @@ header#page_header{
 
 #greenwhite {
   border-radius:5px;
-  height:40px;
-  width:40px;
+  height:30px;
+  width:30px;
   background-color: #608341;
   color:white;
   font-weight:bold;
-  font-size:25px;
+  font-size:1.2em;
   text-align:center;
   padding-top:12px;
 }
 #building_mobile {
-  font-size:25px;
+  font-size:1.2em;
   vertical-align: middle;
   font-weight:bold;
   color:#608341;
@@ -211,36 +213,6 @@ footer{
     border: 5px solid orange;
     margin-top: 20px;
   }
-
-#searchcontainer {
-  margin-left:20px;
-  height:60px;
-  width:700px;
-}
-.search {
-  position: relative;
-  font-size:25px;
-  padding-left:15px;
-  float: left;
-  height:55px;
-  width:600px;
-  border-radius: 20px 0px 0px 20px;
-  -moz-box-shadow: inset 0 0 2px 2px #888;
-  -webkit-box-shadow: inset 0 0 2px 2px#888;
-  box-shadow: inset 0 0 2px 2px #888;
-  font-family:arial;
-}
-.searchgo {
-  position: absolute;
-  font-size:25px;
-  height:58px;
-  width:70px;
-  border-radius: 0px 20px 20px 0px;
-  margin-left:5px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#608341)) no-repeat;
-  color:#3D3D3D;
-  font-weight:bold;
-}
 
 .map {
   position: relative;

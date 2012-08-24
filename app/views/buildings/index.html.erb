@@ -31,33 +31,36 @@
 
 <% if mobile_device? %>
 
-<table>
+<table width="100%">
   <tr>
-    <th width=650px></th>
-    <th width=50px>Spaces</th>
-    <th width=50px>Posts</th>
-    <th width=130px>Avg Rate</th>
+    <th width="60%"></th>
+    <th width="10%">Spaces</th>
+    <th width="10%">Posts</th>
+    <th width="20%">Avg Rate</th>
   </tr>
-</table>
 <% @buildings.each do |building| %>
-<table>
   <tr>
-    <td width=650px><div id="building_mobile"><%= link_to truncate(building.address, :length => 30), building_path(building.id) %></div></td>
-    <td width=50px align=center>
+    <td width="70%"><div id="building_mobile"><%= link_to truncate(building.address, :length => 30), building_path(building.id) %></div></td>
+    <td width="10%" style="text-align:center">
       <div id="greenwhite"><%= building.spaces.count %></div>
     </td>
-    <td width=50px align=center>
+    <td width="10%" style="text-align:center">
       <div id="greenwhite"><%= building.microposts.count %></div>
     </td>
-    <td width=130px align=center>
+    <td width="20%" style="text-align:center">
       <% unless building.spaces.empty? %>
       <div id="building_mobile"><%= number_to_currency(building.spaces.collect(&:monthly).inject(:+)/building.spaces.collect(&:sf).inject(:+)) %></div>
       <% end %>
     </td>
-    <hr size=2>
   </tr>
-</table>
+  <tr>
+    <td colspan="4">
+      <hr size="2">
+    </td>
+  </tr>
 <% end %>
+</table>
+
 <% end %>
 <%= yield :scripts %>
 
