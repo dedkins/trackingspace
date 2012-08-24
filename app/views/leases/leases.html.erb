@@ -4,7 +4,7 @@
 
 <table>
   <tr>
-    <th>Lease Copy</th>
+    <th></th>
     <th width="20px"/>
     <th>Address</th>
     <th width="20px"/>
@@ -19,7 +19,7 @@
 
 <% @leases.each do |lease| %>
   <tr height="30px">
-    <td><% if lease.file? %><%= link_to 'Download', lease.file.url %><% else %>No<% end %></td>
+    <td><%= link_to 'View', lease_path %></td>
     <td width="20px"/>
     <td><%= link_to truncate(lease.space.building.address, :separator => ','), building_path(lease.space.building) %></td>
     <td width="20px"/>
