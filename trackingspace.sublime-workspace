@@ -170,6 +170,22 @@
 				"buffer_size": 1713,
 				"line_ending": "Unix"
 			}
+		},
+		{
+			"file": "app/views/leases/show.html.erb",
+			"settings":
+			{
+				"buffer_size": 835,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/leases/edit.html.erb",
+			"settings":
+			{
+				"buffer_size": 208,
+				"line_ending": "Unix"
+			}
 		}
 	],
 	"build_system": "",
@@ -197,6 +213,7 @@
 	"file_history":
 	[
 		"/C/Users/david/trackingspace/app/views/users/leases.html.erb",
+		"/C/Users/david/trackingspace/app/views/leases/index.html.erb",
 		"/C/Users/david/trackingspace/app/views/leases/_pdf.html.erb",
 		"/C/Users/david/trackingspace/app/views/leases/edit.html.erb",
 		"/C/Users/david/trackingspace/app/models/lease.rb",
@@ -233,7 +250,6 @@
 		"/C/Users/david/trackingspace/app/assets/stylesheets/starting_css.css.scss",
 		"/C/Users/david/trackingspace/app/assets/stylesheets/sidebar.css",
 		"/C/Users/david/trackingspace/app/assets/stylesheets/normalize.css",
-		"/C/Users/david/trackingspace/app/views/leases/index.html.erb",
 		"/C/Users/david/trackingspace/app/helpers/navigation_helper.rb",
 		"/C/Users/david/trackingspace/Gemfile",
 		"/C/Users/david/trackingspace/app/assets/stylesheets/sidebar.css.scss",
@@ -381,7 +397,7 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 6,
 			"sheets":
 			[
 				{
@@ -516,6 +532,59 @@
 							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/views/leases/show.html.erb",
+					"settings":
+					{
+						"buffer_size": 835,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								626,
+								626
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "app/views/leases/edit.html.erb",
+					"settings":
+					{
+						"buffer_size": 208,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								29,
+								29
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
