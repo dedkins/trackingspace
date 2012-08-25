@@ -155,7 +155,7 @@
 			"file": "app/views/layouts/application.html.erb",
 			"settings":
 			{
-				"buffer_size": 1610,
+				"buffer_size": 1921,
 				"line_ending": "Windows"
 			}
 		},
@@ -401,7 +401,7 @@
 	"groups":
 	[
 		{
-			"selected": 6,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -464,15 +464,15 @@
 					"file": "app/views/layouts/application.html.erb",
 					"settings":
 					{
-						"buffer_size": 1610,
+						"buffer_size": 1921,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								341,
-								341
+								630,
+								630
 							]
 						],
 						"settings":
