@@ -187,7 +187,7 @@
 			"file": "app/views/leases/leases.html.erb",
 			"settings":
 			{
-				"buffer_size": 1029,
+				"buffer_size": 1057,
 				"line_ending": "Windows"
 			}
 		}
@@ -575,15 +575,15 @@
 					"file": "app/views/leases/leases.html.erb",
 					"settings":
 					{
-						"buffer_size": 1029,
+						"buffer_size": 1057,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								404,
-								404
+								420,
+								420
 							]
 						],
 						"settings":
