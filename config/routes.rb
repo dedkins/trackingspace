@@ -11,7 +11,7 @@ Trackingspace::Application.routes.draw do
   match 'buildings/:building_id/spaces/:id/post' => 'microposts#mspace_post', :as => 'mspace_post'
 
   match 'map' => 'buildings#map'
-  match 'home' => 'buildings#home'
+  match 'home' => 'pages#home', :as => 'home'
 
   match 'download' => 'leases#download', :as => 'download'
 

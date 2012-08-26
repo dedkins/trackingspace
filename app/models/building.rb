@@ -34,6 +34,12 @@ class Building < ActiveRecord::Base
   def feed
     Micropost.where("building_id = ?", id)
   end
+
+  scope :new_buildings, lambda {
+    {
+      :conditions => ["created_at >= ?", Time.now.prev_month]
+    }
+  }
   
 end
 

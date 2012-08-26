@@ -155,7 +155,7 @@
 			"file": "app/views/layouts/application.html.erb",
 			"settings":
 			{
-				"buffer_size": 1921,
+				"buffer_size": 1610,
 				"line_ending": "Windows"
 			}
 		},
@@ -464,15 +464,15 @@
 					"file": "app/views/layouts/application.html.erb",
 					"settings":
 					{
-						"buffer_size": 1921,
+						"buffer_size": 1610,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								630,
-								630
+								319,
+								319
 							]
 						],
 						"settings":
