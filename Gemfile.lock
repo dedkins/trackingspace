@@ -54,6 +54,8 @@ GEM
     diff-lcs (1.1.3)
     dynamic_form (1.1.4)
     erubis (2.7.0)
+    exception_notification (2.6.1)
+      actionmailer (>= 3.0.4)
     execjs (1.4.0)
       multi_json (~> 1.0)
     faraday (0.8.1)
@@ -183,6 +185,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   devise
   dynamic_form
+  exception_notification
   gmaps4rails
   gravatar_image_tag
   jquery-rails

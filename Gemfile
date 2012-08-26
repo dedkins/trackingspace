@@ -17,6 +17,7 @@ gem 'aws-sdk'
 gem "dynamic_form"
 gem 'gravatar_image_tag'
 gem 'paperclip', '~> 3.0'
+gem 'exception_notification', :require => 'exception_notifier'
 
 group :development do
 	gem 'rspec-rails', '2.0.1'
