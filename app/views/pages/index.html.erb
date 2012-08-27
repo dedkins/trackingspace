@@ -4,6 +4,17 @@
 
 <%= render 'buildings/new_buildings' %>
 
+<% unless user_signed_in? %>
 
+<h3>The Non-Listing Service</h3>
+<p>
+TrackingSpace is not another listing service.  It is not a listing service at all.  It is a means by which businesses leasing commercial real estate space can track not only the leases on their space but other spaces as well.  This forms the basis of the service.  Additionally, members of this service can observe changes that occur with buildings, spaces and other members.  Access is free.  Only those that wish to show their connection with a given building/space may opt for an upgrade.  Otherwise, feel free to become a member and start tracking.  Oh and click a few ads that may be of interest...
+<p>
 
+<h3>Where to Start?</h3>
+<p>
+	Everything is driven off addresses.  Start by typing an address in the search box at the top of this page.  Be sure to complete (or select) the address before clicking "Go".  This will take you to the building detail page.  From here you can add your space if its not already there, and add/upload your lease.
+</p>
+
+<% end %>
 
