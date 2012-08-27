@@ -1,10 +1,8 @@
 class PagesController < ApplicationController
 
-	def home
+	def index
 		@newbuildings = Building.new_buildings
 		@json = Building.new_buildings.to_gmaps4rails
-
-		render :home
 	end
 
 end
