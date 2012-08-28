@@ -5,4 +5,7 @@ class PagesController < ApplicationController
 		@json = Building.new_buildings.to_gmaps4rails
 	end
 
+	def spaces_main
+	end
+	
 end
