@@ -13,6 +13,7 @@
         <%= nav_tab 'Buildings', buildings_path, current: current_tab%>
         <%= nav_tab 'Spaces', user_leases_path, current: current_tab %>
         <%= nav_tab 'People', buildings_path, current: current_tab %>
+        <%= nav_tab 'Login', new_user_session_path, current: current_tab %>
         <% if user_signed_in? %>
         <%= nav_tab 'Profile', current_user, current: current_tab %></li>
         <% end %>
