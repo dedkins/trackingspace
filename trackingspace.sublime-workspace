@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"user",
+				"user_signed_in"
+			],
+			[
 				"new",
 				"newbuildings"
 			],
@@ -34,10 +38,6 @@
 			[
 				"lease",
 				"lease"
-			],
-			[
-				"user",
-				"current_user"
 			],
 			[
 				"omni",
@@ -171,7 +171,7 @@
 			"file": "app/views/layouts/_header.html.erb",
 			"settings":
 			{
-				"buffer_size": 1530,
+				"buffer_size": 1590,
 				"line_ending": "Windows"
 			}
 		},
@@ -181,6 +181,14 @@
 			{
 				"buffer_size": 1716,
 				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/layouts/application.html.erb",
+			"settings":
+			{
+				"buffer_size": 2622,
+				"line_ending": "Windows"
 			}
 		}
 	],
@@ -209,6 +217,7 @@
 	"file_history":
 	[
 		"/C/Users/david/trackingspace/app/views/layouts/_main_nav.html.erb",
+		"/C/Users/david/trackingspace/app/views/layouts/application.html.erb",
 		"/C/Users/david/trackingspace/app/assets/stylesheets/mobile.css.scss",
 		"/C/Users/david/trackingspace/app/views/buildings/building_posts.html.erb",
 		"/C/Users/david/trackingspace/app/controllers/buildings_controller.rb",
@@ -220,7 +229,6 @@
 		"/C/Users/david/trackingspace/app/assets/stylesheets/application.css",
 		"/C/Users/david/trackingspace/app/assets/stylesheets/layout.css.scss",
 		"/C/Users/david/trackingspace/app/views/layouts/_header.html.erb",
-		"/C/Users/david/trackingspace/app/views/layouts/application.html.erb",
 		"/C/Users/david/trackingspace/Gemfile",
 		"/C/Users/david/trackingspace/config/environments/production.rb",
 		"/C/Users/david/trackingspace/app/controllers/pages_controller.rb",
@@ -393,7 +401,7 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 5,
 			"sheets":
 			[
 				{
@@ -482,15 +490,15 @@
 					"file": "app/views/layouts/_header.html.erb",
 					"settings":
 					{
-						"buffer_size": 1530,
+						"buffer_size": 1590,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1333,
-								1333
+								314,
+								314
 							]
 						],
 						"settings":
@@ -500,7 +508,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 104.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -519,6 +527,34 @@
 							[
 								78,
 								78
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/views/layouts/application.html.erb",
+					"settings":
+					{
+						"buffer_size": 2622,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								128,
+								128
 							]
 						],
 						"settings":

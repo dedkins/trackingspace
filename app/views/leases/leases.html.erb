@@ -2,6 +2,13 @@
 
 <div class="pagetitle">my Leases</div>
 
+<% unless user_signed_in? %>
+<p>
+  Sign in to see and add your lease information.  <%= link_to 'Sign-In', new_user_session_path %>
+</p>
+<% end %>
+
+<% if user_signed_in? %>
 <table>
   <tr>
     <th></th>
@@ -34,12 +41,8 @@
 <% end %>
 
 </table>
+<% else %>
 
-<table>
-  <tr>
-    <td>Placeholder for total</td>
-  </tr>
+Looks like you do not have any leases yet.  Add one now.
 
-</table>
-
-<br />
+<% end %>
