@@ -28,7 +28,6 @@ class LeasesController < ApplicationController
   end
 
   def leases
-    @user = User.find(current_user.id)
     @leases = Lease.find_all_by_user_id(current_user.id)
   end
   
