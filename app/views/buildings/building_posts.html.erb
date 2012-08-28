@@ -1,0 +1,25 @@
+<%= currently_at 'Buildings' %>
+
+<div class="pagetitle">Latest Building Updates</div>
+
+  <table>
+    <tr>
+      <td>
+        <% unless @buildings.microposts.empty? %>
+          <%= render 'shared/feed' %>
+        <% end %>
+      </td>
+    </tr>
+  </table>
+
+<% unless mobile_device? %>
+  <%= content_for :sidebar do %>
+
+    <%= link_to 'List Buildings I\'m Tracking', buildings_path %>
+
+  <% end %>
+<% end %>
+
+<% end %>
+
+

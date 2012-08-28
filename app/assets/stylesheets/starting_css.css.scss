@@ -95,13 +95,13 @@ section#sidebar {
 }
 
 footer#page_footer {
-  background-color: #807c77;
-  border-bottom: 10px solid #4c2719;
   color: black;
-  font-size: 0.8em;
   height: 100px;
   padding: 10px 20px;
-  
+  margin: 10px auto auto auto;
+  width: 940px;
+  background-color:#ffffff;
+  opacity:0.6;
   ul {
     margin-left: -10px;
     padding: 0;
