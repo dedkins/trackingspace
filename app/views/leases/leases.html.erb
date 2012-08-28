@@ -2,13 +2,7 @@
 
 <div class="pagetitle">my Leases</div>
 
-<% unless user_signed_in? %>
-<p>
-  Sign in to see and add your lease information.  <%= link_to 'Sign-In', new_user_session_path %>
-</p>
-<% end %>
 
-<% if user_signed_in? %>
 <table>
   <tr>
     <th></th>
@@ -24,25 +18,27 @@
     <th></th>
   </tr>
 
-<% @leases.each do |lease| %>
-  <tr height="30px">
-    <td><%= link_to 'View', space_lease_path(lease.space,lease.id) %></td>
-    <td width="20px"/>
-    <td><%= link_to truncate(lease.space.building.address, :separator => ','), building_path(lease.space.building) %></td>
-    <td width="20px"/>
-    <td><%= link_to lease.space.suite, building_space_path(lease.space.building,lease.space) %></td>
-    <td width="20px"/>
-    <td><%= l lease.expiration %></td>
-    <td width="20px"/>
-    <td><%= number_to_currency(lease.current_rate) %></td>
-    <td width="20px"/>
-    <td><%= link_to 'Edit', edit_space_lease_path(lease.space,lease) %></td>
-  </tr>
+<% if @leases? %>
+
+  <% @leases.each do |lease| %>
+    <tr height="30px">
+      <td><%= link_to 'View', space_lease_path(lease.space,lease.id) %></td>
+      <td width="20px"/>
+      <td><%= link_to truncate(lease.space.building.address, :separator => ','), building_path(lease.space.building) %></td>
+      <td width="20px"/>
+      <td><%= link_to lease.space.suite, building_space_path(lease.space.building,lease.space) %></td>
+      <td width="20px"/>
+      <td><%= l lease.expiration %></td>
+      <td width="20px"/>
+      <td><%= number_to_currency(lease.current_rate) %></td>
+      <td width="20px"/>
+      <td><%= link_to 'Edit', edit_space_lease_path(lease.space,lease) %></td>
+    </tr>
+  <% end %>
+
+  <% else %>
+
+  Feel free to add a new lease by clicking here.
 <% end %>
 
 </table>
-<% else %>
-
-Looks like you do not have any leases yet.  Add one now.
-
-<% end %>

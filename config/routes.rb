@@ -21,7 +21,7 @@ Trackingspace::Application.routes.draw do
     resources :spaces
   end
 
-  match 'leases' => 'leases#leases', :as => 'user_leases'
+  match 'spaces' => 'pages#spaces_main', :as => 'spaces_main'
 
   resources :spaces do
     resources :leases

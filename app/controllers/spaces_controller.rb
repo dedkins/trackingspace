@@ -1,5 +1,8 @@
 class SpacesController < ApplicationController
 
+  private 
+  def main
+  end
 
   before_filter :load_building
 
