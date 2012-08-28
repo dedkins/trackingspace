@@ -13,9 +13,11 @@
         <%= nav_tab 'Buildings', buildings_path, current: current_tab%>
         <%= nav_tab 'Spaces', user_leases_path, current: current_tab %>
         <%= nav_tab 'People', buildings_path, current: current_tab %>
-        <%= nav_tab 'Login', new_user_session_path, current: current_tab %>
+        <% unless user_signed_in? %>
+          <%= nav_tab 'Login', new_user_session_path, current: current_tab %>
+        <% end %>
         <% if user_signed_in? %>
-        <%= nav_tab 'Profile', current_user, current: current_tab %></li>
+          <%= nav_tab 'myProfile', current_user, current: current_tab %>
         <% end %>
       </ul>
 	</nav>
