@@ -160,27 +160,27 @@
 			}
 		},
 		{
-			"file": "app/views/pages/index.html.erb",
-			"settings":
-			{
-				"buffer_size": 1159,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/views/leases/leases.html.erb",
-			"settings":
-			{
-				"buffer_size": 1103,
-				"line_ending": "Windows"
-			}
-		},
-		{
 			"file": "app/controllers/leases_controller.rb",
 			"settings":
 			{
 				"buffer_size": 2391,
 				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/controllers/pages_controller.rb",
+			"settings":
+			{
+				"buffer_size": 181,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/leases/_leases.html.erb",
+			"settings":
+			{
+				"buffer_size": 1102,
+				"line_ending": "Windows"
 			}
 		}
 	],
@@ -208,6 +208,8 @@
 	},
 	"file_history":
 	[
+		"/C/Users/david/trackingspace/app/views/pages/index.html.erb",
+		"/C/Users/david/trackingspace/app/views/leases/_leases.html.erb",
 		"/C/Users/david/trackingspace/config/routes.rb",
 		"/C/Users/david/trackingspace/app/views/layouts/_main_nav.html.erb",
 		"/C/Users/david/trackingspace/app/views/pages/spaces_main.html.erb",
@@ -333,9 +335,7 @@
 		"/C/Users/david/trackingspace/db/migrate/20120626024924_add_name_to_user_model.rb",
 		"/C/Users/david/trackingspace/app/views/users/show.erb",
 		"/C/Users/david/trackingspace/spec/models/micropost_spec.rb",
-		"/C/Users/david/trackingspace/app/views/buildings/mobile.index.html",
-		"/C/Users/david/trackingspace/spec/spec_helper.rb",
-		"/C/Users/david/trackingspace/db/migrate/20120620141825_create_microposts.rb"
+		"/C/Users/david/trackingspace/app/views/buildings/mobile.index.html"
 	],
 	"find":
 	{
@@ -453,60 +453,6 @@
 				},
 				{
 					"buffer": 2,
-					"file": "app/views/pages/index.html.erb",
-					"settings":
-					{
-						"buffer_size": 1159,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1146,
-								1146
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "app/views/leases/leases.html.erb",
-					"settings":
-					{
-						"buffer_size": 1103,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1103,
-								1103
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 297.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
 					"file": "app/controllers/leases_controller.rb",
 					"settings":
 					{
@@ -529,6 +475,60 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/controllers/pages_controller.rb",
+					"settings":
+					{
+						"buffer_size": 181,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								176,
+								176
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/views/leases/_leases.html.erb",
+					"settings":
+					{
+						"buffer_size": 1102,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1102,
+								1102
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 156.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

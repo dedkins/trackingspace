@@ -17,17 +17,21 @@ Trackingspace::Application.routes.draw do
 
   resources :authentications
 
+  match 'buildings' => 'pages#buildings_main', :as => 'buildings_main', :except => 'admin'
+
   resources :buildings do
     resources :spaces
   end
 
   match 'spaces' => 'pages#spaces_main', :as => 'spaces_main'
+  match 'people' => 'pages#people_main', :as => 'people_main'
 
   resources :spaces do
     resources :leases
   end
 
-  root :to => 'pages#index'
+  match 'home' => 'pages#index', :as => 'user_root'
+  root :to => 'buildings#home'
   
   
   end

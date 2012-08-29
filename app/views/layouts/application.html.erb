@@ -70,14 +70,18 @@
           </td>
         </tr>
       </table>
-        
+
+      <%= render 'layouts/footer' %>    
       </section>
+
     <% end %>
-  </section>
     <div class="clear"></div>
   </div>    
+
+<% if mobile_device? %>
+<%= render 'layouts/footer' %>
+<% end %>  
   
-  <%= render 'layouts/footer' %>
 
 </body>
 </html>

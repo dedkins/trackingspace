@@ -1,5 +1,8 @@
+<% currently_at 'Home' %>
 
-<h2>Sign in</h2>
+<div class="pagetitle">Sign-In</div>
+
+<div class="form_box">
 
 <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
   <div class="field"><%= f.label :email %><br />
@@ -18,3 +21,5 @@
 <%= render 'oauth_signin' %>
 
 <%= render :partial => "devise/shared/links" %>
+
+</div>

@@ -1,4 +1,16 @@
-<h2>Sign up</h2>
+<% currently_at 'Home' %>
+
+<div class="pagetitle">Become a Member</div>
+
+<h2>Membership = Free</h2>
+<p>
+	Become a member today and start tracking your space(s) and lease(s).  Becoming a member is free.  Our members get total access every building, space and person.  Our objective is, like most other web companies, to get more people using this service and telling others about it.  We welcome you to share it with others and visit a few of the sponsors along the way.
+</p>
+<p>
+	We look forward to you as a member!
+<p>
+
+<div class="form_box">
 
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
@@ -16,3 +28,5 @@
 <% end %>
 
 <%= render :partial => "devise/shared/links" %>
+
+</div>
