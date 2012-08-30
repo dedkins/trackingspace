@@ -1,7 +1,10 @@
 <%= currently_at 'Buildings' %>
 
+<header id="content_title">
+		<%= @building.address %>
+</header>
+
 <div class="yield_container">
-		<div class="pagetitle"><%= @building.address %> | (<%= link_to 'Edit', edit_building_path(@building) %>)</div>
 			
 			<table width="100%">
 				<tr>

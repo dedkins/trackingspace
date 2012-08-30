@@ -1,25 +1,26 @@
 nav#main_nav {
 	postion: absolute;
-	float:right;
-	top: 10px;
+	float:left;
 	right: 0;
 	li {
-		background: #865140;
+		background: #3B6AA0;
+		color: #fff;
 		display: inline-block;
-		margin: 10px 1px 0px 1px;
-		padding: 6px 12px;
+		margin: 1px;
+		padding: 8px 15px;
 		a, a:link, a:visited {
 			color: #fff;
+			font-size: 1.5em;
 			text-decoration: none;	
 		}
 		&.active {
-			background: #fff;
-			padding-bottom: 15px;
+			background: #666;
+			color: #fff;
+			padding: 8px 20px;
 			a,
 			a:link,
 			a:visited {
-				color: #555;
-				font-weight: bold;
+				color: #fff;
 			}	
 		}
 	}

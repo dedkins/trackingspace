@@ -1,6 +1,8 @@
 <%= currently_at 'Buildings' %>
 
-<div class="pagetitle">my Building List</div>
+<%= content_for :content_title do %>
+  my Building List
+<% end %>
 
 <% unless mobile_device? %>
 
