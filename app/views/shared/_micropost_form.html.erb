@@ -1,11 +1,21 @@
 <%= form_for @micropost do |f| %>
+
 <% if @building.present? %>
-<%= f.hidden_field :building_id, :value => @building.id %>
+	<%= f.hidden_field :building_id, :value => @building.id %>
+	<%= hidden_field_tag "back_to", building_path(@building) %>
+<% end %>
+
 <% if @space.present? %>
-<%= f.hidden_field :space_id, :value => @space.id %>
+	<%= f.hidden_field :building_id, :value => @building.id %>
+	<%= f.hidden_field :space_id, :value => @space.id %>
+	<%= hidden_field_tag "back_to", building_space_path(@building,@space) %>
 <% end %>
-<%= hidden_field_tag "back_to", building_path(@building) %>
+
+<% if @user.present? %>
+	<%= f.hidden_field :user_id, :value => @user.id %>
+	<%= hidden_field_tag "back_to", user_path(@user) %>
 <% end %>
+
 <%= f.text_area :content, :size => "20x4"%>
 <%= f.submit "Submit" %>
 

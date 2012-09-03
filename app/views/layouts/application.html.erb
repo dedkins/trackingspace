@@ -7,6 +7,30 @@
   <meta name="description" content="TrackingSpace allows businesses with commercial real estate leases store their lease(s) and track it with other buildings, spaces and people.">
   <meta name="keywords" content="commercial real estate,building for lease, space for rent, space for lease,commercial real estate leases,leasing space,available office space,office space,warehouse space,industrial space,commercial real estate brokerage,real estate brokerage,ring central,credit score">
 
+  <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+
+    <%= stylesheet_link_tag 'application' %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+    
+    <script>
+          $(function() {
+            var addresspicker = $( "#addresspicker" ).addresspicker();
+            var addresspickerMap = $( "#addresspicker_map" ).addresspicker({
+              regionBias: "fr",
+              elements: {
+                map:      "#map",
+                lat:      "#lat",
+                lng:      "#lng"
+              }
+            });
+            var gmarker = addresspickerMap.addresspicker( "marker");
+            gmarker.setVisible(true);
+            addresspickerMap.addresspicker( "updatePosition");
+        
+          });
+    </script>
+
   <script type="text/javascript">
 
   var _gaq = _gaq || [];
@@ -29,7 +53,11 @@
       <% content_tag :div, msg, :id => "flash_#{name}" %>
     <% end %>
 
-  <div class="container">
+  <% if mobile_device? %>
+    <div class="container_mobile">
+  <% else %>
+    <div class="container">
+  <% end %>
     <section id="content">
         <%= yield %>
       </section>
@@ -78,9 +106,7 @@
     <div class="clear"></div>
   </div>    
 
-<% if mobile_device? %>
-<%= render 'layouts/footer' %>
-<% end %>  
+ 
   
 <div class="clear"/>
 </body>

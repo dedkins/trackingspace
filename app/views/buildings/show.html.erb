@@ -1,12 +1,30 @@
 <%= currently_at 'Buildings' %>
 
 <header id="content_title">
-		<%= @building.address %>
+	<table width="100%">
+		<tr>
+			<td><%= @building.address %></td>
+			<% if user_signed_in? %>
+				<td>
+					<button id="track">Track It</button>
+				</td>
+				<td>
+					<button id="share">Share It</button>
+				</td>
+				<td>
+					<button id="tour">+ Tour</button>
+				</td>
+			<% else %>
+				<td>Sign in for more options</td>
+			<% end %>
+		</tr>
+	</table>
 </header>
 
 <div class="yield_container">
 			
 			<table width="100%">
+				<tr height="10px"/>
 				<tr>
 					<td width="25%" style="font-size:1.25em;font-weight:bold;color:green;text-align:center"><%= render 'est_value' %></td>
 					<td width="25%" style="font-size:1.25em;font-weight:bold;color:green;text-align:center"><%= render 'avg_rate' %></td>
@@ -51,37 +69,34 @@
 	<% if mobile_device? %>
 
 		<table width="100%">
-			<% if user_signed_in? %>
 			<tr>
-				<td><div class="greenbutton"><%= link_to 'Add Comment', mbuilding_post_path(@building) %></div></td>
-				<td><div class="greenbutton"><%= link_to 'Track It', '' %></div></td>
-				<td><div class="greenbutton"><%= link_to 'Share It', '' %></div></td>
-				<td><div class="greenbutton"><%= link_to 'Add to Tour', '' %></div></td>
-			</tr>
-			<% end %>
-			<% unless user_signed_in? %>
-			<tr>
-				<td>		
-					<div id="announcement"><%= link_to 'Sign In To Get More Options', new_user_session_path(:building_id => @building) %></div>
-				</td>
-			</tr>
-			<% end %>
-
-			<tr>
-				<td colspan="4">
-					<script type="text/javascript"><!--
-						google_ad_client = "ca-pub-5451064655705220";
-						/* 468 Banner */
-						google_ad_slot = "5816101200";
-						google_ad_width = 468;
-						google_ad_height = 60;
-						//-->
-					</script>
-					<script type="text/javascript"
-					src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-					</script>
-				</td>
-			</tr>
+          <td>
+            <script type="text/javascript"><!--
+              google_ad_client = "ca-pub-5451064655705220";
+              /* First */
+              google_ad_slot = "8276506850";
+              google_ad_width = 250;
+              google_ad_height = 250;
+              //-->
+            </script>
+            <script type="text/javascript"
+              src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+            </script>
+          </td>
+          <td>
+            <script type="text/javascript"><!--
+              google_ad_client = "ca-pub-5451064655705220";
+              /* First */
+              google_ad_slot = "8276506850";
+              google_ad_width = 250;
+              google_ad_height = 250;
+              //-->
+            </script>
+            <script type="text/javascript"
+              src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+            </script>
+          </td>
+        </tr>
 		</table>
 
 		<% unless @building.microposts.empty? %>

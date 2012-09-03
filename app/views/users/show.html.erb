@@ -1,5 +1,5 @@
-<% if @user.id == current_user %>
-	<%= currently_at 'Profile' %>
+<% if @user.id == current_user.id %>
+	<%= currently_at 'myProfile' %>
 <% else %>
 	<%= currently_at 'People' %>
 <% end %>
@@ -8,47 +8,32 @@
 
 	<table>
 		<tr>
-			<td width="50%">
-				<div class="feed">
-					<% if user_signed_in? %>
-						Add a comment about this person:
-					<%= render '/shared/micropost_form' %>
-					<% else %>
-						<%= link_to "Sign In to Add a Comment", new_user_registration_path %>
-					<% end %>
-				</div>
-			</td>
-			<td>
-				Something here
-			</td>
-		</tr>
-		<tr>
 			<td>
 				<% unless @user.microposts.empty? %>
 					<%= render 'shared/feed' %>
 				<% end %>
 			</td>
-			<td>Something here</td>
 		</tr>
 	</table>
 
 		<%= content_for :sidebar do %>
 			<%= gravatar_image_tag @user.email %>
-			<%= @user.name %>'s Profile Page</h1>
 			<% if current_user == @user %>(<%= link_to 'Edit my Profile', edit_user_registration_path %>)<% end %>
 
-			<p>
-				<script type="text/javascript"><!--
-						google_ad_client = "ca-pub-5451064655705220";
-						/* First */
-						google_ad_slot = "8276506850";
-						google_ad_width = 250;
-						google_ad_height = 250;
-						//-->
-				</script>
-				<script type="text/javascript"
-					src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-				</script>
-			</p>
+		<table>
+			<tr>
+				<td>
+					<div class="feed">
+						<% if user_signed_in? %>
+							Add a comment about this person:
+						<%= render '/shared/micropost_form' %>
+						<% else %>
+							<%= link_to "Sign In to Add a Comment", new_user_registration_path %>
+						<% end %>
+					</div>
+				</td>
+			</tr>
+		</table>
+			
 		<% end %>
 	</table>

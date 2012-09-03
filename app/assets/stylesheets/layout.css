@@ -1,4 +1,4 @@
-/*html {
+html {
   background: url(/assets/SanDiegoSkyline.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -6,7 +6,7 @@
   background-size: cover; 
   font-family: Orbitron, sans-serif;
 }
-*/
+
 
 body {
   background:transparent;
@@ -22,6 +22,15 @@ body {
   width: 960px;
   height: 100%;
   padding: 0 20px;
+  z-index: 5;
+}
+
+.container_mobile {
+  position: absolute;
+  margin: 90px auto 20px auto;
+  height: 100%;
+  padding: 0 20px;
+  z-index: 5;
 }
 
 header#header_container {
@@ -59,21 +68,22 @@ header#page_header{
   height: 60px;
   width: 960px;
   margin: auto;
-  a,
-  a:link,
-  a:hover {
-    color: orange;
-  }
-  a:active,
-  a:visited {
-    color: #fff;
-    text-decoration: none;
   }
   nav#utility {
     float:right;
     font-size: .8em;
-    color: orange;
   }
+  a {
+    text-decoration: none;
+  }
+    a:link,
+    a:hover {
+      color: orange;
+    }
+    a:active,
+    a:visited {
+    color: #fff;
+    text-decoration: none;
 }
 
 header#content_header {
@@ -89,9 +99,9 @@ header#content_title {
   position: fixed;
   width: 600px;
   margin: -40px 0 0 -80px;
-  padding: 5px 0 0 100px;
+  padding: 3px 0 0 80px;
   color: #fff;
-  height: 25px;
+  height: 30px;
   background: #666;
   z-index: 9998;
 }
@@ -104,6 +114,18 @@ section#content {
   margin-top: 10px;
 }
 
+a {
+    text-decoration: none;
+  }
+    a:link,
+    a:hover {
+      color: orange;
+    }
+    a:active,
+    a:visited {
+    color: #666;
+    text-decoration: none;
+}
 section#sidebar {
   float: right; 
   width: 260px;
@@ -119,6 +141,32 @@ section#sidebar {
   font-size: 1.2em;
   font-weight: bold;
   padding: 15px 0 0 25px;
+}
+
+#name {
+  margin-top: 5px;
+  font-size: 0.9em;
+  font-weight: bold;
+  color:#3B6AA0;
+}
+#name a{color:#3B6AA0;text-decoration:none;}
+#name a:visited{color:#3B6AA0;text-decoration:none;}
+#name a:hover{color:red;background:#fff;text-decoration:none;}
+
+#building {
+  font-size: 0.8em;
+  font-weight:bold;
+  color:#666;
+  line-height:1.2;
+}
+#building a{color:#666;text-decoration:none;}
+#building a:visited{color:#666;text-decoration:none;}
+#building a:hover{color:red;background:#fff;text-decoration:none;}
+
+#post {
+  margin-top: 5px;
+  font-size: 0.9em;
+  font-weight:bold;
 }
 
 footer#page_footer {
@@ -197,4 +245,50 @@ footer#page_footer {
 
 .clear {
   clear: both;
+}
+
+button#track {
+  margin-top: -3px;
+  color: #000;
+  height: 25px;
+  width: 65px;
+  padding: 2px;
+  font-size: .9em;
+  text-align: center;
+  border-radius: 5px;
+  background: green;
+  border: 1px solid #666;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='green', endColorstr='#f0f0f0');
+    background: -webkit-gradient(linear, left top, left bottom, from(green), to(#f0f0f0)) no-repeat;
+    background: -moz-linear-gradient(top, green, #f0f0f0);
+}
+
+button#share {
+  margin-top: -3px;
+  color: #000;
+  height: 25px;
+  width: 65px;
+  padding: 2px;
+  font-size: .9em;
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid #666;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='orange', endColorstr='#f0f0f0');
+    background: -webkit-gradient(linear, left top, left bottom, from(orange), to(#f0f0f0)) no-repeat;
+    background: -moz-linear-gradient(top, orange, #f0f0f0);
+}
+
+button#tour {
+  margin-top: -3px;
+  color: #000;
+  height: 25px;
+  width: 65px;
+  padding: 2px;
+  font-size: .9em;
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid #666;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='blue', endColorstr='#f0f0f0');
+    background: -webkit-gradient(linear, left top, left bottom, from(blue), to(#f0f0f0)) no-repeat;
+    background: -moz-linear-gradient(top, blue, #f0f0f0);
 }

@@ -1,12 +1,6 @@
 <% content_for :main_navigation do %>
 
-  <% unless mobile_device? %>
     <nav id="main_nav" role="navigation">
-  <% end %>
-
-  <% if mobile_device? %>
-    <nav id="mobile_nav" role="navigation">
-  <% end %>
 
       <ul>
         <%= nav_tab 'Home', home_path, current: current_tab %>
