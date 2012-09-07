@@ -1,5 +1,6 @@
 <%= currently_at 'Leases' %>
 
+<% if @lease.user_id = current_user %>
 
 <%= render 'leases/pdf' %>
 
@@ -39,7 +40,11 @@
 			</td>
 		</tr>
 	</table>
+<% end %>
 
+<% else %>
+
+Oops.  Somehow we ended up here.  To look at this lease, you need to either have created it, or had it shared with you.  
 	
 
 <% end %>

@@ -6,13 +6,16 @@
 			<td><%= @building.address %></td>
 			<% if user_signed_in? %>
 				<td>
-					<button id="track">Track It</button>
+					<button id="comment">Comment</button>
 				</td>
 				<td>
-					<button id="share">Share It</button>
+					<button id="track">Track</button>
 				</td>
 				<td>
-					<button id="tour">+ Tour</button>
+					<button id="share">Share</button>
+				</td>
+				<td>
+					<button id="tour">+Tour</button>
 				</td>
 			<% else %>
 				<td>Sign in for more options</td>
@@ -100,9 +103,9 @@
 		</table>
 
 		<% unless @building.microposts.empty? %>
-		<div class="feed">
-			<%= render 'shared/feed' %>
-		</div>
+			<div class="feed">
+				<%= render 'shared/feed' %>
+			</div>
 		<% end %>
 	<% end %>
 
