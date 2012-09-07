@@ -151,7 +151,7 @@
 			"file": "app/assets/stylesheets/layout.css",
 			"settings":
 			{
-				"buffer_size": 6377,
+				"buffer_size": 6516,
 				"line_ending": "Windows"
 			}
 		},
@@ -397,7 +397,7 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -405,15 +405,15 @@
 					"file": "app/assets/stylesheets/layout.css",
 					"settings":
 					{
-						"buffer_size": 6377,
+						"buffer_size": 6516,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								6116,
-								6116
+								1710,
+								1710
 							]
 						],
 						"settings":
@@ -423,7 +423,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 4508.0,
+						"translation.y": 1105.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
