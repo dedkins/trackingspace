@@ -212,6 +212,8 @@
 	},
 	"file_history":
 	[
+		"/C/Users/david/trackingspace/app/views/users/show.html.erb",
+		"/C/Users/david/trackingspace/app/views/users/index.html.erb",
 		"/C/Users/david/trackingspace/app/views/buildings/show.html.erb",
 		"/C/Users/david/trackingspace/app/models/lease.rb",
 		"/C/Users/david/trackingspace/app/views/leases/show.html.erb",
@@ -221,7 +223,6 @@
 		"/C/Users/david/trackingspace/app/assets/stylesheets/starting_css.css.scss",
 		"/C/Users/david/trackingspace/app/views/layouts/application.html.erb",
 		"/C/Users/david/trackingspace/app/views/pages/buildings_main.html.erb",
-		"/C/Users/david/trackingspace/app/views/users/show.html.erb",
 		"/C/Users/david/trackingspace/app/views/layouts/_header.html.erb",
 		"/C/Users/david/trackingspace/app/controllers/spaces_controller.rb",
 		"/C/Users/david/trackingspace/app/controllers/buildings_controller.rb",
@@ -288,7 +289,6 @@
 		"/C/Users/david/trackingspace/db/migrate/20120809021802_adding_file_to_lease.rb",
 		"/C/Users/david/trackingspace/app/controllers/authentications_controller.rb",
 		"/C/Users/david/trackingspace/app/assets/stylesheets/home_html.css",
-		"/C/Users/david/trackingspace/app/views/users/index.html.erb",
 		"/C/Users/david/trackingspace/app/views/registrations/edit.html.erb",
 		"/C/Users/david/trackingspace/db/migrate/20120802031524_add_username_to_users.rb",
 		"/C/Users/david/trackingspace/.gitignore",
@@ -397,7 +397,6 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
 				{

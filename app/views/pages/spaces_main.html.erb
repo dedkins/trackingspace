@@ -1,11 +1,10 @@
 <% currently_at 'Spaces' %>
 
-<div class="pagetitle">Spaces</div>
+<div class="pagetitle"><%= link_to 'Spaces', spaces_main_path, :class => 'title' %> -> myLeases</div>
 
 <% if user_signed_in? %>
 	<%= render 'leases/leases' %>
 <% else %>
-	<h3>myLeases</h3>
 	<p>
 		This is where you would keep track of your lease(s).  From here you would be able to view or download the actual lease copy and/or update the particulars of your lease.  If you haven't become a member yet, <%= link_to 'click here', new_user_registration_path %>, otherwise <%= link_to 'sign-in', new_user_session_path %> to start tracking your space(s).
 	<p>
@@ -14,6 +13,12 @@
 	<p>
 		Once a member and you've selected other spaces to track, this area would show a list of recent communications/posts related to the spaces you're tracking...kind of like a Twitter feed.
 	</p>
+<% end %>
+
+<% content_for :sidebar do %>
+
+	
+
 <% end %>
 
 
