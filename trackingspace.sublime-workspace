@@ -194,6 +194,14 @@
 				"buffer_size": 1242,
 				"line_ending": "Windows"
 			}
+		},
+		{
+			"file": "app/views/leases/_pdf.html.erb",
+			"settings":
+			{
+				"buffer_size": 383,
+				"line_ending": "Windows"
+			}
 		}
 	],
 	"build_system": "",
@@ -220,6 +228,7 @@
 	},
 	"file_history":
 	[
+		"/C/Users/david/trackingspace/app/views/leases/_pdf.html.erb",
 		"/C/Users/david/trackingspace/app/views/layouts/_header.html.erb",
 		"/C/Users/david/trackingspace/app/views/pages/spaces_main.html.erb",
 		"/C/Users/david/trackingspace/app/views/leases/_leases.html.erb",
@@ -270,7 +279,6 @@
 		"/C/Users/david/trackingspace/app/views/leases/_form.html.erb",
 		"/C/Users/david/trackingspace/app/views/users/leases.html.erb",
 		"/C/Users/david/trackingspace/app/views/leases/index.html.erb",
-		"/C/Users/david/trackingspace/app/views/leases/_pdf.html.erb",
 		"/C/Users/david/trackingspace/app/assets/stylesheets/mobile.css",
 		"/C/Users/david/trackingspace/app/assets/stylesheets/media.css.scss",
 		"/C/Users/david/trackingspace/app/views/buildings/_spaces.html.erb",
@@ -405,6 +413,7 @@
 	"groups":
 	[
 		{
+			"selected": 5,
 			"sheets":
 			[
 				{
@@ -538,6 +547,32 @@
 							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/views/leases/_pdf.html.erb",
+					"settings":
+					{
+						"buffer_size": 383,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								163,
+								159
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
