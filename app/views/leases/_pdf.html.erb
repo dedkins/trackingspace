@@ -2,9 +2,9 @@
 	Lease for <%= @space.building.address %> | Suite <%= @space.suite %>
 </div>
 
-<iframe src='<%= @lease.file.url %>' width="600px" height="100%">
+<object class="pdf" data="<%= @lease.file.url %>" width="100%" height="800px" type="application/pdf">
 <p>
   It appears your Web browser is not configured to display PDF files. 
   No worries, just <%= link_to 'click here to download the PDF file.', @lease.file.url %>
 </p>
-</iframe>
+</object>
