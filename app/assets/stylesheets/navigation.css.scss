@@ -3,7 +3,6 @@ nav#main_nav {
 	float:left;
 	right: 0;
 	li {
-		background: #3B6AA0;
 		color: #fff;
 		display: inline-block;
 		margin: -8px 1px 1px 1px;
@@ -14,9 +13,9 @@ nav#main_nav {
 			text-decoration: none;	
 		}
 		&.active {
-			background: #666;
 			color: #fff;
 			padding: 8px 20px;
+			border-bottom: 5px solid #fff;
 			a,
 			a:link,
 			a:visited {
@@ -28,25 +27,22 @@ nav#main_nav {
 nav#mobile_nav {
 	position:absolute;
 	float:left;
-	top: 70px;
-	font-size: 1.5em;
+	font-size: 1.6em;
 	li {
-		background: #865140;
 		display: inline-block;
-		margin: 10px 1px 0px 1px;
-		padding: 12px 18px;
+		margin: -10px 1px 0px 1px;
+		padding: 5px 18px;
 		a, a:link, a:visited {
 			color: #fff;
 			text-decoration: none;	
 		}
 		&.active {
-			background: #fff;
-			padding-bottom: 20px;
+			color: #fff;
+			padding-bottom: 15px;
+			border-bottom: 5px solid #fff;
 			a,
 			a:link,
 			a:visited {
-				color: #555;
-				font-weight: bold;
 			}	
 		}
 	}
