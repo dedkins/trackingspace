@@ -28,7 +28,7 @@ body {
   position: absolute;
   margin: 90px auto 20px auto;
   height: 100%;
-  padding: 0 20px;
+  padding: 0 5px;
   z-index: 5;
 }
 
@@ -44,7 +44,7 @@ header#header_container {
 
 header#top {
   color: #fff;
-  padding: 8px 40px 5px 10px;
+  padding: 8px 40px 5px 20px;
   margin: -8px 0 0 -8px;
   font-size: 1em;
   vertical-align: middle;
@@ -88,13 +88,13 @@ header#content_header {
   background: #666;
   width: 105%;
   height: 2px;
-  border-bottom: 2px solid #666;
+  border-bottom: 2px solid #fff;
 }
 
 header#content_title {
   position: fixed;
-  width: 650px;
-  margin: -51px 0 0 -50px;
+  width: 619px;
+  margin: -51px 0 0 -31px;
   padding: 8px 0 0 40px;
   color: #666;
   height: 35px;
@@ -102,7 +102,7 @@ header#content_title {
   border: 1px solid #666;
   font-size: 1.3em;
   z-index: 9998;
-  box-shadow: 5px 5px 10px #888;
+  box-shadow: 0px 5px 10px #888;
 }
 
 .content_container {
