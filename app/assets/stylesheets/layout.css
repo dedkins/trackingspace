@@ -358,11 +358,12 @@ button#comment {
     }
 
 .add {
-  color: #fff;
+  color: #000;
   padding: 10px;
   height: 20px;
   width: 150px;
-  font-size: 1em;
+  font-size: 1.25em;
+  text-shadow: 1px 1px 2px #fff;
   font-weight: bold;
   text-align: center;
   border-radius: 5px;
@@ -377,7 +378,6 @@ button#comment {
   .add:hover,
   .add:active,
   .add:visited {
-    color: #000;
     text-decoration: none;
     }
 
