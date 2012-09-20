@@ -75,7 +75,6 @@ header#page_header{
   color: #fff;
   font-size: .8em;
   height: 60px;
-  width: 960px;
   margin: auto;
   }
   nav#utility {
@@ -87,15 +86,14 @@ header#content_header {
   position: absolute;
   margin: 49px 0 0 -10px;
   background: #666;
-  width: 105%;
   height: 2px;
   border-bottom: 2px solid #fff;
 }
 
-header#content_title {
+/*header#content_title {
   position: fixed;
-  width: 619px;
-  margin: -51px 0 0 -31px;
+  width: 100%;
+  margin: auto;
   padding: 8px 0 0 40px;
   color: #666;
   height: 35px;
@@ -104,7 +102,7 @@ header#content_title {
   font-size: 1.3em;
   z-index: 9998;
   box-shadow: 0px 5px 10px #888;
-}
+}*/
 
 .content_container {
   width: 660px;
