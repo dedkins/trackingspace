@@ -55,6 +55,7 @@
 
   <% if mobile_device? %>
     <div class="container_mobile">
+      <div class="clear"/>
   <% else %>
     <div class="container">
   <% end %>
@@ -71,7 +72,6 @@
     <section id="list">
       <%= yield :list %>
     </section>  
-
   </div>  
 
     <% unless mobile_device? %>
