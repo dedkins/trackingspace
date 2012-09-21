@@ -1,0 +1,38 @@
+@media screen and (max-width: 1250px){
+	section#left {
+		width: 15%;
+		min-width: 100px;
+	}
+	section#content {
+		margin-left: 20%;
+	}
+}
+
+@media screen and (max-width: 1124px){
+	section#left {
+		display: none;
+	}
+	section#content {
+		margin-left: 0;
+	}
+}
+
+@media screen and (max-width: 900px){
+	body { 
+		font-size: 1.2em;
+	}
+	section#sidebar {
+		display:none;
+	}
+	section#content {
+		width: 95%;
+	}
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px){
+	body { 
+		font-size: 1.5em;
+	}
+	section#sidebar {
+		display:none;
+	}
+}
