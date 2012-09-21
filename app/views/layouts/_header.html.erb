@@ -1,43 +1,21 @@
-<header id="header_container">
-
-  <% unless mobile_device? %>
   <header id="top">
     <table width="100%">
       <tr>
-        <td style="text-align:right">
-          trackingspace: 
+        <td width="75%">
+          <%= yield :main_navigation %>
         </td>
-        <td>
-          <%= render 'buildings/form_new' %>
-        </td>
-        <td width="50%" style="text-align:right">
+        <td width="25%" style="text-align:right;vertical-align:top;padding-top:15px">
           <% unless mobile_device? %>
             <nav id="utility">
                 <% if user_signed_in? %>
-                  Signed in as <%= current_user.email %>. Not You?
+                  <%= current_user.email %> |
                   <%= link_to "Sign Out", destroy_user_session_path, :method => 'delete', :class => 'top' %>
                 <% else %>
                   <%= link_to "Sign Up", new_user_registration_path, :class => 'top' %> | <%= link_to "Sign In", new_user_session_path, :class => 'top' %> | <%= link_to "Sign In w/ Twitter", '/auth/twitter', :class => 'top' %>
                 <% end %>
             </nav>
-          <% else %>
-            <nav id="utility">
-              <% if user_signed_in? %>
-                <%= link_to "Sign Out", destroy_user_session_path, :method => 'delete', :class => 'top' %>
-              <% else %>
-                <%= link_to "Sign Up", new_user_registration_path, :class => 'top' %> | <%= link_to "Sign In", new_user_session_path, :class => 'top' %>
-              <% end %>
           <% end %>
         </td>
       </tr>
     </table>
   </header>
-  <% end %> 
-
-  <header id="page_header">
-     
-     <%= yield :main_navigation %>
-
-  </header>
-
-</header>

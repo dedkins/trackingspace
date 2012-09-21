@@ -9,13 +9,13 @@ nav#main_nav {
 		padding: 8px 15px;
 		a, a:link, a:visited {
 			color: #fff;
-			font-size: 1.5em;
+			font-size: 1.2em;
 			text-decoration: none;	
 		}
 		&.active {
 			color: #fff;
-			padding: 8px 20px;
-			border-bottom: 5px solid #fff;
+			padding: 8px 15px;
+			border-bottom: 5px solid red;
 			a,
 			a:link,
 			a:visited {
@@ -25,13 +25,12 @@ nav#main_nav {
 	}
 }
 nav#mobile_nav {
-	position:absolute;
+	margin-top: -19px;
 	float:left;
 	font-size: 1.6em;
 	li {
 		display: inline-block;
-		margin: -10px 1px 0px 1px;
-		padding: 5px 18px;
+		padding: 5px 15px;
 		a, a:link, a:visited {
 			color: #fff;
 			text-decoration: none;	
@@ -39,7 +38,7 @@ nav#mobile_nav {
 		&.active {
 			color: #fff;
 			padding-bottom: 15px;
-			border-bottom: 5px solid #fff;
+			border-bottom: 5px solid red;
 			a,
 			a:link,
 			a:visited {
