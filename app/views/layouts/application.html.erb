@@ -60,19 +60,13 @@
     <div class="container">
   <% end %>
   <div class="content_container">
-
-    <section id="content">
-        <%= yield %>
-      </section>
-
-    <section id="feed">
-      <%= yield :feed %>
+    
+    <% unless mobile_device? %>
+    <section id="left">
+      <%= yield :left %>
+        Test
     </section>
-
-    <section id="list">
-      <%= yield :list %>
-    </section>  
-  </div>  
+    <% end %>
 
     <% unless mobile_device? %>
       <section id="sidebar">
@@ -114,7 +108,11 @@
       </section>
 
     <% end %>
-    <div class="clear"></div>
+
+    <section id="content">
+        <%= yield %>
+      </section>
+      
   </div>    
 
  
