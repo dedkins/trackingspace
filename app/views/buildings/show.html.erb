@@ -1,15 +1,5 @@
 <%= currently_at 'Buildings' %>
 
-<header id="content_title">
-	<table width="100%">
-		<tr>
-			<td><h2><%= @building.address %></h2></td>
-		</tr>
-	</table>
-</header>
-
-<div class="yield_container">
-			
 			<table width="100%">
 				<tr height="10px"/>
 				<tr>
@@ -143,12 +133,6 @@
 			</div>
 	<% end %>
 
-	<%= content_for :sidebar do %>
-	<table>
-		<tr height="50px"/>
-	</table>
-		<%= render 'buildings/spaces' %>	
-	<% end %>
-</div>
+	
 
 <%= yield :scripts %>
