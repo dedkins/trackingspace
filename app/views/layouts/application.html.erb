@@ -108,7 +108,11 @@
 
     <% end %>
 
+    <% unless mobile_device? %>
     <section id="content">
+    <% else %>
+    <section id="content_mobile">
+    <% end %>
         <%= yield %>
       </section>
 

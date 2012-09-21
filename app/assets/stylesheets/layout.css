@@ -81,6 +81,12 @@ section#content {
   padding: 20px;
 }
 
+section#content_mobile {
+  width:100%;
+  background: #fff;
+  padding: 20px;
+}
+
 a {
     text-decoration: none;
   }
