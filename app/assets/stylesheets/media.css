@@ -13,16 +13,23 @@
 		display: none;
 	}
 	section#content {
-		margin-left: 0;
+		margin-left: 10px;
 	}
 }
 
 @media screen and (max-width: 900px){
 	body { 
-		font-size: 1.2em;
+		font-size: 1.1em;
+	}
+	header#top {
+		height: 70px;
+		padding-top: 10px;
 	}
 	section#sidebar {
 		display:none;
+	}
+	.container {
+		width: 95%;
 	}
 	section#content {
 		width: 95%;
@@ -31,6 +38,12 @@
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px){
 	body { 
 		font-size: 1.5em;
+	}
+	header#top {
+		height: 80px;
+	}
+	section#content {
+		width: 95%;
 	}
 	section#sidebar {
 		display:none;

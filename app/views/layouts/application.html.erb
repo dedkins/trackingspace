@@ -60,14 +60,11 @@
   <% end %>
   <div class="content_container">
     
-    <% unless mobile_device? %>
     <section id="left">
       <%= yield :left %>
         Test
     </section>
-    <% end %>
-
-    <% unless mobile_device? %>
+    
       <section id="sidebar">
         <%= yield :sidebar %>
         <table>
@@ -102,17 +99,11 @@
           </td>
         </tr>
       </table>
-
-      <%= render 'layouts/footer' %>    
+   
       </section>
 
-    <% end %>
 
-    <% unless mobile_device? %>
     <section id="content">
-    <% else %>
-    <section id="content_mobile">
-    <% end %>
         <%= yield %>
       </section>
 
