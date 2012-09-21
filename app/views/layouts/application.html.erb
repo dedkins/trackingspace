@@ -53,12 +53,8 @@
       <% content_tag :div, msg, :id => "flash_#{name}" %>
     <% end %>
 
-  <% if mobile_device? %>
-    <div class="container_mobile">
-  <% else %>
-    <div class="container">
-  <% end %>
-  <div class="content_container">
+  
+  <div class="container">
     
     <section id="left">
       <%= yield :left %>
