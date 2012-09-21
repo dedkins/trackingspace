@@ -1,11 +1,11 @@
   <header id="top">
     <table width="100%">
       <tr>
-        <td width="75%">
+        <td>
           <%= yield :main_navigation %>
         </td>
-        <td width="25%" style="text-align:right;vertical-align:top;padding-top:15px">
-          <% unless mobile_device? %>
+        <% unless mobile_device? %>
+          <td width="25%" style="text-align:right;vertical-align:top;padding-top:15px">
             <nav id="utility">
                 <% if user_signed_in? %>
                   <%= current_user.email %> |
@@ -14,8 +14,8 @@
                   <%= link_to "Sign Up", new_user_registration_path, :class => 'top' %> | <%= link_to "Sign In", new_user_session_path, :class => 'top' %> | <%= link_to "Sign In w/ Twitter", '/auth/twitter', :class => 'top' %>
                 <% end %>
             </nav>
-          <% end %>
-        </td>
+          </td>
+        <% end %>
       </tr>
     </table>
   </header>
