@@ -19,7 +19,7 @@
 
 @media screen and (max-width: 960px){
 	body { 
-		font-size: 1.1em;
+		font-size: 1.2em;
 	}
 	header#top {
 		height: 70px;
@@ -30,16 +30,27 @@
 	}
 	.container {
 		width: 95%;
-		margin-top: 80px;
+		margin-top: 100px;
 	}
 	section#content {
 		width: 95%;
 	}
-
-	.feed {
-		font-size: 1.8em;
-		line-height: 1.8em;
+	#name {
+		font-size: 1.2em;
+		line-height: 1.2em;
 	}
+	#building {
+		font-size: 1.2em;
+		line-height: 1.2em;
+	}
+	#post {
+		font-size: 1.2em;
+		line-height: 1.2em;
+	}
+	nav#utility {
+		display: none;
+	}
+
 }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px){
 	body { 

@@ -5,7 +5,7 @@
           <%= yield :main_navigation %>
         </td>
         <% unless mobile_device? %>
-          <td width="25%" style="text-align:right;vertical-align:top;padding-top:15px">
+          <td>
             <nav id="utility">
                 <% if user_signed_in? %>
                   <%= current_user.email %> |
