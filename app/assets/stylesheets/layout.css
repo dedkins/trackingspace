@@ -107,6 +107,16 @@ section#sidebar {
   }
 }
 
+section#search {
+  border: 1.5px solid #888;
+  border-radius: 5px;
+  background: #edeae6;
+  padding: 10px;
+  font-size: 1.15em;
+  color: #666;
+  height: 25px;
+}
+
 /*.pagetitle {
   background: black;
   color: #fff;

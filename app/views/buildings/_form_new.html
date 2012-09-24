@@ -1,13 +1,10 @@
 <%= form_for Building.new do |f| %>
-  
-      <div class='searchcontainer'>
-      	<%= f.error_messages %>
-        <%= f.text_field :address, :class => "search", :id => "addresspicker_map", :placeholder => 'Enter a Complete Address To Find'%>
-        <%= f.submit "GO!", :class => "searchgo" %>
-        <%= f.hidden_field :latitude, :id => "lat" %>
-        <%= f.hidden_field :longitude, :id => "lng" %>
-          <% if user_signed_in? %>
-          <%= f.hidden_field :user_id, :value => current_user.id %>
-          <% end %>
-      </div>
+  	<%= f.error_messages %>
+    <%= f.text_field :address, :class => "search", :id => "addresspicker_map", :placeholder => 'Enter a Complete Address To Find'%>
+    <%= f.submit "GO!", :class => "searchgo" %>
+    <%= f.hidden_field :latitude, :id => "lat" %>
+    <%= f.hidden_field :longitude, :id => "lng" %>
+      <% if user_signed_in? %>
+      <%= f.hidden_field :user_id, :value => current_user.id %>
+      <% end %>
 <% end %>

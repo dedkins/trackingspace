@@ -1,5 +1,18 @@
 <%= currently_at 'Buildings' %>
 
+		<section id="search">
+			<table>
+				<tr>
+					<td width="140px" style="vertical-align:top">
+						Find a Building:
+					</td>
+					<td>
+						<%= render 'buildings/form_new' %>
+					</td>
+				</tr>
+			</table>
+		</section>
+
 			<table width="100%">
 				<tr>
 					<td colspan="4"><h2><%= @building.address %></h2></td>

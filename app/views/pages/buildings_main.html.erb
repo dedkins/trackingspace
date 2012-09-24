@@ -1,6 +1,17 @@
 <% currently_at 'Buildings' %>
 
-<div class="pagetitle">Buildings</div>
+<section id="search">
+	<table width="100%">
+		<tr>
+			<td width="140px" style="vertical-align:top">
+				Find a Building:
+			</td>
+			<td>
+				<%= render 'buildings/form_new' %>
+			</td>
+		</tr>
+	</table>
+</section>
 
 <% if user_signed_in? %>
 <h3>Buildings Feed</h3>
