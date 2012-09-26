@@ -187,7 +187,7 @@
 			"file": "app/controllers/buildings_controller.rb",
 			"settings":
 			{
-				"buffer_size": 3419,
+				"buffer_size": 3423,
 				"line_ending": "Unix"
 			}
 		},
@@ -200,10 +200,18 @@
 			}
 		},
 		{
-			"file": "app/views/shared/_recent.html.erb",
+			"file": "app/views/leases/show.html.erb",
 			"settings":
 			{
-				"buffer_size": 321,
+				"buffer_size": 1225,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/views/leases/_pdf.html.erb",
+			"settings":
+			{
+				"buffer_size": 282,
 				"line_ending": "Windows"
 			}
 		}
@@ -232,6 +240,7 @@
 	},
 	"file_history":
 	[
+		"/C/Users/david/trackingspace/app/views/shared/_recent.html.erb",
 		"/C/Users/david/trackingspace/app/controllers/application_controller.rb",
 		"/C/Users/david/trackingspace/app/views/layouts/_right_ads.html.erb",
 		"/C/Users/david/trackingspace/app/assets/stylesheets/layout.css",
@@ -242,7 +251,6 @@
 		"/C/Users/david/trackingspace/app/assets/stylesheets/media.css",
 		"/C/Users/david/trackingspace/app/views/shared/_recent_item.html.erb",
 		"/C/Users/david/trackingspace/app/views/buildings/index.html.erb",
-		"/C/Users/david/trackingspace/app/views/shared/_recent.html.erb",
 		"/C/Users/david/trackingspace/app/models/user.rb",
 		"/C/Users/david/trackingspace/app/controllers/pages_controller.rb",
 		"/C/Users/david/trackingspace/app/models/building.rb",
@@ -471,7 +479,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 165.0,
+						"translation.y": 530.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -481,15 +489,15 @@
 					"file": "app/controllers/buildings_controller.rb",
 					"settings":
 					{
-						"buffer_size": 3419,
+						"buffer_size": 3423,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								531,
-								531
+								527,
+								527
 							]
 						],
 						"settings":
@@ -533,18 +541,45 @@
 				},
 				{
 					"buffer": 4,
-					"file": "app/views/shared/_recent.html.erb",
+					"file": "app/views/leases/show.html.erb",
 					"settings":
 					{
-						"buffer_size": 321,
+						"buffer_size": 1225,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								311,
-								311
+								502,
+								349
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/views/leases/_pdf.html.erb",
+					"settings":
+					{
+						"buffer_size": 282,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								73,
+								73
 							]
 						],
 						"settings":

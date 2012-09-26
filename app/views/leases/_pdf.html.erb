@@ -1,9 +1,5 @@
 
-<div class="pagetitle">
-	Lease for <%= @space.building.address %> | Suite <%= @space.suite %>
-</div>
-
-<object class="pdf" data="<%= @lease.file.url %>" width="100%" height="800px" type="application/pdf">
+<object class="pdf" data="<%= @lease.file.url %>" width="100%" height="600px" type="application/pdf">
 <p>
   It appears your Web browser is not configured to display PDF files. 
   No worries, just <%= link_to 'click here to download the PDF file.', @lease.file.url %>
