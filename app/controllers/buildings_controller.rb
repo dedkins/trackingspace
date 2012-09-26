@@ -1,9 +1,11 @@
 class BuildingsController < ApplicationController
 
   def index
+    @user = User.find(current_user.id)
     @buildings = Building.all(:order => "created_at desc")
     @newbuildings = Building.new_buildings
     @json = Building.new_buildings.to_gmaps4rails
+    @recent_items = @user.recent
 
     respond_to do |format|
       format.html # index.html.erb
@@ -12,6 +14,7 @@ class BuildingsController < ApplicationController
   end
 
   def show
+    @user = User.find(current_user.id)
     @building = Building.find(params[:id])
     @spaces = Space.find_all_by_building_id(@building.id)
     @new_space = @building.spaces.build
@@ -19,8 +22,16 @@ class BuildingsController < ApplicationController
 
     @micropost = Micropost.new if signed_in?
     @feed_items = @building.feed
-
+    @recent_items = @user.recent
+    
     respond_to do |format|
+      if user_signed_in?  
+        @last_recent = BuildingOrder.find_by_user_id_and_building_id(current_user,@building.id)
+          if @last_recent != nil
+            @last_recent.delete
+          end
+        BuildingOrder.create!(building_id: @building.id, user_id: current_user.id)
+      end
       format.html # show.html.erb
       format.json { render json: @building }
     end

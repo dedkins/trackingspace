@@ -23,6 +23,7 @@
 class User < ActiveRecord::Base
   has_many :authentications
   has_many :microposts, :dependent => :destroy
+  has_many :buildingorders
   
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
@@ -33,8 +34,13 @@ class User < ActiveRecord::Base
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me, :name
   # attr_accessible :title, :body
+
   def feed
     Micropost.where("user_id = ?", id)
+  end
+
+  def recent
+    @recent_items = BuildingOrder.where("user_id = ?", id).limit(10).order('created_at desc')
   end
 
   def lease

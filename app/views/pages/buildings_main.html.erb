@@ -35,13 +35,14 @@
 	Building List
 <% end %>
 
-<%= content_for :sidebar do %>
+<%= content_for :left do %>
+	<%= render 'shared/recent' %>
+<% end %>
 
-	Partial for last 5 buildings touched
-	<ul>
-		<li>1020 Sun Down Way...</li>
-		<li>755 Sunrise Av...</li>
-	</ul>
+<%= content_for :sidebar do %>
+	<% if user_signed_in? %>
+          <%= render 'shared/recent' %>
+    <% end %>
 	<p>
 	 Partial for building "views"
 	</p>

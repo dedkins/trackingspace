@@ -1,5 +1,13 @@
 <%= currently_at 'Buildings' %>
 
+<%= content_for :left do %>
+  <%= render 'shared/recent' %>
+<% end %>
+
+<%= content_for :sidebar do %>
+  <%= render 'shared/recent' %>
+<% end %>
+
 <%= content_for :content_title do %>
   my Building List
 <% end %>

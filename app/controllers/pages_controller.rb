@@ -15,6 +15,10 @@ class PagesController < ApplicationController
 	end
 
 	def buildings_main
+		if user_signed_in?
+			@user = User.find(current_user.id)
+			@recent_items = @user.recent
+		end
 	end
 	
 end

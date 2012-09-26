@@ -1,0 +1,8 @@
+		
+		<table width="100%" style="background:#fff; padding: 2px">
+			<tr>
+				<td style="padding-left:5px"><%= link_to truncate(recent_item.building.address, :length => 20), building_path(id: recent_item.building_id) %><td>
+					<td width="18px"><%= recent_item.id %></td>
+			</tr>
+		</table>
+		 
