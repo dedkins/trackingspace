@@ -1,7 +1,9 @@
 class BuildingsController < ApplicationController
 
   def index
-    @user = User.find(current_user.id)
+    if user_signed_in?
+      @user = User.find(current_user.id)
+    end
     @buildings = Building.all(:order => "created_at desc")
     @newbuildings = Building.new_buildings
     @json = Building.new_buildings.to_gmaps4rails
@@ -14,7 +16,9 @@ class BuildingsController < ApplicationController
   end
 
   def show
-    @user = User.find(current_user.id)
+    if user_signed_in?
+      @user = User.find(current_user.id)
+    end
     @building = Building.find(params[:id])
     @spaces = Space.find_all_by_building_id(@building.id)
     @new_space = @building.spaces.build
