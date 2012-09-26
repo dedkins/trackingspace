@@ -3,11 +3,11 @@ class BuildingsController < ApplicationController
   def index
     if user_signed_in?
       @user = User.find(current_user.id)
+      @recent_items = @user.recent
     end
     @buildings = Building.all(:order => "created_at desc")
     @newbuildings = Building.new_buildings
     @json = Building.new_buildings.to_gmaps4rails
-    @recent_items = @user.recent
 
     respond_to do |format|
       format.html # index.html.erb
@@ -18,6 +18,7 @@ class BuildingsController < ApplicationController
   def show
     if user_signed_in?
       @user = User.find(current_user.id)
+      @recent_items = @user.recent
     end
     @building = Building.find(params[:id])
     @spaces = Space.find_all_by_building_id(@building.id)
@@ -26,7 +27,6 @@ class BuildingsController < ApplicationController
 
     @micropost = Micropost.new if signed_in?
     @feed_items = @building.feed
-    @recent_items = @user.recent
     
     respond_to do |format|
       if user_signed_in?  
