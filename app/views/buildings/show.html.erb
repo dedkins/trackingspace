@@ -93,61 +93,22 @@
 				</tr>
 			</table>
 
-	<% if mobile_device? %>
-
-		<table width="100%">
-			<tr>
-          <td>
-            <script type="text/javascript"><!--
-              google_ad_client = "ca-pub-5451064655705220";
-              /* First */
-              google_ad_slot = "8276506850";
-              google_ad_width = 250;
-              google_ad_height = 250;
-              //-->
-            </script>
-            <script type="text/javascript"
-              src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-            </script>
-          </td>
-          <td>
-            <script type="text/javascript"><!--
-              google_ad_client = "ca-pub-5451064655705220";
-              /* First */
-              google_ad_slot = "8276506850";
-              google_ad_width = 250;
-              google_ad_height = 250;
-              //-->
-            </script>
-            <script type="text/javascript"
-              src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-            </script>
-          </td>
-        </tr>
-		</table>
-
-		<% unless @building.microposts.empty? %>
-			<div class="feed">
-				<%= render 'shared/feed' %>
-			</div>
+		<% if mobile_device? %>
+			<%= render 'layouts/mobile_ads' %>
 		<% end %>
-	<% end %>
-
-	<% if not mobile_device? %>
 
 			
-				<div class="feed">
-					<% if user_signed_in? %>
-					<h3>Add a comment about this building:</h3>
-						<%= render '/shared/micropost_form' %>
-					<% end %>
-					<% unless @building.microposts.empty? %>
-						<div class="feeditems">
-							<%= render 'shared/feed' %>
-						</div>
-					<% end %>
+		<div class="feed">
+			<% if user_signed_in? %>
+			<h3>Add a comment about this building:</h3>
+				<%= render '/shared/micropost_form' %>
+			<% end %>
+			<% unless @building.microposts.empty? %>
+				<div class="feeditems">
+					<%= render 'shared/feed' %>
 				</div>
-	<% end %>
+			<% end %>
+		</div>
 
 	<%= content_for :sidebar do %>
 		<% if user_signed_in? %>
