@@ -1,9 +1,9 @@
 <%= currently_at 'Buildings' %>
 
-		<section id="search">
-			<table>
+		<%= content_for :search do %>
+			<table width="100%">
 				<tr>
-					<td>
+					<td style="text-align:right">
 						Find a Building:
 					</td>
 					<td>
@@ -11,12 +11,19 @@
 					</td>
 				</tr>
 			</table>
-		</section>
+		<% end %>
 
 			<table width="100%">
 				<tr>
-					<td colspan="4"><h2><%= @building.address %></h2></td>
+					<td colspan="4" style="text-align:center"><%= link_to 'Add Space', new_building_space_path(@building) %> |
+						<%= link_to 'Update Building Info' %>
+					</td>
 				</tr>
+				<tr>
+					<td colspan="4" class="title"><%= truncate(@building.address, :length => 25, :separator => ',', :omission => '') %></td>
+				</tr>
+				<tr>
+					<td colspan="4" style="font-size:.7em;text-align:center"><%= @building.address %></td>
 				<tr>
 					<td colspan="4"><hr/></td>
 				</tr>

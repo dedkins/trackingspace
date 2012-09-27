@@ -15,7 +15,7 @@
 		<td style="font-size: 2em;text-align:center" colspan="3">L  E  A  S  E</td>
 	</tr>
 	<tr height="12px" style="font-size:.8em;text-align:center">
-		<td colspan="3" ><%= @lease.space.building.address %>, Suite: <%= @lease.space.suite %></td>
+		<td colspan="3" ><%= link_to truncate(@lease.space.building.address, :length => 25, :separator => ',', :omission => ''), building_path(@lease.space.building) %>, Suite: <%= @lease.space.suite %></td>
 	</tr>
 	<tr>
 		<td colspan="3"><hr/></td>

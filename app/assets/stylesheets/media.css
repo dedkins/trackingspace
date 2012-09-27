@@ -6,6 +6,9 @@
 	section#content {
 		margin-left: 20%;
 	}
+	section#search {
+		margin-left: 20%;
+	}
 }
 
 @media screen and (max-width: 1124px){
@@ -13,6 +16,9 @@
 		display: none;
 	}
 	section#content {
+		margin-left: 10px;
+	}
+	section#search {
 		margin-left: 10px;
 	}
 }
@@ -33,6 +39,9 @@
 		margin-top: 80px;
 	}
 	section#content {
+		width: 95%;
+	}
+	section#search {
 		width: 95%;
 	}
 	#name {
