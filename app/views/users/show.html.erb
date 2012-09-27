@@ -2,13 +2,25 @@
 	<%= currently_at 'myProfile' %>
 <% else %>
 	<%= currently_at 'People' %>
-<% end %>
+<% end %> 
 
-<div class="pagetitle"><%= @user.name %>'s Profile</div> 
-
-	<table>
+	<table width="100%">
+		<tr>
+			<td rowspan="2" style="padding:8px"><%= gravatar_image_tag @user.email %></td>
+			<td class="title" style="text-align:left"><%= @user.name %></td>
+		</tr>
 		<tr>
 			<td>
+				<% if current_user == @user %>
+				<%= link_to 'Edit my Profile |', edit_user_registration_path %>
+				<% end %>
+				Posts: <%= @user.microposts.count %> |
+				Member Since: <%= @user.created_at.strftime("%b %d, %Y") %>
+			</td>
+		</tr>
+		<tr><td colspan="2"><hr/><hr/></td></tr>
+		<tr>
+			<td colspan="2">
 				<% unless @user.microposts.empty? %>
 					<%= render 'shared/feed' %>
 				<% end %>
@@ -17,8 +29,6 @@
 	</table>
 
 		<%= content_for :sidebar do %>
-			<%= gravatar_image_tag @user.email %>
-			<% if current_user == @user %>(<%= link_to 'Edit my Profile', edit_user_registration_path %>)<% end %>
 
 		<table>
 			<tr>
