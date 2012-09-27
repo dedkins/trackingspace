@@ -16,7 +16,8 @@
 			<table width="100%">
 				<tr>
 					<td colspan="4" style="text-align:center"><%= link_to 'Add Space', new_building_space_path(@building) %> |
-						<%= link_to 'Update Building Info', edit_building_path(@building.id) %>
+						<%= link_to 'Update Building Info', edit_building_path(@building.id) %> | 
+						<%= link_to 'Show Spaces', '' %>
 					</td>
 				</tr>
 				<tr>
@@ -74,6 +75,7 @@
 						<td><%= link_to 'Sign in for more options', new_user_registration_path, :class => 'add' %></td>
 					<% end %>
 				</tr>
+				<tr height="10px"/>
 				<tr>
 						<td colspan="4">
 						<%= gmaps({
