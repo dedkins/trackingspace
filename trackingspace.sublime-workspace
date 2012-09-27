@@ -195,7 +195,7 @@
 			"file": "app/views/leases/show.html.erb",
 			"settings":
 			{
-				"buffer_size": 1446,
+				"buffer_size": 1450,
 				"line_ending": "Windows"
 			}
 		},
@@ -418,7 +418,7 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 4,
 			"sheets":
 			[
 				{
@@ -509,15 +509,15 @@
 					"file": "app/views/leases/show.html.erb",
 					"settings":
 					{
-						"buffer_size": 1446,
+						"buffer_size": 1450,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								673,
-								673
+								69,
+								69
 							]
 						],
 						"settings":

@@ -235,6 +235,21 @@ footer#page_footer {
   clear: both;
 }
 
+.form_box {
+  margin: 20px;
+  background: #C3E4ED;
+  border: 1.5px solid #888;
+  border-radius: 5px;
+  padding: 20px;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.field {
+  padding: 8px;
+  line-height: 1.2;
+}
+
 .top_words {
   margin: auto;
   padding: 10px;

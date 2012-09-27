@@ -1,24 +1,31 @@
 <% currently_at 'Home' %>
 
-<div class="pagetitle">Sign-In</div>
-
+<div class="title">Sign-In</div>
+<hr/>
+<hr/>
 <div class="form_box">
 
-<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-  <div class="field"><%= f.label :email %><br />
-  <%= f.email_field :email %></div>
+<table width="100%">
+	<tr>
+		<td width="40%">
+			<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+			  <div class="field"><%= f.label :email %><br />
+			  <%= f.email_field :email %></div>
 
-  <div class="field"><%= f.label :password %><br />
-  <%= f.password_field :password %></div>
+			  <div class="field"><%= f.label :password %><br />
+			  <%= f.password_field :password %></div>
 
-  <% if devise_mapping.rememberable? -%>
-    <div class="field"><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
-  <% end -%>
-  
-  <div class="field"><%= f.submit "Sign in" %></div>
-<% end %>
-
-<%= render 'oauth_signin' %>
+			  <% if devise_mapping.rememberable? -%>
+			    <div style="font-size: .8em"><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
+			  <% end -%>
+			  <p>
+			  <div><%= f.submit "Sign in" %></div>
+			<% end %>
+		</td>
+		<td width="20%" style="vertical-align:middle;text-align:center">- O  R -</td>
+		<td width="40%">Sign In Through<br/><%= render 'twitter_sign_in' %></td>
+	</tr>
+</table>
 
 <%= render :partial => "devise/shared/links" %>
 

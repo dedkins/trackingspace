@@ -15,8 +15,13 @@
 
 			<table width="100%">
 				<tr>
-					<td colspan="4" style="text-align:center"><%= link_to 'Add Space', new_building_space_path(@building) %> |
-						<%= link_to 'Update Building Info', edit_building_path(@building.id) %> | 
+					<td colspan="4" style="text-align:center">
+						<% if user_signed_in? %>
+							<%= link_to 'Add Space', new_building_space_path(@building) %> |
+							<%= link_to 'Update Building Info', edit_building_path(@building.id) %> | 
+						<% else %>
+							<%= link_to 'Sign-In to Add Space and Update Building Info', new_user_session_path %> |
+						<% end %>
 						<%= link_to 'Show Spaces', '' %>
 					</td>
 				</tr>
@@ -72,7 +77,7 @@
 							<div class="add">Share It</button>
 						</td>
 					<% else %>
-						<td><%= link_to 'Sign in for more options', new_user_registration_path, :class => 'add' %></td>
+						<td width="100%" style="text-align:center"><%= link_to 'Sign-In to Start Tracking, Add Comments and Share', new_user_session_path %></td>
 					<% end %>
 				</tr>
 				<tr height="10px"/>
