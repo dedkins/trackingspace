@@ -1,33 +1,16 @@
 
-<table>
-  <tr height="35px">
-    <th></th>
-    <th width="20px"/>
-    <th>Address</th>
-    <th width="20px"/>
-    <th>Suite</th>
-    <th width="20px"/>
-    <th>Expiration</th>
-    <th width="20px"/>
-    <th>Monthly</th>
-    <th></th>
-    <th></th>
+<table width="100%">
+  <tr>
+    <td colspan="5"><hr/><hr/></td>
   </tr>
-
 <% if @leases %>
   <% @leases.each do |lease| %>
-    <tr height="30px">
-      <td><%= link_to 'View', space_lease_path(lease.space,lease.id), :class => 'view' %></td>
-      <td width="20px"/>
-      <td><%= link_to truncate(lease.space.building.address, :separator => ','), building_path(lease.space.building) %></td>
-      <td width="20px"/>
-      <td><%= link_to lease.space.suite, building_space_path(lease.space.building,lease.space) %></td>
-      <td width="20px"/>
-      <td><%= l lease.expiration %></td>
-      <td width="20px"/>
-      <td><%= number_to_currency(lease.current_rate) %></td>
-      <td width="20px"/>
-      <td><%= link_to 'Edit', edit_space_lease_path(lease.space,lease) %></td>
+    <tr>
+      <td style="font-size:1.1em; padding: 10px"><%= link_to 'View', space_lease_path(lease.space,lease.id), :class => 'view' %></td>
+      <td style="font-size:1.1em; padding:10px"><%= link_to 'Edit', edit_space_lease_path(lease.space,lease), :class => 'view' %></td>
+      <td style="font-size:1.2em; padding: 10px;font-variant:small-caps"><%= link_to truncate(lease.space.building.address, :length => 20, :separator => ',', :omission => ''), building_path(lease.space.building) %>, Ste <%= link_to lease.space.suite, building_space_path(lease.space.building,lease.space) %></td>
+      <td style="font-size:1.1em;padding:10px"><%= l lease.expiration %></td>
+      <td style="font-size:1.1em;padding:10px"><%= number_to_currency(lease.current_rate) %></td>
     </tr>
   <% end %>
 <% else %>
