@@ -1,6 +1,6 @@
 <% currently_at 'Buildings' %>
 
-<section id="search">
+<%= content_for :search do %>
 	<table width="100%">
 		<tr>
 			<td>
@@ -11,7 +11,7 @@
 			</td>
 		</tr>
 	</table>
-</section>
+<% end %>
 
 <% if user_signed_in? %>
 <h3>Buildings Feed</h3>

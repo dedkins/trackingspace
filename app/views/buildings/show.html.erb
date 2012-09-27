@@ -16,11 +16,11 @@
 			<table width="100%">
 				<tr>
 					<td colspan="4" style="text-align:center"><%= link_to 'Add Space', new_building_space_path(@building) %> |
-						<%= link_to 'Update Building Info' %>
+						<%= link_to 'Update Building Info', edit_building_path(@building.id) %>
 					</td>
 				</tr>
 				<tr>
-					<td colspan="4" class="title"><%= truncate(@building.address, :length => 25, :separator => ',', :omission => '') %></td>
+					<td colspan="4" class="title"><%= truncate(@building.address, :length => 20, :separator => ',', :omission => '') %></td>
 				</tr>
 				<tr>
 					<td colspan="4" style="font-size:.7em;text-align:center"><%= @building.address %></td>
