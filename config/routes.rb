@@ -23,7 +23,6 @@ Trackingspace::Application.routes.draw do
 
   match 'spaces' => 'pages#spaces_main', :as => 'spaces_main'
   match 'people' => 'pages#people_main', :as => 'people_main'
-  get 'pages/autocomplete_user_name'
   match 'bmain' => 'pages#buildings_main', :as => 'buildings_main'
   
   resources :spaces do

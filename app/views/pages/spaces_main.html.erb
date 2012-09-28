@@ -1,7 +1,9 @@
 <% currently_at 'Spaces' %>
 
-<div class="title">my leases</div>
+<%= content_for :search do %>
+<% end %>
 
+<div class="title">my leases</div>
 <% if user_signed_in? %>
 	<%= render 'leases/leases' %>
 <% else %>

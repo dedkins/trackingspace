@@ -2,6 +2,10 @@ class PagesController < ApplicationController
 	autocomplete :user, :name, :full => true
 
 	def index
+		if user_signed_in?
+			@user = User.find(current_user.id)
+			@recent_items = @user.recent
+		end
 		@newbuildings = Building.new_buildings
 		@json = Building.new_buildings.to_gmaps4rails
 	end

@@ -1,16 +1,7 @@
 <% currently_at 'Buildings' %>
 
 <%= content_for :search do %>
-	<table width="100%">
-		<tr>
-			<td>
-				Find a Building:
-			</td>
-			<td>
-				<%= render 'buildings/form_new' %>
-			</td>
-		</tr>
-	</table>
+	<%= render 'buildings/form_new' %>
 <% end %>
 
 <% if user_signed_in? %>
@@ -27,16 +18,8 @@
 	</p>
 <% end %>
 
-<%= content_for :feed do %>
-	The Latest
-<% end %>
-
-<%= content_for :list do %>
-	Building List
-<% end %>
-
 <%= content_for :left do %>
-	<%= render 'shared/recent' %>
+	Recent Activity
 <% end %>
 
 <%= content_for :sidebar do %>

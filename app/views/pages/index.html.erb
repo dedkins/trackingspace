@@ -1,5 +1,9 @@
 <% currently_at 'Home' %>
 
+<%= content_for :search do %>
+	<%= render 'buildings/form_new' %>
+<% end %>	
+
 <div class="pagetitle">New Spaces Added Last 24hrs</div>
 
 <%= render 'buildings/new_buildings' %>
@@ -19,11 +23,5 @@ TrackingSpace is not another listing service.  It is not a listing service at al
 <% end %>
 
 <%= content_for :sidebar do %>
-<table width="100%">
-	<tr height="50px">
-		<td style="text-align:center">
-			<%= link_to 'Add a New Lease', new_building_path, :class => 'add' %>
-		</td>
-	</tr>
-</table>
+	<%= render 'shared/recent' %>
 <% end %>
