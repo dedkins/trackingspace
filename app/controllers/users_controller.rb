@@ -18,6 +18,17 @@ class UsersController < ApplicationController
   	@feed_items = @user.feed
   end
 
+  def search
+    if !params[:user_name].nil?
+      @user = User.find_by_name(params[:user_name])
+      if @user.id
+          redirect_to user_path(@user.id)
+        else
+          people_main_path
+      end
+     end
+  end
+
   def edit
   end
 end

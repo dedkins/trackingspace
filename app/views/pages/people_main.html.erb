@@ -2,7 +2,7 @@
 
 <%= content_for :search do %>
 	<%= form_tag do %>
-		<%=text_field_tag 'name', '', :autocomplete => autocomplete_user_name_users_path %>
+		<%=text_field_tag 'name', '', :autocomplete => pages_autocomplete_user_name_path %>
 	  	<%=submit_tag "Submit" %>
 	<% end %>
 <% end %>

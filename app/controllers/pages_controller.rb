@@ -15,7 +15,7 @@ class PagesController < ApplicationController
 	def people_main
 		if !params[:name].nil?
 			@user = User.find_by_name(params[:name])
-			if @user.id
+			if @user.id?
 	    		redirect_to user_path(@user.id)
 	    	else
 	    		people_main_path
