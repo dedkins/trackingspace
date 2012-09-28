@@ -15,6 +15,10 @@ Trackingspace::Application.routes.draw do
   match 'buildingposts' => 'buildings#index', :as => 'buildingposts'
   match 'download' => 'leases#download', :as => 'download'
 
+  resources :users do
+    get :autocomplete_user_name, :on => :collection
+  end
+
   resources :authentications
 
   resources :buildings do

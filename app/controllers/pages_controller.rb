@@ -1,4 +1,5 @@
 class PagesController < ApplicationController
+	autocomplete :user, :name, :full => true
 
 	def index
 		@newbuildings = Building.new_buildings
@@ -12,6 +13,14 @@ class PagesController < ApplicationController
 	end
 
 	def people_main
+		if !params[:name].nil?
+			@user = User.find_by_name(params[:name])
+			if @user.id
+	    		redirect_to user_path(@user.id)
+	    	else
+	    		people_main_path
+	    	end
+	    end
 	end
 
 	def buildings_main

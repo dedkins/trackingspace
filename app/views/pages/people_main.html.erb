@@ -1,6 +1,13 @@
 <% currently_at 'People' %>
 
-<div class="pagetitle">People</div>
+<%= content_for :search do %>
+	<%= form_tag do %>
+		<%=text_field_tag 'name', '', :autocomplete => autocomplete_user_name_users_path %>
+	  	<%=submit_tag "Submit" %>
+	<% end %>
+<% end %>
+
+<div class="title">People</div>
 
 <% if user_signed_in? %>
 <h3>People Feed</h3>
