@@ -1,0 +1,8 @@
+<%= gmaps({
+        "map_options" => {"auto_adjust" => true, "auto_zoom" => true, "type" => 'ROADMAP' },
+        "markers" => {"data" => @json }
+      })
+      %>
+
+
+  <%= yield :scripts %>

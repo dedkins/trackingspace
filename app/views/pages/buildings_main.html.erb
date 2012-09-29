@@ -1,5 +1,16 @@
 <% currently_at 'Buildings' %>
 
+<%= content_for :left do %>
+	<%= render 'buildings/new_buildings' %>
+<% end %>
+
+<%= content_for :sidebar do %>
+	<% if user_signed_in? %>
+          <%= render 'shared/recent' %>
+    <% end %>
+
+<% end %>
+
 <%= content_for :search do %>
 	<%= render 'buildings/form_new' %>
 <% end %>
@@ -18,20 +29,3 @@
 	</p>
 <% end %>
 
-<%= content_for :left do %>
-	Recent Activity
-<% end %>
-
-<%= content_for :sidebar do %>
-	<% if user_signed_in? %>
-          <%= render 'shared/recent' %>
-    <% end %>
-	<p>
-	 Partial for building "views"
-	</p>
-	 <ul>
-	 	<li>Buildings I'm Tracking</li>
-	 	<li>Latest Comments</li>
-	 </ul>
-
-<% end %>

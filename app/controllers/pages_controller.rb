@@ -6,7 +6,8 @@ class PagesController < ApplicationController
 			@user = User.find(current_user.id)
 			@recent_items = @user.recent
 		end
-		@newbuildings = Building.new_buildings
+		@newbuildings24 = Building.new_buildings
+		@newbuildings = Building.order('created_at DESC').limit(10)
 		@json = Building.new_buildings.to_gmaps4rails
 	end
 
@@ -32,6 +33,7 @@ class PagesController < ApplicationController
 			@user = User.find(current_user.id)
 			@recent_items = @user.recent
 		end
+		@newbuildings = Building.order('created_at DESC').limit(10)
 	end
 	
 end

@@ -4,9 +4,8 @@
 	<%= render 'buildings/form_new' %>
 <% end %>	
 
-<div class="pagetitle">New Spaces Added Last 24hrs</div>
-
-<%= render 'buildings/new_buildings' %>
+<%= render 'buildings/new_buildings_map' %>
+<p style="font-size:.7em">New Buildings Last 24hrs</p>
 
 <% unless user_signed_in? %>
 
@@ -20,6 +19,10 @@ TrackingSpace is not another listing service.  It is not a listing service at al
 	Everything is driven off addresses.  Start by typing an address in the search box at the top of this page.  Be sure to complete (or select) the address before clicking "Go".  This will take you to the building detail page.  From here you can add your space if its not already there, and add/upload your lease.
 </p>
 
+<% end %>
+
+<%= content_for :left do %>
+	<%= render 'buildings/new_buildings' %>
 <% end %>
 
 <%= content_for :sidebar do %>

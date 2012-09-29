@@ -1,8 +1,16 @@
-<%= gmaps({
-        "map_options" => {"auto_adjust" => true, "auto_zoom" => true, "type" => 'ROADMAP' },
-        "markers" => {"data" => @json }
-      })
-      %>
-
-
-  <%= yield :scripts %>
+	
+		<table width="100%">
+			
+			<tr>
+				<td style="text-align:center">Recently Added Buildings</td>
+			</tr>
+			<tr>
+				<td><hr/></td>
+			</tr>
+			<% @newbuildings.each do |b| %>
+			<tr>
+				<td style="font-size: .8em;text-transform:uppercase"><%= link_to truncate(b.address, :size => 20, :separator => ',', :omission => ''), building_path(b.id) %></td>
+			</tr>
+			<% end %>
+		</table>
+	

@@ -6,7 +6,8 @@ class BuildingsController < ApplicationController
       @recent_items = @user.recent
     end
     @buildings = Building.all(:order => "created_at desc")
-    @newbuildings = Building.new_buildings
+    @newbuildings24 = Building.new_buildings
+    @newbuildings = Building.order('created_at DESC').limit(10)
     @json = Building.new_buildings.to_gmaps4rails
 
     respond_to do |format|
