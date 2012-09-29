@@ -6,6 +6,7 @@ html {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover; 
+  background-attachment: fixed;
 }
 
 .logo {
@@ -128,9 +129,7 @@ section#sidebar {
 }
 
 section#search {
-  border: 1.5px solid #fff;
   background: #edeae6;
-  padding: 10px 30px;
   font-size: 1.15em;
   color: #666;
   margin-left: 265px;
@@ -225,9 +224,10 @@ footer#page_footer {
 }
 
 .search {
+  margin: 20px -10px 20px 30px;
   padding-left: 10px;
   height: 40px;
-  width: 85%;
+  width: 92%;
   font-size: 1.1em;
   border-radius: 5px 0px 0px 5px;
   -moz-box-shadow: inset 0 0 1px 1px #888;

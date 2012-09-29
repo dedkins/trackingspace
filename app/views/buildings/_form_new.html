@@ -1,12 +1,11 @@
 <table width="100%">
 		<tr>
-			<td style="font-size:1.2em;text-transform:uppercase">
-				
-			</td>
 			<td>
 				<%= form_for Building.new do |f| %>
 				  	<%= f.error_messages %>
 				    <%= f.text_field :address, :class => "search", :id => "addresspicker_map", :placeholder => 'Find A Building...'%>
+			</td>
+			<td width="80px">
 				    <%= f.submit "GO!", :class => "add" %>
 				    <%= f.hidden_field :latitude, :id => "lat" %>
 				    <%= f.hidden_field :longitude, :id => "lng" %>
