@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"backg",
+				"background-attachment"
+			],
+			[
 				"new",
 				"newbuildings"
 			],
@@ -148,10 +152,6 @@
 				"height"
 			],
 			[
-				"backg",
-				"background	background-color: hex"
-			],
-			[
 				"pas",
 				"password_required"
 			],
@@ -199,7 +199,7 @@
 			"file": "app/assets/stylesheets/layout.css",
 			"settings":
 			{
-				"buffer_size": 9174,
+				"buffer_size": 9188,
 				"line_ending": "Windows"
 			}
 		},
@@ -217,6 +217,22 @@
 			{
 				"buffer_size": 3489,
 				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/buildings/_form_new.html",
+			"settings":
+			{
+				"buffer_size": 580,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/assets/stylesheets/media.css",
+			"settings":
+			{
+				"buffer_size": 1205,
+				"line_ending": "Windows"
 			}
 		}
 	],
@@ -430,7 +446,7 @@
 	"groups":
 	[
 		{
-			"selected": 5,
+			"selected": 7,
 			"sheets":
 			[
 				{
@@ -521,15 +537,15 @@
 					"file": "app/assets/stylesheets/layout.css",
 					"settings":
 					{
-						"buffer_size": 9174,
+						"buffer_size": 9188,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3960,
-								3960
+								4002,
+								4002
 							]
 						],
 						"settings":
@@ -539,7 +555,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1382.0,
+						"translation.y": 2946.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -594,6 +610,60 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "app/views/buildings/_form_new.html",
+					"settings":
+					{
+						"buffer_size": 580,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								257,
+								257
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "app/assets/stylesheets/media.css",
+					"settings":
+					{
+						"buffer_size": 1205,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								625,
+								625
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 371.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
