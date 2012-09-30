@@ -25,6 +25,7 @@ class BuildingsController < ApplicationController
     @spaces = Space.find_all_by_building_id(@building.id)
     @new_space = @building.spaces.build
     @json = Building.find(@building.id).to_gmaps4rails
+    @newbuildings = Building.order('created_at DESC').limit(10)
 
     @micropost = Micropost.new if signed_in?
     @feed_items = @building.feed

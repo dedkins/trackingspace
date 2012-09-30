@@ -6,7 +6,6 @@ html {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover; 
-  background-attachment: fixed;
 }
 
 .logo {
@@ -135,6 +134,7 @@ section#search {
   margin-left: 265px;
   margin-right: 300px;
   box-shadow: 0px 3px 5px #666;
+  border: 1.5px solid #fff;
 }
 
 /*.pagetitle {
