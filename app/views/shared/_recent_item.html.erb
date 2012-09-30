@@ -1,9 +1,9 @@
 		
 		<table width="100%" style="background:#fff; padding: 2px 10px">
 			<tr>
-				<td style="padding-left:5px;font-variant:small-caps;font-size:1.1em"><%= link_to truncate(recent_item.building.address, :length => 20, :separator => ',', :omission => ''), building_path(id: recent_item.building_id), :title => "Go to the building detail" %><td>
-					<td width="20px" style="padding-left:5px;text-align:right"><%= link_to recent_item.building.spaces.count, '', :title => "How many spaces?" %></td>
-					<td width="20px" style="padding-left:5px;text-align:right"><%= link_to recent_item.building.microposts.count, '', :title => "What's the activity?" %></td>
+				<td class="lists_left"><%= link_to truncate(recent_item.building.address, :length => 20, :separator => ',', :omission => ''), building_path(id: recent_item.building_id), :title => "Go to the building detail" %><td>
+					<td class="lists_right"><%= link_to recent_item.building.spaces.count, '', :title => "How many spaces?" %></td>
+					<td class="lists_right"><%= link_to recent_item.building.microposts.count, '', :title => "What's the activity?" %></td>
 			</tr>
 		</table>
 		 

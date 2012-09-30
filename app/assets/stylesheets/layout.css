@@ -246,6 +246,22 @@ footer#page_footer {
 .clear {
   clear: both;
 }
+.lists_title {
+  text-transform: uppercase;
+  text-align: center;
+}
+.lists_left {
+  padding:5px;
+  text-align: left;
+  font-variant: small-caps;
+  font-size:1.1em;
+}
+.lists_right {
+  padding:5px;
+  text-align: right;
+  font-size: 1.1em;
+  width: 20px;
+}
 
 .form_box {
   margin: 20px;

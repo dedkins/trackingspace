@@ -6,6 +6,10 @@
 
 <%= render 'buildings/new_buildings_map' %>
 <p style="font-size:.7em">New Buildings Last 24hrs</p>
+<hr/>
+<% if user_signed_in? %>
+	<%= render 'shared/recent' %>
+<% end %>
 
 <% unless user_signed_in? %>
 

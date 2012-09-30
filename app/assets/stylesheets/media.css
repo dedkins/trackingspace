@@ -59,6 +59,18 @@
 	nav#utility {
 		display: none;
 	}
+	.lists_title {
+		font-size: 1,75em;
+	}
+	.lists_left {
+		font-size: 2em;
+		padding: 10px;
+	}
+	.lists_right {
+		font-size: 2em;
+		width:80px;
+		padding: 10px;
+	}
 
 }
 

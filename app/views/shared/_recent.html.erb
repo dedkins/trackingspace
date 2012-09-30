@@ -3,7 +3,10 @@
 	<% unless @recent_items.empty? %>
 		<table width="99%">
 			<tr>
-				<td style="text-align:center">Recently Visited Buildings</td>
+				<td class="lists_title">Recently Visited Buildings</td>
+			</tr>
+			<tr>
+				<td><hr/></td>
 			</tr>
 			<tr>
 				<td style="font-size: .8em"><%= render :partial => 'shared/recent_item', :collection => @recent_items %></td>
