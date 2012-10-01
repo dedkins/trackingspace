@@ -88,25 +88,19 @@
 			</table>
 
 			<table width="100%">
-				<tr class="contact_box_title">
-					<th>Contact</th>
-					<th>Property Manager</th>
-					<th>Brokerage Agency</th>
-					<th>Landscaper</th>
-				</tr>
-				<tr class="contact_box">
-					<td><%= link_to 'Add Yourself', '' %></td>
-					<td><%= link_to 'Add Yourself', '' %></td>
-					<td><%= link_to 'Add Yourself', '' %></td>
-					<td><%= link_to 'Add Yourself', '' %></td>
+				<tr>
+					<td class="building_contact_ads"><%= link_to 'Listing Broker', '' %></td>
+					<td class="building_contact_ads"><%= link_to 'Broker', '' %></td>
+					<td class="building_contact_ads"><%= link_to 'Property Manager', '' %></td>
 				</tr>
 			</table>
+			<hr/>
 
 		<% if mobile_device? %>
 			<%= render 'layouts/mobile_ads' %>
 			<hr/>
+			<%= render 'buildings/spaces' %>
 		<% end %>
-
 			
 		<div class="feed">
 			<% if user_signed_in? %>

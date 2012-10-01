@@ -1,28 +1,31 @@
 <% if @spaces.any? %>
-
+<hr/>
 <table width="100%">
-  <tr class="tabletitle">
-    <th colspan="5">Spaces</th>
-  </tr>
-  <% @spaces.each do |space| %>
-  <tr class="tabletext">
-    <td width="20px"/>
-    <td width="25%"><%= link_to space.suite, building_space_path(@building,space) %></td>
-    <td width="30%"><%= space.sf %>sf</td>
-    <td><%= space.status %></td>
-    <td/>
-  </tr>
-  <% end %>
-</table>
-<table>
   <tr>
-    <td style="text-align:center">
-
+    <td style="text-align:center" colspan="3">
       <% if user_signed_in? %>
-      <%= link_to 'Add New Space', new_building_space_path(@building) %>
+      <%= link_to '(Add New Space)', new_building_space_path(@building) %>
       <% else %>
       <%= link_to 'Log In To Add Space', new_user_session_path %>
       <% end %>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="3" class="title">Spaces</td>
+  </tr>
+  <tr height="8px"/>
+  <% @spaces.each do |space| %>
+  <tr>
+    <td width="25%" class="lists_left"><%= link_to space.suite, building_space_path(@building,space) %></td>
+    <td width="30%" class="lists_right"><%= space.sf %>sf</td>
+    <td class="lists_right"><%= space.status %></td>
+  </tr>
+  <% end %>
+</table>
+<hr/>
+<table>
+  <tr>
+    <td style="text-align:center">
       
       <% else %>
         Looks like we need to add some spaces!
@@ -36,5 +39,4 @@
     </td>
   </tr>
 </table>
-
 <% end %>

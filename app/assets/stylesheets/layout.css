@@ -249,6 +249,7 @@ footer#page_footer {
 .lists_title {
   text-transform: uppercase;
   text-align: center;
+  font-size: 1.6em;
 }
 .lists_left {
   padding:5px;
@@ -261,6 +262,13 @@ footer#page_footer {
   text-align: right;
   font-size: 1.1em;
   width: 20px;
+}
+.building_contact_ads {
+  height: 200px;
+  width: 200px;
+  background: #C3E4ED;
+  text-align: center;
+  vertical-align: middle;
 }
 
 .form_box {
