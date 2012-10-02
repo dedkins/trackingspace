@@ -18,3 +18,4 @@
 //= require jquery-ui-1.8.7.min
 //= require jquery.ui.addresspicker
 //= require autocomplete-rails
+//= require html5shiv
