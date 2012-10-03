@@ -1,9 +1,21 @@
 <% currently_at 'Spaces' %>
 
-<div class="title">
-  <%= link_to truncate(@space.building.address, :size => 20, :separator => ',', :omission => ''), building_path(@space.building.id) %> | Suite <%= @space.suite %>
-</div>
-<hr/>
+  <table width="100%">
+    <tr>
+      <td style="text-align:center">
+        <% if user_signed_in? %>
+          <%= link_to 'New Lease', new_space_lease_path(@space) %> |
+          <%= link_to 'Edit Stats', edit_building_space_path(@building,@space) %>
+          <% end %>     
+      </td>
+    </tr>
+    <tr>
+      <td class="title">Suite <%= @space.suite %></td>
+    </tr>
+    <tr>
+      <td style="text-align:center"><%= link_to @space.building.address, building_path(@space.building.id) %></td>
+  </table>
+  <hr/>
       <table>
         <tr>
           <td >
@@ -80,66 +92,11 @@
 </table>
 
 <%= content_for :sidebar do %>
-
-  <table width="100%">
-    <tr class="tabletitle">
-      <th colspan="3">Stats</th>
-    </tr>
-    <tr class="tabletext">
-      <td width="10%"/>
-      <td width="40%">Status</td>
-      <td><%= @space.status %></td>
-    </tr>
-    <tr class="tabletext">
-      <td/>
-      <td width="40%">Number</td>
-      <td><%= @space.suite %></td>
-    </tr>
+  <table width="100%" height="200px" style="background:#ffffff">
     <tr>
-      <td/>
-      <td width="40%">Size</td>
-      <td><%= @space.sf %>sf</td>
-    </tr>
-    <tr>
-      <td/>
-      <td width="40%">Monthly</td>
-      <td><%= number_to_currency(@space.monthly) %></td>
-    </tr>
-    <tr>
-      <td/>
-      <td width="40%">Rate</td>
-      <td><%= number_to_currency(@space.monthly/@space.sf) %></td>
+      <td style="vertical-align:middle;text-align:center">Video</td>
     </tr>
   </table>
-
-  <table width="100%">
-    <tr height="15px"/>
-    <tr>
-      <th class="tabletitle">Leases on Record?</th>
-    </tr>
-    <tr class="tabletext">
-      <td style="text-align:center">
-        <% if @leases.empty? %>No
-        <% else %>Yes
-        <% end %>
-      </td>
-    </tr>
-  </table>
-
-  <table width="100%">
-    <tr height="15px"/>
-    <tr>
-      <td style="text-align:center">
-        <% if user_signed_in? %>
-          <%= link_to 'New Lease', new_space_lease_path(@space) %> |
-          <%= link_to 'Edit Stats', edit_building_space_path(@building,@space) %> |
-          <% end %>
-
-          <%= link_to 'Back', building_path(@building) %>      
-      </td>
-    </tr>
-  </table>
-  
 
 <% end %>
 
