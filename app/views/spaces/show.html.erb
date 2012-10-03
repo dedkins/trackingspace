@@ -1,9 +1,60 @@
 <% currently_at 'Spaces' %>
 
-<div class="pagetitle">
-  <%= @space.building.address %> | Suite <%= @space.suite %>
+<div class="title">
+  <%= truncate(@space.building.address, :size => 20, :separator => ',', :omission => '') %> | Suite <%= @space.suite %>
 </div>
-
+<hr/>
+      <table>
+        <tr>
+          <td >
+            <div class="top_words">
+              <%= number_with_delimiter(@space.sf) %> sq.ft.
+            </div>
+          </td>
+          <td >
+            <div class="top_words">
+              <%= number_to_currency(@space.monthly) %>
+            </div>
+          </td>
+          <td >
+            <div class="top_words">
+              <%= @space.microposts.count %>
+            </div>
+          </td>
+          <td >
+            <div class="top_words">
+              <% if @leases.empty? %>No
+              <% else %>Yes
+              <% end %>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td width="25%" style="font-size:0.8em;text-align:center">Size</td>
+          <td width="15%" style="font-size:0.8em;text-align:center">Monthly</td>
+          <td width="15%" style="font-size:0.8em;text-align:center">Activity</td>
+          <td width="15%" style="font-size:0.8em;text-align:center">Lease on Record</td>
+        </tr>
+      </table>
+      <hr/> 
+      <table width="100%">
+        <tr height="8px"/>
+        <tr>
+          <% if user_signed_in? %>
+            <td width="33%">
+              <div class="add">Comment</button>
+            </td>
+            <td width="33%">
+              <div class="add">Track It</button>
+            </td>
+            <td width="33%">
+              <div class="add">Share It</button>
+            </td>
+          <% else %>
+            <td width="100%" style="text-align:center"><%= link_to 'Sign-In to Start Tracking, Add Comments and Share', new_user_session_path %></td>
+          <% end %>
+        </tr>
+      </table>
 <table>
   <tr>
     <td>

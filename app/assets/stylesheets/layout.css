@@ -307,9 +307,10 @@ footer#page_footer {
   letter-spacing: 8px;
   text-transform: uppercase;
   text-align: center;
-  font-size: 2em;
+  font-size: 1.6em;
   padding: 20px 0 10px 0;
   margin-bottom: 10px;
+  line-height: 1.25;
 }
 
 
