@@ -1,7 +1,7 @@
 <% currently_at 'Spaces' %>
 
 <div class="title">
-  <%= truncate(@space.building.address, :size => 20, :separator => ',', :omission => '') %> | Suite <%= @space.suite %>
+  <%= link_to truncate(@space.building.address, :size => 20, :separator => ',', :omission => ''), building_path(@space.building.id) %> | Suite <%= @space.suite %>
 </div>
 <hr/>
       <table>
