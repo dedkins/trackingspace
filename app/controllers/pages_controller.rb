@@ -26,6 +26,7 @@ class PagesController < ApplicationController
 	    		people_main_path
 	    	end
 	    end
+	    @new_users = User.order('created_at DESC').limit(10)
 	end
 
 	def buildings_main
