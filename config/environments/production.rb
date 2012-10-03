@@ -1,14 +1,15 @@
 Trackingspace::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
+config.force_ssl = true
 
 config.middleware.use ExceptionNotifier,
   :email_prefix => "[Exception] ",
-  :sender_address => %{"Exception Notifier" <dedkins@edkinsgroup.com>},
-  :exception_recipients => %w{dedkins@edkinsgroup.com}
+  :sender_address => %{"Exception Notifier" <dedkins@trackingspace.com>},
+  :exception_recipients => %w{dedkins@trackingspace.com}
   
   #email stuff
 
-  config.action_mailer.default_url_options = { :host => 'test.trackingspace.com' }
+  config.action_mailer.default_url_options = { :host => 'www.trackingspace.com' }
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = true
 
@@ -17,9 +18,9 @@ config.middleware.use ExceptionNotifier,
   config.action_mailer.smtp_settings = {
     :address              => "smtp.gmail.com",
     :port                 => 587,
-    :domain               => "edkinsgroup.com",
+    :domain               => "trackingspace.com",
     :authentication       => "plain",
-    :user_name            => "dedkins@edkinsgroup.com",
+    :user_name            => "dedkins@trackingspace.com",
     :password             => "Pepper96!",
     :enable_starttls_auto => true
   }
