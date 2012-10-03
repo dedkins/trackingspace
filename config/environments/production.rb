@@ -1,6 +1,5 @@
 Trackingspace::Application.configure do
-  # Settings specified here will take precedence over those in config/application.rb
-config.force_ssl = true
+  # Settings specified here will take precedence over those in config/application.#!/usr/bin/env ruby -wKU
 
 config.middleware.use ExceptionNotifier,
   :email_prefix => "[Exception] ",
