@@ -21,6 +21,17 @@
 		<tr><td colspan="2"><hr/><hr/></td></tr>
 		<tr>
 			<td colspan="2">
+				<% if user_signed_in? %>
+							Add a comment about this person:
+						<%= render '/shared/micropost_form' %>
+						<% else %>
+							<%= link_to "Sign In to Add a Comment", new_user_registration_path %>
+						<% end %>
+			</td>
+		</tr>
+		<tr><td colspan="2"><hr/><hr/></td></tr>
+		<tr>
+			<td colspan="2">
 				<% unless @user.microposts.empty? %>
 					<%= render 'shared/feed' %>
 				<% end %>
@@ -29,21 +40,6 @@
 	</table>
 
 		<%= content_for :sidebar do %>
-
-		<table>
-			<tr>
-				<td>
-					<div class="feed">
-						<% if user_signed_in? %>
-							Add a comment about this person:
-						<%= render '/shared/micropost_form' %>
-						<% else %>
-							<%= link_to "Sign In to Add a Comment", new_user_registration_path %>
-						<% end %>
-					</div>
-				</td>
-			</tr>
-		</table>
 			
 		<% end %>
 	</table>

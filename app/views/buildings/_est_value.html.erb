@@ -1,6 +1,6 @@
 <% if @spaces.any? && @building.size? %>
 
-$<%= number_to_human(@building.size*(@spaces.collect(&:monthly).inject(:+)/@spaces.collect(&:sf).inject(:+))*12*0.68/0.08) %>
+$<%= number_to_human(@building.size*(@spaces.collect(&:monthly).inject(:+)/@spaces.collect(&:sf).inject(:+))*12*0.62/0.08) %>
 
 <% else %>
 

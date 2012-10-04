@@ -12,12 +12,16 @@
 				<tr>
 					<td colspan="4" style="text-align:center">
 						<% if user_signed_in? %>
-							<%= link_to 'Add Space', new_building_space_path(@building) %> |
-							<%= link_to 'Update Building Info', edit_building_path(@building.id) %> | 
+							<% if @spaces.empty? %>
+							<%= link_to 'Add a Space', new_building_space_path(@building) %> |
+							<% end %>
+							<% if @building.size %>
+							<%= number_with_precision(@building.size,:precision => 0) %> sq.ft.
+							<% end %>
+							(<%= link_to 'Update Building Size', edit_building_path(@building.id) %>)
 						<% else %>
-							<%= link_to 'Sign-In to Add Space and Update Building Info', new_user_session_path %> |
+							<%= link_to 'Sign-In to Add Space and Update Building Info', new_user_session_path %>
 						<% end %>
-						<%= link_to 'Show Spaces', '' %>
 					</td>
 				</tr>
 				<tr>
@@ -41,20 +45,20 @@
 					</td>
 					<td >
 						<div class="top_words">
-							0
+							<%= @spaces.count %>
 						</div>
 					</td>
 					<td >
 						<div class="top_words">
-							50
+							<%= @building.microposts.count %>
 						</div>
 					</td>
 				</tr>
 				<tr>
-					<td width="25%" style="font-size:0.8em;text-align:center">Estimated Value</td>
+					<td width="25%" style="font-size:0.8em;text-align:center">Rough Value Estimate</td>
 					<td width="15%" style="font-size:0.8em;text-align:center">Average Rate</td>
-					<td width="15%" style="font-size:0.8em;text-align:center">Hype Score</td>
-					<td width="15%" style="font-size:0.8em;text-align:center">Validity Score</td>
+					<td width="15%" style="font-size:0.8em;text-align:center">Current Spaces</td>
+					<td width="15%" style="font-size:0.8em;text-align:center">Activity</td>
 				</tr>
 			</table>
 			<hr/>	
@@ -62,20 +66,13 @@
 				<tr height="8px"/>
 				<tr>
 					<% if user_signed_in? %>
-						<td width="33%">
-							<div class="add">Comment</button>
-						</td>
-						<td width="33%">
-							<div class="add">Track It</button>
-						</td>
-						<td width="33%">
-							<div class="add">Share It</button>
+						<td>
+							<div class="add"><%= link_to 'Track This Building', '' %></button>
 						</td>
 					<% else %>
 						<td width="100%" style="text-align:center"><%= link_to 'Sign-In to Start Tracking, Add Comments and Share', new_user_session_path %></td>
 					<% end %>
 				</tr>
-				<tr height="10px"/>
 				<tr>
 						<td colspan="4">
 						<%= gmaps({
@@ -89,9 +86,9 @@
 
 			<table width="100%">
 				<tr>
-					<td class="building_contact_ads"><%= link_to 'Listing Broker', '' %></td>
-					<td class="building_contact_ads"><%= link_to 'Broker', '' %></td>
-					<td class="building_contact_ads"><%= link_to 'Property Manager', '' %></td>
+					<td class="building_contact_ads"><%= link_to 'You the Listing Broker?', '' %></td>
+					<td class="building_contact_ads"><%= link_to 'Broker? Add Your Name', '' %></td>
+					<td class="building_contact_ads"><%= link_to 'You the Property Manager?', '' %></td>
 				</tr>
 			</table>
 			<hr/>
@@ -107,6 +104,8 @@
 			<h3>Add a comment about this building:</h3>
 				<%= render '/shared/micropost_form' %>
 			<% end %>
+			<p/>
+			<hr/>
 			<% unless @building.microposts.empty? %>
 				<div class="feeditems">
 					<%= render 'shared/feed' %>
@@ -118,6 +117,7 @@
 		<% if user_signed_in? %>
           <%= render 'shared/recent' %>
         <% end %>
+        <%= render 'buildings/spaces' %>
 	<% end %>
 
 

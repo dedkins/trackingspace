@@ -48,42 +48,38 @@
           <td width="15%" style="font-size:0.8em;text-align:center">Lease on Record</td>
         </tr>
       </table>
-      <hr/> 
+      <hr/>
       <table width="100%">
-        <tr height="8px"/>
         <tr>
-          <% if user_signed_in? %>
-            <td width="33%">
-              <div class="add">Comment</button>
-            </td>
-            <td width="33%">
-              <div class="add">Track It</button>
-            </td>
-            <td width="33%">
-              <div class="add">Share It</button>
-            </td>
-          <% else %>
-            <td width="100%" style="text-align:center"><%= link_to 'Sign-In to Start Tracking, Add Comments and Share', new_user_session_path %></td>
-          <% end %>
+          <td class="add"><%= link_to 'Start Tracking', '' %></td>
         </tr>
       </table>
-<table>
+<table width="100%">
   <tr>
-    <td>
+    <td style="text-align:center;height:200px;background:#FEF1B5;padding:100px;border:1px solid #888">
       <% if @space._3dplanurl? %>
         <iframe frameborder="0" height="400" scrolling="no" src="<%= @space._3dplanurl %>" width="100%"></iframe>
         <% else %>
-        <%= link_to image_tag('/assets/threedadfplan.png', :size => '600x350'), 'http://www.propertizing.com' %>
+        Looks like we could use a picture, video, 3D floorplan...heck anything would be better than this!
+        <%= link_to 'Click here to add a 3D floorplan of the space', 'http://www.propertizing.com', :target => '_blank' %>
       <% end %>
     </td>
   </tr>
-
+  <table width="100%">
+    <tr>
+      <% if user_signed_in? %>
+        <td>
+          <%= render '/shared/micropost_form' %>
+        </td>
+      <% else %>
+        <td width="100%" style="text-align:center"><%= link_to 'Sign-In to Start Tracking, Add Comments and Share', new_user_session_path %></td>
+      <% end %>
+    </tr>
+  </table>
+  <hr/>
 	<tr>
 		<td width="600px" valign=top >
-  		<% if user_signed_in? %>
-  		<h3>Add a comment about this space:</h3>
-  			<%= render '/shared/micropost_form' %>
-  		<% end %>
+  		
   		<% unless @space.microposts.empty? %>
   			<%= render 'shared/feed' %>
   		<% end %>
@@ -94,7 +90,7 @@
 <%= content_for :sidebar do %>
   <table width="100%" height="200px" style="background:#ffffff">
     <tr>
-      <td style="vertical-align:middle;text-align:center">Video</td>
+      <td style="vertical-align:middle;text-align:center;padding:20px">Looks like we could use a video here...<p/><%= link_to 'Click here to save us all and add one - please keep it clean', '' %></td>
     </tr>
   </table>
 

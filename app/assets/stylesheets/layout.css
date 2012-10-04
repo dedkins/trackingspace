@@ -116,6 +116,7 @@ section#recent_right {
 }
 
 section#sidebar {
+  border: 1px solid #fff;
   padding: 10px;
   float: right;
   width: 260px;
@@ -303,6 +304,21 @@ footer#page_footer {
     text-decoration: none;
 }
 
+.comment_input {
+  border: 1px solid #888;
+  border-radius: 5px;
+  width: 80%;
+  height: 30px;
+  -moz-box-shadow: inset 0 0 1px 1px #888;
+  -webkit-box-shadow: inset 0 0 1px 1px#888;
+  box-shadow: inset 0 0 1px 1px #888;
+  padding-left: 15px;
+  font-size: 1.2em;
+  vertical-align: middle;
+  margin: auto;
+  background: #FEF1B5;
+}
+
 .title {
   letter-spacing: 8px;
   text-transform: uppercase;
@@ -391,10 +407,10 @@ footer#page_footer {
 
 .add {
   margin: auto;
-  color: #000;
+  color: #fff;
   padding: 8px;
   font-size: 1em;
-  text-shadow: 1px 1px 2px #fff;
+  text-shadow: 1px 1px 2px #888;
   font-weight: bold;
   text-align: center;
   vertical-align: top;
@@ -407,9 +423,12 @@ footer#page_footer {
     -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
   }
-  .add:hover,
+  .add:hover {
+    color:#ffffff;
+  }
   .add:active,
   .add:visited {
+    color: #ffffff;
     text-decoration: none;
     }
 

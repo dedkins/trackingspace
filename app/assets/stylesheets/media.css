@@ -44,6 +44,13 @@
 	section#search {
 		width: 100%;
 	}
+	.comment_input {
+		height:50px;
+	}
+	.add {
+		height:100%;
+		vertical-align: middle;
+	}
 	#name {
 		font-size: 1.2em;
 		line-height: 1.2em;
