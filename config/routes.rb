@@ -30,7 +30,7 @@ Trackingspace::Application.routes.draw do
   end
 
   match 'home' => 'pages#index', :as => 'user_root'
-  root :to => 'buildings#home'
+  root :to => 'pages#index'
   
   
   end
