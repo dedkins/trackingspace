@@ -1,3 +1,11 @@
-  <p style="text-align:center;text-shadow:1px 1px 2px #fff">
-  	Share this with three of your friends...
-  </p>
+<table width="100%">
+  	<tr style="text-align:center">
+  		<td style="text-align:center;vertical-align:middle;padding:10px" width="600px">
+		  Share this with some of your friends via (click one):
+		</td>
+		<td style="text-align:left">
+	  	<%= link_to image_tag("https://github.com/intridea/authbuttons/raw/master/png/twitter_64.png", :size => "30x30", :alt => "Twitter"), "http://twitter.com/home?status=Take a look at Trackingspace", :target => '_blank' %>
+		  	<%= link_to image_tag("http://github.com/intridea/authbuttons/raw/master/png/facebook_64.png", :size => "30x30"), "http://www.facebook.com/sharer.php?u=http://www.trackingspace.com", :target => '_blank' %>
+	  </td>
+	</tr>
+</table>
