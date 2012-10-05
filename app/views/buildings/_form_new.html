@@ -6,7 +6,7 @@
 				    <%= f.text_field :address, :class => "search", :id => "addresspicker_map", :placeholder => 'Find A Building...'%>
 			</td>
 			<td width="80px">
-				    <%= f.submit "GO!", :class => "add" %>
+				    <%= f.submit "GO!", :class => 'button' %>
 				    <%= f.hidden_field :latitude, :id => "lat" %>
 				    <%= f.hidden_field :longitude, :id => "lng" %>
 				      <% if user_signed_in? %>

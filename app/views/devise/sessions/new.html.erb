@@ -7,26 +7,27 @@
 
 <table width="100%">
 	<tr>
-		<td width="40%">
+		<td width="50%">
 			<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-			  <div class="field"><%= f.label :email %><br />
-			  <%= f.email_field :email %></div>
+			  <div class="field"><%= f.label :email %>
+			  <%= f.email_field :email, :class => 'field' %></div>
 
-			  <div class="field"><%= f.label :password %><br />
-			  <%= f.password_field :password %></div>
+			  <div class="field"><%= f.label :password %>
+			  <%= f.password_field :password, :class => 'field' %></div>
 
 			  <% if devise_mapping.rememberable? -%>
-			    <div style="font-size: .8em"><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
+			    <%= f.check_box :remember_me %> <%= f.label :remember_me %>
 			  <% end -%>
 			  <p>
-			  <div><%= f.submit "Sign in" %></div>
+			  <div><%= f.submit "Sign in", :class => 'button' %></div>
 			<% end %>
 		</td>
-		<td width="20%" style="vertical-align:middle;text-align:center">- O  R -</td>
-		<td width="40%">Sign In Through<br/><%= render 'twitter_sign_in' %></td>
+		<td width="50%">- OR - <p/>Sign In Through<br/><%= render 'twitter_sign_in' %></td>
 	</tr>
 </table>
-
+<p/>
+<hr/>
+<p/>
 <%= render :partial => "devise/shared/links" %>
 
 </div>
