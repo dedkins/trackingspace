@@ -2,7 +2,8 @@
 
   <table width="100%">
     <tr>
-      <td style="text-align:center">
+      <td><%= button_to 'Track This Space', '', :class => 'button' %></td>
+      <td style="text-align:right">
         <% if user_signed_in? %>
           <%= link_to 'New Lease', new_space_lease_path(@space) %> |
           <%= link_to 'Edit Stats', edit_building_space_path(@building,@space) %>
@@ -10,10 +11,10 @@
       </td>
     </tr>
     <tr>
-      <td class="title">Suite <%= @space.suite %></td>
+      <td class="title" colspan="2">Suite <%= @space.suite %></td>
     </tr>
     <tr>
-      <td style="text-align:center"><%= link_to @space.building.address, building_path(@space.building.id) %></td>
+      <td style="text-align:center" colspan="2"><%= link_to @space.building.address, building_path(@space.building.id) %></td>
   </table>
   <hr/>
       <table>
@@ -49,11 +50,6 @@
         </tr>
       </table>
       <hr/>
-      <table width="100%">
-        <tr>
-          <td class="add"><%= link_to 'Start Tracking', '' %></td>
-        </tr>
-      </table>
 <table width="100%">
   <tr>
     <td style="text-align:center;height:200px;background:#FEF1B5;padding:100px;border:1px solid #888">

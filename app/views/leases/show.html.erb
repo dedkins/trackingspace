@@ -4,7 +4,8 @@
 
 <table width="100%">
 	<tr>
-		<td colspan="3" style="text-align:center;font-size:.9em">
+		<td><%= button_to 'Share It', '', :class => 'button' %></td>
+		<td colspan="2" style="text-align:right;font-size:.9em">
 				<%= link_to 'Edit', edit_space_lease_path(@lease) %> |
 				<%= link_to 'Download Copy', @lease.file.url %> |
 				<%= link_to 'See Space', space_lease_path(@lease) %>

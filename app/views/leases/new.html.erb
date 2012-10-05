@@ -1,8 +1,7 @@
 <% currently_at 'Spaces' %>
 
-<div class="pagetitle">Add a new lease for</div>
-<h2><%= @space.building.address %>
-<br/> Suite <%= @space.suite %></h2>
+<div class="title">-  New lease  -</div>
+<div style="font-size:.9em;text-align:center"><%= @space.building.address %>, Suite <%= @space.suite %></div>
 
 <%= render 'form' %>
 

@@ -18,22 +18,23 @@
     <%= f.hidden_field :space_id, :value => @space.id %>
   
   <div class="field">
-    <%= f.label :size %><br />
-    <%= f.number_field :size %>
+    <%= f.label :size %>
+    <%= f.number_field :size, :class => 'field', :placeholder => 'How big is the space?...' %>
   </div>
   <div class="field">
-    <%= f.label 'Monthly Total' %><br />
-    <%= f.text_field :current_rate %>
+    <%= f.label 'Monthly Total' %>
+    <%= f.text_field :current_rate, :class => 'field', :placeholder => 'Amount you pay each month...' %>
   </div>
   <div class="field">
-    <%= f.label :expiration %><br />
-    <%= f.date_select :expiration, :end_year => Time.now.year + 15, :start_year => Time.now.year %>
+    <%= f.label :expiration %>
+    <%= f.date_select(:expiration,{:end_year => Time.now.year + 15, :start_year => Time.now.year}, {:class => 'field'}) %>
   </div>
   <div class="field">
-  <%= f.file_field :file %>
+    <%= f.label 'Upload a Copy of the Lease' %>
+  <%= f.file_field(:file, {:class => 'field'}) %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Add It!', :class => 'button' %>
   </div>
 <% end %>
 
