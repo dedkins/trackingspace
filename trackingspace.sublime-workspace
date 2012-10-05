@@ -198,6 +198,22 @@
 				"buffer_size": 1277,
 				"line_ending": "Windows"
 			}
+		},
+		{
+			"file": "app/views/leases/show.html.erb",
+			"settings":
+			{
+				"buffer_size": 1450,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/assets/stylesheets/layout.css",
+			"settings":
+			{
+				"buffer_size": 10012,
+				"line_ending": "Windows"
+			}
 		}
 	],
 	"build_system": "",
@@ -410,6 +426,7 @@
 	"groups":
 	[
 		{
+			"selected": 4,
 			"sheets":
 			[
 				{
@@ -489,6 +506,61 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/views/leases/show.html.erb",
+					"settings":
+					{
+						"buffer_size": 1450,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								72,
+								72
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/assets/stylesheets/layout.css",
+					"settings":
+					{
+						"buffer_size": 10012,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								8812,
+								8812
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 5528.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

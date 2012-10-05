@@ -10,7 +10,12 @@
 
 			<table width="100%">
 				<tr>
-					<td colspan="4" style="text-align:center">
+					<% if user_signed_in? %>
+						<td>
+							<%= button_to 'Track This Building', '', :class => 'add' %>
+						</td>
+					<% end %>
+					<td colspan="3">
 						<% if user_signed_in? %>
 							<% if @spaces.empty? %>
 							<%= link_to 'Add a Space', new_building_space_path(@building) %> |
@@ -64,15 +69,7 @@
 			<hr/>	
 			<table width="100%">
 				<tr height="8px"/>
-				<tr>
-					<% if user_signed_in? %>
-						<td>
-							<div class="add"><%= link_to 'Track This Building', '' %></button>
-						</td>
-					<% else %>
-						<td width="100%" style="text-align:center"><%= link_to 'Sign-In to Start Tracking, Add Comments and Share', new_user_session_path %></td>
-					<% end %>
-				</tr>
+				
 				<tr>
 						<td colspan="4">
 						<%= gmaps({
