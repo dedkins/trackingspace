@@ -32,6 +32,10 @@ class Building < ActiveRecord::Base
     "#{self.address}, #{self.latitude}, #{self.longitude}" 
   end
 
+  def gmaps4rails_title
+      "#{self.address}"
+    end
+
   def feed
     Micropost.where("building_id = ?", id)
   end

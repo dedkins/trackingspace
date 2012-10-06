@@ -8,7 +8,9 @@ class BuildingsController < ApplicationController
     @buildings = Building.all(:order => "created_at desc")
     @newbuildings24 = Building.new_buildings
     @newbuildings = Building.order('created_at DESC').limit(10)
-    @json = Building.new_buildings.to_gmaps4rails
+    @json = Building.new_buildings.to_gmaps4rails do |building, marker|
+      marker.json "\"buildings\": #{building.id}"
+    end
 
     respond_to do |format|
       format.html # index.html.erb
