@@ -63,7 +63,7 @@ class BuildingsController < ApplicationController
   
   def home
     if user_signed_in?
-      redirect_to pages_index_path
+      redirect_to home_path
     else
       render :layout => "home_html"
     end

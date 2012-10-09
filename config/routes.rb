@@ -2,11 +2,12 @@ Trackingspace::Application.routes.draw do
 
   devise_for :users, :controllers => {:registrations => 'registrations'}
   resources :users, :only => [:index,:show,:user_root]
-  #match 'home' => 'users#show', as: :user_root
   
   match 'auth/:provider/callback' => 'authentications#create'
   
   resources :microposts, :only => [:create,:destroy,:mobile_post]
+  resources :user_relationships, :only => [:create,:destroy]
+
   match 'buildings/:building_id/post' => 'microposts#mbuilding_post', :as => 'mbuilding_post'
   match 'buildings/:building_id/spaces/:id/post' => 'microposts#mspace_post', :as => 'mspace_post'
 
@@ -29,9 +30,7 @@ Trackingspace::Application.routes.draw do
     resources :leases
   end
 
-  match 'home' => 'pages#index', :as => 'user_root'
   root :to => 'buildings#home'
-  
   
   end
   # The priority is based upon order of creation:

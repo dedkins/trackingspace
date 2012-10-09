@@ -1,0 +1,4 @@
+<%= form_for current_user.UserRelationships.build(:followed_id => @user.id) do |f| %>
+	<%= f.hidden_field :followed_id %>
+	<%= f.submit "Follow", :class => 'button' %>
+<% end %>
