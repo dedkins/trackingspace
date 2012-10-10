@@ -24,10 +24,10 @@ class User < ActiveRecord::Base
   has_many :authentications
   has_many :microposts, :dependent => :destroy
   has_many :BuildingOrders
-  has_many :UserRelationships, :foreign_key => "follower_id", :dependent => :destroy
-  has_many :following, :through => :UserRelationships, :source => :followed
-  has_many :reverse_UserRelationships, :foreign_key => "followed_id", :class_name => "UserRelationship", :dependent => :destroy
-  has_many :followers, :through => :reverse_UserRelationships
+  has_many :user_relationships, :foreign_key => "follower_id", :dependent => :destroy
+  has_many :following, :through => :user_relationships, :source => :followed
+  has_many :reverse_user_relationships, :foreign_key => "followed_id", :class_name => "UserRelationship", :dependent => :destroy
+  has_many :followers, :through => :reverse_user_relationships
   
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
@@ -56,15 +56,15 @@ class User < ActiveRecord::Base
   end
 
   def following?(followed)
-    UserRelationship.find_by_followed_id(followed)
+    user_relationships.find_by_followed_id(followed)
   end
 
   def follow!(followed)
-    UserRelationship.create!(:followed_id => followed.id)
+    user_relationships.create!(:followed_id => followed.id)
   end
 
   def unfollow!(followed)
-    UserRelationship.find_by_followed_id(followed).destroy
+    user_relationships.find_by_followed_id(followed).destroy
   end
 
   #def password_required?
