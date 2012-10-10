@@ -6,9 +6,11 @@
 
 	<table width="100%">
 		<tr>
-			<td rowspan="2" style="padding:8px"><%= gravatar_image_tag @user.email %></td>
+			<td rowspan="3" style="padding:8px"><%= gravatar_image_tag @user.email %></td>
 			<td class="title" style="text-align:left"><%= @user.name %></td>
-			<td style="text-align:center;vertical-align:middle" width="100px">
+		</tr>
+		<tr>
+			<td colspan="2" style="text-align:left;vertical-align:middle" width="100px">
 				<% unless current_user == @user %>
 					<div id="follow_form">
 						<% if current_user.following?(@user) %>
@@ -26,7 +28,9 @@
 				<%= link_to 'Edit my Profile |', edit_user_registration_path %>
 				<% end %>
 				Posts: <%= @user.microposts.count %> |
-				Member Since: <%= @user.created_at.strftime("%b %d, %Y") %>
+				Member Since: <%= @user.created_at.strftime("%b %d, %Y") %>  |
+				Following: <%= @user.following.count %>  |
+				Followers: <%= @user.followers.count %>
 			</td>
 		</tr>
 		<tr><td colspan="3"><hr/><hr/></td></tr>

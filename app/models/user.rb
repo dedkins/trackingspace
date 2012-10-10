@@ -40,7 +40,7 @@ class User < ActiveRecord::Base
   # attr_accessible :title, :body
 
   def feed
-    Micropost.where("user_id = ?", id)
+    Micropost.from_users_followed_by(self)
   end
 
   def recent

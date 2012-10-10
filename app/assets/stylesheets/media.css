@@ -78,6 +78,12 @@
 		width:80px;
 		padding: 20px;
 	}
+	.button_follow {
+		font-size:1.2em;
+	}
+	.button_unfollow {
+		font-size:1.2em;
+	}
 
 }
 

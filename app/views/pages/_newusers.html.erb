@@ -1,7 +1,7 @@
 <table width="100%">
 	<% @new_users.each do |f| %>
 		<tr>
-			<td rowspan="2" style="padding:8px"><%= gravatar_image_tag f.email %></td>
+			<td rowspan="2" style="padding:8px" width="80px"><%= gravatar_image_tag f.email %></td>
 			<td style="text-align:left;text-transform:uppercase;font-size:1.5em;padding-top:18px"><%= link_to f.name, user_path(f.id) %></td>
 			<td style="text-align:right">
 				<% unless current_user.id == f.id %>
