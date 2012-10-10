@@ -27,7 +27,7 @@
 				<% if current_user == @user %>
 				<%= link_to 'Edit my Profile |', edit_user_registration_path %>
 				<% end %>
-				Posts: <%= @user.microposts.count %> |
+				Activity: <%= @user.microposts.count %> |
 				Member Since: <%= @user.created_at.strftime("%b %d, %Y") %>  |
 				Following: <%= @user.following.count %>  |
 				Followers: <%= @user.followers.count %>
