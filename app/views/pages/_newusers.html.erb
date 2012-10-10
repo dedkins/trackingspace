@@ -1,13 +1,31 @@
-<table>
+<table width="100%">
 	<% @new_users.each do |f| %>
 		<tr>
 			<td rowspan="2" style="padding:8px"><%= gravatar_image_tag f.email %></td>
 			<td style="text-align:left;text-transform:uppercase;font-size:1.5em;padding-top:18px"><%= link_to f.name, user_path(f.id) %></td>
+			<td style="text-align:right">
+				<% unless current_user.id == f.id %>
+					<div id="follow_form">
+						<% if current_user.following?(f.id) %>
+							<%= form_for current_user.user_relationships.find_by_followed_id(f.id), :html => { :method => :delete }, :remote => true do |f| %>
+								<%= f.submit "Unfollow", :class => 'button_unfollow' %>
+							<% end %>
+						<% else %>
+							<%= form_for current_user.user_relationships.build(:followed_id => f.id), :remote => true do |f| %>
+								<%= f.hidden_field :followed_id %>
+								<%= f.submit "Follow", :class => 'button_follow' %>
+							<% end %>
+						<% end %>
+					</div>
+				<% end %>
+			</td>
 		</tr>
 		<tr>
-			<td>
+			<td colspan="2">
 				Posts: <%= f.microposts.count %> |
-				Member Since: <%= f.created_at.strftime("%b %d, %Y") %>
+				Member Since: <%= f.created_at.strftime("%b %d, %Y") %>  |
+				Followers: <%= f.followers.count %>  |
+				Following: <%= f.following.count %>
 			</td>
 		</tr>
 	<% end %>
