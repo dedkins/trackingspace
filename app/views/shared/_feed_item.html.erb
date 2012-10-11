@@ -1,31 +1,42 @@
-
-		<div id="building">
-			<% unless @building.present? %>
-				<% if feed_item.building_id? %>
-					<%= link_to feed_item.building.address, building_path(feed_item.building) %></div>
+<table width="100%">
+	<tr>
+		<td rowspan="2" width="80px"><%= gravatar_image_tag(feed_item.user.email, :gravatar => {:size => '60x60'}) %></td>
+		<td><div id="name" style="text-transform:uppercase;font-size:1.3em"><%= link_to feed_item.user.name, user_path(feed_item.user) %></div>
+		</td>
+		<td style="text-align:right">
+			<%= time_ago_in_words(feed_item.created_at) %> ago 
+			<% if current_user == (feed_item.user) %>
+			<%= link_to " | delete", feed_item, :method => :delete, :confirm => "Are You Sure?" %>
+			<% end %>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<% if feed_item.content? %>
+				<div id="post">"<%= feed_item.content %>"</div>
+			<% end %>
+			<% if feed_item.typeof == 'Created' %>
+				<div id="post">Added Suite <%= feed_item.suite %></div>
+			<% end %>
+			<% if feed_item.typeof == 'Updated' %>
+				<div id="post">Updated Suite <%= feed_item.suite %></div>
+			<% end %>
+		</td>
+		<td style="text-align:right">
+			<div id="building">
+				<% unless @building.present? %>
+					<% if feed_item.building_id? %>
+						<%= link_to feed_item.building.address, building_path(feed_item.building) %></div>
+					<% end %>
 				<% end %>
-			<% end %>
-			<% if feed_item.space_id %>
-				<div id="building">
-					Related to Suite <%= feed_item.space.suite %>
-				</div>
-			<% end %>
-		</div>
-		<% if feed_item.content? %>
-			<div id="post">"<%= feed_item.content %>"</div>
-		<% end %>
-		<% if feed_item.typeof == 'Created' %>
-			<div id="post">Added Suite <%= feed_item.suite %></div>
-		<% end %>
-		<% if feed_item.typeof == 'Updated' %>
-			<div id="post">Updated Suite <%= feed_item.suite %></div>
-		<% end %>
-		<div id="name"><%= link_to feed_item.user.name, user_path(feed_item.user) %></div>
-		Posted <%= time_ago_in_words(feed_item.created_at) %> ago - 
-		<% if current_user == (feed_item.user) %>
-		<%= link_to "delete", feed_item, :method => :delete, :confirm => "Are You Sure?" %>
-		<% end %>
-		<p></p>
-		<hr size="3"/>
-		<p></p>
+				<% if feed_item.space_id %>
+					<div id="building">
+						Related to Suite <%= feed_item.space.suite %>
+					</div>
+				<% end %>
+			</div>
+		</td>
+	</tr>
+	<hr/>
+</table>
 	
