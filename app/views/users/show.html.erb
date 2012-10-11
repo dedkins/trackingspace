@@ -10,17 +10,21 @@
 			<td class="title" style="text-align:left"><%= @user.name %></td>
 		</tr>
 		<tr>
-			<td colspan="2" style="text-align:left;vertical-align:middle" width="100px">
-				<% unless current_user == @user %>
-					<div id="follow_form">
-						<% if current_user.following?(@user) %>
-							<%= render 'unfollow' %>
-						<% else %>
-							<%= render 'follow' %>
-						<% end %>
-					</div>
-				<% end %>
-			</td>
+			<% if user_signed_in? %>
+				<td colspan="2" style="text-align:left;vertical-align:middle" width="100px">
+					<% unless current_user == @user %>
+						<div id="follow_form">
+							<% if current_user.following?(@user) %>
+								<%= render 'unfollow' %>
+							<% else %>
+								<%= render 'follow' %>
+							<% end %>
+						</div>
+					<% end %>
+				</td>
+			<% else %>
+				<td colspan="2">Sign-In to Follow</td>
+			<% end %>
 		</tr>
 		<tr>
 			<td colspan="2">
