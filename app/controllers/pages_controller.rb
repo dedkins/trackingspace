@@ -27,6 +27,10 @@ class PagesController < ApplicationController
 	    	end
 	    end
 	    @new_users = User.order('created_at DESC').limit(10)
+	    if user_signed_in?
+	    	@user = current_user
+	    	@feed_items = @user.feed
+	    end
 	end
 
 	def buildings_main

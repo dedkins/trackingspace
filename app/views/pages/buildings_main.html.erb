@@ -16,6 +16,16 @@
 <% end %>
 
 <% if user_signed_in? %>
+<table width="100%">
+	<tr style="text-align:center">
+		<td>
+			<%= link_to 'Activity', '' %> | 
+			<%= link_to 'Recently Added', '' %> | 
+			<%= link_to 'Recently Viewed', '' %> | 
+			<%= link_to 'Tracking', '' %>
+		</td>
+	</tr>
+</table>
 <div class="title">Building Activity</div>
 	<% unless @user.building_feed %>
 	<p>

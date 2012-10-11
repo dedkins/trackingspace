@@ -44,6 +44,10 @@ class User < ActiveRecord::Base
     Micropost.from_users_followed_by(self)
   end
 
+  def self_feed
+    Micropost.where("user_id = ?", self)
+  end
+
   def building_following?(building)
     building_relationships.find_by_building_id(building)
   end

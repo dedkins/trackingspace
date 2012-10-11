@@ -4,16 +4,32 @@
 	<%= render 'shared/topmsg' %>	
 <% end %>
 
-<div class="title">People</div>
-<hr/>
+<table width="100%">
+	<tr style="text-align:center">
+		<td>
+			<%= link_to 'Activity', '' %> | 
+			<%= link_to 'Recently Added', '' %> | 
+			<%= link_to 'Recently Viewed', '' %> | 
+			<%= link_to 'Tracking', '' %>
+		</td>
+	</tr>
+</table>
 
 <% if user_signed_in? %>
-<h3>Activity</h3>
+<div class="title">People Activity</div>
+	<% unless @user.feed %>
 	<p>
 		Once a member and you've selected other people to track, this area would show a list of recent communications/posts related to the people you're tracking...kind of like a Twitter feed.  Looks like you've got to start adding some people to track.  In the meantime, here are some recent additions.
 	</p>
+	<% else %>
+	<table width="100%">
+		<tr>
+			<td><%= render 'shared/feed' %></td>
+		</tr>
+	</table>
+	<% end %>
 <% else %>
-	<h3>Activity</h3>
+	<div class="title">People Activity</div>
 	<p>
 		Once a member and you've selected people to track, this area would show a list of recent communications/posts related to the people you're tracking...kind of like a Twitter feed.  In the meantime, here are some of our recent additions...
 	</p>
