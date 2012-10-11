@@ -1,7 +1,19 @@
 <table width="100%">
 	<tr>
 		<td rowspan="2" width="80px"><%= gravatar_image_tag(feed_item.user.email, :gravatar => {:size => '60x60'}) %></td>
-		<td><div id="name" style="text-transform:uppercase;font-size:1.3em"><%= link_to feed_item.user.name, user_path(feed_item.user) %></div>
+		<td>
+			<div id="name" style="text-transform:uppercase">
+				<% unless @building.present? %>
+					<% if feed_item.building_id? %>
+						<%= link_to truncate(feed_item.building.address, :size => 30, :separator => ',', :omission => ''), building_path(feed_item.building) %></div>
+					<% end %>
+				<% end %>
+				<% if feed_item.space_id %>
+					<div id="building">
+						Related to Suite <%= feed_item.space.suite %>
+					</div>
+				<% end %>
+			</div>
 		</td>
 		<td style="text-align:right">
 			<%= time_ago_in_words(feed_item.created_at) %> ago 
@@ -24,16 +36,7 @@
 		</td>
 		<td style="text-align:right">
 			<div id="building">
-				<% unless @building.present? %>
-					<% if feed_item.building_id? %>
-						<%= link_to feed_item.building.address, building_path(feed_item.building) %></div>
-					<% end %>
-				<% end %>
-				<% if feed_item.space_id %>
-					<div id="building">
-						Related to Suite <%= feed_item.space.suite %>
-					</div>
-				<% end %>
+				<%= link_to feed_item.user.name, user_path(feed_item.user) %>
 			</div>
 		</td>
 	</tr>
