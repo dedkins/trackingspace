@@ -227,7 +227,7 @@
 			"file": "app/views/shared/_feed_item.html.erb",
 			"settings":
 			{
-				"buffer_size": 1312,
+				"buffer_size": 1500,
 				"line_ending": "Windows"
 			}
 		},
@@ -399,7 +399,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 90.0,
+		"height": 0.0,
 		"where_history":
 		[
 			"C:\\Users\\david\\trackingspace",
@@ -531,15 +531,15 @@
 					"file": "app/views/shared/_feed_item.html.erb",
 					"settings":
 					{
-						"buffer_size": 1312,
+						"buffer_size": 1500,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1301,
-								1301
+								805,
+								805
 							]
 						],
 						"settings":
@@ -548,7 +548,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 16.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

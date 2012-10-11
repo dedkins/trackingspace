@@ -4,31 +4,46 @@
 
 <hr/>
 <hr/>
-
-<h2>Membership = Free</h2>
-<p>
-	Become a member today and start tracking your space(s) and lease(s).  Becoming a member is free.  Our members get total access every building, space and person.  Our objective is, like most other web companies, to get more people using this service and telling others about it.  We welcome you to share it with others and visit a few of the sponsors along the way.
-</p>
-<p>
-	We look forward to having you as a member!
-<p>
+<table width="95%">
+	<tr>
+		<td width="25px"/>
+		<td>
+			<h2>Membership = Free</h2>
+			<p>
+				Become a member today and start tracking your space(s) and lease(s).  Becoming a member is free.  Our members get total access every building, space and person.  Our objective is, like most other web companies, to get more people using this service and telling others about it.  We welcome you to share it with others and visit a few of the sponsors along the way.
+			</p>
+			<p>
+				We look forward to having you as a member!
+			<p>
+		</td>
+	</tr>
+</table>
 
 <div class="form_box">
 
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
 
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email %></div>
-
-  <div><%= f.label :password %><br />
-  <%= f.password_field :password %></div>
-
-  <div><%= f.label :password_confirmation %><br />
-  <%= f.password_field :password_confirmation %></div>
+	<table width="90%">
+		<tr>
+			<td style="vertical-align:middle;text-align:right"><%= f.label :name %></td>
+			<td><%= f.email_field :name, :class => 'field' %></td>
+		</tr>
+		<tr>
+			<td style="vertical-align:middle;text-align:right"><%= f.label :email %></td>
+			<td><%= f.email_field :email, :class => 'field' %></td>
+		</tr>
+		<tr>
+			<td style="vertical-align:middle;text-align:right"><%= f.label :password %></td>
+			<td><%= f.email_field :password, :class => 'field' %></td>
+		</tr>
+		<tr>
+			<td style="vertical-align:middle;text-align:right"><%= f.label :password_confirmation %></td>
+			<td><%= f.email_field :password_confirmation, :class => 'field' %></td>
+		</tr>
+		<tr height="15px"/>
+	</table>
   
-  <div><%= f.submit "Sign up" %></div>
+  <div><%= f.submit "Sign up", :class => 'button' %></div>
 <% end %>
-
-<%= render :partial => "devise/shared/links" %>
 
 </div>
