@@ -33,6 +33,7 @@ class PagesController < ApplicationController
 		if user_signed_in?
 			@user = User.find(current_user.id)
 			@recent_items = @user.recent
+			@feed_items = @user.building_feed
 		end
 		@newbuildings = Building.order('created_at DESC').limit(10)
 	end

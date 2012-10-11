@@ -12,7 +12,13 @@
 				<tr>
 					<% if user_signed_in? %>
 						<td>
-							<%= button_to 'Track This Building', '', :class => 'button' %>
+							<div id="building_follow_form">
+								<% if current_user.building_following?(@building) %>
+									<%= render 'pages/building_unfollow' %>
+								<% else %>
+									<%= render 'pages/building_follow' %>
+								<% end %>
+							</div>
 						</td>
 					<% end %>
 					<td colspan="3">

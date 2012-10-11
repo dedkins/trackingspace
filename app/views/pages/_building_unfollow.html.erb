@@ -1,0 +1,3 @@
+<%= form_for current_user.building_relationships.find_by_user_id(@user), :html => { :method => :delete } do |f| %>
+	<%= f.submit "UnTrack", :class => 'button_unfollow' %>
+<% end %>

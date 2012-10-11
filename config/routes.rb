@@ -12,6 +12,7 @@ Trackingspace::Application.routes.draw do
   
   resources :microposts, :only => [:create,:destroy,:mobile_post]
   resources :user_relationships, :only => [:create,:destroy]
+  resources :building_relationships, :only => [:create,:destroy]
 
   match 'buildings/:building_id/post' => 'microposts#mbuilding_post', :as => 'mbuilding_post'
   match 'buildings/:building_id/spaces/:id/post' => 'microposts#mspace_post', :as => 'mspace_post'
@@ -27,9 +28,9 @@ Trackingspace::Application.routes.draw do
     resources :spaces
   end
 
-  match 'spaces' => 'pages#spaces_main', :as => 'spaces_main'
+  match 'commercial_real_estate_lease' => 'pages#spaces_main', :as => 'spaces_main'
   match 'people' => 'pages#people_main', :as => 'people_main'
-  match 'bmain' => 'pages#buildings_main', :as => 'buildings_main'
+  match 'commercial_real_estate_properties' => 'pages#buildings_main', :as => 'buildings_main'
   
   resources :spaces do
     resources :leases

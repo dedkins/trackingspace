@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121009124643) do
+ActiveRecord::Schema.define(:version => 20121010203932) do
 
   create_table "authentications", :force => true do |t|
     t.integer  "user_id"
@@ -27,6 +27,16 @@ ActiveRecord::Schema.define(:version => 20121009124643) do
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end
+
+  create_table "building_relationships", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "building_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  add_index "building_relationships", ["building_id"], :name => "index_building_relationships_on_building_id"
+  add_index "building_relationships", ["user_id"], :name => "index_building_relationships_on_user_id"
 
   create_table "buildings", :force => true do |t|
     t.float    "latitude"

@@ -19,6 +19,7 @@ class Building < ActiveRecord::Base
   has_many :microposts, :dependent => :destroy
   attr_accessible :address, :latitude, :longitude, :user_id, :size
   has_many :buildingorders
+  has_many :building_relationships
 
   validates :latitude, :presence => true
   validates :longitude, :presence => true

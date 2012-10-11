@@ -23,11 +23,12 @@
 class User < ActiveRecord::Base
   has_many :authentications
   has_many :microposts, :dependent => :destroy
-  has_many :BuildingOrders
+  has_many :building_orders
   has_many :user_relationships, :foreign_key => "follower_id", :dependent => :destroy
   has_many :following, :through => :user_relationships, :source => :followed
   has_many :reverse_user_relationships, :foreign_key => "followed_id", :class_name => "UserRelationship", :dependent => :destroy
   has_many :followers, :through => :reverse_user_relationships
+  has_many :building_relationships, :dependent => :destroy
   
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
@@ -41,6 +42,14 @@ class User < ActiveRecord::Base
 
   def feed
     Micropost.from_users_followed_by(self)
+  end
+
+  def building_following?(building)
+    building_relationships.find_by_building_id(building)
+  end
+
+  def building_feed
+    Micropost.from_buildings_followed_by(self)
   end
 
   def recent
