@@ -21,9 +21,9 @@
 							<% end %>
 						</div>
 					<% else %>	
-						<%= link_to 'Edit my Profile', edit_user_registration_path %>
+						<%= link_to 'Edit my Profile', edit_user_registration_path(@user) %>
 						<% if mobile_device? %>
-						<%= link_to ' | Sign-Out', destroy_user_session_path %>
+						<%= link_to ' | Sign-Out', destroy_user_session_path(@user) %>
 						<% end %>
 						<br/>
 					<% end %>
