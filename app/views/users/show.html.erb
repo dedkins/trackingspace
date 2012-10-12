@@ -23,7 +23,7 @@
 					<% else %>	
 						<%= link_to 'Edit my Profile', edit_user_registration_path(@user) %>
 						<% if mobile_device? %>
-						<%= link_to ' | Sign-Out', destroy_user_session_path(@user) %>
+						<%= link_to ' | Sign-Out', destroy_user_session_path, :method => 'delete' %>
 						<% end %>
 						<br/>
 					<% end %>
