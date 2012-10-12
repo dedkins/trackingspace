@@ -6,12 +6,12 @@
 
 	<table width="100%">
 		<tr>
-			<td rowspan="3" style="padding:8px"><%= gravatar_image_tag @user.email %></td>
-			<td class="title" style="text-align:left"><%= @user.name %></td>
+			<td rowspan="2" style="padding:10px;vertical-align:top" width="80px"><%= gravatar_image_tag @user.email %></td>
+			<td colspan="2" class="title" style="text-align:left;vertical-align:top;padding-top:8px"><%= @user.name %></td>
 		</tr>
 		<tr>
 			<% if user_signed_in? %>
-				<td colspan="2" style="text-align:left;vertical-align:middle" width="100px">
+				<td colspan="3" style="text-align:left;vertical-align:middle" width="100px">
 					<% unless current_user == @user %>
 						<div id="follow_form">
 							<% if current_user.following?(@user) %>
@@ -20,17 +20,21 @@
 								<%= render 'follow' %>
 							<% end %>
 						</div>
+					<% else %>	
+						<%= link_to 'Edit my Profile', edit_user_registration_path %>
+						<% if mobile_device? %>
+						<%= link_to ' | Sign-Out', destroy_user_session_path %>
+						<% end %>
+						<br/>
 					<% end %>
 				</td>
 			<% else %>
-				<td colspan="2">Sign-In to Follow</td>
+				<td colspan="3">Sign-In to Follow</td>
 			<% end %>
 		</tr>
 		<tr>
-			<td colspan="2">
-				<% if current_user == @user %>
-				<%= link_to 'Edit my Profile |', edit_user_registration_path %>
-				<% end %>
+			<td colspan="3" style="padding-left:8px">
+				
 				Activity: <%= @user.microposts.count %> |
 				Member Since: <%= @user.created_at.strftime("%b %d, %Y") %>  |
 				Following: <%= @user.following.count %>  |

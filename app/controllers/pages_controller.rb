@@ -18,6 +18,9 @@ class PagesController < ApplicationController
 		end
 	end
 
+	def privacy
+	end
+
 	def people_main
 		if !params[:name].nil?
 			@user = User.find_by_name(params[:name])
@@ -31,6 +34,8 @@ class PagesController < ApplicationController
 	    if user_signed_in?
 	    	@user = current_user
 	    	@feed_items = @user.feed
+	    else
+	    	@feed_items = Micropost.order('created_at DESC').limit(10)
 	    end
 	end
 
@@ -41,6 +46,7 @@ class PagesController < ApplicationController
 			@feed_items = @user.building_feed
 		end
 		@newbuildings = Building.order('created_at DESC').limit(10)
+		@feed_items = Micropost.where(:building_id != nil).order('created_at DESC').limit(10)
 	end
 	
 end

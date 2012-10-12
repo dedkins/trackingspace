@@ -21,6 +21,8 @@ Trackingspace::Application.routes.draw do
   match 'home' => 'pages#index', :as => 'home'
   match 'buildingposts' => 'buildings#index', :as => 'buildingposts'
   match 'download' => 'leases#download', :as => 'download'
+  match 'privacy' => 'pages#privacy', :as => 'privacy'
+  match 'help' => 'pages#help', :as => 'help'
 
   resources :authentications
 

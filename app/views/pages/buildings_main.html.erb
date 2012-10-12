@@ -43,9 +43,12 @@
 <hr/>
 <%= render 'shared/recent' %>
 <% else %>
-	<h3>Buildings Feed</h3>
+	<div class="title">Building Activity</div>
 	<p>
 		Once a member and you've selected other buildings to track, this area would show a list of recent communications/posts related to the buildings you're tracking...kind of like a Twitter feed.
-	</p>
+	<p>
+		Feel free to look at the following recent additions and <%= link_to 'become a member', new_user_registration_path %> or <%= link_to 'Sign-In', new_user_session_path %>
+	<hr/>
+	<%= render 'shared/feed' %>
 <% end %>
 
