@@ -1,6 +1,6 @@
 <table width="100%">
 	<tr>
-		<td rowspan="2" width="80px" style="vertical-align:top;padding-top:10px"><%= gravatar_image_tag(feed_item.user.email, :gravatar => {:size => '60x60'}) %></td>
+		<td rowspan="2" width="80px" style="vertical-align:top;padding-top:10px"><%= link_to gravatar_image_tag(feed_item.user.email, :gravatar => {:size => '60x60'}, :title => "Click to see #{feed_item.user.name}\'s profile", :alt => feed_item.user.name), user_path(feed_item.user) %></td>
 		<td style="vertical-align:top">
 			<div id="name" style="text-transform:uppercase">
 				<% unless @building.present? %>
