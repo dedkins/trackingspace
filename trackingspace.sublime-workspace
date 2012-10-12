@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"password",
+				"password_confirmation"
+			],
+			[
 				"user",
 				"user_signed_in"
 			],
@@ -216,27 +220,11 @@
 			}
 		},
 		{
-			"file": "app/views/pages/people_main.html.erb",
+			"file": "app/views/registrations/new.html.erb",
 			"settings":
 			{
-				"buffer_size": 1281,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/views/shared/_feed_item.html.erb",
-			"settings":
-			{
-				"buffer_size": 1500,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/views/pages/_newusers.html.erb",
-			"settings":
-			{
-				"buffer_size": 1284,
-				"line_ending": "Windows"
+				"buffer_size": 1546,
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -264,16 +252,17 @@
 	},
 	"file_history":
 	[
+		"/C/Users/david/trackingspace/app/views/pages/people_main.html.erb",
+		"/C/Users/david/trackingspace/app/views/shared/_feed_item.html.erb",
+		"/C/Users/david/trackingspace/app/views/pages/_newusers.html.erb",
 		"/C/Users/david/trackingspace/app/controllers/pages_controller.rb",
 		"/C/Users/david/trackingspace/app/controllers/users_controller.rb",
-		"/C/Users/david/trackingspace/app/views/pages/_newusers.html.erb",
 		"/C/Users/david/trackingspace/app/views/users/show.html.erb",
 		"/C/Users/david/trackingspace/app/models/user.rb",
 		"/C/Users/david/trackingspace/app/views/buildings/show.html.erb",
 		"/C/Users/david/trackingspace/app/models/building.rb",
 		"/C/Users/david/trackingspace/app/views/pages/_building_follow.html.erb",
 		"/C/Users/david/trackingspace/app/views/pages/_building_unfollow.html.erb",
-		"/C/Users/david/trackingspace/app/views/shared/_feed_item.html.erb",
 		"/C/Users/david/trackingspace/app/models/micropost.rb",
 		"/C/Users/david/trackingspace/app/views/pages/buildings_main.html.erb",
 		"/C/Users/david/trackingspace/app/views/shared/_micropost_form.html.erb",
@@ -316,7 +305,6 @@
 		"/C/Users/david/trackingspace/app/views/pages/spaces_main.html.erb",
 		"/C/Users/david/trackingspace/app/views/buildings/_spaces.html.erb",
 		"/C/Users/david/trackingspace/app/views/devise/sessions/_twitter_sign_in.html.erb",
-		"/C/Users/david/trackingspace/app/views/pages/people_main.html.erb",
 		"/C/Users/david/trackingspace/app/views/buildings/_est_value.html.erb",
 		"/C/Users/david/trackingspace/app/views/buildings/index.html.erb",
 		"/C/Users/david/trackingspace/config/environments/production.rb",
@@ -469,7 +457,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -484,8 +472,8 @@
 						"selection":
 						[
 							[
-								1083,
-								998
+								300,
+								300
 							]
 						],
 						"settings":
@@ -501,81 +489,26 @@
 				},
 				{
 					"buffer": 1,
-					"file": "app/views/pages/people_main.html.erb",
+					"file": "app/views/registrations/new.html.erb",
 					"settings":
 					{
-						"buffer_size": 1281,
+						"buffer_size": 1546,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1250,
-								1250
+								97,
+								97
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "app/views/shared/_feed_item.html.erb",
-					"settings":
-					{
-						"buffer_size": 1500,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								805,
-								805
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 16.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "app/views/pages/_newusers.html.erb",
-					"settings":
-					{
-						"buffer_size": 1284,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								110,
-								143
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 30.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

@@ -9,6 +9,7 @@ class PagesController < ApplicationController
 		@newbuildings24 = Building.new_buildings
 		@newbuildings = Building.order('created_at DESC').limit(10)
 		@json = Building.new_buildings.to_gmaps4rails
+		@feed_items = Micropost.order('created_at DESC').limit(10)
 	end
 
 	def spaces_main

@@ -19,6 +19,7 @@ gem 'gravatar_image_tag'
 gem 'paperclip', '~> 3.0'
 gem 'exception_notification', :require => 'exception_notifier'
 gem 'rails3-jquery-autocomplete'
+gem 'will_paginate', '~> 3.0.0'
 
 group :development do
 	gem 'rspec-rails', '2.0.1'
