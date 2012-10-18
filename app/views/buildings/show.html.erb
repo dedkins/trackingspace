@@ -21,7 +21,7 @@
 							</div>
 						</td>
 					<% end %>
-					<td colspan="3">
+					<td colspan="2">
 						<% if user_signed_in? %>
 							<% if @spaces.empty? %>
 							<%= link_to 'Add a Space', new_building_space_path(@building) %> |
@@ -34,9 +34,20 @@
 							<%= link_to 'Sign-In to Add Space and Update Building Info', new_user_session_path %>
 						<% end %>
 					</td>
+					<td style="text-align:right">
+						<% unless mobile_device? %>
+					  		<%= link_to image_tag("https://github.com/intridea/authbuttons/raw/master/png/twitter_64.png", :size => "30x30", :alt => "Twitter"), "http://twitter.com/home?status=Saw this on Trackingspace: http://#{request.host+request.fullpath}", :target => '_blank', :title => 'Share with Twitter' %>
+						  	<%= link_to image_tag("http://github.com/intridea/authbuttons/raw/master/png/facebook_64.png", :size => "30x30"), "http://www.facebook.com/sharer.php?u=http://#{request.host+request.fullpath}", :target => '_blank', :title => 'Share with FaceBook' %>
+						<% else %>
+							<%= link_to image_tag("https://github.com/intridea/authbuttons/raw/master/png/twitter_64.png", :size => "50x50", :alt => "Twitter"), "http://twitter.com/home?status=Saw this on Trackingspace: http://#{request.host+request.fullpath}", :target => '_blank', :title => 'Share with Twitter' %>
+						  	<%= link_to image_tag("http://github.com/intridea/authbuttons/raw/master/png/facebook_64.png", :size => "50x50"), "http://www.facebook.com/sharer.php?u=http://#{request.host+request.fullpath}", :target => '_blank', :title => 'Share with FaceBook' %>
+						<% end %>
+					</td>
 				</tr>
 				<tr>
-					<td colspan="4" class="title"><%= truncate(@building.address, :length => 20, :separator => ',', :omission => '') %></td>
+					<td colspan="4" class="title">
+						<%= truncate(@building.address, :length => 20, :separator => ',', :omission => '') %>
+					</td>
 				</tr>
 				<tr>
 					<td colspan="4" style="font-size:.7em;text-align:center"><%= @building.address %></td>
@@ -89,9 +100,9 @@
 
 			<table width="100%">
 				<tr>
-					<td class="building_contact_ads"><%= link_to 'You the Listing Broker?', '' %></td>
-					<td class="building_contact_ads"><%= link_to 'Broker? Add Your Name', '' %></td>
-					<td class="building_contact_ads"><%= link_to 'You the Property Manager?', '' %></td>
+					<td class="building_contact_ads"><%= link_to 'Your Name Here', upgrade_path %></td>
+					<td class="building_contact_ads"><%= link_to 'Your Name Here', upgrade_path %></td>
+					<td class="building_contact_ads"><%= link_to 'Your Name Here', upgrade_path %></td>
 				</tr>
 			</table>
 			<hr/>

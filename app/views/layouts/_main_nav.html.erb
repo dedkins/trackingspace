@@ -3,7 +3,7 @@
     <% unless mobile_device? %>
     <nav id="main_nav" role="navigation">
       <ul>
-        <%= nav_tab 'Home', home_path, current: current_tab %>
+        <%= nav_tab 'Searches', home_path, current: current_tab %>
         <%= nav_tab 'Buildings', buildings_main_path, current: current_tab%>
         <%= nav_tab 'Spaces', spaces_main_path, current: current_tab %>
         <%= nav_tab 'People', people_main_path, current: current_tab %>
@@ -11,14 +11,14 @@
           <%= nav_tab 'Login', new_user_session_path, current: current_tab %>
         <% end %>
         <% if user_signed_in? %>
-          <%= nav_tab 'myProfile', current_user, current: current_tab %>
+          <%= nav_tab 'myStuff', current_user, current: current_tab %>
         <% end %>
       </ul>
      </nav>
     <% else %>
     <nav id="mobile_nav" role="navigation">
       <ul>
-        <%= nav_tab 'Home', home_path, current: current_tab %>
+        <%= nav_tab 'Searches', home_path, current: current_tab %>
         <%= nav_tab 'Buildings', buildings_main_path, current: current_tab%>
         <%= nav_tab 'Spaces', spaces_main_path, current: current_tab %>
         <%= nav_tab 'People', people_main_path, current: current_tab %>
@@ -26,7 +26,7 @@
           <%= nav_tab 'Login', new_user_session_path, current: current_tab %>
         <% end %>
         <% if user_signed_in? %>
-          <%= nav_tab 'myProfile', current_user, current: current_tab %>
+          <%= nav_tab 'myStuff', current_user, current: current_tab %>
         <% end %>
       </ul>
 	   </nav>

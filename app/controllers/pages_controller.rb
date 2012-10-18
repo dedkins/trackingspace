@@ -21,6 +21,9 @@ class PagesController < ApplicationController
 	def privacy
 	end
 
+	def upgrade
+	end
+
 	def people_main
 		if !params[:name].nil?
 			@user = User.find_by_name(params[:name])

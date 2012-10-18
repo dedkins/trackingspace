@@ -9,6 +9,11 @@
             <nav id="utility">
                 <% if user_signed_in? %>
                   <%= current_user.email %> |
+                  <% unless current_user.upgrade == 'Upgrade59' %>
+                    <%= link_to 'Upgrade', upgrade_path, :class => 'top' %> |
+                  <% else %>
+                    <%= link_to 'Downgrade', '', :class => 'top' %> |
+                  <% end %>
                   <%= link_to "Sign Out", destroy_user_session_path, :method => 'delete', :class => 'top' %>
                 <% else %>
                   <%= link_to "Sign Up", new_user_registration_path, :class => 'top' %> | <%= link_to "Sign In", new_user_session_path, :class => 'top' %> | <%= link_to "Sign In w/ Twitter", '/auth/twitter', :class => 'top' %>

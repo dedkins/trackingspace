@@ -1,5 +1,5 @@
 <%= form_for current_user.building_relationships.build(:user_id => current_user.id,:building_id => @building.id) do |f| %>
 	<%= f.hidden_field :user_id %>
 	<%= f.hidden_field :building_id %>
-	<%= f.submit "Track", :class => 'button_follow' %>
+	<%= f.submit "Track", :class => 'button' %>
 <% end %>

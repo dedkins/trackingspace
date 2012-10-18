@@ -6,7 +6,7 @@ Trackingspace::Application.routes.draw do
         get :following, :followers
       end
     end
-  resources :users, :only => [:index,:show,:user_root]
+  resources :users, :only => [:index,:show,:upgrade]
   
   match 'auth/:provider/callback' => 'authentications#create'
   
@@ -23,6 +23,7 @@ Trackingspace::Application.routes.draw do
   match 'download' => 'leases#download', :as => 'download'
   match 'privacy' => 'pages#privacy', :as => 'privacy'
   match 'help' => 'pages#help', :as => 'help'
+  match 'upgrade' => 'pages#upgrade', :as => 'upgrade'
 
   resources :authentications
 
@@ -38,7 +39,7 @@ Trackingspace::Application.routes.draw do
     resources :leases
   end
 
-  root :to => 'buildings#home'
+  root :to => 'pages#buildings_main'
   
   end
   # The priority is based upon order of creation:

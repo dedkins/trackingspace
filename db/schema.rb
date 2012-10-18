@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121010203932) do
+ActiveRecord::Schema.define(:version => 20121018032246) do
 
   create_table "authentications", :force => true do |t|
     t.integer  "user_id"
@@ -77,6 +77,7 @@ ActiveRecord::Schema.define(:version => 20121010203932) do
     t.string   "suite"
     t.string   "name"
     t.string   "typeof"
+    t.integer  "postforuser"
   end
 
   add_index "microposts", ["user_id"], :name => "index_microposts_on_user_id"
@@ -136,6 +137,10 @@ ActiveRecord::Schema.define(:version => 20121010203932) do
     t.string   "rpx_indentifier"
     t.string   "name"
     t.string   "username"
+    t.string   "upgrade"
+    t.text     "description"
+    t.string   "phone"
+    t.string   "website"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
