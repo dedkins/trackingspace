@@ -3,7 +3,7 @@
 			<td>
 				<%= form_for Building.new do |f| %>
 				  	<%= f.error_messages %>
-				    <%= f.text_field :address, :class => "search", :id => "addresspicker_map", :placeholder => 'Find A Building...'%>
+				    <%= f.text_field :address, :class => "search", :id => "addresspicker_map", :placeholder => 'Find A Building By Address...'%>
 			</td>
 			<td width="80px">
 				    <%= f.submit "GO!", :class => 'button' %>

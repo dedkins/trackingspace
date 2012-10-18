@@ -1,7 +1,19 @@
 <% currently_at 'Home' %>
 
+<%= content_for :search do %>
+	<% if notice %>
+		<p class="notification notice">
+			<%= notice %>
+		</p>
+	<% end %>
+	<% if alert %>
+		<p class="notification alert">
+			<%= alert %>
+		</p>
+	<% end %>
+<% end %>
+
 <div class="title">Sign-In</div>
-<hr/>
 <hr/>
 <div class="form_box">
 

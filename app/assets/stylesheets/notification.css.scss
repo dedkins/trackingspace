@@ -1,0 +1,31 @@
+.notification {
+	background{ 
+		position: relative;
+		repeat: no-repeat;
+		width: 100%;
+		margin:auto;
+		}
+	color: #fff;
+	font {
+		size: 14px;
+		weight: bold;
+		}
+	line-height: 1.6em;
+	margin: auto;
+	padding: 0.75em 0.75em 0.75em 45px;
+	a, a:link, a:visited {
+			color: #fff;
+		}
+
+	&.notice {
+		background: {
+			color: #006302;
+		}
+	}
+
+	&.alert {
+		background: {
+			color: #920202;
+		}
+	}
+}

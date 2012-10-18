@@ -21,6 +21,7 @@
 							<% end %>
 						</div>
 					<% else %>	
+						<%= link_to 'Change Picture', 'http://www.gravatar.com', :target => '_blank' %> |
 						<%= link_to 'Edit my Profile', edit_user_registration_path(@user) %>
 						<% if mobile_device? %>
 						<%= link_to ' | Sign-Out', destroy_user_session_path, :method => 'delete' %>
@@ -51,9 +52,14 @@
 					</td>
 				</tr>
 			<% else %>
-				<%= link_to "Sign In to Add a Comment", new_user_registration_path %>
 			<tr><td colspan="3"><hr/><hr/></td></tr>
 			<% end %>
+		<% else %>
+			<tr>
+				<td colspan="3">
+					<%= link_to "Sign In to Add a Comment", new_user_registration_path %>
+				</td>
+			</tr>
 		<% end %>
 		<tr>
 			<td colspan="3">
