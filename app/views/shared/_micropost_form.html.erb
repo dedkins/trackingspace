@@ -12,7 +12,7 @@
 <% end %>
 
 <% if @user.present? %>
-	<%= f.hidden_field :postforuser, :value => @user.id %>
+	<%= f.hidden_field :postforuser_id, :value => @user.id %>
 	<%= hidden_field_tag "back_to", user_path(@user) %>
 <% end %>
 
