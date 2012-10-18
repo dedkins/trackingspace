@@ -22,7 +22,8 @@
 
 class User < ActiveRecord::Base
   has_many :authentications
-  has_many :microposts, :dependent => :destroy
+  has_many :microposts, :class_name => "Micropost", :foreign_key => :user_id, :dependent => :destroy
+  has_many :postforusers, :class_name => "Micropost", :foreign_key => :postforuser_id
   has_many :building_orders
   has_many :user_relationships, :foreign_key => "follower_id", :dependent => :destroy
   has_many :following, :through => :user_relationships, :source => :followed
@@ -45,7 +46,7 @@ class User < ActiveRecord::Base
   end
 
   def self_feed
-    Micropost.where("user_id = ? OR postforuser = ?", self, self)
+    Micropost.where("user_id = ? OR postforuser_id = ?", self, self)
   end
 
   def building_following?(building)
