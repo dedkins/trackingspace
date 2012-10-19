@@ -11,7 +11,7 @@
 			<table width="100%">
 				<tr>
 					<% if user_signed_in? %>
-						<td>
+						<td width="50px">
 							<div id="building_follow_form">
 								<% if current_user.building_following?(@building) %>
 									<%= render 'pages/building_unfollow' %>
@@ -20,8 +20,10 @@
 								<% end %>
 							</div>
 						</td>
-					<% end %>
 					<td colspan="2">
+					<% else %>
+					<td colspan="3">
+					<% end %>
 						<% if user_signed_in? %>
 							<% if @spaces.empty? %>
 							<%= link_to 'Add a Space', new_building_space_path(@building) %> |
@@ -31,10 +33,10 @@
 							<% end %>
 							(<%= link_to 'Update Building Size', edit_building_path(@building.id) %>)
 						<% else %>
-							<%= link_to 'Sign-In to Add Space and Update Building Info', new_user_session_path %>
+							<%= button_to 'Sign-In', new_user_session_path, :class => 'button' %>
 						<% end %>
 					</td>
-					<td style="text-align:right">
+					<td style="text-align:right" width="60px">
 						<% unless mobile_device? %>
 					  		<%= link_to image_tag("https://github.com/intridea/authbuttons/raw/master/png/twitter_64.png", :size => "30x30", :alt => "Twitter"), "http://twitter.com/home?status=Saw this on Trackingspace: http://#{request.host+request.fullpath}", :target => '_blank', :title => 'Share with Twitter' %>
 						  	<%= link_to image_tag("http://github.com/intridea/authbuttons/raw/master/png/facebook_64.png", :size => "30x30"), "http://www.facebook.com/sharer.php?u=http://#{request.host+request.fullpath}", :target => '_blank', :title => 'Share with FaceBook' %>

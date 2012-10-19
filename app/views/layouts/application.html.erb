@@ -57,12 +57,29 @@
   <div class="container">
     
     <section id="left">
+      <table>
+        <tr>
+          <td style="text-align:center;border:1px dashed #888888;border-radius:5px;padding:5px;background:#f0f0f0">
+            <a href="http://www.jdoqocy.com/click-5746770-10554211" target="_blank" onmouseover="window.status='http://www.ringcentral.com';return true;" onmouseout="window.status=' ';return true;">Complete Fax+Phone Service</a><img src="http://www.ftjcfx.com/image-5746770-10554211" width="1" height="1" border="0"/>
+          </td>
+        </tr>
+      </table>
       <%= yield :left %>
     </section>
 
       <section id="sidebar">
-        <%= yield :sidebar %>
         <% unless mobile_device? %>
+        <table width="100%">
+        <tr>
+          <td style="text-align:center;border:1px dashed #888888;border-radius:5px;padding:5px;background:#f0f0f0;margin-top:8px">
+            <a href="http://www.jdoqocy.com/click-5746770-10554211" target="_blank" onmouseover="window.status='http://www.ringcentral.com';return true;" onmouseout="window.status=' ';return true;">Complete Fax+Phone Service</a><img src="http://www.ftjcfx.com/image-5746770-10554211" width="1" height="1" border="0"/>
+          </td>
+        </tr>
+        <tr>
+          <td height="8px"/>
+        </tr>
+      </table>
+      <%= yield :sidebar %>
           <%= render 'layouts/right_ads' %>
         <% end %>
         <hr/>
