@@ -10,7 +10,7 @@
 			<td class="title" style="text-align:left;vertical-align:top;padding-top:8px"><%= @user.name %></td>
 			<td width="40px"><%= button_to 'Edit my Profile', edit_user_registration_path(@user), :method => 'get', :class => 'button' %></td>
 		</tr>
-		<% if @user.upgrade != nil %>
+		<% if @user.upgrade %>
 		<tr>
 			<td colspan="2">
 				<%= @user.description %>
