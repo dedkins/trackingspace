@@ -6,9 +6,26 @@
 
 	<table width="100%">
 		<tr>
-			<td rowspan="2" style="padding:10px;vertical-align:top" width="80px"><%= gravatar_image_tag @user.email %></td>
-			<td colspan="2" class="title" style="text-align:left;vertical-align:top;padding-top:8px"><%= @user.name %></td>
+			<td rowspan="2" style="padding:10px;vertical-align:top" width="80px"><%= link_to gravatar_image_tag(@user.email), 'http://www.gravatar.com', :title => 'Click to Update Pic', :class => 'profile_pic', :target => '_blank' %></td>
+			<td class="title" style="text-align:left;vertical-align:top;padding-top:8px"><%= @user.name %></td>
+			<td width="40px"><%= button_to 'Edit my Profile', edit_user_registration_path(@user), :class => 'button' %></td>
 		</tr>
+		<% if @user.upgrade != nil %>
+		<tr>
+			<td colspan="2">
+				<%= @user.description %>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="3" style="border:1px solid #888888;background:#f0f0f0">
+				<table width="100%">
+					<td class="top_words"><%= @user.phone %></td>
+					<td class="top_words"><%= mail_to @user.email, 'Email Me' %></td>
+					<td class="top_words"><%= link_to 'My Website', 'http://'+@user.website, :target => '_blank' %></td>
+				</table>
+			</td>
+		</tr>
+		<% end %>
 		<tr>
 			<% if user_signed_in? %>
 				<td colspan="3" style="text-align:left;vertical-align:middle" width="100px">
@@ -20,9 +37,7 @@
 								<%= render 'follow' %>
 							<% end %>
 						</div>
-					<% else %>	
-						<%= link_to 'Change Picture', 'http://www.gravatar.com', :target => '_blank' %> |
-						<%= link_to 'Edit my Profile', edit_user_registration_path(@user) %>
+					<% else %>
 						<% if mobile_device? %>
 						<%= link_to ' | Sign-Out', destroy_user_session_path, :method => 'delete' %>
 						<% end %>

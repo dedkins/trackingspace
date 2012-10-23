@@ -18,6 +18,10 @@
 #  rpx_indentifier        :string(255)
 #  name                   :string(255)
 #  username               :string(255)
+#  upgrade                :string(255)
+#  description            :text
+#  phone                  :string(255)
+#  website                :string(255)
 #
 
 class User < ActiveRecord::Base
@@ -38,7 +42,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :name, :upgrade, :phone, :description
+  attr_accessible :username, :email, :password, :password_confirmation, :remember_me, :name, :upgrade, :phone, :website, :description
   # attr_accessible :title, :body
 
   def feed

@@ -18,6 +18,10 @@
 #  rpx_indentifier        :string(255)
 #  name                   :string(255)
 #  username               :string(255)
+#  upgrade                :string(255)
+#  description            :text
+#  phone                  :string(255)
+#  website                :string(255)
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html

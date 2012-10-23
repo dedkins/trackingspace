@@ -1,3 +1,14 @@
+# == Schema Information
+#
+# Table name: building_orders
+#
+#  id          :integer          not null, primary key
+#  user_id     :integer
+#  building_id :integer
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#
+
 class BuildingOrder < ActiveRecord::Base
   belongs_to :building, :dependent => :destroy
   belongs_to :user, :dependent => :destroy

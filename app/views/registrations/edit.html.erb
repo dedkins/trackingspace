@@ -1,5 +1,8 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<% currently_at 'myStuff' %>
 
+<div class="title">Edit My Profile</div>
+<hr/>
+<hr/>
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
   <%= devise_error_messages! %>
 
@@ -11,6 +14,19 @@
 
   <div><%= f.label :email %><br />
   <%= f.email_field :email %></div>
+
+  <% if @user.upgrade != nil %>
+
+  <div><%= f.label :phone %><br />
+  <%= f.phone_field :phone %></div>
+
+  <div><%= f.label :description %><br />
+  <%= f.text_area :description, :size => '40x5' %></div>
+
+  <div><%= f.label :website %><br />
+  <%= f.text_field :website %></div>
+
+  <% end %>
 
   <div><%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
   <%= f.password_field :current_password %></div>

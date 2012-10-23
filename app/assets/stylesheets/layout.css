@@ -505,3 +505,10 @@ footer#page_footer {
     text-decoration: none;
     }
 
+.profile_pic {
+  background:transparent;
+}
+.profile_pic:hover {
+  background:#f0f0f0;
+  opacity: .5;
+}
