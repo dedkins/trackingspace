@@ -85,6 +85,11 @@ class User < ActiveRecord::Base
     user_relationships.find_by_followed_id(followed).destroy
   end
 
+  def upgrade?
+    @user = User.find(params[:id])
+    @user.upgrade != ''
+  end 
+
   #def password_required?
   #	(authentications.empty? || !password.blank?) && super
   #end
