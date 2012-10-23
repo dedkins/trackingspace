@@ -27,7 +27,7 @@
 								<% end %>
 							</div>
 					<% else %>
-						<%= button_to 'Edit my Profile', edit_user_registration_path(@user), :method => 'get', :class => 'button' %>
+						<%= button_to 'Edit my Profile', edit_user_registration_path(@user), :method => :get, :class => 'button' %>
 						<% if mobile_device? %>
 							<%= button_to 'Sign-Out', destroy_user_session_path, :method => 'delete' %>
 						<% end %>
@@ -39,7 +39,7 @@
 		</tr>
 		<% if @user.upgrade? %>
 		<tr>
-			<td colspan="2" style="margin-bottom:10px;border:1px solid #888888;background:#f0f0f0;padding:5px;text-align:center">
+			<td colspan="2" style="border:1px solid #888888;background:#f0f0f0;padding:5px;text-align:center">
 				<table width="100%">
 					<td>Phone: <%= @user.phone %></td>
 					<td><%= mail_to @user.email, 'Email Me' %></td>
