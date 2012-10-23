@@ -27,7 +27,7 @@
 								<% end %>
 							</div>
 					<% else %>
-						<%= button_to('Edit my Profile', edit_user_registration_path(@user), :method => "get", :class => 'button') %>
+						<%= button_to('Edit my Profile', edit_user_registration_path(@user), :method => :get, :class => 'button') %>
 						<% if mobile_device? %>
 							<%= button_to 'Sign-Out', destroy_user_session_path, :method => 'delete' %>
 						<% end %>
