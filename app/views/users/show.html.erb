@@ -27,7 +27,7 @@
 								<% end %>
 							</div>
 					<% else %>
-						<% if mobile_device? %>
+					<% if mobile_device? %>
 							<%= button_to 'Sign-Out', destroy_user_session_path, :method => 'delete' %>
 						<% end %>
 					<% end %>
@@ -36,7 +36,7 @@
 				<% end %>
 			</td>
 		</tr>
-		<% if @user.upgrade? %>
+		<% if @user.upgrade %>
 		<tr>
 			<td colspan="2" style="border:1px solid #888888;background:#f0f0f0;padding:5px;text-align:center">
 				<table width="100%">
