@@ -6,50 +6,55 @@
 
 	<table width="100%">
 		<tr>
-			<td rowspan="2" style="padding:10px;vertical-align:top" width="80px"><%= link_to gravatar_image_tag(@user.email), 'http://www.gravatar.com', :title => 'Click to Update Pic', :class => 'profile_pic', :target => '_blank' %></td>
+			<% if user_signed_in? %>
+			<% if current_user == @user %>
+				<td rowspan="2" style="padding-top:10px;vertical-align:top" width="90px"><%= link_to gravatar_image_tag(@user.email), 'http://www.gravatar.com', :title => 'Click to Update Pic', :class => 'profile_pic', :target => '_blank' %></td>
+			<% else %>
+				<td rowspan="2" style="padding-top:10px;vertical-align:top" width="90px"><%= gravatar_image_tag(@user.email) %></td>
+			<% end %>
+			<% else %>
+				<td rowspan="2" style="padding-top:10px;vertical-align:top" width="90px"><%= gravatar_image_tag(@user.email) %></td>
+			<% end %>
 			<td class="title" style="text-align:left;vertical-align:top;padding-top:8px"><%= @user.name %></td>
-			<td width="40px"><%= button_to 'Edit my Profile', edit_user_registration_path(@user), :method => 'get', :class => 'button' %></td>
+			<td width="60px">
+				<% if user_signed_in? %>
+					<% unless current_user == @user %>
+							<div id="follow_form">
+								<% if current_user.following?(@user) %>
+									<%= render 'unfollow' %>
+								<% else %>
+									<%= render 'follow' %>
+								<% end %>
+							</div>
+					<% else %>
+						<%= button_to 'Edit my Profile', edit_user_registration_path(@user), :method => 'get', :class => 'button' %>
+						<% if mobile_device? %>
+							<%= button_to 'Sign-Out', destroy_user_session_path, :method => 'delete' %>
+						<% end %>
+					<% end %>
+				<% else %>
+					<%= button_to 'Sign-In', new_user_session_path, :class => 'button' %>
+				<% end %>
+			</td>
 		</tr>
-		<% if @user.upgrade != '' %>
+		<% if @user.upgrade? %>
 		<tr>
-			<td colspan="2">
-				<%= @user.description %>
+			<td colspan="2" style="margin-bottom:10px;border:1px solid #888888;background:#f0f0f0;padding:5px;text-align:center">
+				<table width="100%">
+					<td>Phone: <%= @user.phone %></td>
+					<td><%= mail_to @user.email, 'Email Me' %></td>
+					<td><%= link_to 'My Website', 'http://'+@user.website, :target => '_blank' %></td>
+				</table>
 			</td>
 		</tr>
 		<tr>
-			<td colspan="3" style="border:1px solid #888888;background:#f0f0f0">
-				<table width="100%">
-					<td class="top_words"><%= @user.phone %></td>
-					<td class="top_words"><%= mail_to @user.email, 'Email Me' %></td>
-					<td class="top_words"><%= link_to 'My Website', 'http://'+@user.website, :target => '_blank' %></td>
-				</table>
+			<td colspan="3">
+				<%= @user.description %>
 			</td>
 		</tr>
 		<% end %>
 		<tr>
-			<% if user_signed_in? %>
-				<td colspan="3" style="text-align:left;vertical-align:middle" width="100px">
-					<% unless current_user == @user %>
-						<div id="follow_form">
-							<% if current_user.following?(@user) %>
-								<%= render 'unfollow' %>
-							<% else %>
-								<%= render 'follow' %>
-							<% end %>
-						</div>
-					<% else %>
-						<% if mobile_device? %>
-						<%= link_to ' | Sign-Out', destroy_user_session_path, :method => 'delete' %>
-						<% end %>
-						<br/>
-					<% end %>
-				</td>
-			<% else %>
-				<td colspan="3">Sign-In to Follow</td>
-			<% end %>
-		</tr>
-		<tr>
-			<td colspan="3" style="padding-left:8px">
+			<td colspan="3" style="padding-left:8px;text-align:center">
 				
 				Activity: <%= @user.microposts.count %> |
 				Member Since: <%= @user.created_at.strftime("%b %d, %Y") %>  |
@@ -69,12 +74,6 @@
 			<% else %>
 			<tr><td colspan="3"><hr/><hr/></td></tr>
 			<% end %>
-		<% else %>
-			<tr>
-				<td colspan="3">
-					<%= link_to "Sign In to Add a Comment", new_user_registration_path %>
-				</td>
-			</tr>
 		<% end %>
 		<tr>
 			<td colspan="3">
