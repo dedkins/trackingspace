@@ -8,7 +8,7 @@
 		<tr>
 			<td rowspan="2" style="padding:10px;vertical-align:top" width="80px"><%= link_to gravatar_image_tag(@user.email), 'http://www.gravatar.com', :title => 'Click to Update Pic', :class => 'profile_pic', :target => '_blank' %></td>
 			<td class="title" style="text-align:left;vertical-align:top;padding-top:8px"><%= @user.name %></td>
-			<td width="40px"><%= button_to 'Edit my Profile', edit_user_registration_path(@user), :class => 'button' %></td>
+			<td width="40px"><%= button_to 'Edit my Profile', edit_user_registration_path(@user), :method => 'get', :class => 'button' %></td>
 		</tr>
 		<% if @user.upgrade != nil %>
 		<tr>
