@@ -3,7 +3,7 @@
     <% unless mobile_device? %>
     <nav id="main_nav" role="navigation">
       <ul>
-        <%= nav_tab 'Searches', home_path, current: current_tab %>
+        <%= nav_tab 'Home', home_path, current: current_tab %>
         <%= nav_tab 'Buildings', buildings_main_path, current: current_tab%>
         <%= nav_tab 'Spaces', spaces_main_path, current: current_tab %>
         <%= nav_tab 'People', people_main_path, current: current_tab %>
@@ -18,7 +18,7 @@
     <% else %>
     <nav id="mobile_nav" role="navigation">
       <ul>
-        <%= nav_tab 'Searches', home_path, current: current_tab %>
+        <%= nav_tab 'Home', home_path, current: current_tab %>
         <%= nav_tab 'Buildings', buildings_main_path, current: current_tab%>
         <%= nav_tab 'Spaces', spaces_main_path, current: current_tab %>
         <%= nav_tab 'People', people_main_path, current: current_tab %>

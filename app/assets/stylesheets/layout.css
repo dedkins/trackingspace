@@ -513,3 +513,7 @@ footer#page_footer {
   background:#f0f0f0;
   opacity: .5;
 }
+#stripe_error {
+  color: red;
+  font-weight: bold;
+}

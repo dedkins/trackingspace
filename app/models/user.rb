@@ -34,6 +34,7 @@ class User < ActiveRecord::Base
   has_many :reverse_user_relationships, :foreign_key => "followed_id", :class_name => "UserRelationship", :dependent => :destroy
   has_many :followers, :through => :reverse_user_relationships
   has_many :building_relationships, :dependent => :destroy
+  has_one   :subscription
   
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
@@ -84,11 +85,6 @@ class User < ActiveRecord::Base
   def unfollow!(followed)
     user_relationships.find_by_followed_id(followed).destroy
   end
-
-  def upgrade?
-    @user = User.find(params[:id])
-    @user.upgrade != ''
-  end 
 
   #def password_required?
   #	(authentications.empty? || !password.blank?) && super
