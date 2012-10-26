@@ -12,9 +12,16 @@
     </div>
   <% end %>
 
+<table>
+  <tr>
+    <td><%= f.label :suite %></td>
+    <td><%= f.number_field :suite %></td>
+  </tr>
+</table>
+
   <div class="field">
-    <%= f.label :suite %><br />
-    <%= f.number_field :suite %>
+    
+    
   </div>
 
   <div class="field">
@@ -43,6 +50,6 @@
   </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Update Space', :class => 'button' %>
   </div>
 <% end %>

@@ -49,7 +49,7 @@ class PagesController < ApplicationController
 			@feed_items = @user.building_feed
 		end
 		@newbuildings = Building.order('created_at DESC').limit(10)
-		@feed_items = Micropost.where(:building_id != nil).order('created_at DESC').limit(10)
+		@feed_items = Micropost.where("building_id IS NOT NULL").order('created_at DESC').limit(10)
 	end
 	
 end

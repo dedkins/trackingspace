@@ -36,9 +36,9 @@ class Micropost < ActiveRecord::Base
   end
 
   def self.from_buildings_followed_by(user)
-    followed_user_ids = "SELECT building_id FROM building_relationships
+    followed_building_ids = "SELECT building_id FROM building_relationships
                          WHERE user_id = :user_id"
-    where("building_id IN (#{followed_user_ids})",user_id: user.id)
+    where("building_id IN (#{followed_building_ids})",user_id: user.id)
   end
 
 end

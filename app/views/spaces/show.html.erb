@@ -5,7 +5,7 @@
       <td><%= button_to 'Track This Space', '', :class => 'button' %></td>
       <td style="text-align:right">
         <% if user_signed_in? %>
-          <%= link_to 'New Lease', new_space_lease_path(@space) %> |
+          <%= link_to 'Add New Lease', new_space_lease_path(@space) %> |
           <%= link_to 'Edit Stats', edit_building_space_path(@building,@space) %>
           <% end %>     
       </td>
@@ -52,16 +52,14 @@
       <hr/>
 <table width="100%">
   <tr>
-    <td style="text-align:center;height:200px;background:#FEF1B5;padding:100px;border:1px solid #888">
-      <% if @space._3dplanurl? %>
-        <iframe frameborder="0" height="400" scrolling="no" src="<%= @space._3dplanurl %>" width="100%"></iframe>
-        <% else %>
-        Looks like we could use a picture, video, 3D floorplan...heck anything would be better than this!
-        <%= link_to 'Click here to add a 3D floorplan of the space', 'http://www.propertizing.com', :target => '_blank' %>
-      <% end %>
-    </td>
+    <td class="building_contact_ads"><%= link_to 'Your Name Here', upgrade_path %></td>
+    <td class="building_contact_ads"><%= link_to 'Your Name Here', upgrade_path %></td>
+    <td class="building_contact_ads"><%= link_to 'Your Name Here', upgrade_path %></td>
   </tr>
   <table width="100%">
+    <tr>
+      <td height="10px"/>
+    </tr>
     <tr>
       <% if user_signed_in? %>
         <td>
