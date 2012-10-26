@@ -6,16 +6,32 @@
 
 	<table width="100%">
 		<tr>
-			<% if user_signed_in? %>
-			<% if current_user == @user %>
-				<td rowspan="2" style="padding-top:10px;vertical-align:top" width="90px"><%= link_to gravatar_image_tag(@user.email), 'http://www.gravatar.com', :title => 'Click to Update Pic', :class => 'profile_pic', :target => '_blank' %></td>
+			<% unless mobile_device? %>
+				<% if user_signed_in? %>
+					<% if current_user == @user %>
+						<td rowspan="2" style="padding-top:10px;vertical-align:top" width="90px"><%= link_to gravatar_image_tag(@user.email), 'http://www.gravatar.com', :title => 'Click to Update Pic', :class => 'profile_pic', :target => '_blank' %></td>
+					<% else %>
+						<td rowspan="2" style="padding-top:10px;vertical-align:top" width="90px"><%= gravatar_image_tag(@user.email) %></td>
+					<% end %>
+				<% else %>
+					<td rowspan="2" style="padding-top:10px;vertical-align:top" width="90px"><%= gravatar_image_tag(@user.email) %></td>
+				<% end %>
 			<% else %>
-				<td rowspan="2" style="padding-top:10px;vertical-align:top" width="90px"><%= gravatar_image_tag(@user.email) %></td>
+				<% if user_signed_in? %>
+					<% if current_user == @user %>
+						<td rowspan="2" style="padding-top:10px;vertical-align:middle" width="140px"><%= link_to gravatar_image_tag(@user.email, :gravatar => {:size => '120x120'}, :title => 'Click to Update Pic', :class => 'profile_pic', :target => '_blank'), 'http://www.gravatar.com' %></td>
+					<% else %>
+						<td rowspan="2" style="padding-top:10px;vertical-align:top" width="90px"><%= gravatar_image_tag(@user.email) %></td>
+					<% end %>
+				<% else %>
+					<td rowspan="2" style="padding-top:10px;vertical-align:top" width="90px"><%= gravatar_image_tag(@user.email) %></td>
+				<% end %>
 			<% end %>
-			<% else %>
-				<td rowspan="2" style="padding-top:10px;vertical-align:top" width="90px"><%= gravatar_image_tag(@user.email) %></td>
-			<% end %>
-			<td style="font-size:2em;letter-spacing:8px;text-transform:uppercase;text-align:left;vertical-align:top;padding-top:12px"><%= @user.name %></td>
+
+			<td style="text-align:left;">
+				<span class="title"><%= @user.name %></span><br/>
+				<span style="font-size:.8em;text-transform:uppercase">Member Since: <%= @user.created_at.strftime("%b %d, %Y") %></span>
+			</td>
 			<td width="60px">
 				<% if user_signed_in? %>
 					<% unless current_user == @user %>
@@ -28,9 +44,6 @@
 							</div>
 					<% else %>
 						<%= button_to 'Edit my Profile', edit_user_registration_path(@user), :method => 'get', :class => 'button' %>
-						<% if mobile_device? %>
-							<%= button_to 'Sign-Out', destroy_user_session_path, :method => 'delete' %>
-						<% end %>
 					<% end %>
 				<% else %>
 					<%= button_to 'Sign-In', new_user_session_path, :class => 'button' %>
@@ -42,10 +55,7 @@
 			<td colspan="2" style="vertical-align:top">
 				<table width="100%">
 					<tr>
-						<td style="font-size:.8em;text-transform:uppercase">Member Since: <%= @user.created_at.strftime("%b %d, %Y") %></td>
-					</tr>
-					<tr>
-						<td colspan="2">
+						<td colspan="3" style="padding-top:10px">
 							<span style="font-size:1.5em"><%= @user.phone %></span>
 							<% if @user.website != '' %>
 							 | <%= link_to 'http://'+@user.website, 'http://'+@user.website, :target => '_blank' %>
@@ -54,7 +64,7 @@
 					</tr>
 				</table>
 			</td>
-		</tr>
+		</tr>	
 		<tr>
 			<td colspan="3" style="padding:10px;background:#f0f0f0">
 				<%= @user.description %>
@@ -68,6 +78,9 @@
 				Following: <%= link_to @user.following.count, following_user_path %>  |
 				Followers: <%= link_to @user.followers.count, followers_user_path %> | 
 				Buildings Tracked: <%= @user.building_relationships.count %>
+				<% if user_signed_in? && mobile_device? %> |
+					<%= link_to 'SignOut', destroy_user_session_path(@user) %>
+				<% end %>
 			</td>
 		</tr>
 		<% if user_signed_in? %>
