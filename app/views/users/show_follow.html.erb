@@ -1,0 +1,44 @@
+<% currently_at 'myStuff' %>
+
+<%= content_for :search do %>
+	<%= render 'shared/topmsg' %>
+<% end %>
+
+<div class="title"><%= @title %></div>
+<hr/>
+<hr/>
+
+<% unless @users.empty? %>
+	<% @users.each do |f| %>
+		<table width="100%">
+			<tr>
+				<td rowspan="2" width="80px" style="vertical-align:top;padding-top:10px"><%= link_to gravatar_image_tag(f.email, :gravatar => {:size => '60x60'}, :title => "Click to see #{f.name}\'s profile", :alt => f.name), user_path(f) %>
+				</td>
+				<td>
+					<table width="100%">
+						<tr>
+							<td style="text-transform:uppercase;padding-top:10px;font-size:1.2em">
+								<%= f.name %>
+							</td>
+							<td style="text-align:right">
+								
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2">
+								<% if f.description %>
+								"<%= f.description %>"
+								<% end %>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Activity: <%= f.microposts.count %> | Buildings Followed: <%= f.building_relationships.count %>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+	<% end %>
+<% end %>

@@ -3,11 +3,13 @@ Trackingspace::Application.routes.draw do
   resources :subscriptions
 
   devise_for :users, :controllers => {:registrations => 'registrations'}
+
   resources :users do
       member do
         get :following, :followers
       end
     end
+  
   resources :users, :only => [:index,:show,:upgrade]
   
   match 'auth/:provider/callback' => 'authentications#create'
