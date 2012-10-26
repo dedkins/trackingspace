@@ -263,7 +263,7 @@
 			"file": "app/controllers/users_controller.rb",
 			"settings":
 			{
-				"buffer_size": 1158,
+				"buffer_size": 1161,
 				"line_ending": "Windows"
 			}
 		},
@@ -271,7 +271,7 @@
 			"file": "app/views/users/show_follow.html.erb",
 			"settings":
 			{
-				"buffer_size": 1064,
+				"buffer_size": 1133,
 				"line_ending": "Windows"
 			}
 		},
@@ -287,7 +287,7 @@
 			"file": "app/views/users/show.html.erb",
 			"settings":
 			{
-				"buffer_size": 2928,
+				"buffer_size": 3235,
 				"line_ending": "Windows"
 			}
 		}
@@ -585,15 +585,15 @@
 					"file": "app/controllers/users_controller.rb",
 					"settings":
 					{
-						"buffer_size": 1158,
+						"buffer_size": 1161,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1122,
-								1122
+								1060,
+								1060
 							]
 						],
 						"settings":
@@ -613,20 +613,21 @@
 					"file": "app/views/users/show_follow.html.erb",
 					"settings":
 					{
-						"buffer_size": 1064,
+						"buffer_size": 1133,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								134,
-								134
+								688,
+								688
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -667,15 +668,15 @@
 					"file": "app/views/users/show.html.erb",
 					"settings":
 					{
-						"buffer_size": 2928,
+						"buffer_size": 3235,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1880,
-								1880
+								866,
+								866
 							]
 						],
 						"settings":
@@ -684,7 +685,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 430.0,
+						"translation.y": 118.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

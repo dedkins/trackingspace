@@ -46,7 +46,7 @@
 					</tr>
 					<tr>
 						<td colspan="2">
-							<div style="font-size:1.5em"><%= @user.phone %></div>
+							<span style="font-size:1.5em"><%= @user.phone %></span>
 							<% if @user.website != '' %>
 							 | <%= link_to 'http://'+@user.website, 'http://'+@user.website, :target => '_blank' %>
 							<% end %>
