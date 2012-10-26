@@ -4,7 +4,7 @@
 	<%= render 'shared/topmsg' %>
 <% end %>
 
-<div class="title"><%= @title %></div>
+<div class="title"><%= @title %> <%= link_to @user.name, user_path(@user) %></div>
 <hr/>
 <hr/>
 
@@ -18,7 +18,7 @@
 					<table width="100%">
 						<tr>
 							<td style="text-transform:uppercase;padding-top:10px;font-size:1.2em">
-								<%= f.name %>
+								<%= link_to f.name, user_path(f.id) %>
 							</td>
 							<td style="text-align:right">
 								

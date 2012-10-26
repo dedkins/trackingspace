@@ -271,7 +271,7 @@
 			"file": "app/views/users/show_follow.html.erb",
 			"settings":
 			{
-				"buffer_size": 179,
+				"buffer_size": 1064,
 				"line_ending": "Windows"
 			}
 		},
@@ -280,6 +280,14 @@
 			"settings":
 			{
 				"buffer_size": 3288,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/views/users/show.html.erb",
+			"settings":
+			{
+				"buffer_size": 2928,
 				"line_ending": "Windows"
 			}
 		}
@@ -595,7 +603,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 323.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -605,15 +613,15 @@
 					"file": "app/views/users/show_follow.html.erb",
 					"settings":
 					{
-						"buffer_size": 179,
+						"buffer_size": 1064,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								119,
-								119
+								134,
+								134
 							]
 						],
 						"settings":
@@ -650,6 +658,33 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/views/users/show.html.erb",
+					"settings":
+					{
+						"buffer_size": 2928,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1880,
+								1880
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 430.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

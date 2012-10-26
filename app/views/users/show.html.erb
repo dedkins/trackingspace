@@ -15,7 +15,7 @@
 			<% else %>
 				<td rowspan="2" style="padding-top:10px;vertical-align:top" width="90px"><%= gravatar_image_tag(@user.email) %></td>
 			<% end %>
-			<td class="title" style="text-align:left;vertical-align:top;padding-top:8px"><%= @user.name %></td>
+			<td style="font-size:2em;letter-spacing:8px;text-transform:uppercase;text-align:left;vertical-align:top;padding-top:12px"><%= @user.name %></td>
 			<td width="60px">
 				<% if user_signed_in? %>
 					<% unless current_user == @user %>
@@ -39,12 +39,19 @@
 		</tr>
 		<% if @user.upgrade == 'Upgrade59' %>
 		<tr>
-			<td colspan="2">
+			<td colspan="2" style="vertical-align:top">
 				<table width="100%">
-					<div style="font-size:1.25em"><%= @user.phone %></div><br/>
-					<% if @user.website != '' %>
-					<%= link_to 'http://'+@user.website, 'http://'+@user.website, :target => '_blank' %>
-					<% end %>
+					<tr>
+						<td style="font-size:.8em;text-transform:uppercase">Member Since: <%= @user.created_at.strftime("%b %d, %Y") %></td>
+					</tr>
+					<tr>
+						<td colspan="2">
+							<div style="font-size:1.5em"><%= @user.phone %></div>
+							<% if @user.website != '' %>
+							 | <%= link_to 'http://'+@user.website, 'http://'+@user.website, :target => '_blank' %>
+							<% end %>
+						</td>
+					</tr>
 				</table>
 			</td>
 		</tr>
@@ -58,9 +65,9 @@
 			<td colspan="3" style="padding-left:8px;text-align:center;padding-top:10px">
 				
 				Activity: <%= @user.microposts.count %> |
-				Member Since: <%= @user.created_at.strftime("%b %d, %Y") %>  |
 				Following: <%= link_to @user.following.count, following_user_path %>  |
-				Followers: <%= @user.followers.count %>
+				Followers: <%= link_to @user.followers.count, followers_user_path %> | 
+				Buildings Tracked: <%= @user.building_relationships.count %>
 			</td>
 		</tr>
 		<% if user_signed_in? %>
