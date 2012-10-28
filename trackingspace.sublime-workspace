@@ -294,6 +294,14 @@
 				"buffer_size": 12438,
 				"line_ending": "Windows"
 			}
+		},
+		{
+			"file": "app/views/user_mailer/upgrade_email.html.erb",
+			"settings":
+			{
+				"buffer_size": 2323,
+				"line_ending": "Windows"
+			}
 		}
 	],
 	"build_system": "",
@@ -527,6 +535,7 @@
 	"groups":
 	[
 		{
+			"selected": 6,
 			"sheets":
 			[
 				{
@@ -660,7 +669,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 432.0,
+						"translation.y": 26.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -689,6 +698,34 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 4208.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "app/views/user_mailer/upgrade_email.html.erb",
+					"settings":
+					{
+						"buffer_size": 2323,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								457,
+								457
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

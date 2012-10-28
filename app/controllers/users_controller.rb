@@ -16,6 +16,7 @@ class UsersController < ApplicationController
   	@user = User.find(params[:id])
   	@micropost = Micropost.new if signed_in?
   	@feed_items = @user.self_feed
+    @authentications = Authentication.find_by_user_id(@user.id)
   end
 
   def search
@@ -31,6 +32,7 @@ class UsersController < ApplicationController
 
   def edit
     @user = current_user
+    @authentications = Authentication.find_by_user_id(@user.id)
   end
 
   def update
@@ -45,7 +47,7 @@ class UsersController < ApplicationController
   end
 
   def following
-    @title = "Following"
+    @title = "Followed by"
     @user = User.find(params[:id])
     @users = @user.following
     render 'show_follow'

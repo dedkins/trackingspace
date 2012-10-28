@@ -12,9 +12,10 @@ class AuthenticationsController < ApplicationController
       sign_in_and_redirect(:user, authentication.user)
       flash[:notice] = 'Sign In Successful'
     elsif current_user
+      @user = current_user
       current_user.authentications.create!(:provider => omniauth['provider'], :uid => omniauth['uid'])
       flash[:notice] = "Authentication successful."
-      redirect_to authentications_url
+      redirect_to edit_user_registration_path(@user)
     else
       user=User.new
       user.apply_omniauth(omniauth)

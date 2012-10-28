@@ -4,6 +4,12 @@ class RegistrationsController < Devise::RegistrationsController
 
 	end
 
+	def edit
+		@user = User.find(current_user.id)
+		@authentications = Authentication.find_all_by_user_id(@user.id)
+		super
+	end
+
 	def create
 		@user = User.new(params[:user])
 
