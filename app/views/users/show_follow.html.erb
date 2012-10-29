@@ -33,7 +33,7 @@
 						</tr>
 						<tr>
 							<td>
-								Activity: <%= f.microposts.count %> | Buildings Followed: <%= f.building_relationships.count %>
+								Activity: <%= f.microposts.count %> | Following: <%= link_to f.following.count, following_user_path(f.id) %> | Followers: <%= link_to f.followers.count, followers_user_path(f.id) %> | Buildings Tracking: <%= link_to f.building_relationships.count, followers_building_path(f.building_relationships) %> 
 							</td>
 						</tr>
 					</table>

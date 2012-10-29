@@ -44,41 +44,104 @@
 </table>
   
 <hr/>
+
+<div class="form_box">
+
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
   <%= devise_error_messages! %>
 
-  <div><%= f.label :name %><br />
-  <%= f.text_field :name %></div>
-
-  <div><%= f.label :username %><br />
-  <%= f.text_field :username %></div>
-
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email %></div>
-
-  <% if @user.upgrade != nil %>
-
-  <div><%= f.label :phone %><br />
-  <%= f.phone_field :phone %></div>
-
-  <div><%= f.label :description %><br />
-  <%= f.text_area :description, :size => '40x5' %></div>
-
-  <div><%= f.label :website %><br />
-  <%= f.text_field :website %></div>
-
-  <% end %>
-
-  <div><%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-  <%= f.password_field :current_password %></div>
-
-  <%= link_to 'Edit Password', edit_user_password_path(resource_name) %>
-
-  <div><%= f.submit "Update" %></div>
+  <table width="100%">
+    <tr>
+      <td colspan="2" style="text-align:center">
+        
+      </td>
+    </tr>
+    <tr>
+      <td width="25%">
+        <div class="field"><%= f.label :name %></div>
+      </td>
+      <td>
+        <%= f.text_field :name, :class => 'field' %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="field"><%= f.label :username %></div>
+      </td>
+      <td>
+        <%= f.text_field :username, :class => 'field' %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="field"><%= f.label :email %></div>
+      </td>
+      <td>
+        <%= f.email_field :email, :class => 'field' %>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2" style="padding:8px 20px;background:#888888;color:#ffffff">
+        The following appear when upgraded...
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="field"><%= f.label :phone %></div>
+      </td>
+      <td>
+        <%= f.phone_field :phone, :class => 'field' %>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align:top">
+        <div class="field"><%= f.label :description %></div>
+      </td>
+      <td>
+        <%= f.text_area :description, :size => '40x5', :class => 'field' %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="field"><%= f.label :website %></div>
+      </td>
+      <td>
+        <%= f.text_field :website, :class => 'field' %>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <hr/>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="field"><%= f.label :password %></div>
+      </td>
+      <td>
+        <%= f.password_field :current_password, :class => 'field' %>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2" style="text-align:center;color:#888888;font-size:.8em">
+        <i>(we need your current password to confirm your changes)</i>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2" style="text-align:center">
+        <%= f.submit "Update", :class => 'button' %>
+      </td>
+    </tr>
+  </table>
+</div>
+  <table width="100%">
+    <tr>
+      <td style="padding:30px;text-align:center">
+        <%= button_to 'Edit Password', edit_user_password_path(resource_name), :class => 'button' %>
+      </td>
+      <td>
+        <%= button_to "Cancel my account", registration_path(resource_name), :confirm => "Are you sure?", :method => :delete, :class => 'red_button' %>
+      </td>
+    </tr>
+  </table>
 <% end %>
-
-<h3>Cancel my account</h3>
-
-<p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), :confirm => "Are you sure?", :method => :delete %>.</p>
-
-<%= link_to "Back", :back %>
