@@ -118,11 +118,4 @@ class BuildingsController < ApplicationController
     end
   end
 
-  def followers
-    @title = 'Trackers of'
-    @building = Building.find(params[:id])
-    @buildings = @building.building_relationships
-    render 'show_building_follow'
-  end
-
 end

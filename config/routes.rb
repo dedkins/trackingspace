@@ -6,7 +6,7 @@ Trackingspace::Application.routes.draw do
 
   resources :users do
       member do
-        get :following, :followers
+        get :following, :followers, :trackingbuildings
       end
     end
   
@@ -33,9 +33,6 @@ Trackingspace::Application.routes.draw do
 
   resources :buildings do
     resources :spaces
-    member do
-      get :followers
-    end
   end
 
   match 'commercial_real_estate_lease' => 'pages#spaces_main', :as => 'spaces_main'

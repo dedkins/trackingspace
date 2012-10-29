@@ -5,7 +5,7 @@
 
 <table width="100%">
   <tr>
-    <td style="border-right:2px solid #888888" width="50%">
+    <td style="border-right:2px solid #888888;padding-left:20px" width="50%">
       <strong>Associate one of these services:</strong>
         <div style="font-size:.7em">Makes signing in easier in the future</div>
 
@@ -19,10 +19,6 @@
 
       <a href="/auth/linkedin" class="auth_provider">
         <%= image_tag "http://github.com/intridea/authbuttons/raw/master/png/linkedin_64.png", :size => "64x64", :alt => "LinkedIn" %>
-      </a>
-
-      <a href="/auth/google" class="auth_provider">
-        <%= image_tag "http://github.com/intridea/authbuttons/raw/master/png/google_64.png", :size => "64x64", :alt => "Google" %>
       </a>
     </td>
     <td style="padding-left:20px">
@@ -61,7 +57,7 @@
         <div class="field"><%= f.label :name %></div>
       </td>
       <td>
-        <%= f.text_field :name, :class => 'field' %>
+        <%= f.text_field :name, :class => 'field', :title => 'Let people know who you are' %>
       </td>
     </tr>
     <tr>
@@ -69,7 +65,7 @@
         <div class="field"><%= f.label :username %></div>
       </td>
       <td>
-        <%= f.text_field :username, :class => 'field' %>
+        <%= f.text_field :username, :class => 'field', :title => 'Not necessary but may be helpful in the future' %>
       </td>
     </tr>
     <tr>
@@ -136,10 +132,7 @@
 </div>
   <table width="100%">
     <tr>
-      <td style="padding:30px;text-align:center">
-        <%= button_to 'Edit Password', edit_user_password_path(resource_name), :class => 'button' %>
-      </td>
-      <td>
+      <td colspan="2" style="text-align:center">
         <%= button_to "Cancel my account", registration_path(resource_name), :confirm => "Are you sure?", :method => :delete, :class => 'red_button' %>
       </td>
     </tr>

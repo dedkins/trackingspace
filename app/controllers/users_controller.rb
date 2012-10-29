@@ -59,4 +59,12 @@ class UsersController < ApplicationController
     @users = @user.followers
     render 'show_follow'
   end
+
+  def trackingbuildings
+    @title = 'Tracked by'
+    @user = User.find(params[:id])
+    @buildings = @user.building_relationships
+    render 'show_building_follow'
+  end
+
 end

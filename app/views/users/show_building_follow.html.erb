@@ -4,7 +4,7 @@
 	<%= render 'shared/topmsg' %>
 <% end %>
 
-<div class="title"><%= @title %> <%= link_to @user.name, building_path(@building) %></div>
+<div class="title">Buildings <%= @title %><br/> <%= link_to @user.name, user_path(@user.id) %></div>
 <hr/>
 <hr/>
 
@@ -16,22 +16,15 @@
 					<table width="100%">
 						<tr>
 							<td style="text-transform:uppercase;padding-top:10px;font-size:1.2em">
-								<%= link_to f.name, building_path(f.id) %>
+								<%= link_to f.building.address, building_path(f.building_id) %>
 							</td>
 							<td style="text-align:right">
 								
 							</td>
 						</tr>
 						<tr>
-							<td colspan="2">
-								<% if f.description %>
-								"<%= f.description %>"
-								<% end %>
-							</td>
-						</tr>
-						<tr>
 							<td>
-								Activity: <%= f.microposts.count %> | Followers: <%= link_to f.building_relationships.count, following_user_path(f.id) %>
+								Activity: <%= f.building.microposts.count %>
 							</td>
 						</tr>
 					</table>
