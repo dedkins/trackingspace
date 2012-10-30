@@ -24,8 +24,10 @@
 	<% if user_signed_in? %>
 		<% if @user_ad_availability %>
 		This is blank, but you've used your ad allotment for this building
-		<% else %>
+		<% elsif @user.upgrade %>
 		<%= link_to 'Available (click)', new_ad_path(:id => @building.id,:s => '3') %>
+		<% else %>
+		<%= link_to 'Your Name or Property Advertised Here', upgrade_path %>
 		<% end %>
 	<% else %>
 	Can you believe no one has claimed this space yet?
