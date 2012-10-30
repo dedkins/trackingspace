@@ -25,17 +25,17 @@
 #
 
 class User < ActiveRecord::Base
-  has_many :authentications
+  has_many :authentications, :dependent => :destroy
   has_many :microposts, :class_name => "Micropost", :foreign_key => :user_id, :dependent => :destroy
-  has_many :postforusers, :class_name => "Micropost", :foreign_key => :postforuser_id
-  has_many :building_orders
+  has_many :postforusers, :class_name => "Micropost", :foreign_key => :postforuser_id, :dependent => :destroy
+  has_many :building_orders, :dependent => :destroy
   has_many :user_relationships, :foreign_key => "follower_id", :dependent => :destroy
-  has_many :following, :through => :user_relationships, :source => :followed
+  has_many :following, :through => :user_relationships, :source => :followed, :dependent => :destroy
   has_many :reverse_user_relationships, :foreign_key => "followed_id", :class_name => "UserRelationship", :dependent => :destroy
-  has_many :followers, :through => :reverse_user_relationships
+  has_many :followers, :through => :reverse_user_relationships, :dependent => :destroy
   has_many :building_relationships, :dependent => :destroy
-  has_one   :subscription
-  has_many :ads
+  has_one  :subscription
+  has_many :ads, :dependent => :destroy
   
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,

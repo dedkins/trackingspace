@@ -44,12 +44,11 @@
 <div class="form_box">
 
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
-  <%= devise_error_messages! %>
-
+  
   <table width="100%">
     <tr>
-      <td colspan="2" style="text-align:center">
-        
+      <td colspan="2" style="color:red;font-weight:bold">
+        <%= devise_error_messages! %>
       </td>
     </tr>
     <tr>
@@ -130,11 +129,4 @@
     </tr>
   </table>
 </div>
-  <table width="100%">
-    <tr>
-      <td colspan="2" style="text-align:center">
-        <%= button_to "Cancel my account", registration_path(resource_name), :confirm => "Are you sure?", :method => :delete, :class => 'red_button' %>
-      </td>
-    </tr>
-  </table>
 <% end %>
