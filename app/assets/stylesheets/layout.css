@@ -294,6 +294,15 @@ footer#page_footer {
   vertical-align: top;
 }
 
+.expiration {
+  padding: 5px;
+  line-height: 1.2;
+  border-radius: 5px;
+  border:1px solid #888888;
+  font-weight: bold;
+  vertical-align: top;
+}
+
 .top_words {
   margin: auto;
   padding: 10px;
