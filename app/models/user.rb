@@ -35,6 +35,7 @@ class User < ActiveRecord::Base
   has_many :followers, :through => :reverse_user_relationships
   has_many :building_relationships, :dependent => :destroy
   has_one   :subscription
+  has_many :ads
   
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,

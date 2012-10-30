@@ -1,0 +1,34 @@
+<% if @ad_slot1 %>
+	<table width="100%" height="100%" style="border:1px solid #888888">
+		<tr height="15px" style="vertical-align:top">
+			<td colspan="2" style="font-size:.8em;vertical-align:middle;text-align:center;text-transform:uppercase;padding:5px;background:#333333;color:#ffffff;letter-spacing:2px"><%= @ad_slot1.title %></td>
+		</tr>
+		<tr height="20px" style="vertical-align:top">
+			<td colspan="2" style="padding:8px;font-weight:bold;padding:5px;text-transform:uppercase;letter-spacing:3px"><%= link_to @ad_slot1.user.name, user_path(@ad_slot1.user_id) %></td>
+		</tr>
+		<tr>
+			<td colspan="2" style="text-align:center;padding:0 5px">"<%= @ad_slot1.message %>"</td>
+		</tr>
+		<tr height="15px" style="vertical-align:bottom">
+			<td colspan="2" style="padding:8px;font-size:1.25em;font-weight:bold"><%= @ad_slot1.user.phone %></td>
+		</tr>
+		<% if user_signed_in? && @ad_slot1.user_id == current_user.id %>
+		<tr>
+			<td width="50%" style="border-right:1px solid #888888"><%= link_to 'Edit', edit_ad_path(@ad_slot1.id) %></td>
+			<td><%= link_to 'Remove', '' %></td>
+		</tr>
+		<% end %>
+	</table>
+	
+<% else %>
+	<% if user_signed_in? %>
+		<% if @user_ad_availability %>
+		This is blank, but you've used your ad allotment for this building
+		<% else %>
+		<%= link_to 'Available (click)', new_ad_path(:id => @building.id,:s => '1') %>
+		<% end %>
+	<% else %>
+	Can you believe no one has claimed this space yet?
+	<% end %>
+
+<% end %>

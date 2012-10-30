@@ -20,6 +20,7 @@ class Building < ActiveRecord::Base
   attr_accessible :address, :latitude, :longitude, :user_id, :size
   has_many :buildingorders
   has_many :building_relationships
+  has_many :ads
 
   validates :latitude, :presence => true
   validates :longitude, :presence => true

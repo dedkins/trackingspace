@@ -21,9 +21,14 @@ class BuildingsController < ApplicationController
   def show
     if user_signed_in?
       @user = User.find(current_user.id)
+      @building = Building.find(params[:id])
       @recent_items = @user.recent
+      @user_ad_availability = Ad.find_by_building_id_and_user_id(@building.id,@user.id)
     end
     @building = Building.find(params[:id])
+    @ad_slot1 = Ad.find_by_building_id_and_slot(@building.id,'1')
+    @ad_slot2 = Ad.find_by_building_id_and_slot(@building.id,'2')
+    @ad_slot3 = Ad.find_by_building_id_and_slot(@building.id,'3')
     @spaces = Space.find_all_by_building_id(@building.id)
     @new_space = @building.spaces.build
     @json = Building.find(@building.id).to_gmaps4rails

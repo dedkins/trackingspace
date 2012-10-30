@@ -1,5 +1,13 @@
 Trackingspace::Application.routes.draw do
 
+  get "ads/new"
+
+  get "ads/create"
+
+  get "ads/edit"
+
+  get "ads/show"
+
   resources :subscriptions
 
   devise_for :users, :controllers => {:registrations => 'registrations'}
@@ -34,6 +42,8 @@ Trackingspace::Application.routes.draw do
   resources :buildings do
     resources :spaces
   end
+
+  resources :ads
 
   match 'commercial_real_estate_lease' => 'pages#spaces_main', :as => 'spaces_main'
   match 'people' => 'pages#people_main', :as => 'people_main'
