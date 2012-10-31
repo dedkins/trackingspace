@@ -260,18 +260,18 @@
 	"buffers":
 	[
 		{
-			"file": "app/controllers/subscriptions_controller.rb",
+			"file": "app/controllers/spaces_controller.rb",
 			"settings":
 			{
-				"buffer_size": 545,
+				"buffer_size": 2342,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "app/assets/stylesheets/layout.css",
+			"file": "app/models/space.rb",
 			"settings":
 			{
-				"buffer_size": 12801,
+				"buffer_size": 737,
 				"line_ending": "Windows"
 			}
 		}
@@ -300,8 +300,10 @@
 	},
 	"file_history":
 	[
-		"/C/Users/david/trackingspace/app/controllers/registrations_controller.rb",
+		"/C/Users/david/trackingspace/app/controllers/subscriptions_controller.rb",
+		"/C/Users/david/trackingspace/app/assets/stylesheets/layout.css",
 		"/C/Users/david/trackingspace/app/views/subscriptions/_upgrade.html.erb",
+		"/C/Users/david/trackingspace/app/controllers/registrations_controller.rb",
 		"/C/Users/david/trackingspace/app/mailers/user_mailer.rb",
 		"/C/Users/david/trackingspace/config/initializers/stripe.rb",
 		"/C/Users/david/trackingspace/app/views/registrations/edit.html.erb",
@@ -322,7 +324,6 @@
 		"/C/Users/david/trackingspace/app/views/ads/new.html.erb",
 		"/C/Users/david/trackingspace/app/views/pages/buildings_main.html.erb",
 		"/C/Users/david/trackingspace/app/controllers/users_controller.rb",
-		"/C/Users/david/trackingspace/app/assets/stylesheets/layout.css",
 		"/C/Users/david/trackingspace/app/views/users/show_follow.html.erb",
 		"/C/Users/david/trackingspace/app/views/users/show_building_follow.html.erb",
 		"/C/Users/david/trackingspace/app/views/pages/upgrade.html.erb",
@@ -337,7 +338,6 @@
 		"/C/Users/david/trackingspace/app/views/spaces/edit.html.erb",
 		"/C/Users/david/trackingspace/app/models/micropost.rb",
 		"/C/Users/david/trackingspace/app/views/spaces/_form.html.erb",
-		"/C/Users/david/trackingspace/app/controllers/subscriptions_controller.rb",
 		"/C/Users/david/trackingspace/app/views/user_mailer/upgrade_notification.html.erb",
 		"/C/Users/david/trackingspace/config/environments/development.rb",
 		"/C/Users/david/trackingspace/app/models/subscription.rb",
@@ -509,60 +509,61 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app/controllers/subscriptions_controller.rb",
+					"file": "app/controllers/spaces_controller.rb",
 					"settings":
 					{
-						"buffer_size": 545,
+						"buffer_size": 2342,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								528,
-								528
+								914,
+								914
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 91.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "app/assets/stylesheets/layout.css",
+					"file": "app/models/space.rb",
 					"settings":
 					{
-						"buffer_size": 12801,
+						"buffer_size": 737,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								5253,
-								5253
+								624,
+								624
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 3721.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

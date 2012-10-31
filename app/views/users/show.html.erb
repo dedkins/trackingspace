@@ -58,7 +58,7 @@
 						<td colspan="3" style="padding-top:10px">
 							<span style="font-size:1.5em"><%= @user.phone %></span>
 							<% if @user.website %>
-							 | <%= link_to 'http://'+@user.website, 'http://'+@user.website, :target => '_blank' %>
+							 | <%= link_to @user.website, 'http://'+@user.website, :target => '_blank' %>
 							<% end %>
 						</td>
 					</tr>

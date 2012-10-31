@@ -19,17 +19,8 @@ class Space < ActiveRecord::Base
   belongs_to :building
   has_many :leases, :dependent => :destroy
   has_many :microposts, :dependent => :destroy
-  
-  validates_attachment_content_type :file, :content_type => ['image/jpeg', 'image/png', 'image/gif','application/pdf']
 
-  attr_accessible :monthly, :sf, :suite, :company, :status, :_3dplanurl
-
-  #paperclip
-  has_attached_file :file,
-     :storage => :s3,
-     :s3_credentials => "#{Rails.root}/config/s3.yml",
-     :path => "#{Rails.root}/public/system/:attachment/:id/:style/:filename"
-     
+  attr_accessible :monthly, :sf, :suite, :company, :status, :_3dplanurl  
   
   def feed
     Micropost.where("space_id = ?", id)
