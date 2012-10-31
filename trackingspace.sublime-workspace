@@ -295,7 +295,7 @@
 			"file": "app/assets/stylesheets/layout.css",
 			"settings":
 			{
-				"buffer_size": 13608,
+				"buffer_size": 13631,
 				"line_ending": "Windows"
 			}
 		},
@@ -311,7 +311,7 @@
 			"file": "app/assets/stylesheets/media.css",
 			"settings":
 			{
-				"buffer_size": 1588,
+				"buffer_size": 1683,
 				"line_ending": "Windows"
 			}
 		},
@@ -674,15 +674,15 @@
 					"file": "app/assets/stylesheets/layout.css",
 					"settings":
 					{
-						"buffer_size": 13608,
+						"buffer_size": 13631,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4802,
-								4698
+								821,
+								821
 							]
 						],
 						"settings":
@@ -692,7 +692,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 3415.0,
+						"translation.y": 27.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -730,15 +730,15 @@
 					"file": "app/assets/stylesheets/media.css",
 					"settings":
 					{
-						"buffer_size": 1588,
+						"buffer_size": 1683,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								668,
-								668
+								263,
+								263
 							]
 						],
 						"settings":
@@ -747,7 +747,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 322.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

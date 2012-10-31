@@ -9,6 +9,12 @@
 	section#search {
 		margin-left: 20%;
 	}
+	.container {
+		position: relative;
+		margin:auto;
+		max-width: 1850px;
+		padding-top:50px;
+	}
 }
 
 @media screen and (max-width: 1124px){
