@@ -295,7 +295,7 @@
 			"file": "app/assets/stylesheets/layout.css",
 			"settings":
 			{
-				"buffer_size": 13170,
+				"buffer_size": 13608,
 				"line_ending": "Windows"
 			}
 		},
@@ -303,7 +303,7 @@
 			"file": "app/views/layouts/application.html.erb",
 			"settings":
 			{
-				"buffer_size": 4053,
+				"buffer_size": 4383,
 				"line_ending": "Windows"
 			}
 		},
@@ -311,8 +311,16 @@
 			"file": "app/assets/stylesheets/media.css",
 			"settings":
 			{
-				"buffer_size": 1558,
+				"buffer_size": 1588,
 				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/views/buildings/_form_new.html",
+			"settings":
+			{
+				"buffer_size": 594,
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -666,15 +674,15 @@
 					"file": "app/assets/stylesheets/layout.css",
 					"settings":
 					{
-						"buffer_size": 13170,
+						"buffer_size": 13608,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4546,
-								4546
+								4802,
+								4698
 							]
 						],
 						"settings":
@@ -684,7 +692,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 2982.0,
+						"translation.y": 3415.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -694,7 +702,62 @@
 					"file": "app/views/layouts/application.html.erb",
 					"settings":
 					{
-						"buffer_size": 4053,
+						"buffer_size": 4383,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4156,
+								4156
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 417.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "app/assets/stylesheets/media.css",
+					"settings":
+					{
+						"buffer_size": 1588,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								668,
+								668
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 322.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "app/views/buildings/_form_new.html",
+					"settings":
+					{
+						"buffer_size": 594,
 						"regions":
 						{
 						},
@@ -707,35 +770,7 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 630.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "app/assets/stylesheets/media.css",
-					"settings":
-					{
-						"buffer_size": 1558,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								31,
-								31
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"syntax": "Packages/HTML/HTML.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,

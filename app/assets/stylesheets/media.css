@@ -45,6 +45,9 @@
 	section#search {
 		width: 102%;
 	}
+	.search {
+		height: 60px;
+	}
 	.comment_input {
 		height:50px;
 	}

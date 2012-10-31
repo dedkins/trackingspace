@@ -43,13 +43,11 @@ body {
 }
 
 footer {
-   position:fixed;
    left:0px;
    bottom:0px;
    height:25px;
    width:100%;
    background:#4c4c4c;
-   z-index: 99999;
 }
 
 /* IE 6 */
@@ -256,6 +254,7 @@ footer#page_footer {
 }*/
 section#search {
   font-size: 1.15em;
+  margin-top: 10px;
   margin-left: 265px;
   margin-right: 300px;
 }
