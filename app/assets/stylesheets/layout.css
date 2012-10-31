@@ -42,6 +42,22 @@ body {
   z-index: 5;
 }
 
+footer {
+   position:fixed;
+   left:0px;
+   bottom:0px;
+   height:25px;
+   width:100%;
+   background:#4c4c4c;
+   z-index: 99999;
+}
+
+/* IE 6 */
+* html #footer {
+   position:absolute;
+   top:expression((0-(footer.offsetHeight)+(document.documentElement.clientHeight ? document.documentElement.clientHeight : document.body.clientHeight)+(ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop))+'px');
+}
+
 header#top {
   position: fixed;
   width: 100%;

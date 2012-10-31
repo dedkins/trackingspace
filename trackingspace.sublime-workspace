@@ -295,7 +295,7 @@
 			"file": "app/assets/stylesheets/layout.css",
 			"settings":
 			{
-				"buffer_size": 13082,
+				"buffer_size": 13170,
 				"line_ending": "Windows"
 			}
 		},
@@ -666,15 +666,15 @@
 					"file": "app/assets/stylesheets/layout.css",
 					"settings":
 					{
-						"buffer_size": 13082,
+						"buffer_size": 13170,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1772,
-								1772
+								4546,
+								4546
 							]
 						],
 						"settings":
@@ -684,7 +684,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 975.0,
+						"translation.y": 2982.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
