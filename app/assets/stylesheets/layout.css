@@ -93,6 +93,8 @@ section#content {
   margin-top: 20px;
   background: #fff;
   padding: 20px 30px 30px 30px;
+  border: 1px solid #888888;
+  box-shadow: 0 5px 5px 0 #888888;
 }
 
 a {
@@ -116,7 +118,7 @@ section#left {
   /*background-color: #edeae6;*/
   background:#ffffff;
   color:#666;
-  border:1px solid #ffffff;
+  border:1px solid #888888;
 }
 
 section#recent_right {
@@ -127,7 +129,7 @@ section#recent_right {
 }
 
 section#sidebar {
-  border: 1px solid #fff;
+  border: 1px solid #888888;
   padding: 10px;
   float: right;
   width: 260px;
@@ -141,9 +143,9 @@ section#sidebar {
 }
 
 section#search {
-  background: #edeae6;
+  background: #4c4c4c;
   font-size: 1.15em;
-  color: #666;
+  color: #ffffff;
   margin-left: 265px;
   margin-right: 300px;
   box-shadow: 0px 3px 5px #666;
