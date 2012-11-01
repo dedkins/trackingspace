@@ -65,13 +65,8 @@
 				</table>
 			</td>
 			<td>
-				<% unless mobile_device? %>
-			  		<%= link_to image_tag("https://github.com/intridea/authbuttons/raw/master/png/twitter_64.png", :size => "30x30", :alt => "Twitter"), "http://twitter.com/home?status=Saw this on Trackingspace: http://#{request.host+request.fullpath}", :target => '_blank' %>
-				  	<%= link_to image_tag("http://github.com/intridea/authbuttons/raw/master/png/facebook_64.png", :size => "30x30"), "http://www.facebook.com/sharer.php?u=http://#{request.host+request.fullpath}", :target => '_blank' %>
-				<% else %>
-					<%= link_to image_tag("https://github.com/intridea/authbuttons/raw/master/png/twitter_64.png", :size => "50x50", :alt => "Twitter"), "http://twitter.com/home?status=Saw this on Trackingspace: http://#{request.host+request.fullpath}", :target => '_blank' %>
-				  	<%= link_to image_tag("http://github.com/intridea/authbuttons/raw/master/png/facebook_64.png", :size => "50x50"), "http://www.facebook.com/sharer.php?u=http://#{request.host+request.fullpath}", :target => '_blank' %>
-				<% end %>
+		  		<%= link_to image_tag("https://github.com/intridea/authbuttons/raw/master/png/twitter_64.png", :size => "30x30", :alt => "Twitter"), "http://twitter.com/home?status=Saw this on Trackingspace: http://#{request.host+request.fullpath}", :target => '_blank' %>
+			  	<%= link_to image_tag("http://github.com/intridea/authbuttons/raw/master/png/facebook_64.png", :size => "30x30"), "http://www.facebook.com/sharer.php?u=http://#{request.host+request.fullpath}", :target => '_blank' %>
 			</td>
 		</tr>	
 		<tr>
@@ -86,7 +81,8 @@
 				Activity: <%= @user.microposts.count %> |
 				Following: <%= link_to @user.following.count, following_user_path %>  |
 				Followers: <%= link_to @user.followers.count, followers_user_path %> | 
-				Buildings: <%= link_to @user.ads.count, '' %> |
+				Buildings: <%= link_to @building_ads.count, '' %> |
+				Spaces: <%= link_to @space_ads.count, '' %> |
 				Buildings Tracked: <%= link_to @user.building_relationships.count, trackingbuildings_user_path %>
 				<% if user_signed_in? && mobile_device? %> |
 					<%= link_to 'SignOut', destroy_user_session_path(@user) %>

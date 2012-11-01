@@ -4,18 +4,29 @@
 
   <div style="text-align:center;font-size:.8em"><%= @title %></div>
   <div class="title">
+  <% if @building %>
     <% unless @ad.building_id %>
-      <%= truncate(@building.address, :size => '20', :separator => ',', :omission => '') %>
+      <%= truncate(@building.address, :length => 20, :separator => ',', :omission => '') %>
     <% else %>
-      <%= truncate(@ad.building.address, :size => '20', :separator => ',', :omission => '') %>
+      <%= truncate(@ad.building.address, :length => 20, :separator => ',', :omission => '') %>
     <% end %>
+  <% end %>
+  <% if @space %>
+    <% unless @ad.space_id %>
+      <%= truncate(@space.building.address, :length => 20, :separator => ',', :omission => '') %><br/>
+      Number <%= @space.suite %>
+    <% else %>
+      <%= truncate(@ad.space.building.address, :length => 20, :separator => ',', :omission => '') %><br/>
+      Number <%= @ad.space.suite %>
+    <% end %>
+  <% end %>
     </div>
   <hr/>
 
   <table width="100%">
     <tr>
       <td><div class="field"><%= f.label "Title" %></div></td>
-      <td><%= f.select( :title, [["Select One..."],"Exclusively Offered By", "Get More Information", "Property Managed By", "Alternative Property", "Willing to Sublet"], {}, {:class => "field"}) %></td>
+      <td><%= f.select( :title, [["Select One..."],"Exclusively Offered By", "For More Information", "Property Manager", "How About This?", "Landscaper", "Willing to Sublet"], {}, {:class => "field"}) %></td>
     </tr>
     <tr>
       <td style="vertical-align:top"><div class="field"><%= f.label "Description" %></div></td>
@@ -24,9 +35,16 @@
   </table>
 
 <% unless @ad.building_id %>
-  <%= hidden_field_tag "back_to", building_path(@building) %>
+  <% if @building %>
+    <%= hidden_field_tag "back_to", building_path(@building) %>
+    <%= f.hidden_field :building_id, :value => @building.id %>
+  <% end %>
+  <% if @space %>
+    <%= hidden_field_tag "back_to", building_space_path(@sbuilding,@space) %>
+    <%= f.hidden_field :space_id, :value => @space.id %>
+  <% end %>
+  
   <%= f.hidden_field :slot, :value => @slot %>
-  <%= f.hidden_field :building_id, :value => @building.id %>
   <%= f.hidden_field :user_id, :value => @user.id %>
 <% end %>
 

@@ -93,6 +93,13 @@ class User < ActiveRecord::Base
     }
   }
 
+  def building_ads
+    Ad.where("user_id = ? and building_id IS NOT NULL", id)
+  end
+
+  def space_ads
+    Ad.where("user_id = ? and space_id IS NOT NULL", id)
+  end
   #def password_required?
   #	(authentications.empty? || !password.blank?) && super
   #end

@@ -17,6 +17,8 @@ class UsersController < ApplicationController
   	@micropost = Micropost.new if signed_in?
   	@feed_items = @user.self_feed
     @authentications = Authentication.find_by_user_id(@user.id)
+    @building_ads = @user.building_ads
+    @space_ads = @user.space_ads
   end
 
   def search

@@ -62,18 +62,6 @@
 		height:80%;
 		vertical-align: middle;
 	}
-	#name {
-		font-size: 1.2em;
-		line-height: 1.2em;
-	}
-	#building {
-		font-size: 1.2em;
-		line-height: 1.2em;
-	}
-	#post {
-		font-size: 1.2em;
-		line-height: 1.2em;
-	}
 	nav#utility {
 		display: none;
 	}
@@ -88,12 +76,6 @@
 		font-size: 1.8em;
 		width:80px;
 		padding: 20px;
-	}
-	.button_follow {
-		font-size:1.1em;
-	}
-	.button_unfollow {
-		font-size:1.1em;
 	}
 
 }

@@ -11,13 +11,15 @@
 #  type        :string(255)
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
+#  space_id    :integer
 #
 
 class Ad < ActiveRecord::Base
 
 	belongs_to :user
 	belongs_to :building
+	belongs_to :space
 
-  	attr_accessible :building_id, :message, :slot, :title, :type, :user_id
+  	attr_accessible :building_id, :space_id, :message, :slot, :title, :type, :user_id
   	
 end

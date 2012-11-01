@@ -5,8 +5,8 @@ class ApplicationController < ActionController::Base
 before_filter :new_stuff
 
 def new_stuff
-  @allnewusers = User.new_users
-  @allnewbuildings = Building.new_buildings
+  @allnewusers = User.new_users.limit(15)
+  @allnewbuildings = Building.new_buildings.limit(15)
   @allnewposts = Micropost.new_posts.limit(10)
 end
 

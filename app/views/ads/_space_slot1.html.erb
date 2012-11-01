@@ -25,7 +25,7 @@
 		<% if @user_ad_availability %>
 		This is blank, but you've used your ad allotment for this building
 		<% elsif @user.upgrade %>
-		<%= link_to 'Available (click)', new_ad_path(:bid => @building.id,:s => '1') %>
+		<%= link_to 'Available (click)', new_ad_path(:sid => @space.id,:s => 's1') %>
 		<% else %>
 		<%= link_to 'Your Name or Property Advertised Here', upgrade_path %>
 		<% end %>
