@@ -42,7 +42,8 @@
 		display:none;
 	}
 	.container {
-		width: 90%;
+		width: 95%;
+		left:-20px;
 		padding-top:30px;
 	}
 	section#content {
