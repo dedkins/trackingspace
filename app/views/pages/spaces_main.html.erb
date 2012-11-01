@@ -1,9 +1,5 @@
 <% currently_at 'Spaces' %>
 
-<%= content_for :search do %>
-	<%= render 'shared/topmsg' %>
-<% end %>
-
 <div class="title">my leases</div>
 <% if user_signed_in? %>
 	<%= render 'leases/leases' %>

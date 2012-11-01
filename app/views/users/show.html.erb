@@ -52,7 +52,7 @@
 		</tr>
 		<% if @user.upgrade == 'Upgrade59' %>
 		<tr>
-			<td colspan="2" style="vertical-align:top">
+			<td style="vertical-align:top">
 				<table width="100%">
 					<tr>
 						<td colspan="3" style="padding-top:10px">
@@ -63,6 +63,15 @@
 						</td>
 					</tr>
 				</table>
+			</td>
+			<td>
+				<% unless mobile_device? %>
+			  		<%= link_to image_tag("https://github.com/intridea/authbuttons/raw/master/png/twitter_64.png", :size => "30x30", :alt => "Twitter"), "http://twitter.com/home?status=Saw this on Trackingspace: http://#{request.host+request.fullpath}", :target => '_blank' %>
+				  	<%= link_to image_tag("http://github.com/intridea/authbuttons/raw/master/png/facebook_64.png", :size => "30x30"), "http://www.facebook.com/sharer.php?u=http://#{request.host+request.fullpath}", :target => '_blank' %>
+				<% else %>
+					<%= link_to image_tag("https://github.com/intridea/authbuttons/raw/master/png/twitter_64.png", :size => "50x50", :alt => "Twitter"), "http://twitter.com/home?status=Saw this on Trackingspace: http://#{request.host+request.fullpath}", :target => '_blank' %>
+				  	<%= link_to image_tag("http://github.com/intridea/authbuttons/raw/master/png/facebook_64.png", :size => "50x50"), "http://www.facebook.com/sharer.php?u=http://#{request.host+request.fullpath}", :target => '_blank' %>
+				<% end %>
 			</td>
 		</tr>	
 		<tr>
@@ -107,9 +116,5 @@
 
 		<%= content_for :sidebar do %>
 			
-		<% end %>
-
-		<%= content_for :search do %>
-			<%= render 'shared/topmsg' %>
 		<% end %>
 	</table>
