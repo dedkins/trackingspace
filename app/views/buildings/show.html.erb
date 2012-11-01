@@ -22,18 +22,14 @@
 						</td>
 					<td colspan="2">
 					<% else %>
-					<td colspan="3">
+					<td>
+						<%= button_to 'Sign-In', new_user_session_path, :class => 'button' %>
+					</td>
+					<td colspan="2">
 					<% end %>
-						<% if user_signed_in? %>
-							<% if @spaces.empty? %>
-							<%= link_to 'Add a Space', new_building_space_path(@building) %> |
-							<% end %>
-							<% if @building.size %>
-							<%= number_with_precision(@building.size,:precision => 0) %> sq.ft.
-							<% end %>
-							(<%= link_to 'Update Building Size', edit_building_path(@building.id) %>)
-						<% else %>
-							<%= button_to 'Sign-In', new_user_session_path, :class => 'button' %>
+						<% if mobile_device? %>
+							<%= link_to 'Activity', '' %> |
+							<%= link_to 'Spaces', '' %>
 						<% end %>
 					</td>
 					<td style="text-align:right" width="60px">
@@ -88,7 +84,17 @@
 			<hr/>	
 			<table width="100%">
 				<tr height="8px"/>
-				
+					<td>
+						<% if user_signed_in? %>
+							<% if @spaces.empty? %>
+							<%= link_to 'Add a Space', new_building_space_path(@building) %> |
+							<% end %>
+							<% if @building.size %>
+							<%= number_with_precision(@building.size,:precision => 0) %> sq.ft.
+							<% end %>
+							(<%= link_to 'Update Building Size', edit_building_path(@building.id) %>)
+						<% end %>
+					</td>
 				<tr>
 						<td colspan="4">
 						<%= gmaps({
