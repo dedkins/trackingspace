@@ -5,6 +5,7 @@
 	}
 	section#content {
 		margin-left: 20%;
+		max-width: 800px;
 	}
 	section#search {
 		margin-left: 20%;
@@ -12,8 +13,7 @@
 	.container {
 		position: relative;
 		margin:auto;
-		max-width: 1850px;
-		padding-top:50px;
+		max-width: 1370px;
 	}
 }
 

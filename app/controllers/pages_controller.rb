@@ -9,7 +9,7 @@ class PagesController < ApplicationController
 		@newbuildings24 = Building.new_buildings
 		@newbuildings = Building.order('created_at DESC').limit(10)
 		@json = Building.new_buildings.to_gmaps4rails
-		@feed_items = Micropost.order('created_at DESC').limit(10)
+		@feed_items = Micropost.where("user_id IS NOT NULL").order('created_at DESC').limit(10)
 	end
 
 	def spaces_main
@@ -38,7 +38,7 @@ class PagesController < ApplicationController
 	    	@user = current_user
 	    	@feed_items = @user.feed
 	    else
-	    	@feed_items = Micropost.order('created_at DESC').limit(10)
+	    	@feed_items = Micropost.where("user_id IS NOT NULL").order('created_at DESC').limit(10)
 	    end
 	end
 
