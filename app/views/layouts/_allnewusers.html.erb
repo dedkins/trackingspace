@@ -1,0 +1,12 @@
+<table width="100%">
+			
+	<tr>
+		<td colspan="2" class="listbox_title">New Members</td>
+	</tr>
+	<% @allnewusers.each do |u| %>
+	<tr>
+		<td style="font-size:.75em"><%= link_to u.name, user_path(u.id) %></td>
+		<td style="font-size:.75em"><%= time_ago_in_words(u.created_at) %></td>
+	</tr>
+	<% end %>
+</table>

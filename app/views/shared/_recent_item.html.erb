@@ -1,5 +1,5 @@
 		
-		<table width="100%" style="background:#fff; padding: 2px 10px">
+		<table width="100%" >
 			<tr>
 				<td class="lists_left"><%= link_to truncate(recent_item.building.address, :length => 20, :separator => ',', :omission => ''), building_path(id: recent_item.building_id), :title => "Go to the building detail" %><td>
 					<td class="lists_right"><%= link_to recent_item.building.spaces.count, '', :title => "How many spaces?" %></td>

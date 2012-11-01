@@ -1,0 +1,14 @@
+<table width="100%">
+			
+	<div >
+		<tr>
+			<td class="listbox_title">New Comments</td>
+		</tr>
+	</div>
+
+	<% @allnewposts.each do |m| %>
+	<tr>
+		<td style="font-size:.75em"><%= link_to truncate(m.content, :size => 15, :omission => '...'), user_path(m.user.id) %></td>
+	</tr>
+	<% end %>
+</table>

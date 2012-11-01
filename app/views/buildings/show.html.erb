@@ -3,11 +3,6 @@
 		<%= content_for :search do %>
 						<%= render 'buildings/form_new' %>
 		<% end %>
-
-		<%= content_for :left do %>
-			<%= render 'buildings/new_buildings' %>
-		<% end %>
-
 			<table width="100%">
 				<tr>
 					<% if user_signed_in? %>

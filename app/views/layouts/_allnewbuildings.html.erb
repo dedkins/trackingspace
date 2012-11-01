@@ -1,0 +1,14 @@
+<table width="100%">
+			
+	<div >
+		<tr>
+			<td class="listbox_title">New Buildings</td>
+		</tr>
+	</div>
+
+	<% @allnewbuildings.each do |b| %>
+	<tr>
+		<td style="font-size:.75em"><%= link_to truncate(b.address, :size => 20, :separator => ',', :omission => ''), building_path(b.id) %></td>
+	</tr>
+	<% end %>
+</table>

@@ -1,5 +1,7 @@
 <%= form_for ([@building,@space]) do |f| %>
 
+<%= currently_at 'Buildings' %>
+
   <% if @space.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@space.errors.count, "error") %> prohibited this space from being saved:</h2>
@@ -12,44 +14,37 @@
     </div>
   <% end %>
 
-<table>
+<div class="form_box">
+<table width="100%">
   <tr>
-    <td><%= f.label :suite %></td>
-    <td><%= f.number_field :suite %></td>
+    <td width="45%"><%= f.label :suite %></td>
+    <td><%= f.number_field :suite, :class => 'field' %></td>
+  </tr>
+  <tr>
+    <td><%= f.label :sf %></td>
+    <td><%= f.number_field :sf, :class => 'field' %></td>
+  </tr>
+  <tr>
+    <td><%= f.label :monthly %></td>
+    <td><%= f.number_field :monthly, :class => 'field', :precision => '2' %></td>
+  </tr>
+  <tr>
+    <td><%= f.label :company %></td>
+    <td><%= f.text_field :company, :class => 'field' %></td>
+  </tr>
+  <tr>
+    <td><%= f.label :status %></td>
+    <td><%= f.select( :status, ["Available","Leased","Possible"], {}, {:class => "field"}) %></td>
+  </tr>
+  <tr>
+    <td><%= f.label '3D Floorplan URL' %></td>
+    <td><%= f.text_field :_3dplanurl, :class => 'field', :title => 'If you have a 3d floorplan url, enter it here' %></td>
+  </tr>
+  <tr><td colspan="2"><hr/></td></tr>
+
+  <tr>
+    <td colspan="2" style="text-align:center"><%= f.submit 'Update Space', :class => 'button' %></td>
   </tr>
 </table>
-
-  <div class="field">
-    
-    
-  </div>
-
-  <div class="field">
-    <%= f.label :sf %><br />
-    <%= f.number_field :sf %>
-  </div>
-
-  <div class="field">
-    <%= f.label :Monthly %><br />
-    <%= f.number_field :monthly %>
-  </div>
-
-  <div class="field">
-    <%= f.label :company %><br />
-    <%= f.text_field :company %>
-  </div>
-
-  <div class="field">
-    <%= f.label :status %><br/>
-    <%= f.select :status, options_for_select([["Available", "Available"], ["Leased", "Leased"], ["Possible", "Possible"]]) %>
-  </div>
-
-  <div class='field'>
-    <%= f.label "3D Floorplan" %>
-    <%= f.text_field :_3dplanurl %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit 'Update Space', :class => 'button' %>
-  </div>
+</div>
 <% end %>

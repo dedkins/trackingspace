@@ -86,6 +86,7 @@
 				Activity: <%= @user.microposts.count %> |
 				Following: <%= link_to @user.following.count, following_user_path %>  |
 				Followers: <%= link_to @user.followers.count, followers_user_path %> | 
+				Buildings: <%= link_to @user.ads.count, '' %> |
 				Buildings Tracked: <%= link_to @user.building_relationships.count, trackingbuildings_user_path %>
 				<% if user_signed_in? && mobile_device? %> |
 					<%= link_to 'SignOut', destroy_user_session_path(@user) %>

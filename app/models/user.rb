@@ -87,6 +87,12 @@ class User < ActiveRecord::Base
     user_relationships.find_by_followed_id(followed).destroy
   end
 
+  scope :new_users, lambda {
+    {
+      :conditions => ["created_at >= ?", Time.now.prev_month]
+    }
+  }
+
   #def password_required?
   #	(authentications.empty? || !password.blank?) && super
   #end

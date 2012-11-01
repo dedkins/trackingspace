@@ -2,6 +2,14 @@ class ApplicationController < ActionController::Base
   helper :all
   protect_from_forgery
 
+before_filter :new_stuff
+
+def new_stuff
+  @allnewusers = User.new_users
+  @allnewbuildings = Building.new_buildings
+  @allnewposts = Micropost.new_posts.limit(10)
+end
+
 private 
 
 def redirect_back_or(default)

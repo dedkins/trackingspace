@@ -112,13 +112,11 @@ a {
     }
 
 section#left {
-  padding: 10px;
   float: left;
-  width: 100%;
+  width: 250px;
   /*background-color: #edeae6;*/
-  background:#ffffff;
   color:#666;
-  border:1px solid #888888;
+  padding: 5px;
 }
 
 section#recent_right {
@@ -129,17 +127,31 @@ section#recent_right {
 }
 
 section#sidebar {
-  border: 1px solid #888888;
-  padding: 10px;
   float: right;
   width: 260px;
-  /*background-color: #edeae6;*/
-  background: #ffffff;
   color:#666;
   font: {
     size: 0.8em;
     weight: normal;
   }
+}
+
+.listbox_title {
+  height:1.2;
+  background: #4c4c4c;
+  color:#ffffff;
+  text-align: center;
+}
+
+.listbox {
+  background: #ffffff;
+  border:1px solid #888888;
+  box-shadow: 5px 5px 5px #888;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding:5px;
+  font-size: .8em;
+  text-transform:uppercase;
 }
 
 

@@ -1,9 +1,5 @@
 <% currently_at 'Buildings' %>
 
-<%= content_for :left do %>
-	<%= render 'buildings/new_buildings' %>
-<% end %>
-
 <%= content_for :sidebar do %>
 	<% if user_signed_in? %>
           <%= render 'shared/recent' %>

@@ -1,5 +1,4 @@
-<h1>New space</h1>
+<div class='title'>New Space for<br/> <%= truncate(@building.address,:length => 20, :separator => ',', :omission => '') %></div>
+<hr/>
 
 <%= render 'form' %>
-
-<%= link_to 'Back', buildings_path %>

@@ -1,25 +1,47 @@
 <% if @spaces.any? %>
-<hr/>
-<table width="99%" style="background: #ffffff;padding:8px;box-shadow:2px 2px 2px #888;border:1px solid #888">
+<table width="100%">
+
   <tr>
-    <td style="text-align:center;font-size:.7em" colspan="3">
-      <% if user_signed_in? %>
-      <%= link_to '(Add New Space)', new_building_space_path(@building) %>
-      <% else %>
-      <%= link_to 'Log In To Add Space', new_user_session_path %>
-      <% end %>
-    </td>
+    <td height="10px"/>
   </tr>
   <tr>
-    <td colspan="3" style="text-transform:uppercase;font-size:1.3em;text-align:center">Spaces<br/><hr/></td>
+    <td colspan="3" class="listbox_title">Spaces</td>
   </tr>
-  <tr height="8px"/>
   <% @spaces.each do |space| %>
   <tr>
     <td width="25%" style="text-align:left"><%= link_to space.suite, building_space_path(@building,space) %></td>
     <td width="30%" style="text-align:right"><%= space.sf %>sf</td>
     <td style="text-align:right"><%= space.status %></td>
   </tr>
+  <tr>
+    <td height="5px"/>
+  </tr>
   <% end %>
+</table>
+  <tr>
+    <td height="5px"/>
+  </tr>
+<table>
+  <tr>
+    <td style="text-align:center;font-size:.7em" colspan="3">
+      <% if user_signed_in? %>
+      <%= button_to 'Add New Space for '+truncate(@building.address, :length => 20, :separator => ',', :omission => ''), new_building_space_path(@building), :method => :get, :class => 'button' %>
+      <% else %>
+      <%= button_to 'Sign In to Add Space', new_user_session_path %>
+      <% end %>
+    </td>
+  </tr>
+</table>
+<% else %>
+<table>
+  <tr>  
+    <td style="text-align:center;font-size:.7em" colspan="3">
+      <% if user_signed_in? %>
+      <%= button_to 'Add New Space for '+truncate(@building.address, :length => 20, :separator => ',', :omission => ''), new_building_space_path(@building), :method => :get, :class => 'button' %>
+      <% else %>
+      <%= button_to 'Sign In to Add Space', new_user_session_path %>
+      <% end %>
+    </td>
+  </tr>
 </table>
 <% end %>

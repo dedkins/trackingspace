@@ -41,4 +41,10 @@ class Micropost < ActiveRecord::Base
     where("building_id IN (#{followed_building_ids})",user_id: user.id)
   end
 
+  scope :new_posts, lambda {
+    {
+      :conditions => ["created_at >= ?", Time.now.prev_month]&&["content != ''"]
+    }
+  }
+
 end
