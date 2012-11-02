@@ -5,7 +5,6 @@
       <ul>
         <%= nav_tab 'Home', home_path, current: current_tab %>
         <%= nav_tab 'Buildings', buildings_main_path, current: current_tab%>
-        <%= nav_tab 'Spaces', spaces_main_path, current: current_tab %>
         <%= nav_tab 'People', people_main_path, current: current_tab %>
         <% unless user_signed_in? %>
           <%= nav_tab 'Login', new_user_session_path, current: current_tab %>
@@ -20,7 +19,6 @@
       <ul>
         <%= nav_tab 'Home', home_path, current: current_tab %>
         <%= nav_tab 'Buildings', buildings_main_path, current: current_tab%>
-        <%= nav_tab 'Spaces', spaces_main_path, current: current_tab %>
         <%= nav_tab 'People', people_main_path, current: current_tab %>
         <% unless user_signed_in? %>
           <%= nav_tab 'Login', new_user_session_path, current: current_tab %>
