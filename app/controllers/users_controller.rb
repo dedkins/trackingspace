@@ -18,8 +18,9 @@ class UsersController < ApplicationController
   	@feed_items = @user.self_feed
     @authentications = Authentication.find_by_user_id(@user.id)
     @building_ads = @user.building_ads
-    @space_ads = @user.space_ads
-  end
+    @space_ads = @user.space_ads               
+    
+  end 
 
   def search
     if !params[:user_name].nil?
@@ -52,21 +53,30 @@ class UsersController < ApplicationController
     @title = "Followed by"
     @user = User.find(params[:id])
     @users = @user.following
-    render 'show_follow'
+
+    respond_to do |format|               
+      format.js
+    end 
   end
 
   def followers
     @title = 'Followers of'
     @user = User.find(params[:id])
     @users = @user.followers
-    render 'show_follow'
+    
+    respond_to do |format|               
+      format.js
+    end 
   end
 
   def trackingbuildings
     @title = 'Tracked by'
     @user = User.find(params[:id])
     @buildings = @user.building_relationships
-    render 'show_building_follow'
+
+    respond_to do |format|               
+    format.js
+  end   
   end
 
 end

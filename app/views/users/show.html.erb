@@ -1,3 +1,4 @@
+
 <% if current_user == @user %>
 	<%= currently_at 'myStuff' %>
 <% else %>
@@ -79,11 +80,11 @@
 			<td colspan="3" style="padding-left:8px;text-align:center;padding-top:10px">
 				
 				Activity: <%= @user.microposts.count %> |
-				Following: <%= link_to @user.following.count, following_user_path %>  |
-				Followers: <%= link_to @user.followers.count, followers_user_path %> | 
+				Following: <%= link_to @user.following.count, following_user_path, :remote => true %>  |
+				Followers: <%= link_to @user.followers.count, followers_user_path, :remote => true %> | 
 				Buildings: <%= link_to @building_ads.count, '' %> |
 				Spaces: <%= link_to @space_ads.count, '' %> |
-				Buildings Tracked: <%= link_to @user.building_relationships.count, trackingbuildings_user_path %>
+				Buildings Tracked: <%= link_to @user.building_relationships.count, trackingbuildings_user_path, :remote => true %>
 				<% if user_signed_in? && mobile_device? %> |
 					<%= link_to 'SignOut', destroy_user_session_path(@user) %>
 				<% end %>
@@ -102,14 +103,10 @@
 			<tr><td colspan="3"><hr/><hr/></td></tr>
 			<% end %>
 		<% end %>
-		<tr>
-			<td colspan="3">
-				<% unless @user.microposts.empty? %>
-					<%= render 'shared/feed' %>
-				<% end %>
-			</td>
-		</tr>
 	</table>
+	<div id="partials">
+		<%= render 'shared/feed' %>
+	</div>
 
 		<%= content_for :sidebar do %>
 			

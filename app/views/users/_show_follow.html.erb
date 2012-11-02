@@ -1,13 +1,5 @@
 <% currently_at 'myStuff' %>
 
-<%= content_for :search do %>
-	<%= render 'shared/topmsg' %>
-<% end %>
-
-<div class="title"><%= @title %> <%= link_to @user.name, user_path(@user) %></div>
-<hr/>
-<hr/>
-
 <% unless @users.empty? %>
 	<% @users.each do |f| %>
 		<table width="100%">
