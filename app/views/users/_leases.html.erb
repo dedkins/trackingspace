@@ -1,9 +1,8 @@
+<hr/>
+<div class="partial_title"><%= @title %></div>
+<hr/>
 
 <table width="100%">
-  <tr>
-    <td colspan="6"><hr/><hr/></td>
-  </tr>
-<% if @leases %>
   <% @leases.each do |lease| %>
     <tr>
       <td style="font-size:1em; padding:5px"><%= link_to 'View', space_lease_path(lease.space,lease.id), :class => 'view' %></td>
@@ -15,10 +14,12 @@
       <td style="padding:5px;text-align:right"><%= number_to_currency(lease.current_rate/lease.size) %></td>
       <% end %>
     </tr>
+    <tr>
+      <td height="8px"/>
+    </tr>
   <% end %>
-<% else %>
-  If you wanted to keep track of your leases, this is where you'd do it.
-<% end %>
 
 </table>
+<hr/>
+To add a new lease: first find a building (clicking building at the top), find or create a space, then click the link to add a lease.
 

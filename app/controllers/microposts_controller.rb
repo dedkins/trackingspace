@@ -5,8 +5,8 @@ def create
 	@micropost = current_user.microposts.build(params[:micropost])
 	@back_to = params[:back_to]
 
+	
 	if @micropost.save
-		flash[:success] = "Micropost Saved"
 		redirect_to @back_to
 	else
 		render current_user
@@ -16,6 +16,10 @@ end
 def mbuilding_post
 	@building = Building.find(params[:building_id])
 	@micropost = current_user.microposts.build(params[:micropost])
+
+	respond_to do |format|               
+      format.js
+    end 
 end
 
 def mspace_post

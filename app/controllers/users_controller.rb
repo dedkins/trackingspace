@@ -7,9 +7,13 @@ class UsersController < ApplicationController
   end
 
   def leases
+    @title = 'My Leases'
     @user = User.find(current_user.id)
-    @leases = @user.lease
-    @total = @leases.all.size*@leases.all.current_rate
+    @leases = @user.leases
+
+    respond_to do |format|               
+      format.js
+    end 
   end
 
   def show
@@ -18,7 +22,8 @@ class UsersController < ApplicationController
   	@feed_items = @user.self_feed
     @authentications = Authentication.find_by_user_id(@user.id)
     @building_ads = @user.building_ads
-    @space_ads = @user.space_ads               
+    @space_ads = @user.space_ads  
+    @leases = @user.leases if signed_in?            
     
   end 
 
@@ -92,7 +97,7 @@ class UsersController < ApplicationController
   def spaceads
     @title = 'Spaces Promoted'
     @user = User.find(params[:id])
-    @buildings = @user.space_ads
+    @spaces = @user.space_ads
 
     respond_to do |format|
       format.js

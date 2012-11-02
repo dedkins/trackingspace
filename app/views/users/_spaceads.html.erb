@@ -4,15 +4,15 @@
 <div class="partial_title"><%= @title %></div>
 <hr/>
 
-<% unless @buildings.empty? %>
-	<% @buildings.each do |f| %>
+<% unless @spaces.empty? %>
+	<% @spaces.each do |f| %>
 		<table width="100%">
 			<tr>
 				<td>
 					<table width="100%">
 						<tr>
 							<td style="text-transform:uppercase;padding-top:10px;font-size:1.2em">
-								<%= link_to f.building.address, building_path(f.building_id) %>
+								<%= link_to f.space.building.address, building_space_path(f.space.building_id,f.space.id) %>
 							</td>
 							<td style="text-align:right">
 								
@@ -20,7 +20,7 @@
 						</tr>
 						<tr>
 							<td>
-								Activity: <%= f.building.microposts.count %>
+								Activity: <%= f.space.microposts.count %>
 							</td>
 						</tr>
 					</table>

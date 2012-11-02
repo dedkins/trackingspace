@@ -71,6 +71,10 @@ header#top {
     margin-bottom: 20px;
   }
 
+.partial_title {
+  text-align: center;
+  text-transform: uppercase;
+}
 
 /*header#content_title {
   position: fixed;

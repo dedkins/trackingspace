@@ -14,7 +14,7 @@ Trackingspace::Application.routes.draw do
 
   resources :users do
       member do
-        get :following, :followers, :trackingbuildings, :buildingads, :spaceads
+        get :following, :followers, :trackingbuildings, :buildingads, :spaceads, :leases
       end
     end
   

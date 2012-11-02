@@ -67,7 +67,7 @@ class User < ActiveRecord::Base
     @recent_items = BuildingOrder.where("user_id = ?", id).limit(10).order('created_at desc')
   end
 
-  def lease
+  def leases
     Lease.where("user_id = ?", id)
   end
 

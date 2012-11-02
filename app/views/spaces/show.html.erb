@@ -12,8 +12,7 @@
 
   <table width="100%">
     <tr>
-      <td><%= button_to 'Track This Space', '', :class => 'button' %></td>
-      <td style="text-align:right">
+      <td colspan="2" style="text-align:right">
         <% if user_signed_in? && @space.user_id == current_user.id %>
           <%= link_to 'Add New Lease', new_space_lease_path(@space) %> |
           <%= link_to 'Edit Stats', edit_building_space_path(@building,@space) %>
@@ -85,22 +84,12 @@
     </tr>
   </table>
   <hr/>
-	<tr>
-		<td width="600px" valign=top >
-  		
   		<% unless @space.microposts.empty? %>
   			<%= render 'shared/feed' %>
   		<% end %>
-    </td>
-  </tr>
 </table>
 
 <%= content_for :sidebar do %>
-  <table width="100%" height="200px" style="background:#ffffff">
-    <tr>
-      <td style="vertical-align:middle;text-align:center;padding:20px">Looks like we could use a video here...<p/><%= link_to 'Click here to save us all and add one - please keep it clean', '' %></td>
-    </tr>
-  </table>
 
 <% end %>
 

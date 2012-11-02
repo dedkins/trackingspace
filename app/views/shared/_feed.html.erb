@@ -1,5 +1,6 @@
 
 	<% unless @feed_items.empty? %>
+	<div id="feeditems">
 		<%= render :partial => 'shared/feed_item', :collection => @feed_items %>
+	</div>
 	<% end %>
-	

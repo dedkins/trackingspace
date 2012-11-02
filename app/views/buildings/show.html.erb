@@ -22,10 +22,6 @@
 					</td>
 					<td colspan="2">
 					<% end %>
-						<% if mobile_device? %>
-							<%= link_to 'Activity', '' %> |
-							<%= link_to 'Spaces', '' %>
-						<% end %>
 					</td>
 					<td style="text-align:right" width="60px">
 						<% unless mobile_device? %>
@@ -78,18 +74,6 @@
 			</table>
 			<hr/>	
 			<table width="100%">
-				<tr height="8px"/>
-					<td>
-						<% if user_signed_in? %>
-							<% if @spaces.empty? %>
-							<%= link_to 'Add a Space', new_building_space_path(@building) %> |
-							<% end %>
-							<% if @building.size %>
-							<%= number_with_precision(@building.size,:precision => 0) %> sq.ft.
-							<% end %>
-							(<%= link_to 'Update Building Size', edit_building_path(@building.id) %>)
-						<% end %>
-					</td>
 				<tr>
 						<td colspan="4">
 						<%= gmaps({
@@ -124,7 +108,7 @@
 			<p/>
 			<hr/>
 			<% unless @building.microposts.empty? %>
-				<div class="feeditems">
+				<div class="feeditems" id="feeditems">
 					<%= render 'shared/feed' %>
 				</div>
 			<% end %>

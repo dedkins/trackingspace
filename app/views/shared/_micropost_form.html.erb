@@ -11,7 +11,7 @@
 	<%= hidden_field_tag "back_to", building_space_path(@building,@space) %>
 <% end %>
 
-<% if @user.present? %>
+<% if @user.id != current_user.id %>
 	<%= f.hidden_field :postforuser_id, :value => @user.id %>
 	<%= hidden_field_tag "back_to", user_path(@user) %>
 <% end %>
