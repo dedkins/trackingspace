@@ -13,9 +13,12 @@ class RegistrationsController < Devise::RegistrationsController
 	def create
 		@user = User.new(params[:user])
 
-		if @user.save!
+		if @user.save
 			UserMailer.welcome_email(@user).deliver
 			sign_in_and_redirect(:user, @user)
+		else
+			flash[:alert] = "Looks like we may have missed something - all fields should be filled in"
+			redirect_to new_user_registration_path
 		end
 		session[:omniauth] = nil unless @user.new_record?
 	end

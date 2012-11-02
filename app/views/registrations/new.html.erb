@@ -1,5 +1,18 @@
 <% currently_at 'Home' %>
 
+<%= content_for :search do %>
+	<% if notice %>
+		<p class="notification notice">
+			<%= notice %>
+		</p>
+	<% end %>
+	<% if alert %>
+		<p class="notification alert">
+			<%= alert %>
+		</p>
+	<% end %>
+<% end %>
+
 <div class="title">Become a Member</div>
 
 <hr/>
@@ -43,7 +56,7 @@
 		<tr height="15px"/>
 	</table>
   
-  <div><%= f.submit "Sign up", :class => 'button' %></div>
+  <div style="text-align:center"><%= f.submit "Sign up", :class => 'button' %></div>
 <% end %>
 
 </div>

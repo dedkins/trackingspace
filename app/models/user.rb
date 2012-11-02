@@ -47,6 +47,8 @@ class User < ActiveRecord::Base
   attr_accessible :username, :email, :password, :password_confirmation, :remember_me, :name, :upgrade, :phone, :website, :description
   # attr_accessible :title, :body
 
+  validates :name, :presence => true
+
   def feed
     Micropost.from_users_followed_by(self)
   end
