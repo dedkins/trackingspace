@@ -13,7 +13,7 @@ class RegistrationsController < Devise::RegistrationsController
 	def create
 		@user = User.new(params[:user])
 
-		if @user.save
+		if @user.save!
 			UserMailer.welcome_email(@user).deliver
 			sign_in_and_redirect(:user, @user)
 		end
