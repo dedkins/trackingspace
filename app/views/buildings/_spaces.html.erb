@@ -27,7 +27,7 @@
       <% if user_signed_in? %>
       <%= button_to 'Add New Space for '+truncate(@building.address, :length => 20, :separator => ',', :omission => ''), new_building_space_path(@building), :method => :get, :class => 'button' %>
       <% else %>
-      <%= button_to 'Sign In to Add Space', new_user_session_path %>
+      <%= button_to 'Sign In to Add Space', new_user_session_path, :class => 'button' %>
       <% end %>
     </td>
   </tr>
@@ -39,7 +39,7 @@
       <% if user_signed_in? %>
       <%= button_to 'Add New Space for '+truncate(@building.address, :length => 20, :separator => ',', :omission => ''), new_building_space_path(@building), :method => :get, :class => 'button' %>
       <% else %>
-      <%= button_to 'Sign In to Add Space', new_user_session_path %>
+      <%= button_to 'Sign In to Add Space', new_user_session_path, :class => 'button' %>
       <% end %>
     </td>
   </tr>

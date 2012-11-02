@@ -50,7 +50,7 @@ class UsersController < ApplicationController
   end
 
   def following
-    @title = "Followed by"
+    @title = 'Following'
     @user = User.find(params[:id])
     @users = @user.following
 
@@ -60,7 +60,7 @@ class UsersController < ApplicationController
   end
 
   def followers
-    @title = 'Followers of'
+    @title = 'Followers'
     @user = User.find(params[:id])
     @users = @user.followers
     
@@ -70,13 +70,33 @@ class UsersController < ApplicationController
   end
 
   def trackingbuildings
-    @title = 'Tracked by'
+    @title = 'Buildings Being Tracked'
     @user = User.find(params[:id])
-    @buildings = @user.building_relationships
+    @buildings = @user.building_relationships   
 
     respond_to do |format|               
-    format.js
-  end   
+      format.js
+    end   
+  end
+
+  def buildingads
+    @title = 'Buildings Promoted'
+    @user = User.find(params[:id])
+    @buildings = @user.building_ads
+
+    respond_to do |format|
+      format.js
+    end
+  end
+
+  def spaceads
+    @title = 'Spaces Promoted'
+    @user = User.find(params[:id])
+    @buildings = @user.space_ads
+
+    respond_to do |format|
+      format.js
+    end
   end
 
 end

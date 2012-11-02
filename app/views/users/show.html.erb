@@ -65,7 +65,7 @@
 					</tr>
 				</table>
 			</td>
-			<td>
+			<td style="text-align:right">
 		  		<%= link_to image_tag("https://github.com/intridea/authbuttons/raw/master/png/twitter_64.png", :size => "30x30", :alt => "Twitter"), "http://twitter.com/home?status=Saw this on Trackingspace: http://#{request.host+request.fullpath}", :target => '_blank' %>
 			  	<%= link_to image_tag("http://github.com/intridea/authbuttons/raw/master/png/facebook_64.png", :size => "30x30"), "http://www.facebook.com/sharer.php?u=http://#{request.host+request.fullpath}", :target => '_blank' %>
 			</td>
@@ -79,16 +79,20 @@
 		<tr>
 			<td colspan="3" style="padding-left:8px;text-align:center;padding-top:10px">
 				
-				Activity: <%= @user.microposts.count %> |
 				Following: <%= link_to @user.following.count, following_user_path, :remote => true %>  |
 				Followers: <%= link_to @user.followers.count, followers_user_path, :remote => true %> | 
-				Buildings: <%= link_to @building_ads.count, '' %> |
-				Spaces: <%= link_to @space_ads.count, '' %> |
+				<% if @user.upgrade == 'Upgrade59' %>
+					Buildings: <%= link_to @building_ads.count, buildingads_user_path, :remote => true %> |
+					Spaces: <%= link_to @space_ads.count, '' %> |
+				<% end %>
 				Buildings Tracked: <%= link_to @user.building_relationships.count, trackingbuildings_user_path, :remote => true %>
 				<% if user_signed_in? && mobile_device? %> |
 					<%= link_to 'SignOut', destroy_user_session_path(@user) %>
 				<% end %>
 			</td>
+		</tr>
+		<tr>
+			<td height="10px"/>
 		</tr>
 		<% if user_signed_in? %>
 			<% unless current_user == @user %>
@@ -100,7 +104,6 @@
 					</td>
 				</tr>
 			<% else %>
-			<tr><td colspan="3"><hr/><hr/></td></tr>
 			<% end %>
 		<% end %>
 	</table>
@@ -111,4 +114,21 @@
 		<%= content_for :sidebar do %>
 			
 		<% end %>
+
+	<%= content_for :search do %>
+		<% if user_signed_in? and current_user.upgrade != 'Upgrade59' %>
+		<table width="100%">
+			<tr>
+				<td style="background:#FFFF7E;padding:8px;text-align:center">Upgrade to get more information, <%= link_to 'Click Here', upgrade_path %></td>
+			</tr>
+		</table>
+		<% end %>
+		<% if @user.upgrade == 'Upgrade59' %>
+			<table width="100%">
+				<tr>
+					<td style="background:#FFFF7E;padding:15px;text-align:center;box-shadow:5px 5px 5px #888"><%= truncate(@user.name, :length => 10, :separator => ' ', :omission => '') %> is a premium user and has access to more information, get in contact or upgrade yourself by <%= link_to 'Clicking Here', upgrade_path %></td>
+				</tr>
+			</table>
+		<% end %>
+	<% end %>
 	</table>
