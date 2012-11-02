@@ -1,7 +1,7 @@
 <% currently_at 'Spaces' %>
 
 <%= content_for :search do %>
-  <% if @leases.empty? %>
+  <% if @leases.empty? & user_signed_in? %>
     <table width="100%">
       <tr>
         <td style="background:#FFFF7E;padding:8px;text-align:center;box-shadow:5px 5px 5px #888">Do you have the lease for this space? <%= link_to 'Click Here', new_space_lease_path(@space) %></td>

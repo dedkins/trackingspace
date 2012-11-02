@@ -13,7 +13,7 @@ class SpacesController < ApplicationController
   # GET /spaces/1
   # GET /spaces/1.json
   def show
-    @user = User.find(current_user.id)
+    @user = User.find(current_user.id) if signed_in?
     @space = Space.find(params[:id])
     @micropost = Micropost.new if signed_in?
     @feed_items = @space.feed
