@@ -79,7 +79,7 @@
 		<tr>
 			<td colspan="3" style="padding-left:8px;text-align:center;padding-top:10px">
 				
-				<% if @leases %>
+				<% if @leases and @user.id == current_user.id %>
 				Leases: <%= link_to @user.leases.count, leases_user_path, :remote => true %> |
 				<% end %>
 				Following: <%= link_to @user.following.count, following_user_path, :remote => true %>  |
