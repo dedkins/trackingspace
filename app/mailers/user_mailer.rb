@@ -3,7 +3,7 @@ class UserMailer < ActionMailer::Base
 
   def welcome_email(user)
     @user = user
-    @url  = "http://www.trackingspace.com/users/sign-in"
+    @url  = "http://www.trackingspace.com/users/sign_in"
     mail(:to => user.email, :subject => "Thank you for joining")
   end
 
