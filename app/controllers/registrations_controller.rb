@@ -3,10 +3,6 @@ class RegistrationsController < Devise::RegistrationsController
 	def new 
 	end
 
-	def destroy
-		super
-	end
-
 	def edit
 		@user = User.find(current_user.id)
 		@authentications = Authentication.find_all_by_user_id(@user.id)

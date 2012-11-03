@@ -39,7 +39,7 @@ body {
   height: 90%;
   width: 98%;
   z-index: 5;
-  margin-top:50px;
+  margin-top:40px;
 }
 
 header#top {
@@ -47,7 +47,7 @@ header#top {
   width: 100%;
   z-index: 9999;
   color: #fff;
-  margin: -8px 0px 0px -8px;
+  margin: -20px 0px 0px -8px;
   font-size: 1em;
   background: #4c4c4c;
   height: 50px;
