@@ -1,7 +1,10 @@
 class RegistrationsController < Devise::RegistrationsController
 
 	def new 
+	end
 
+	def destroy
+		super
 	end
 
 	def edit

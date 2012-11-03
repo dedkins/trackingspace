@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
 before_filter :new_stuff
 
 def new_stuff
-  @allnewusers = User.new_users.limit(8)
+  @allnewusers = User.new_users.limit(8).order('created_at desc')
   @allnewbuildings = Building.new_buildings.limit(8)
   @allnewposts = Micropost.new_posts.limit(10)
 end

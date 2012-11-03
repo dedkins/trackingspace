@@ -6,7 +6,7 @@
 	<% @allnewusers.each do |u| %>
 	<tr>
 		<td style="font-size:.75em"><%= link_to u.name, user_path(u.id) %></td>
-		<td style="font-size:.75em"><%= time_ago_in_words(u.created_at) %></td>
+		<td style="font-size:.75em;text-align:right"><%= time_ago_in_words(u.created_at) %></td>
 	</tr>
 	<% end %>
 </table>
