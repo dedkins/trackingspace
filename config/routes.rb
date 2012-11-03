@@ -53,7 +53,7 @@ Trackingspace::Application.routes.draw do
     resources :leases
   end
 
-  root :to => 'pages#index'
+  root :to => 'buildings#home'
   
   end
   # The priority is based upon order of creation:
