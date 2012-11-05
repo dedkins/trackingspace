@@ -24,12 +24,21 @@
                 <% end %>
             </td>
           </tr>
+          <tr><td height="10px"/></tr>
+          <tr>
+            <td width="50%">
+              <div class="login">
+                <%= link_to "Log In", new_user_session_path %>
+              </div>
+            </td>
+            <td>
+              <div class="logintwitter">
+                <%= link_to "Just Let me In!", home_path %>
+              </div>
+            </td>
+          </tr>
         </table>
       </div>
-      <div class="login">
-        <%= link_to "Log In", new_user_session_path %>
-      </div>
-      <div class="logintwitter">
-        <%= link_to "Log In", '/auth/twitter' %> <%= image_tag "https://github.com/intridea/authbuttons/raw/master/png/twitter_64.png", :size => "25x25", :alt => "Twitter", :align => "Top" %>
-      </div>
+      
+      
 <% end %>
