@@ -8,6 +8,7 @@
 <hr/><hr/>
 <% if user_signed_in? %>
 	<%= render 'shared/recent' %>
+	<%= render 'shared/feed' %>
 <% end %>
 
 <% unless user_signed_in? %>
