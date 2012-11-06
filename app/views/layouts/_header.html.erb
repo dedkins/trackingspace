@@ -16,7 +16,7 @@
                   <% end %>
                   <%= link_to "Sign Out", destroy_user_session_path, :method => 'delete', :class => 'top' %>
                 <% else %>
-                  <%= link_to "Sign Up", new_user_registration_path, :class => 'top' %> | <%= link_to "Sign In", new_user_session_path, :class => 'top' %> | <%= link_to "Sign In w/ Twitter", '/auth/twitter', :class => 'top' %>
+                  <%= link_to "Become a Member", new_user_registration_path, :class => 'top' %> | <%= link_to "Sign In", new_user_session_path, :class => 'top' %>
                 <% end %>
             </nav>
           </td>
