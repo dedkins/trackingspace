@@ -48,6 +48,7 @@ class SpacesController < ApplicationController
         format.html { redirect_to [@building], notice: 'Space was successfully created.' }
         format.json { render json: [@building], status: :created, location: @space }
       else
+        flash[:alert] = "Oops - size, suite and monthly are required.  Please try again."
         format.html { render action: "new" }
         format.json { render json: @space.errors, status: :unprocessable_entity }
       end

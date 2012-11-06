@@ -8,7 +8,7 @@
 
 	<% @allnewposts.each do |m| %>
 	<tr>
-		<td style="font-size:.75em"><%= link_to '"'+truncate(m.content, :size => 15, :omission => '...')+'"', user_path(m.user.id) %></td>
+		<td style="font-size:.75em"><%= link_to '"'+truncate(m.content, :size => 20, :omission => '...')+'"', user_path(m.user.id) %></td>
 	</tr>
 	<tr>
 		<td style="text-transform:uppercase;font-size:.7em;text-align:right;font-variant:italic"><%= link_to m.user.name, user_path(m.user_id) %></td>

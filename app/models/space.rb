@@ -20,7 +20,11 @@ class Space < ActiveRecord::Base
   has_many :leases, :dependent => :destroy
   has_many :microposts, :dependent => :destroy
 
-  attr_accessible :monthly, :sf, :suite, :company, :status, :_3dplanurl  
+  attr_accessible :monthly, :sf, :suite, :company, :status, :_3dplanurl
+
+  validates :suite, :presence => true
+  validates :monthly, :presence => true
+  validates :sf, :presence => true  
   
   def feed
     Micropost.where("space_id = ?", id)

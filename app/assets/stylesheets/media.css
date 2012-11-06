@@ -1,10 +1,9 @@
 @media screen and (max-width: 2050px){
 	section#left {
-		width: 17%;
-		min-width: 110px;
+		width: 17.5%;
 	}
 	section#content {
-		margin-left: 18%;
+		margin-left: 20%;
 	}
 	section#search {
 		margin-left: 20%;
