@@ -25,15 +25,7 @@ class PagesController < ApplicationController
 	end
 
 	def people_main
-		if !params[:name].nil?
-			@user = User.find_by_name(params[:name])
-			if @user.id?
-	    		redirect_to user_path(@user.id)
-	    	else
-	    		people_main_path
-	    	end
-	    end
-	    @new_users = User.order('created_at DESC').limit(10)
+	    @users = User.last(20).reverse
 	    if user_signed_in?
 	    	@user = current_user
 	    	@feed_items = @user.feed

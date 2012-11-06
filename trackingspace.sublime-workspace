@@ -319,7 +319,7 @@
 			"file": "app/views/pages/index.html.erb",
 			"settings":
 			{
-				"buffer_size": 1320,
+				"buffer_size": 1349,
 				"line_ending": "Windows"
 			}
 		}
@@ -652,15 +652,15 @@
 					"file": "app/views/pages/index.html.erb",
 					"settings":
 					{
-						"buffer_size": 1320,
+						"buffer_size": 1349,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								154,
-								154
+								239,
+								239
 							]
 						],
 						"settings":

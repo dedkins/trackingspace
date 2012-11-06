@@ -5,7 +5,7 @@
 <% end %>	
 
 <div class="title">TrackingSpace</div>
-<hr/><hr/>
+<hr/>
 <% if user_signed_in? %>
 	<%= render 'shared/recent' %>
 	<%= render 'shared/feed' %>
@@ -26,7 +26,6 @@ TrackingSpace is not another listing service.  It is not a listing service at al
 <div class="title">Recent Activity</div>
 <hr/>
 <%= render 'shared/feed' %>
-
 <% end %>
 
 <%= content_for :sidebar do %>
