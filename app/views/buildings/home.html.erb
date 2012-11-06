@@ -5,39 +5,28 @@
 <%= form_for Building.new do |f| %>
   <div class="centerbox">
   </div>
-  <div class="hometitle">
-    Start Tracking...
-  </div>
       <div class='searchcontainer'>
-      	<table width="100%">
-          <tr>
-            <td>
-                <%= f.error_messages %>
-                <%= f.text_field :address, :id => "addresspicker_map", :placeholder => 'Find a Building by Address...', :class => "search" %>
-            </td>
-            <td >
+              <div style="font-size:1.5em;font-weight:bold;text-transform:uppercase">
+                Start Tracking...
+              </div>
+            
+                <%= f.text_field :address, :id => "addresspicker_map", :placeholder => 'Find a Building by Address...', :class => 'search' %>
+            
               <%= f.submit "GO!", :class => "searchgo" %>
               <%= f.hidden_field :latitude, :id => "lat" %>
               <%= f.hidden_field :longitude, :id => "lng" %>
                 <% if user_signed_in? %>
                 <%= f.hidden_field :user_id, :value => current_user.id %>
                 <% end %>
-            </td>
-          </tr>
-          <tr><td height="10px"/></tr>
-          <tr>
-            <td width="50%">
+          
               <div class="login">
                 <%= link_to "Log In", new_user_session_path %>
               </div>
-            </td>
-            <td>
+          
               <div class="logintwitter">
-                <%= link_to "Just Let me In!", home_path %>
+                <%= link_to "Learn More", home_path %>
               </div>
-            </td>
-          </tr>
-        </table>
+           
       </div>
       
       
