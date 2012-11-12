@@ -15,6 +15,13 @@
               <%= f.submit "GO!", :class => "searchgo" %>
               <%= f.hidden_field :latitude, :id => "lat" %>
               <%= f.hidden_field :longitude, :id => "lng" %>
+              <%= f.hidden_field :street_number, :id => "street_number" %>
+              <%= f.hidden_field :route, :id => "route" %>
+              <%= f.hidden_field :locality, :id => "locality" %>
+              <%= f.hidden_field :administrative_area_level_1, :id => "administrative_area_level_1" %>
+              <%= f.hidden_field :administrative_area_level_2, :id => "administrative_area_level_2" %>
+              <%= f.hidden_field :postal_code, :id => "postal_code" %>
+              <%= f.hidden_field :country, :id => "country" %>
                 <% if user_signed_in? %>
                 <%= f.hidden_field :user_id, :value => current_user.id %>
                 <% end %>
