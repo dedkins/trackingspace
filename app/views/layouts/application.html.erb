@@ -18,11 +18,18 @@
           $(function() {
             var addresspicker = $( "#addresspicker" ).addresspicker();
             var addresspickerMap = $( "#addresspicker_map" ).addresspicker({
-              regionBias: "fr",
+              regionBias: "us",
               elements: {
                 map:      "#map",
                 lat:      "#lat",
-                lng:      "#lng"
+                lng:      "#lng",
+                street_number: "#street_number",
+                route: "#route",
+                country:  "#country",
+                locality: "#locality",
+                administrative_area_level_2: "#administrative_area_level_2",
+                administrative_area_level_1: "#administrative_area_level_1",
+                postal_code: "#postal_code"
               }
             });
             var gmarker = addresspickerMap.addresspicker( "marker");

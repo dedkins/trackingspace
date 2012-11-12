@@ -21,6 +21,7 @@ gem 'exception_notification', :require => 'exception_notifier'
 gem 'rails3-jquery-autocomplete'
 gem 'will_paginate', '~> 3.0.0'
 gem 'stripe'
+gem 'friendly_id'
 
 group :development do
 	gem 'rspec-rails', '2.0.1'

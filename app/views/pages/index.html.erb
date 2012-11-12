@@ -7,8 +7,17 @@
 <div class="title">TrackingSpace</div>
 <hr/>
 <% if user_signed_in? %>
+	<% if @recent_items %>
 	<%= render 'shared/recent' %>
+	<% else %>
+	As you look at buildings, you will develop a list in this space keeping track, to allow you a quick click-back to see them again.
+	<% end %>
+	<% if @feed %>
 	<%= render 'shared/feed' %>
+	<% else %>
+	<hr/>
+	As you follow or track people and buildings, you will develop a list of activities related to these people or places.  This would show up here.
+	<% end %>
 <% end %>
 
 <% unless user_signed_in? %>

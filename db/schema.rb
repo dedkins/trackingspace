@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121101194100) do
+ActiveRecord::Schema.define(:version => 20121112041357) do
 
   create_table "ads", :force => true do |t|
     t.integer  "building_id"
@@ -54,13 +54,24 @@ ActiveRecord::Schema.define(:version => 20121101194100) do
     t.float    "latitude"
     t.float    "longitude"
     t.string   "address"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",                  :null => false
+    t.datetime "updated_at",                  :null => false
     t.boolean  "gmaps"
     t.integer  "user_id"
     t.string   "status"
     t.decimal  "size"
+    t.string   "street_number"
+    t.string   "route"
+    t.string   "locality"
+    t.string   "administrative_area_level_1"
+    t.string   "administrative_area_level_2"
+    t.string   "postal_code"
+    t.string   "country"
+    t.string   "pretty_url"
+    t.string   "slug"
   end
+
+  add_index "buildings", ["slug"], :name => "index_buildings_on_slug"
 
   create_table "leases", :force => true do |t|
     t.integer  "user_id"

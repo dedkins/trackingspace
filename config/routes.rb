@@ -43,6 +43,8 @@ Trackingspace::Application.routes.draw do
     resources :spaces
   end
 
+  
+
   resources :ads
 
   match 'commercial_real_estate_lease' => 'pages#spaces_main', :as => 'spaces_main'

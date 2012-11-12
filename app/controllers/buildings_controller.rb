@@ -6,7 +6,7 @@ class BuildingsController < ApplicationController
       @recent_items = @user.recent
     end
     @buildings = Building.all(:order => "created_at desc")
-    @newbuildings24 = Building.new_buildings.limit
+    @newbuildings24 = Building.new_buildings.limit(10)
     @newbuildings = Building.order('created_at DESC').limit(10)
     @json = Building.new_buildings.to_gmaps4rails do |building, marker|
       marker.json "\"buildings\": #{building.id}"
@@ -21,11 +21,21 @@ class BuildingsController < ApplicationController
   def show
     if user_signed_in?
       @user = User.find(current_user.id)
+      if params[:id].present?
       @building = Building.find(params[:id])
+      end
+      if params[:slug].present?
+        @building = Building.find_by_slug(params[:slug])
+      end
       @recent_items = @user.recent
       @user_ad_availability = Ad.find_by_building_id_and_user_id(@building.id,@user.id)
     end
-    @building = Building.find(params[:id])
+    if params[:id].present?
+      @building = Building.find(params[:id])
+      end
+    if params[:slug].present?
+        @building = Building.find_by_slug(params[:slug])
+      end
     @ad_slot1 = Ad.find_by_building_id_and_slot(@building.id,'1')
     @ad_slot2 = Ad.find_by_building_id_and_slot(@building.id,'2')
     @ad_slot3 = Ad.find_by_building_id_and_slot(@building.id,'3')
@@ -79,11 +89,19 @@ class BuildingsController < ApplicationController
     @building.address = params[:building][:address]
     @building.latitude = params[:building][:latitude]
     @building.longitude = params[:building][:longitude]
+    @building.street_number = params[:building][:street_number]
+    @building.route = params[:building][:route]
+    @building.locality = params[:building][:locality]
+    @building.administrative_area_level_1 = params[:building][:administrative_area_level_1]
+    @building.administrative_area_level_2 = params[:building][:administrative_area_level_2]
+    @building.postal_code = params[:building][:postal_code]
+    @building.country = params[:building][:country]
+    @building.slug = @building.street_number+'-'+@building.route.parameterize+'-'+@building.locality.parameterize+'-'+@building.administrative_area_level_1.parameterize
     
     if user_signed_in?
-      @building = Building.find_or_initialize_by_address(:address => @building.address,:user_id => current_user.id, :latitude => @building.latitude,:longitude => @building.longitude)
+      @building = Building.find_or_initialize_by_address(:address => @building.address,:user_id => current_user.id, :latitude => @building.latitude,:longitude => @building.longitude,:street_number => @building.street_number,:slug => @building.slug,:locality => @building.locality,:administrative_area_level_1 => @building.administrative_area_level_1,:administrative_area_level_2 => @building.administrative_area_level_2,:postal_code => @building.postal_code,:country => @building.country)
     else
-      @building = Building.find_or_initialize_by_address(:address => @building.address,:latitude => @building.latitude,:longitude => @building.longitude)
+      @building = Building.find_or_initialize_by_address(:address => @building.address,:latitude => @building.latitude,:longitude => @building.longitude,:street_number => @building.street_number,:slug => @building.slug,:locality => @building.locality,:administrative_area_level_1 => @building.administrative_area_level_1,:administrative_area_level_2 => @building.administrative_area_level_2,:postal_code => @building.postal_code,:country => @building.country)
     end
 
       respond_to do |format|

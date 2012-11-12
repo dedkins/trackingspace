@@ -30,8 +30,13 @@
             map: false,
             lat: false,
             lng: false,
+            street_number: false,
+            route: false,
             locality: false,
-            country: false
+            country: false,
+            administrative_area_level_2: false,
+            administrative_area_level_1: false,
+            postal_code: false
         }
     },
 
@@ -67,8 +72,13 @@
       
       this.lat      = $(this.options.elements.lat);
       this.lng      = $(this.options.elements.lng);
+      this.street_number = $(this.options.elements.street_number);
+      this.route = $(this.options.elements.route);
       this.locality = $(this.options.elements.locality);
       this.country  = $(this.options.elements.country);
+      this.administrative_area_level_2 = $(this.options.elements.administrative_area_level_2);
+      this.administrative_area_level_1 = $(this.options.elements.administrative_area_level_1);
+      this.postal_code = $(this.options.elements.postal_code);
       if (this.options.elements.map) {
         this.mapElement = $(this.options.elements.map);
         this._initMap();
@@ -145,9 +155,24 @@
       if (this.locality) {
         this.locality.val(this._findInfo(address, 'locality'));
       }
+      if (this.street_number) {
+        this.street_number.val(this._findInfo(address, 'street_number'));
+      }
+      if (this.route) {
+        this.route.val(this._findInfo(address, 'route'));
+      }
       if (this.country) {
         this.country.val(this._findInfo(address, 'country'));
       }
+      if (this.administrative_area_level_2) {
+        this.administrative_area_level_2.val(this._findInfo(address, 'administrative_area_level_2'));
+      }
+      if (this.administrative_area_level_1) {
+        this.administrative_area_level_1.val(this._findInfo(address, 'administrative_area_level_1'));
+      }
+      if (this.postal_code) {
+        this.postal_code.val(this._findInfo(address, 'postal_code'));
+      }      
     },
     
     _selectAddress: function(event, ui) {
