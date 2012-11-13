@@ -141,7 +141,7 @@ section#sidebar {
 }
 
 .listbox_title {
-  height:1.2;
+  padding:3px;
   background: #4c4c4c;
   color:#ffffff;
   text-align: center;

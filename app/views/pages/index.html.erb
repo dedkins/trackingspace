@@ -12,7 +12,8 @@
 	<% else %>
 	As you look at buildings, you will develop a list in this space keeping track, to allow you a quick click-back to see them again.
 	<% end %>
-	<% if @feed %>
+	<% if @feed_items %>
+	<div class="listbox_title">Recent Activity</div>
 	<%= render 'shared/feed' %>
 	<% else %>
 	<hr/>

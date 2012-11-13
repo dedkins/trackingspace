@@ -11,13 +11,17 @@
 
 <% if user_signed_in? %>
 	<div class="title">People Activity</div>
-	<% unless @user.feed == nil %>
+	<% if @feed_items == nil %>
 	<p>
 		Once a member and you've selected other people to track, this area would show a list of recent communications/posts related to the people you're tracking...kind of like a Twitter feed.  Looks like you've got to start adding some people to track.  In the meantime, here are some recent additions...find someone to follow...
 	</p>
 	<%= render 'users/show_follow' %>
 	<% else %>
 	<table width="100%">
+		<tr><td height="10px"/></tr>
+		<tr>
+			<td class="listbox_title">Recent Activity</td>
+		</tr>
 		<tr>
 			<td><%= render 'shared/feed' %></td>
 		</tr>
