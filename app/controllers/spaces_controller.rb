@@ -17,7 +17,7 @@ class SpacesController < ApplicationController
     @space = Space.find(params[:id])
     @micropost = Micropost.new if signed_in?
     @feed_items = @space.feed
-    @leases = Lease.find_all_by_space_id(params[:id])
+    @lease = Lease.find_by_space_id(params[:id])
     @ad_slot1 = Ad.find_by_space_id_and_slot(@space.id,'s1')
     @ad_slot2 = Ad.find_by_space_id_and_slot(@space.id,'s2')
     @ad_slot3 = Ad.find_by_space_id_and_slot(@space.id,'s3')

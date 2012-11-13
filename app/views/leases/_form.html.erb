@@ -19,11 +19,11 @@
   
   <div class="field">
     <%= f.label :size %>
-    <%= f.number_field :size, :class => 'field', :placeholder => 'How big is the space?...' %>
+    <%= f.number_field :size, :class => 'field', :placeholder => 'How big is the space?...', :value => @space.sf %>
   </div>
   <div class="field">
     <%= f.label 'Monthly Total' %>
-    <%= f.text_field :current_rate, :class => 'field', :placeholder => 'Amount you pay each month...' %>
+    <%= f.text_field :current_rate, :class => 'field', :placeholder => 'Amount you pay each month...', :value => @space.monthly %>
   </div>
   <div class="field">
     <%= f.label :expiration %>
