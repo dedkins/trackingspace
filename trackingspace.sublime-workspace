@@ -326,6 +326,38 @@
 				"buffer_size": 13415,
 				"line_ending": "Windows"
 			}
+		},
+		{
+			"file": "config/routes.rb",
+			"settings":
+			{
+				"buffer_size": 3502,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/controllers/pages_controller.rb",
+			"settings":
+			{
+				"buffer_size": 1216,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/views/pages/earlyadopter.html.erb",
+			"settings":
+			{
+				"buffer_size": 1933,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/views/layouts/_main_nav.html.erb",
+			"settings":
+			{
+				"buffer_size": 1258,
+				"line_ending": "Windows"
+			}
 		}
 	],
 	"build_system": "",
@@ -352,6 +384,7 @@
 	},
 	"file_history":
 	[
+		"/C/Users/david/trackingspace/app/views/pages/earlyadopter.html.erb",
 		"/C/Users/david/trackingspace/app/controllers/pages_controller.rb",
 		"/C/Users/david/trackingspace/app/views/pages/people_main.html.erb",
 		"/C/Users/david/trackingspace/app/views/users/_leases.html.erb",
@@ -478,8 +511,7 @@
 		"/C/Users/david/trackingspace/app/views/pages/_building_unfollow.html.erb",
 		"/C/Users/david/trackingspace/app/views/building_relationships/destroy.js.erb",
 		"/C/Users/david/trackingspace/app/views/building_relationships/create.js.erb",
-		"/C/Users/david/trackingspace/app/views/user_relationships/create.js.erb",
-		"/C/Users/david/trackingspace/app/views/user_relationships/destroy.js.erb"
+		"/C/Users/david/trackingspace/app/views/user_relationships/create.js.erb"
 	],
 	"find":
 	{
@@ -567,7 +599,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 5,
 			"sheets":
 			[
 				{
@@ -593,7 +625,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1102.0,
+						"translation.y": 523.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -610,13 +642,123 @@
 						"selection":
 						[
 							[
-								665,
-								665
+								686,
+								686
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "config/routes.rb",
+					"settings":
+					{
+						"buffer_size": 3502,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1308,
+								1308
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 264.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/controllers/pages_controller.rb",
+					"settings":
+					{
+						"buffer_size": 1216,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								639,
+								639
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/views/pages/earlyadopter.html.erb",
+					"settings":
+					{
+						"buffer_size": 1933,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1666,
+								1666
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/views/layouts/_main_nav.html.erb",
+					"settings":
+					{
+						"buffer_size": 1258,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								176,
+								176
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
