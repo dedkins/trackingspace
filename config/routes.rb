@@ -36,6 +36,7 @@ Trackingspace::Application.routes.draw do
   match 'privacy' => 'pages#privacy', :as => 'privacy'
   match 'help' => 'pages#help', :as => 'help'
   match 'upgrade' => 'pages#upgrade', :as => 'upgrade'
+  match 'early_adopter' => 'pages#earlyadopter', :as => 'earlyadopter'
 
   resources :authentications
 

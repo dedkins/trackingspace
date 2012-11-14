@@ -25,6 +25,9 @@ class PagesController < ApplicationController
 	def upgrade
 	end
 
+	def earlyadopter
+	end
+
 	def people_main
 	    @users = User.last(20).reverse
 	    if user_signed_in?
