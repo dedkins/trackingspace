@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Orbitron);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
 
 /*html {
   background: url(/assets/SanDiegoSkyline.jpg) no-repeat center center fixed;
@@ -29,7 +29,7 @@ html {
 
 body {
   background:transparent;
-  font-family: verdana, arial, helvetica, sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   line-height: 18px;
 }
