@@ -3,7 +3,7 @@
     <% unless mobile_device? %>
     <nav id="main_nav" role="navigation">
       <ul>
-        <%= image_tag('logo_ts.png', :size => '25x25') %>
+        <%= link_to image_tag('logo_ts.png', :size => '25x25'), home_path %>
         <%= nav_tab 'Home', home_path, current: current_tab %>
         <%= nav_tab 'Buildings', buildings_main_path, current: current_tab%>
         <%= nav_tab 'People', people_main_path, current: current_tab %>

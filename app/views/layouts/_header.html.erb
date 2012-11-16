@@ -7,7 +7,7 @@
         <% unless mobile_device? %>
           <td>
             <nav id="utility">
-                <%= mail_to "dedkins@trackingspace.com", "Help", :subject => 'Need Help with TrackingSpace' %>
+                <%= mail_to "dedkins@trackingspace.com", "Help", :subject => 'Need Help with TrackingSpace', :class => 'top' %> |
                 <% if user_signed_in? %>
                   <%= current_user.email %> |
                   <% unless current_user.upgrade == 'Upgrade59' %>
