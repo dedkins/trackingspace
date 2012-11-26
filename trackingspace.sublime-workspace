@@ -332,10 +332,18 @@
 			}
 		},
 		{
-			"file": "app/views/spaces/show.html.erb",
+			"file": "app/assets/stylesheets/media.css",
 			"settings":
 			{
-				"buffer_size": 3327,
+				"buffer_size": 1402,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/views/buildings/show.html.erb",
+			"settings":
+			{
+				"buffer_size": 4155,
 				"line_ending": "Windows"
 			}
 		}
@@ -364,6 +372,7 @@
 	},
 	"file_history":
 	[
+		"/C/Users/david/trackingspace/app/views/spaces/show.html.erb",
 		"/C/Users/david/trackingspace/app/views/buildings/show.html.erb",
 		"/C/Users/david/trackingspace/Gemfile",
 		"/C/Users/david/trackingspace/app/assets/stylesheets/media.css",
@@ -383,7 +392,6 @@
 		"/C/Users/david/trackingspace/app/views/users/_show_follow.html.erb",
 		"/C/Users/david/trackingspace/app/views/pages/index.html.erb",
 		"/C/Users/david/trackingspace/app/views/shared/_recent.html.erb",
-		"/C/Users/david/trackingspace/app/views/spaces/show.html.erb",
 		"/C/Users/david/trackingspace/app/views/leases/_form.html.erb",
 		"/C/Users/david/trackingspace/app/controllers/spaces_controller.rb",
 		"/C/Users/david/trackingspace/app/views/leases/show.html.erb",
@@ -639,28 +647,54 @@
 				},
 				{
 					"buffer": 2,
-					"file": "app/views/spaces/show.html.erb",
+					"file": "app/assets/stylesheets/media.css",
 					"settings":
 					{
-						"buffer_size": 3327,
+						"buffer_size": 1402,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								376,
-								376
+								443,
+								443
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 111.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/views/buildings/show.html.erb",
+					"settings":
+					{
+						"buffer_size": 4155,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4154,
+								4130
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1443.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

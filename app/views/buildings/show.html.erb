@@ -112,11 +112,13 @@
 			<% end %>
 		</div>
 
-	<%= content_for :sidebar do %>
-		<% if user_signed_in? %>
-          <%= render 'shared/recent' %>
-        <% end %>
-        <%= render 'buildings/spaces' %>
+	<% unless mobile_device? %>
+		<%= content_for :sidebar do %>
+			<% if user_signed_in? %>
+	          <%= render 'shared/recent' %>
+	        <% end %>
+	        <%= render 'buildings/spaces' %>
+		<% end %>
 	<% end %>
 
 
