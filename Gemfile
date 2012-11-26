@@ -22,6 +22,7 @@ gem 'rails3-jquery-autocomplete'
 gem 'will_paginate', '~> 3.0.0'
 gem 'stripe'
 gem 'friendly_id'
+gem 'rest-client'
 
 group :development do
 	gem 'rspec-rails', '2.0.1'

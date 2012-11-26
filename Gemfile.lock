@@ -208,6 +208,7 @@ DEPENDENCIES
   pg
   rails (= 3.2.3)
   rails3-jquery-autocomplete
+  rest-client
   rspec-rails (= 2.0.1)
   sass-rails (~> 3.2.3)
   stripe
