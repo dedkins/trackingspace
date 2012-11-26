@@ -1,13 +1,15 @@
 <% currently_at 'Buildings' %>
 
 <%= content_for :search do %>
-  <% unless @leases.present? && user_signed_in? %>
+<% if user_signed_in %>
+  <% unless @leases.present? %>
     <table width="100%">
       <tr>
         <td style="background:#FFFF7E;padding:8px;text-align:center;box-shadow:5px 5px 5px #888">Do you have the lease for this space? <%= link_to 'Click Here', new_space_lease_path(@space) %></td>
       </tr>
     </table>
   <% end %>
+<% end %>
 <% end %>
 
   <table width="100%">
