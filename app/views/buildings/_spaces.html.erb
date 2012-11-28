@@ -9,7 +9,7 @@
   </tr>
   <% @spaces.each do |space| %>
   <tr>
-    <td width="25%" style="text-align:left"><%= link_to space.suite, building_space_path(@building,space) %></td>
+    <td width="25%" style="text-align:left"><%= link_to space.suite, building_space_path(@building.id,space) %></td>
     <td width="30%" style="text-align:right"><%= space.sf %>sf</td>
     <td style="text-align:right"><%= space.status %></td>
   </tr>

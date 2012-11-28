@@ -15,10 +15,12 @@
   <table width="100%">
     <tr>
       <td colspan="2" style="text-align:right">
-        <% if user_signed_in? && @lease.user_id == current_user.id %>
-          <%= link_to 'See Lease', space_lease_path(@space,@lease) %> |
-          <%= link_to 'Edit Stats', edit_building_space_path(@building,@space) %>
+        <% if @leases.present? %>
+          <% if user_signed_in? && @lease.user_id == current_user.id %>
+            <%= link_to 'See Lease', space_lease_path(@space,@lease) %> |
+            <%= link_to 'Edit Stats', edit_building_space_path(@building.id,@space) %>
           <% end %>  
+        <% end %>
 
         <%= link_to image_tag("https://github.com/intridea/authbuttons/raw/master/png/twitter_64.png", :size => "30x30", :alt => "Twitter"), "http://twitter.com/home?status=Saw this on Trackingspace: http://#{request.host+request.fullpath}", :target => '_blank' %>
         <%= link_to image_tag("http://github.com/intridea/authbuttons/raw/master/png/facebook_64.png", :size => "30x30"), "http://www.facebook.com/sharer.php?u=http://#{request.host+request.fullpath}", :target => '_blank' %>
