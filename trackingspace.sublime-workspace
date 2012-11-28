@@ -322,30 +322,6 @@
 				"buffer_size": 5488,
 				"line_ending": "Windows"
 			}
-		},
-		{
-			"file": "app/assets/stylesheets/navigation.css.scss",
-			"settings":
-			{
-				"buffer_size": 763,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/assets/stylesheets/media.css",
-			"settings":
-			{
-				"buffer_size": 1402,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/views/buildings/show.html.erb",
-			"settings":
-			{
-				"buffer_size": 4155,
-				"line_ending": "Windows"
-			}
 		}
 	],
 	"build_system": "",
@@ -372,18 +348,19 @@
 	},
 	"file_history":
 	[
-		"/C/Users/david/trackingspace/app/views/spaces/show.html.erb",
-		"/C/Users/david/trackingspace/app/views/buildings/show.html.erb",
-		"/C/Users/david/trackingspace/Gemfile",
 		"/C/Users/david/trackingspace/app/assets/stylesheets/media.css",
+		"/C/Users/david/trackingspace/app/views/buildings/show.html.erb",
 		"/C/Users/david/trackingspace/app/assets/stylesheets/layout.css",
+		"/C/Users/david/trackingspace/app/assets/stylesheets/gmaps4rails.css",
+		"/C/Users/david/trackingspace/app/assets/stylesheets/navigation.css.scss",
+		"/C/Users/david/trackingspace/app/views/spaces/show.html.erb",
+		"/C/Users/david/trackingspace/Gemfile",
 		"/C/Users/david/trackingspace/config/routes.rb",
 		"/C/Users/david/trackingspace/app/views/layouts/application.html.erb",
 		"/C/Users/david/trackingspace/app/views/layouts/_header.html.erb",
 		"/C/Users/david/trackingspace/app/views/layouts/_main_nav.html.erb",
 		"/C/Users/david/trackingspace/app/controllers/pages_controller.rb",
 		"/C/Users/david/trackingspace/app/views/pages/earlyadopter.html.erb",
-		"/C/Users/david/trackingspace/app/assets/stylesheets/navigation.css.scss",
 		"/C/Users/david/trackingspace/app/views/pages/people_main.html.erb",
 		"/C/Users/david/trackingspace/app/views/users/_leases.html.erb",
 		"/C/Users/david/trackingspace/app/views/pages/buildings_main.html.erb",
@@ -498,8 +475,7 @@
 		"/C/Users/david/trackingspace/app/views/pages/help.html.erb",
 		"/C/Users/david/trackingspace/app/views/pages/_building_unfollow.html.erb",
 		"/C/Users/david/trackingspace/app/views/building_relationships/destroy.js.erb",
-		"/C/Users/david/trackingspace/app/views/building_relationships/create.js.erb",
-		"/C/Users/david/trackingspace/app/views/user_relationships/create.js.erb"
+		"/C/Users/david/trackingspace/app/views/building_relationships/create.js.erb"
 	],
 	"find":
 	{
@@ -587,7 +563,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -614,87 +590,6 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 523.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "app/assets/stylesheets/navigation.css.scss",
-					"settings":
-					{
-						"buffer_size": 763,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								714,
-								714
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "app/assets/stylesheets/media.css",
-					"settings":
-					{
-						"buffer_size": 1402,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								443,
-								443
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 111.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "app/views/buildings/show.html.erb",
-					"settings":
-					{
-						"buffer_size": 4155,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								4154,
-								4130
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1443.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

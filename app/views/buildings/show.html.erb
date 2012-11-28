@@ -6,7 +6,7 @@
 			<table width="100%">
 				<tr>
 					<% if user_signed_in? %>
-						<td width="50px">
+						<td width="80px">
 							<div id="building_follow_form">
 								<% if current_user.building_following?(@building) %>
 									<%= render 'pages/building_unfollow' %>
@@ -15,7 +15,7 @@
 								<% end %>
 							</div>
 						</td>
-					<td colspan="2">
+					<td colspan="2" class="title"><%= truncate(@building.address, :length => 20, :separator => ',', :omission => '') %></td>
 					<% else %>
 					<td>
 						<%= button_to 'Sign-In', new_user_session_path, :class => 'button' %>
@@ -23,23 +23,16 @@
 					<td colspan="2">
 					<% end %>
 					</td>
-					<td style="text-align:right" width="60px">
-						<% unless mobile_device? %>
-					  		<%= link_to image_tag("https://github.com/intridea/authbuttons/raw/master/png/twitter_64.png", :size => "30x30", :alt => "Twitter"), "http://twitter.com/home?status=Saw this on Trackingspace: http://#{request.host+request.fullpath}", :target => '_blank', :title => 'Share with Twitter' %>
+					<td style="text-align:right" width="80px">
+					  		<%= link_to image_tag("https://github.com/intridea/authbuttons/raw/master/png/twitter_64.png", :size => "30x30", :alt => "Twitter"), "http://twitter.com/home?status=@trackingspace Found this on Trackingspace: http://#{request.host+request.fullpath}", :target => '_blank', :title => 'Share with Twitter' %>
 						  	<%= link_to image_tag("http://github.com/intridea/authbuttons/raw/master/png/facebook_64.png", :size => "30x30"), "http://www.facebook.com/sharer.php?u=http://#{request.host+request.fullpath}", :target => '_blank', :title => 'Share with FaceBook' %>
-						<% else %>
-							<%= link_to image_tag("https://github.com/intridea/authbuttons/raw/master/png/twitter_64.png", :size => "50x50", :alt => "Twitter"), "http://twitter.com/home?status=Saw this on Trackingspace: http://#{request.host+request.fullpath}", :target => '_blank', :title => 'Share with Twitter' %>
-						  	<%= link_to image_tag("http://github.com/intridea/authbuttons/raw/master/png/facebook_64.png", :size => "50x50"), "http://www.facebook.com/sharer.php?u=http://#{request.host+request.fullpath}", :target => '_blank', :title => 'Share with FaceBook' %>
-						<% end %>
 					</td>
 				</tr>
 				<tr>
-					<td colspan="4" class="title">
-						<%= truncate(@building.address, :length => 20, :separator => ',', :omission => '') %>
-					</td>
+					<td colspan="4" style="font-size:.9em;text-align:center"><%= @building.address %></td>
 				</tr>
-				<tr>
-					<td colspan="4" style="font-size:.7em;text-align:center"><%= @building.address %></td>
+			</table>
+			<table width="100%">
 				<tr>
 					<td colspan="4"><hr/></td>
 				</tr>
