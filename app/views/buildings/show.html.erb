@@ -20,7 +20,7 @@
 					<td>
 						<%= button_to 'Sign-In', new_user_session_path, :class => 'button' %>
 					</td>
-					<td colspan="2">
+					<td colspan="2" class="title"><%= truncate(@building.address, :length => 20, :separator => ',', :omission => '') %></td>
 					<% end %>
 					</td>
 					<td style="text-align:right" width="80px">
