@@ -107,6 +107,22 @@
 
 	<% unless mobile_device? %>
 		<%= content_for :sidebar do %>
+		<table>
+			<tr>
+				<td width="250px" style="border-radius:8px;border:2px dashed #888888;text-align:center;padding:8px"><%=link_to image_tag("topsecret.gif", :size => '180x150'), new_user_session_path, :title => 'Members can update building data - premium members have access to greater data.' %></td>
+			</tr>
+			<tr>
+				<td height="10px"/>
+			</tr>
+			<%= link_to "Edit Building", edit_building_path(@building) %>
+			<% if @building.videourl %>
+			<tr>
+				<td width="250px">
+					<iframe width="250" height="141" src="<%= "http://www.youtube.com/embed/"+@building.videourl+"?autoplay=1" %> frameborder="0"></iframe>
+				</td>
+			</tr>
+			<% end %>
+		</table>
 			<% if user_signed_in? %>
 	          <%= render 'shared/recent' %>
 	        <% end %>

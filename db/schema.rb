@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121112041357) do
+ActiveRecord::Schema.define(:version => 20121128031808) do
 
   create_table "ads", :force => true do |t|
     t.integer  "building_id"
@@ -69,6 +69,7 @@ ActiveRecord::Schema.define(:version => 20121112041357) do
     t.string   "country"
     t.string   "pretty_url"
     t.string   "slug"
+    t.string   "videourl"
   end
 
   add_index "buildings", ["slug"], :name => "index_buildings_on_slug"
