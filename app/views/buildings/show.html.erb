@@ -114,7 +114,9 @@
 			<tr>
 				<td height="10px"/>
 			</tr>
+			<% if user_signed_in? %>
 			<%= link_to "Edit Building", edit_building_path(@building) %>
+			<% end %>
 			<% if @building.videourl %>
 			<tr>
 				<td width="250px">
