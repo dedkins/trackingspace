@@ -76,7 +76,7 @@
     <table width="100%">
       <tr>
         <td >
-          <iframe width="100%" height="500px" src="<%= "http://www.youtube.com/embed/"+@space.videourl+"?autoplay=1" %> frameborder="0"></iframe>
+          <object width="100%" height="500px"><param name="movie" value=<%= "http://www.youtube.com/v/"+@space.videourl+"?version=3&amp;autoplay=1&amp;hl=en_US" %>></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src=<%= "http://www.youtube.com/v/"+@space.videourl+"?version=3&amp;autoplay=1&amp;hl=en_US" %> type="application/x-shockwave-flash" width="100%" height="500px" allowscriptaccess="always" allowfullscreen="true"></embed></object>
         </td>
       </tr>
     </table>
