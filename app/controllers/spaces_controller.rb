@@ -65,7 +65,7 @@ class SpacesController < ApplicationController
     respond_to do |format|
       if @space.update_attributes(params[:space])
         @micropost.save!
-        format.html { redirect_to [@building], notice: 'Space was successfully updated.' }
+        format.html { redirect_to building_space_path(@building.id,@space), notice: 'Space was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
