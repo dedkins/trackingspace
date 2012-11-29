@@ -335,7 +335,7 @@
 			"file": "app/views/spaces/show.html.erb",
 			"settings":
 			{
-				"buffer_size": 4080,
+				"buffer_size": 4448,
 				"line_ending": "Windows"
 			}
 		}
@@ -514,6 +514,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"r9yJrxSD7dc",
 			"pretty_url",
 			"street_address",
 			"addresspicker",
@@ -643,15 +644,15 @@
 					"file": "app/views/spaces/show.html.erb",
 					"settings":
 					{
-						"buffer_size": 4080,
+						"buffer_size": 4448,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1171,
-								1171
+								3401,
+								3401
 							]
 						],
 						"settings":
@@ -661,7 +662,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 203.0,
+						"translation.y": 938.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

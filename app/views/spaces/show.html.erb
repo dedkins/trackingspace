@@ -108,6 +108,7 @@
 </table>
 
 <%= content_for :sidebar do %>
+<% if @space.videourl %>
   <table>
     <tr>
       <td>
@@ -115,5 +116,6 @@
       </td>
     </tr>
   </table>
+<% end %>
 <% end %>
 
