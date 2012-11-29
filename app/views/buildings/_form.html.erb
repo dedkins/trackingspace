@@ -15,8 +15,10 @@
   <div>
 
       <div class='field'>
-        <%= f.label "Building Size" %> <%= f.number_field :size %>    
-        <%= f.label "YouTube Video Embed URL" %> <%=f.text_field :videourl %> <%= f.submit %>
+        <%= f.label "Building Size" %> <%= f.number_field :size %>  
+      </div>
+      <div>  
+        <%= f.label "YouTube Video Embed Code" %> <%=f.text_field :videourl, :placeholder => 'x9Jt0tyz' %> <%= f.submit %>
       </div>
       
       <p></P>

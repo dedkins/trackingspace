@@ -14,7 +14,12 @@
 
   <table width="100%">
     <tr>
-      <td colspan="2" style="text-align:right">
+      <td style="text-align:left">
+        <% if user_signed_in? %>
+          <%= link_to 'Edit Space Details', edit_building_space_path(@building.id,@space) %>
+        <% end %>
+      </td>
+      <td style="text-align:right">
         <% if @leases.present? %>
           <% if user_signed_in? && @lease.user_id == current_user.id %>
             <%= link_to 'See Lease', space_lease_path(@space,@lease) %> |
@@ -67,6 +72,15 @@
         </tr>
       </table>
       <hr/>
+  <% if mobile_device? && @space.videourl %>
+    <table width="100%">
+      <tr>
+        <td >
+          <iframe width="100%" height="500px" src="<%= "http://www.youtube.com/embed/"+@space.videourl+"?autoplay=1" %> frameborder="0"></iframe>
+        </td>
+      </tr>
+    </table>
+  <% end %>
 <table width="100%">
   <tr>
     <td class="building_contact_ads"><%= render 'ads/space_slot1' %></td>
@@ -94,6 +108,12 @@
 </table>
 
 <%= content_for :sidebar do %>
-
+  <table>
+    <tr>
+      <td>
+        <iframe width="250" height="141" src="<%= "http://www.youtube.com/embed/"+@space.videourl+"?autoplay=1" %> frameborder="0"></iframe>
+      </td>
+    </tr>
+  </table>
 <% end %>
 

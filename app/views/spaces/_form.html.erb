@@ -1,7 +1,5 @@
 <%= form_for ([@building,@space]) do |f| %>
 
-<%= currently_at 'Buildings' %>
-
 <%= content_for :search do %>
   <% if notice %>
     <p class="notification notice">
@@ -40,6 +38,10 @@
   <tr>
     <td><%= f.label '3D Floorplan URL' %></td>
     <td><%= f.text_field :_3dplanurl, :class => 'field', :title => 'If you have a 3d floorplan url, enter it here' %></td>
+  </tr>
+  <tr>
+    <td><%= f.label 'YouTube Video URL' %></td>
+    <td><%= f.text_field :videourl, :class => 'field', :title => 'Only the last part where the numbers and letters are', :placeholder => 'x8JmfiwOz <---just that part' %></td>
   </tr>
   <tr>
     <td/><td style="padding-left:15px;font-size:.9em"><%= link_to 'Learn more about 3D plans', 'http://www.propertizing.com', :target => '_blank' %></td>
