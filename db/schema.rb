@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121129013636) do
+ActiveRecord::Schema.define(:version => 20121130032436) do
 
   create_table "ads", :force => true do |t|
     t.integer  "building_id"
@@ -128,6 +128,7 @@ ActiveRecord::Schema.define(:version => 20121129013636) do
     t.string   "status"
     t.string   "_3dplanurl"
     t.string   "videourl"
+    t.text     "description"
   end
 
   create_table "spacestatuses", :force => true do |t|

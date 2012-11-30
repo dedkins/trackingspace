@@ -335,7 +335,7 @@
 			"file": "app/views/spaces/show.html.erb",
 			"settings":
 			{
-				"buffer_size": 4848,
+				"buffer_size": 4887,
 				"line_ending": "Windows"
 			}
 		},
@@ -372,6 +372,7 @@
 	},
 	"file_history":
 	[
+		"/C/Users/david/trackingspace/app/views/shared/_feed_item.html.erb",
 		"/C/Users/david/trackingspace/app/views/buildings/_spaces.html.erb",
 		"/C/Users/david/trackingspace/app/assets/stylesheets/layout.css",
 		"/C/Users/david/trackingspace/app/assets/stylesheets/navigation.css.scss",
@@ -471,7 +472,6 @@
 		"/C/Users/david/trackingspace/app/views/users/edit.html.erb",
 		"/C/Users/david/trackingspace/app/controllers/authentications_controller.rb",
 		"/C/Users/david/trackingspace/app/views/user_mailer/upgrade_email.html.erb",
-		"/C/Users/david/trackingspace/app/views/shared/_feed_item.html.erb",
 		"/C/Users/david/trackingspace/app/models/building_relationship.rb",
 		"/C/Users/david/trackingspace/app/views/spaces/edit.html.erb",
 		"/C/Users/david/trackingspace/app/views/user_mailer/upgrade_notification.html.erb",
@@ -652,15 +652,15 @@
 					"file": "app/views/spaces/show.html.erb",
 					"settings":
 					{
-						"buffer_size": 4848,
+						"buffer_size": 4887,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4793,
-								4793
+								4261,
+								4261
 							]
 						],
 						"settings":
@@ -670,7 +670,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1206.0,
+						"translation.y": 1268.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -697,7 +697,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1450.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

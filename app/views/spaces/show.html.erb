@@ -14,29 +14,25 @@
 
   <table width="100%">
     <tr>
-      <td style="text-align:left">
+      <td style="text-align:left" width="120px">
         <% if user_signed_in? %>
           <%= link_to 'Edit Space Details', edit_building_space_path(@building.id,@space) %>
         <% end %>
       </td>
-      <td style="text-align:right">
+      <td class="title">Suite <%= @space.suite %></td>
+      <td style="text-align:right" width="120px">
         <% if @leases.present? %>
           <% if user_signed_in? && @lease.user_id == current_user.id %>
-            <%= link_to 'See Lease', space_lease_path(@space,@lease) %> |
-            <%= link_to 'Edit Stats', edit_building_space_path(@building.id,@space) %>
+            <%= link_to 'See Lease', space_lease_path(@space,@lease) %>
           <% end %>  
         <% end %>
 
         <%= link_to image_tag("https://github.com/intridea/authbuttons/raw/master/png/twitter_64.png", :size => "30x30", :alt => "Twitter"), "http://twitter.com/home?status=@trackingspace Found this on Trackingspace: http://#{request.host+request.fullpath}", :target => '_blank' %>
         <%= link_to image_tag("http://github.com/intridea/authbuttons/raw/master/png/facebook_64.png", :size => "30x30"), "http://www.facebook.com/sharer.php?u=http://#{request.host+request.fullpath}", :target => '_blank' %>
-    </td>   
-      </td>
+    </td>
     </tr>
     <tr>
-      <td class="title" colspan="2">Suite <%= @space.suite %></td>
-    </tr>
-    <tr>
-      <td style="text-align:center" colspan="2"><%= link_to @space.building.address, building_path(@space.building.id) %></td>
+      <td style="text-align:center" colspan="3"><%= link_to @space.building.address, building_path(@space.building.id) %></td>
   </table>
   <hr/>
       <table>
@@ -108,6 +104,7 @@
 </table>
 
 <%= content_for :sidebar do %>
+
 <% if @space.videourl %>
   <table>
     <tr>
