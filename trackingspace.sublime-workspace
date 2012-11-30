@@ -335,7 +335,15 @@
 			"file": "app/views/spaces/show.html.erb",
 			"settings":
 			{
-				"buffer_size": 4448,
+				"buffer_size": 4848,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/views/buildings/show.html.erb",
+			"settings":
+			{
+				"buffer_size": 4346,
 				"line_ending": "Windows"
 			}
 		}
@@ -364,6 +372,7 @@
 	},
 	"file_history":
 	[
+		"/C/Users/david/trackingspace/app/views/buildings/_spaces.html.erb",
 		"/C/Users/david/trackingspace/app/assets/stylesheets/layout.css",
 		"/C/Users/david/trackingspace/app/assets/stylesheets/navigation.css.scss",
 		"/C/Users/david/trackingspace/app/views/buildings/_form.html.erb",
@@ -378,7 +387,6 @@
 		"/C/Users/david/trackingspace/app/models/space.rb",
 		"/C/Users/david/trackingspace/app/views/buildings/show.html.erb",
 		"/C/Users/david/trackingspace/app/models/building.rb",
-		"/C/Users/david/trackingspace/app/views/buildings/_spaces.html.erb",
 		"/C/Users/david/trackingspace/app/views/buildings/_est_value.html.erb",
 		"/C/Users/david/trackingspace/app/views/layouts/_allnewbuildings.html.erb",
 		"/C/Users/david/trackingspace/app/views/layouts/_allnewusers.html.erb",
@@ -644,15 +652,15 @@
 					"file": "app/views/spaces/show.html.erb",
 					"settings":
 					{
-						"buffer_size": 4448,
+						"buffer_size": 4848,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3401,
-								3401
+								4793,
+								4793
 							]
 						],
 						"settings":
@@ -662,7 +670,34 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 938.0,
+						"translation.y": 1206.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/views/buildings/show.html.erb",
+					"settings":
+					{
+						"buffer_size": 4346,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4297,
+								4297
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1450.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
