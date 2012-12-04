@@ -23,6 +23,16 @@
 
 <% unless user_signed_in? %>
 
+<table width="100%" style="border:1px dashed #888;border-radius:5px;padding:10px;background:#FFFFCC">
+	<tr>
+		<td class="title" style="color:red">attention</td>
+	</tr>
+	<tr>
+		<td style="padding:10px">We are currently in pre-release...shaping and forming the final release product. 
+		&nbsp;&nbsp;In the meantime, we are offering a sneak peak to those that tend to pride themselves as early adopters.&nbsp;&nbsp;The site is free for the casual user; and will remain that way.&nbsp;&nbsp;For those that intend on advertising their listings or services on buildings and spaces...this is a tremendous opportunity to plaster their name everywhere for one low monthly fee.&nbsp;&nbsp;We are looking forward to building the best commercial real estate system available...and it starts with people like you.&nbsp;&nbsp;Thank you.&nbsp;&nbsp;You can read the early-adopter invite here: <%= link_to 'Early Adopter Invite', earlyadopter_path %>&nbsp;&nbsp;You can follow us on twitter at: <%= link_to '@trackingspace', 'http://www.twitter.com/@trackingspace', :target=>"_blank" %></td>
+	</tr>
+</table>
+
 <h3>The Non-Listing Service</h3>
 <p>
 TrackingSpace is not another listing service.  It is not a listing service at all.  It is a means by which businesses leasing commercial real estate space can track not only the leases on their space but other spaces as well.  Additionally, members of this service can observe changes that occur with buildings, spaces and other members.  Access is free.  Only those that wish to show their connection with a given building/space may opt for an upgrade.  Otherwise, feel free to become a member and start tracking. 
