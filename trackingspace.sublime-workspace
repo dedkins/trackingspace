@@ -335,7 +335,7 @@
 			"file": "app/views/spaces/show.html.erb",
 			"settings":
 			{
-				"buffer_size": 4742,
+				"buffer_size": 4774,
 				"line_ending": "Windows"
 			}
 		},
@@ -343,7 +343,7 @@
 			"file": "app/views/buildings/show.html.erb",
 			"settings":
 			{
-				"buffer_size": 4346,
+				"buffer_size": 4382,
 				"line_ending": "Windows"
 			}
 		}
@@ -588,7 +588,7 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -614,7 +614,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1487.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -652,15 +652,15 @@
 					"file": "app/views/spaces/show.html.erb",
 					"settings":
 					{
-						"buffer_size": 4742,
+						"buffer_size": 4774,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								747,
-								747
+								4179,
+								4179
 							]
 						],
 						"settings":
@@ -670,7 +670,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 69.0,
+						"translation.y": 1261.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -680,15 +680,15 @@
 					"file": "app/views/buildings/show.html.erb",
 					"settings":
 					{
-						"buffer_size": 4346,
+						"buffer_size": 4382,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4297,
-								4297
+								3989,
+								3989
 							]
 						],
 						"settings":
@@ -697,7 +697,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1436.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
