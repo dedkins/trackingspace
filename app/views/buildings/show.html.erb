@@ -117,7 +117,7 @@
 			<% if user_signed_in? %>
 			<%= link_to "Edit Building", edit_building_path(@building) %>
 			<% end %>
-			<% if @building.videourl != nil || @building.videourl == "" %>
+			<% if @building.videourl.present? %>
 			<tr>
 				<td width="250px">
 					<iframe width="250" height="141" src="<%= "http://www.youtube.com/embed/"+@building.videourl+"?autoplay=1" %>" frameborder="0"></iframe>
