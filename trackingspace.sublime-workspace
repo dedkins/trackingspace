@@ -335,7 +335,7 @@
 			"file": "app/views/spaces/show.html.erb",
 			"settings":
 			{
-				"buffer_size": 4887,
+				"buffer_size": 4742,
 				"line_ending": "Windows"
 			}
 		},
@@ -588,7 +588,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -652,15 +652,15 @@
 					"file": "app/views/spaces/show.html.erb",
 					"settings":
 					{
-						"buffer_size": 4887,
+						"buffer_size": 4742,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4261,
-								4261
+								747,
+								747
 							]
 						],
 						"settings":
@@ -670,7 +670,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1268.0,
+						"translation.y": 69.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
