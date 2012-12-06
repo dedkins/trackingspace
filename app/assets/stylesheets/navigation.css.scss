@@ -7,15 +7,15 @@ nav#main_nav {
 		color: #fff;
 		display: inline-block;
 		margin: -8px 1px 1px 1px;
-		padding: 5px 15px;
+		padding: 2px 15px;
 		a, a:link, a:visited {
 			color: #fff;
-			font-size: 1.2em;
+			font-size: 1.1em;
 			text-decoration: none;	
 		}
 		&.active {
 			color: #fff;
-			padding: 5px 15px;
+			padding: 2px 15px;
 			border-bottom: 5px solid orange;
 			a,
 			a:link,
