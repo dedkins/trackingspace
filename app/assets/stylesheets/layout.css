@@ -380,6 +380,19 @@ section#search {
   line-height: 1.25;
 }
 
+.premium {
+  border:1px solid #888;
+  border-radius: 3px;
+  background: #E0EEEE;
+  color:#000;
+  font-size:.7em;
+  text-align: center;
+  text-shadow: 1px 1px 2px #ffffff;
+  padding:1.5px 10px;
+  margin-left:8px;
+  box-shadow: 1px 1px 1px #888;
+  vertical-align: top;
+}
 
 .value {
   margin: auto;

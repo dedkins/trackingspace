@@ -30,7 +30,11 @@
 			<% end %>
 
 			<td style="text-align:left;">
-				<span class="title"><%= @user.name %></span><br/>
+				<span class="title"><%= @user.name %></span>
+				<% if @user.upgrade == 'Upgrade59' %>
+				<span class="premium">premium</span>
+				<% end %>
+				<br/>
 				<span style="font-size:.8em;text-transform:uppercase">Member Since: <%= @user.created_at.strftime("%b %d, %Y") %></span>
 			</td>
 			<td width="60px">
@@ -119,22 +123,5 @@
 		<% end %>
 
 	<%= content_for :search do %>
-		<% if user_signed_in? %>
-			<% if @user.upgrade == 'Upgrade59' and current_user.upgrade != 'Upgrade59' %>
-				<table width="100%">
-					<tr>
-						<td style="background:#FFFF7E;padding:15px;text-align:center;box-shadow:5px 5px 5px #888;border:1px solid #888888"><%= truncate(@user.name, :length => 10, :separator => ' ', :omission => '') %> is a premium user and has access to more information.<br/>That shows commitment.  Stick around; they're going places.</td>
-					</tr>
-				</table>
-			<% end %>
-		<% else %>
-			<% if @user.upgrade %>
-				<table width="100%">
-					<tr>
-						<td style="background:#FFFF7E;padding:15px;text-align:center;box-shadow:5px 5px 5px #888;border:1px solid #888888"><%= truncate(@user.name, :length => 10, :separator => ' ', :omission => '') %> is a premium user and has access to more information.<br/>That shows commitment.  Stick around; they're going places.</td>
-					</tr>
-				</table>
-			<% end %>
-		<% end %>
 	<% end %>
 	</table>
