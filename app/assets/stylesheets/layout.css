@@ -1,5 +1,6 @@
 /*@import url(http://fonts.googleapis.com/css?family=Open+Sans);*/
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro|Open+Sans);
+@import url(http://fonts.googleapis.com/css?family=Syncopate);
 
 /*html {
   background: url(/assets/SanDiegoSkyline.jpg) no-repeat center center fixed;
@@ -136,8 +137,7 @@ section#content {
   margin-top: 20px;
   background: #fff;
   padding: 20px 30px 30px 30px;
-  border: 1px solid #888888;
-  box-shadow: 0 5px 5px 0 #888888;
+  border: 1px solid #0198E1;
 }
 
 a {
@@ -353,9 +353,9 @@ section#search {
   margin: auto;
   padding: 10px;
   height: 20px;
-  font-size: 1.5em;
+  font-size: 1.25em;
   text-shadow: 1px 1px 2px #fff;
-  color: green;
+  color: #0198E1;
   font-weight: bold;
   text-align: center;
   }
@@ -380,13 +380,19 @@ section#search {
   background: #FEF1B5;
 }
 
-.title {
+/*.title {
   letter-spacing: 8px;
   text-transform: uppercase;
   text-align: center;
   font-size: 1.8em;
   padding: 10px 0 10px 0;
   line-height: 1.25;
+}*/
+
+.title {
+  font-size: 2.25em;
+  font-family: 'Syncopate', sans-serif;
+  color: #888888;
 }
 
 .premium {
@@ -537,6 +543,25 @@ section#search {
   .button_follow:hover {
     color: #ffffff;
     text-shadow: 1px 1px 2px #000000  ;
+  }
+
+  .trackbutton {
+    color:#ffffff;
+    background: #0198E1;
+    height: 20px;
+    width: 50px;
+    font-size: .7em;
+    border:0px;
+    vertical-align: bottom;
+  }
+  .untrackbutton {
+    color:red;
+    background: #f0f0f0;
+    height: 20px;
+    width: 50px;
+    font-size: .7em;
+    border:0px;
+    vertical-align: bottom;
   }
 
   .button_unfollow {

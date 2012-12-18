@@ -8,7 +8,9 @@
 			<table width="100%">
 				<tr>
 					<% if user_signed_in? %>
-						<td width="80px">
+						<td class="title" ><%= truncate(@building.address, :length => 20, :separator => ',', :omission => '') %>
+						</td>
+						<td colspan="2" style="text-align:right">
 							<div id="building_follow_form">
 								<% if current_user.building_following?(@building) %>
 									<%= render 'pages/building_unfollow' %>
@@ -17,57 +19,38 @@
 								<% end %>
 							</div>
 						</td>
-					<td colspan="2" class="title"><%= truncate(@building.address, :length => 20, :separator => ',', :omission => '') %></td>
 					<% else %>
-					<td>
-						<%= button_to 'Sign-In', new_user_session_path, :class => 'button' %>
-					</td>
-					<td colspan="2" class="title"><%= truncate(@building.address, :length => 20, :separator => ',', :omission => '') %></td>
+					<td colspan="3" class="title"><%= truncate(@building.address, :length => 20, :separator => ',', :omission => '') %></td>
 					<% end %>
-					</td>
-					<td style="text-align:right" width="80px">
+					<td style="text-align:right" width="70px">
 					  		<%= link_to image_tag("https://github.com/intridea/authbuttons/raw/master/png/twitter_64.png", :size => "30x30", :alt => "Twitter"), "http://twitter.com/home?status=@trackingspace Found this on Trackingspace: http://#{request.host+request.fullpath}", :target => '_blank', :title => 'Share with Twitter' %>
 						  	<%= link_to image_tag("http://github.com/intridea/authbuttons/raw/master/png/facebook_64.png", :size => "30x30"), "http://www.facebook.com/sharer.php?u=http://#{request.host+request.fullpath}", :target => '_blank', :title => 'Share with FaceBook' %>
 					</td>
 				</tr>
 				<tr>
-					<td colspan="4" style="font-size:.9em;text-align:center"><%= @building.address %></td>
+					<td colspan="4" style="font-size:.9em;color:#666666"><%= @building.address %></td>
 				</tr>
 			</table>
 			<table width="100%">
 				<tr>
-					<td colspan="4"><hr/></td>
-				</tr>
-				<tr>
-					<td >
+					<td width="20%">
 						<div class="top_words">
 							<%= render 'est_value' %>
 						</div>
 					</td>
-					<td >
+					<td width="15%">
+						<div class="top_words">
+							<%= number_with_precision(@building.size, :precision => 0, :delimiter => ",") %>sf
+						</div>
+					</td>
+					<td width="15%">
 						<div class="top_words">
 							<%= render 'avg_rate' %>
 						</div>
 					</td>
-					<td >
-						<div class="top_words">
-							<%= @spaces.count %>
-						</div>
-					</td>
-					<td >
-						<div class="top_words">
-							<%= @building.microposts.count %>
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td width="25%" style="font-size:0.8em;text-align:center">Rough Value Estimate</td>
-					<td width="15%" style="font-size:0.8em;text-align:center">Average Rate</td>
-					<td width="15%" style="font-size:0.8em;text-align:center">Current Spaces</td>
-					<td width="15%" style="font-size:0.8em;text-align:center">Activity</td>
+					<td width="50%"/>
 				</tr>
 			</table>
-			<hr/>	
 			<table width="100%">
 				<tr>
 						<td colspan="4">
