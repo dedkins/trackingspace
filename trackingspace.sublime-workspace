@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"margin",
+				"margin-top"
+			],
+			[
 				"tex",
 				"text-decoration"
 			],
@@ -58,10 +62,6 @@
 			[
 				"padding",
 				"padding-top"
-			],
-			[
-				"margin",
-				"margin-top"
 			],
 			[
 				"st",
@@ -355,7 +355,7 @@
 			"file": "app/assets/stylesheets/home_html.css",
 			"settings":
 			{
-				"buffer_size": 3589,
+				"buffer_size": 3584,
 				"line_ending": "Windows"
 			}
 		},
@@ -363,7 +363,7 @@
 			"file": "app/views/buildings/home.html.erb",
 			"settings":
 			{
-				"buffer_size": 1648,
+				"buffer_size": 1638,
 				"line_ending": "Windows"
 			}
 		}
@@ -610,7 +610,7 @@
 	"groups":
 	[
 		{
-			"selected": 5,
+			"selected": 4,
 			"sheets":
 			[
 				{
@@ -729,15 +729,15 @@
 					"file": "app/assets/stylesheets/home_html.css",
 					"settings":
 					{
-						"buffer_size": 3589,
+						"buffer_size": 3584,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3012,
-								3012
+								2791,
+								2791
 							]
 						],
 						"settings":
@@ -747,7 +747,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 425.0,
+						"translation.y": 1248.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -757,15 +757,15 @@
 					"file": "app/views/buildings/home.html.erb",
 					"settings":
 					{
-						"buffer_size": 1648,
+						"buffer_size": 1638,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								541,
-								541
+								1621,
+								1621
 							]
 						],
 						"settings":

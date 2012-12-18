@@ -10,10 +10,16 @@
               <div class="hometitle">
                 find your building by address:
               </div>
-              
-                <%= f.text_field :address, :id => "addresspicker_map", :placeholder => '1020 Sun Down Way, Roseville', :class => 'search' %>
-              
-              <%= image_submit_tag("Magnifying.png", :class => 'mag_glass', :title => 'Click this to look it up') %>
+              <table>
+                <tr>
+                  <td><%= f.text_field :address, :id => "addresspicker_map", :placeholder => '1020 Sun Down Way, Roseville', :class => 'search' %></td>
+                  <td>
+                    <div class="searchglass">
+                      <%= image_submit_tag("MagGlass.png", :class => 'mag_glass', :title => 'Click this to look it up') %>
+                    </div>
+                  </td>
+                </tr>
+              </table>
               <%= f.hidden_field :latitude, :id => "lat" %>
               <%= f.hidden_field :longitude, :id => "lng" %>
               <%= f.hidden_field :street_number, :id => "street_number" %>
