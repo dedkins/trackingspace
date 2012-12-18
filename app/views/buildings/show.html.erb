@@ -22,7 +22,7 @@
 					<% else %>
 					<td colspan="3" class="title"><%= truncate(@building.address, :length => 20, :separator => ',', :omission => '') %></td>
 					<% end %>
-					<td style="text-align:right" width="70px">
+					<td style="text-align:right" width="75px">
 					  		<%= link_to image_tag("https://github.com/intridea/authbuttons/raw/master/png/twitter_64.png", :size => "30x30", :alt => "Twitter"), "http://twitter.com/home?status=@trackingspace Found this on Trackingspace: http://#{request.host+request.fullpath}", :target => '_blank', :title => 'Share with Twitter' %>
 						  	<%= link_to image_tag("http://github.com/intridea/authbuttons/raw/master/png/facebook_64.png", :size => "30x30"), "http://www.facebook.com/sharer.php?u=http://#{request.host+request.fullpath}", :target => '_blank', :title => 'Share with FaceBook' %>
 					</td>

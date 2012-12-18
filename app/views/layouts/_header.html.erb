@@ -1,7 +1,7 @@
   <header id="top">
     <table width="100%">
       <tr>
-        <td width="500px">
+        <td width="420px">
           <%= yield :main_navigation %>
         </td>
         <% unless mobile_device? %>
@@ -31,15 +31,12 @@
                 <% end %>
               <% end %>
           </td>
-          <td width="400px" style="text-align:right">
+          <td width="300px" style="text-align:right">
             <nav id="utility">
-                <%= mail_to "dedkins@trackingspace.com", "Help", :subject => 'Need Help with TrackingSpace', :class => 'top' %> |
                 <% if user_signed_in? %>
                   <%= current_user.email %> |
                   <% unless current_user.upgrade == 'Upgrade59' %>
                     <%= link_to 'Upgrade', upgrade_path, :class => 'top' %> |
-                  <% else %>
-                    <%= link_to 'Downgrade', '', :class => 'top' %> |
                   <% end %>
                   <%= link_to "Sign Out", destroy_user_session_path, :method => 'delete', :class => 'top' %>
                 <% else %>
