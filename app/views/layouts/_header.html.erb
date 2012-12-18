@@ -1,11 +1,37 @@
   <header id="top">
     <table width="100%">
       <tr>
-        <td>
+        <td width="400px">
           <%= yield :main_navigation %>
         </td>
         <% unless mobile_device? %>
-          <td>
+          <td id="topsearch">
+            <table width="100%">
+              <%= form_for Building.new do |f| %>
+                <tr>
+                  <td><%= f.text_field :address, :id => "addresspicker_map", :placeholder => 'Type address to search...', :class => 'search' %></td>
+                  <td width="50px">
+                    <div class="searchglass">
+                      <%= image_submit_tag("MagGlass.png", :class => 'mag_glass', :title => 'Click this to look it up') %>
+                    </div>
+                  </td>
+                </tr>
+              </table>
+              <%= f.hidden_field :latitude, :id => "lat" %>
+              <%= f.hidden_field :longitude, :id => "lng" %>
+              <%= f.hidden_field :street_number, :id => "street_number" %>
+              <%= f.hidden_field :route, :id => "route" %>
+              <%= f.hidden_field :locality, :id => "locality" %>
+              <%= f.hidden_field :administrative_area_level_1, :id => "administrative_area_level_1" %>
+              <%= f.hidden_field :administrative_area_level_2, :id => "administrative_area_level_2" %>
+              <%= f.hidden_field :postal_code, :id => "postal_code" %>
+              <%= f.hidden_field :country, :id => "country" %>
+                <% if user_signed_in? %>
+                <%= f.hidden_field :user_id, :value => current_user.id %>
+                <% end %>
+              <% end %>
+          </td>
+          <td width="300px" style="text-align:right">
             <nav id="utility">
                 <%= mail_to "dedkins@trackingspace.com", "Help", :subject => 'Need Help with TrackingSpace', :class => 'top' %> |
                 <% if user_signed_in? %>

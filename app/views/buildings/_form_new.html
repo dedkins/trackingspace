@@ -1,12 +1,13 @@
 <table width="100%">
 		<tr>
-			<td>
+			<td width="80%">
 				<%= form_for Building.new do |f| %>
 				  	<%= f.error_messages %>
 				    <%= f.text_field :address, :class => "search", :id => "addresspicker_map", :placeholder => 'Find A Building By Address...'%>
 			</td>
-			<td width="80px">
-				    <%= f.submit "GO!", :class => 'button' %>
+			<td width="20%">
+				<div class="searchglass">
+				    <%= image_submit_tag('MagGlass.png', :class => 'mag_glass') %>
 				    <%= f.hidden_field :latitude, :id => "lat" %>
 				    <%= f.hidden_field :longitude, :id => "lng" %>
 				    <%= f.hidden_field :street_number, :id => "street_number" %>
@@ -19,6 +20,7 @@
 				      <% if user_signed_in? %>
 				      <%= f.hidden_field :user_id, :value => current_user.id %>
 				      <% end %>
+				</div>
 				<% end %>
 			</td>
 		</tr>

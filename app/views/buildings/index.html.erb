@@ -1,7 +1,9 @@
 <%= currently_at 'Buildings' %>
 
 <%= content_for :search do %>
-  <%= render 'buildings/form_new' %>
+  <% if mobile_device? %>
+    <%= render 'buildings/form_new' %>
+  <% end %>
 <% end %>
 
 <%= content_for :sidebar do %>
