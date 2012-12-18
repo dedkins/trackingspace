@@ -42,24 +42,25 @@ body {
 }
 
 .mag_glass {
-  height:16px;
-  width: 16px;
+  height:20px;
+  width: 20px;
   text-align: center;
 }
 
 .searchglass {
   position: relative;
   background: #0198E1;
-  padding-top: 5px;
+  padding: 5px 0 0 0;
   width: 60px;
   text-align: center;
   margin-top: 20px;
+  height: 28px;
 }
 
 .search {
   position: relative;
   margin-top: 20px;
-  padding: 5px;
+  padding: 6px;
   border: 1px solid black;
 }
 
@@ -85,7 +86,7 @@ body {
   margin-top:-100px;
   margin-left:-250px;
   border-radius:8px;
-  border:2px solid #888888;
+  border:1.5px solid #ffffff;
   background:#000000;
   opacity: 0.8;
   -moz-opacity: 0.8;
