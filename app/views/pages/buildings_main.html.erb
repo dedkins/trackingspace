@@ -8,7 +8,9 @@
 <% end %>
 
 <%= content_for :search do %>
-	<%= render 'buildings/form_new' %>
+	<% if mobile_device? %>
+		<%= render 'buildings/form_new' %>
+	<% end %>
 <% end %>
 
 <% if user_signed_in? %>
