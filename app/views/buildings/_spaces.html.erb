@@ -1,36 +1,28 @@
 <% if @spaces.any? %>
-<table width="100%">
+<table width="100%" style="border:1px solid orange">
 
-  <tr>
-    <td height="10px"/>
-  </tr>
-  <tr>
-    <td colspan="3" class="listbox_title">Spaces</td>
+  <tr style="background:#888888;color:white;text-align:center;font-size:.9em;border:0px">
+    <th>Suite Num</th>
+    <th>Sq Ft</th>
+    <th>Status</th>
   </tr>
   <% @spaces.each do |space| %>
   <tr>
-    <td width="25%" style="text-align:left"><%= link_to space.suite, building_space_path(@building.id,space) %></td>
-    <td width="30%" style="text-align:right"><%= space.sf %>sf</td>
-    <td style="text-align:right"><%= space.status %></td>
+    <td style="text-align:center"><%= link_to space.suite, building_space_path(@building.id,space) %></td>
+    <td style="text-align:center"><%= space.sf %>sf</td>
+    <td style="text-align:center"><%= space.status %></td>
   </tr>
   <tr>
     <td height="5px"/>
   </tr>
-  <% end %>
-</table>
   <tr>
-    <td height="5px"/>
-  </tr>
-<table>
-  <tr>
-    <td style="text-align:center;font-size:.7em" colspan="3">
+    <td style="text-align:left" colspan="3">
       <% if user_signed_in? %>
-      <%= button_to 'Add New Space for '+truncate(@building.address, :length => 20, :separator => ',', :omission => ''), new_building_space_path(@building), :method => :get, :class => 'button' %>
-      <% else %>
-      <%= button_to 'Sign In to Add Space', new_user_session_path, :class => 'button' %>
+      <%= button_to 'Add New Space', new_building_space_path(@building), :method => :get, :class => 'trackbutton' %>
       <% end %>
     </td>
   </tr>
+  <% end %>
 </table>
 <% else %>
 <table>

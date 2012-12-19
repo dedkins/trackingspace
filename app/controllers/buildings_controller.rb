@@ -75,6 +75,30 @@ class BuildingsController < ApplicationController
 
   def map
   end
+
+  def mapview
+    @building = Building.find(params[:id])
+    @json = Building.find(@building.id).to_gmaps4rails
+    respond_to do |format|
+      format.json { render json: @building }
+      format.js
+    end
+  end
+
+  def videoview
+    @building = Building.find(params[:id])
+    respond_to do |format|
+      format.js
+    end
+  end
+
+  def spacesview
+    @building = Building.find(params[:id])
+    @spaces = Space.find_all_by_building_id(@building.id)
+    respond_to do |format|
+      format.js
+    end
+  end
   
   def home
     if user_signed_in?

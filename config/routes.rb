@@ -41,6 +41,9 @@ Trackingspace::Application.routes.draw do
   resources :authentications
 
   resources :buildings do
+    member do
+      get :mapview, :videoview, :spacesview
+    end
     resources :spaces
   end
 

@@ -20,48 +20,63 @@
 							</div>
 						</td>
 					<% else %>
-					<td colspan="3" class="title"><%= truncate(@building.address, :length => 20, :separator => ',', :omission => '') %></td>
+					<td colspan="3" class="title"><%= truncate(@building.address, :separator => ',', :omission => '') %></td>
 					<% end %>
 					<td style="text-align:right" width="75px">
 					  		<%= link_to image_tag("https://github.com/intridea/authbuttons/raw/master/png/twitter_64.png", :size => "30x30", :alt => "Twitter"), "http://twitter.com/home?status=@trackingspace Found this on Trackingspace: http://#{request.host+request.fullpath}", :target => '_blank', :title => 'Share with Twitter' %>
 						  	<%= link_to image_tag("http://github.com/intridea/authbuttons/raw/master/png/facebook_64.png", :size => "30x30"), "http://www.facebook.com/sharer.php?u=http://#{request.host+request.fullpath}", :target => '_blank', :title => 'Share with FaceBook' %>
 					</td>
 				</tr>
-				<tr>
-					<td colspan="4" style="font-size:.9em;color:#666666"><%= @building.address %></td>
-				</tr>
-			</table>
+					<tr>
+						<td colspan="4" style="font-size:.9em;color:#666666;text-align:left"><%= @building.address %></td>
+					</tr>
+				</table>
 			<table width="100%">
 				<tr>
 					<td width="25%">
-						<div class="top_words">
-							<%= render 'est_value' %>
+							<div class="top_words">
+								<%= render 'est_value' %>
+							</div>
+						</td>
+						<td width="12%">
+							<div class="top_words">
+								<%= render 'avg_rate' %>
+							</div>
+						</td>
+					<td style="text-align:right">
+						<div class="viewbuttoncontainer">
+							<%= button_to 'News', '#', :class => 'viewbutton', :remote => true, :method => 'get' %>
 						</div>
-					</td>
-					<td width="20%">
-						<div class="top_words">
-							<%= number_with_precision(@building.size, :precision => 0, :delimiter => ",") %>sf
+						<div class="viewbuttoncontainer">
+							<%= button_to 'Details', '#', :class => 'viewbutton', :remote => true, :method => 'get' %>
 						</div>
-					</td>
-					<td width="15%">
-						<div class="top_words">
-							<%= render 'avg_rate' %>
+						<div class="viewbuttoncontainer">
+									<% if @building.videourl.present? %>
+									<%= button_to 'Video', videoview_building_path(@building.id), :class => 'viewbutton', :remote => true, :method => 'get' %>
+									<% else %>
+									<%= button_to '+Video', '#', :class => 'viewbutton', :remote => true, :method => 'get' %>
+									<% end %>
 						</div>
+						<div class="viewbuttoncontainer">
+									<%= button_to 'Spaces', spacesview_building_path(@building.id), :class => 'viewbutton', :remote => true, :method => 'get' %>
+						</div>
+						<div class="viewbuttoncontainer">
+									<%= button_to 'Map', mapview_building_path(@building.id), :class => 'viewbutton', :remote => true, :method => 'get' %>
+
 					</td>
-					<td width="40%"/>
 				</tr>
 			</table>
-			<table width="100%">
-				<tr>
-						<td colspan="4">
-						<%= gmaps({
-						  "map_options" => {"auto_zoom" => false, "zoom" => 18, "type" => 'SATELLITE' },
-						  "markers" => {"data" => @json }
-						})
-						%>
-					</td>
-				</tr>
-			</table>
+			<div id="buildingcenter">
+				<% if @building.videourl.present? %>
+					<%= render 'videoview' %>
+				<% else %>
+				<%= gmaps({
+				  "map_options" => {"auto_zoom" => false, "zoom" => 18, "type" => 'SATELLITE' },
+				  "markers" => {"data" => @json }
+				})
+				%>
+				<% end %>
+			</div>
 
 			<table width="100%">
 				<tr>
@@ -94,23 +109,12 @@
 		<%= content_for :sidebar do %>
 		<table>
 			<tr>
-				<td width="250px" style="border-radius:8px;border:2px dashed #888888;text-align:center;padding:8px"><%=link_to image_tag("topsecret.gif", :size => '180x150'), new_user_session_path, :title => 'Members can update building data - premium members have access to greater data.' %></td>
-			</tr>
-			<tr>
 				<td height="10px"/>
 			</tr>
 			<% if user_signed_in? %>
 			<%= link_to "Edit Building", edit_building_path(@building) %>
 			<% end %>
-			<% if @building.videourl.present? %>
-			<tr>
-				<td width="250px">
-					<iframe width="250" height="141" src="<%= "http://www.youtube.com/embed/"+@building.videourl+"?autoplay=1" %>" frameborder="0"></iframe>
-				</td>
-			</tr>
-			<% end %>
 		</table>
-			<%= render 'buildings/spaces' %>
 			<% if user_signed_in? %>
 	          <%= render 'shared/recent' %>
 	        <% end %>

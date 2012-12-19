@@ -1,0 +1,3 @@
+$("#buildingcenter").html("<%= escape_javascript(render('mapview')) %>")
+Gmaps.loadMaps();
+Gmaps.map.addMarkers(json);

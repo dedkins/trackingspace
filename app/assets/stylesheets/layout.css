@@ -351,8 +351,7 @@ section#search {
 
 .top_words {
   margin: auto;
-  padding: 10px;
-  height: 20px;
+  padding: 5px;
   font-size: 1.25em;
   text-shadow: 1px 1px 2px #fff;
   color: #0198E1;
@@ -390,7 +389,7 @@ section#search {
 }*/
 
 .title {
-  font-size: 2.25em;
+  font-size: 1.8em;
   font-family: 'Syncopate', sans-serif;
   color: #888888;
 }
@@ -545,11 +544,27 @@ section#search {
     text-shadow: 1px 1px 2px #000000  ;
   }
 
+  .viewbuttoncontainer {
+    text-align: right;
+    display: inline-block;
+  }
+
+  .viewbutton {
+    color: black;
+    background: orange;
+    height: 25px;
+    width: 60px;
+    font-size: .7em;
+    border: 0px;
+    vertical-align: bottom;
+    margin-bottom: -8px;
+  }
+
   .trackbutton {
     color:#ffffff;
     background: #0198E1;
     height: 20px;
-    width: 50px;
+    padding: 0 5px;
     font-size: .7em;
     border:0px;
     vertical-align: bottom;
