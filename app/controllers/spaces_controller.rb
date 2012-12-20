@@ -45,8 +45,10 @@ class SpacesController < ApplicationController
     respond_to do |format|
       if @space.save
         @micropost.save!
-        format.html { redirect_to [@building], notice: 'Space was successfully created.' }
+        format.html { redirect_to spacesview_building_path(@space.building_id) }
         format.json { render json: [@building], status: :created, location: @space }
+        @building = Building.find(@space.building.id)
+        format.js { redirect_to spacesview_building_path(@space.building_id)}
       else
         flash[:alert] = "Oops - size, suite and monthly are required.  Please try again."
         format.html { render action: "new" }

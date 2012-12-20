@@ -1,0 +1,37 @@
+<%= form_for ([@building,@space]), :remote => true do |f| %>
+
+<table width="100%" height="350px" style="border:1px solid orange;padding: 20px 0;background:#f3f3f3">
+	<tr>
+		<td class="leftpartialform">Suite</td>
+		<td class="rightpartialform"><%= f.text_field :suite %>
+	</tr>
+	<tr>
+		<td class="leftpartialform">Size</td>
+		<td class="rightpartialform"><%= f.number_field :sf %>
+	</tr>
+	<tr>
+		<td class="leftpartialform">Monthly</td>
+		<td class="rightpartialform"><%= f.number_field :monthly %>
+	</tr>
+	<tr>
+	    <td class="leftpartialform"><%= f.label :company %></td>
+	    <td><%= f.text_field :company, :class => 'rightpartialform' %></td>
+	  </tr>
+	  <tr>
+	    <td class="leftpartialform"><%= f.label :status %></td>
+	    <td><%= f.select( :status, ["Available","Leased","Possible"], {}, {:class => "rightpartialform"}) %></td>
+	  </tr>
+	  <tr>
+	    <td class="leftpartialform"><%= f.label '3D Floorplan URL' %></td>
+	    <td><%= f.text_field :_3dplanurl, :class => 'rightpartialform', :title => 'If you have a 3d floorplan url, enter it here' %></td>
+	  </tr>
+	  <tr>
+	    <td class="leftpartialform"><%= f.label 'YouTube Video URL' %></td>
+	    <td><%= f.text_field :videourl, :class => 'rightpartialform', :title => 'Only the last part where the numbers and letters are', :placeholder => 'x8JmfiwOz <---just that part' %></td>
+	  </tr>
+	  <tr>
+	  	<td colspan="2" style="text-align:center"><%= f.submit 'Save', :class => 'trackbutton' %></td>
+	  </tr>
+</table>
+
+<% end %>

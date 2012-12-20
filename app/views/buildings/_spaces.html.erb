@@ -24,17 +24,19 @@
   <tr>
     <td style="text-align:left" colspan="3">
       <% if user_signed_in? %>
-      <%= button_to 'Add New Space', new_building_space_path(@building), :method => :get, :class => 'trackbutton' %>
+      <%= button_to 'Add New Space', newspace_building_path(@building), :method => :get, :class => 'trackbutton', :remote => true %>
       <% end %>
     </td>
   </tr>
 </table>
 <% else %>
-<table>
+<table width="100%" style="border:1px solid orange">
   <tr>  
-    <td style="text-align:center;font-size:.7em" colspan="3">
+    <td style="text-align:center;font-size:.9em;color:#888888" width="100%" height="300px">
+      Looks like we should add some spaces...
+      <p>
       <% if user_signed_in? %>
-      <%= button_to 'Add New Space for '+truncate(@building.address, :length => 20, :separator => ',', :omission => ''), new_building_space_path(@building), :method => :get, :class => 'button' %>
+      <%= button_to 'Add New Space for '+truncate(@building.address, :length => 20, :separator => ',', :omission => ''), newspace_building_path(@building), :method => :get, :class => 'button', :remote => true %>
       <% else %>
       <%= button_to 'Sign In to Add Space', new_user_session_path, :class => 'button' %>
       <% end %>

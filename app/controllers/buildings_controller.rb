@@ -100,6 +100,14 @@ class BuildingsController < ApplicationController
     end
   end
   
+  def newspace
+    @building = Building.find(params[:id])
+    @space = Space.new
+    respond_to do |format|
+      format.js
+    end
+  end
+
   def home
     if user_signed_in?
       redirect_to home_path
