@@ -1,0 +1,7 @@
+<div class="viewbuttoncontainer" id="buildingspacestab">
+		<% if @spaces.present? %>
+			<%= button_to "Spaces (#{@spaces.size})", spacesview_building_path(@building.id), :class => 'viewbutton', :remote => true, :method => 'get' %>
+		<% else %>
+			<%= button_to "+Space", spacesview_building_path(@building.id), :class => 'trackbutton', :remote => true, :method => 'get', :title => 'Add Space' %>
+		<% end %>
+</div>

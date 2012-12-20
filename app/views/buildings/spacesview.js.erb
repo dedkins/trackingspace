@@ -1,1 +1,3 @@
-$("#buildingcenter").html("<%= escape_javascript(render('buildings/spaces')) %>")
+$("#buildingcenter").html("<%= j(render('buildings/spaces')) %>")
+$("#buildingspacestab").html("<%= j(render('buildings/spacestab')) %>")
+$("#avgrate").html("<%= j(render('buildings/avg_rate')) %>")
