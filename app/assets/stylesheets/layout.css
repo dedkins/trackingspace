@@ -559,7 +559,8 @@ section#search {
     border: 0px;
     vertical-align: bottom;
     margin-bottom: -8px;
-    border-radius: 0px;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
   }
 
   .trackbutton {
@@ -570,7 +571,8 @@ section#search {
     font-size: .7em;
     border:0px;
     vertical-align: bottom;
-    border-radius: 0px;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
   }
   .untrackbutton {
     color:red;
