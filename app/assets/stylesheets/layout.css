@@ -11,7 +11,8 @@
 }*/
 
 html {
-  background: #e9e9e9;
+  /*background: #e9e9e9;*/
+  background: #ffffff;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -558,6 +559,7 @@ section#search {
     border: 0px;
     vertical-align: bottom;
     margin-bottom: -8px;
+    border-radius: 0px;
   }
 
   .trackbutton {
@@ -568,6 +570,7 @@ section#search {
     font-size: .7em;
     border:0px;
     vertical-align: bottom;
+    border-radius: 0px;
   }
   .untrackbutton {
     color:red;

@@ -33,8 +33,6 @@
 <table width="100%" style="border:1px solid orange">
   <tr>  
     <td style="text-align:center;font-size:.9em;color:#888888" width="100%" height="300px">
-      Looks like we should add some spaces...
-      <p>
       <% if user_signed_in? %>
       <%= button_to 'Add New Space for '+truncate(@building.address, :length => 20, :separator => ',', :omission => ''), newspace_building_path(@building), :method => :get, :class => 'button', :remote => true %>
       <% else %>
