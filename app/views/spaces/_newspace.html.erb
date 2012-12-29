@@ -29,6 +29,7 @@
 	    <td class="leftpartialform"><%= f.label 'YouTube Video URL' %></td>
 	    <td><%= f.text_field :videourl, :class => 'rightpartialform', :title => 'Only the last part where the numbers and letters are', :placeholder => 'x8JmfiwOz <---just that part' %></td>
 	  </tr>
+	  <%= f.hidden_field :user_id, :value => current_user.id %>
 	  <tr>
 	  	<td colspan="2" style="text-align:center"><%= f.submit 'Save', :class => 'trackbutton' %></td>
 	  </tr>

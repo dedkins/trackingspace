@@ -13,14 +13,17 @@
 #  company     :string(255)
 #  status      :string(255)
 #  _3dplanurl  :string(255)
+#  videourl    :string(255)
+#  description :text
 #
 
 class Space < ActiveRecord::Base
   belongs_to :building
   has_many :leases, :dependent => :destroy
   has_many :microposts, :dependent => :destroy
+  belongs_to :user
 
-  attr_accessible :monthly, :sf, :suite, :company, :status, :_3dplanurl, :videourl
+  attr_accessible :monthly, :sf, :suite, :company, :status, :_3dplanurl, :videourl, :user_id
 
   validates :suite, :presence => true
   validates :monthly, :presence => true

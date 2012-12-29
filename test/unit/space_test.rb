@@ -13,6 +13,8 @@
 #  company     :string(255)
 #  status      :string(255)
 #  _3dplanurl  :string(255)
+#  videourl    :string(255)
+#  description :text
 #
 
 require 'test_helper'
