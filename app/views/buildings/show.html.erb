@@ -5,13 +5,17 @@
 				<%= render 'buildings/form_new' %>
 			<% end %>
 		<% end %>
-		
-		<div style="width:100%">
 			<div style="float:left;padding-right:20px" class="title">
 			 <%= truncate(@building.address, :length => 20, :separator => ',', :omission => '') %>
 			</div>
+				
+			<div style="float:right;margin-top:-5px">
+			  		<%= link_to image_tag("https://github.com/intridea/authbuttons/raw/master/png/twitter_64.png", :size => "30x30", :alt => "Twitter"), "http://twitter.com/home?status=@trackingspace Found this on Trackingspace: http://#{request.host+request.fullpath}", :target => '_blank', :title => 'Share with Twitter' %>
+				  	<%= link_to image_tag("http://github.com/intridea/authbuttons/raw/master/png/facebook_64.png", :size => "30x30"), "http://www.facebook.com/sharer.php?u=http://#{request.host+request.fullpath}", :target => '_blank', :title => 'Share with FaceBook' %>
+			</div>
+
+			<% if user_signed_in? %>
 				<div>
-					<% if user_signed_in? %>
 					<div id="building_follow_form">
 						<% if current_user.building_following?(@building) %>
 							<%= render 'pages/building_unfollow' %>
@@ -19,13 +23,13 @@
 							<%= render 'pages/building_follow' %>
 						<% end %>
 					</div>
-					<% end %>
 				</div>
-					<div style="float:right;margin-top:-25px" width="75px">
-					  		<%= link_to image_tag("https://github.com/intridea/authbuttons/raw/master/png/twitter_64.png", :size => "30x30", :alt => "Twitter"), "http://twitter.com/home?status=@trackingspace Found this on Trackingspace: http://#{request.host+request.fullpath}", :target => '_blank', :title => 'Share with Twitter' %>
-						  	<%= link_to image_tag("http://github.com/intridea/authbuttons/raw/master/png/facebook_64.png", :size => "30x30"), "http://www.facebook.com/sharer.php?u=http://#{request.host+request.fullpath}", :target => '_blank', :title => 'Share with FaceBook' %>
-					</div>
-					<div style="font-size:.9em;color:#666666;text-align:left"><%= @building.address %></div>
+				<div style="float:left;font-size:.9em;color:#666666"><%= @building.address %></div>
+			<% else %>
+			<br/>
+			<div style="float:left;font-size:.9em;color:#666666"><%= @building.address %></div>
+			<% end %>
+			
 			<table width="100%">
 				<tr>
 					<td width="25%">
