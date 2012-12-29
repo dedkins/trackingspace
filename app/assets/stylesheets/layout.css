@@ -582,6 +582,8 @@ section#search {
     font-size: .7em;
     border:0px;
     vertical-align: bottom;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
   }
 
   .button_unfollow {

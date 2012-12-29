@@ -10,8 +10,8 @@
 			<div style="float:left;padding-right:20px" class="title">
 			 <%= truncate(@building.address, :length => 20, :separator => ',', :omission => '') %>
 			</div>
-			<% if user_signed_in? %>
 				<div>
+					<% if user_signed_in? %>
 					<div id="building_follow_form">
 						<% if current_user.building_following?(@building) %>
 							<%= render 'pages/building_unfollow' %>
@@ -19,8 +19,8 @@
 							<%= render 'pages/building_follow' %>
 						<% end %>
 					</div>
+					<% end %>
 				</div>
-			<% end %>
 					<div style="float:right;margin-top:-25px" width="75px">
 					  		<%= link_to image_tag("https://github.com/intridea/authbuttons/raw/master/png/twitter_64.png", :size => "30x30", :alt => "Twitter"), "http://twitter.com/home?status=@trackingspace Found this on Trackingspace: http://#{request.host+request.fullpath}", :target => '_blank', :title => 'Share with Twitter' %>
 						  	<%= link_to image_tag("http://github.com/intridea/authbuttons/raw/master/png/facebook_64.png", :size => "30x30"), "http://www.facebook.com/sharer.php?u=http://#{request.host+request.fullpath}", :target => '_blank', :title => 'Share with FaceBook' %>
