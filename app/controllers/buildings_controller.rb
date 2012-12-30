@@ -92,6 +92,13 @@ class BuildingsController < ApplicationController
     end
   end
 
+  def addvideo
+    @building = Building.find(params[:id])
+    respond_to do |format|
+      format.js
+    end
+  end
+
   def spacesview
     @building = Building.find(params[:id])
     @spaces = Space.find_all_by_building_id(@building.id)

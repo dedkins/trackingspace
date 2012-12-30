@@ -42,7 +42,7 @@ Trackingspace::Application.routes.draw do
 
   resources :buildings do
     member do
-      get :mapview, :videoview, :spacesview, :newspace
+      get :mapview, :videoview, :spacesview, :newspace, :addvideo
     end
     resources :spaces
   end

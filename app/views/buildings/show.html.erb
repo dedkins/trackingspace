@@ -53,7 +53,7 @@
 									<% if @building.videourl.present? %>
 									<%= button_to 'Video', videoview_building_path(@building.id), :class => 'viewbutton', :remote => true, :method => 'get' %>
 									<% else %>
-									<%= button_to '+Video', '#', :class => 'trackbutton', :remote => true, :method => 'get', :title => 'Add a Video' %>
+									<%= button_to '+Video', addvideo_building_path(@building.id), :class => 'trackbutton', :remote => true, :method => 'get', :title => 'Add a Video' %>
 									<% end %>
 						</div>
 						<%= render 'spacestab' %>
