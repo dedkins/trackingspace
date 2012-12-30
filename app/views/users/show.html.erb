@@ -94,7 +94,7 @@
 				<% end %>
 				Buildings Tracked: <%= link_to @user.building_relationships.count, trackingbuildings_user_path, :remote => true %>
 				<% if user_signed_in? && mobile_device? %> |
-					<%= link_to 'SignOut', destroy_user_session_path(@user) %>
+					<%= link_to 'SignOut', destroy_user_session_path(@user), :method => 'delete' %>
 				<% end %>
 			</td>
 		</tr>
