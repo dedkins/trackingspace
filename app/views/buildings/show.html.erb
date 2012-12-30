@@ -67,11 +67,13 @@
 				<% if @building.videourl.present? %>
 					<%= render 'videoview' %>
 				<% else %>
-				<%= gmaps({
-				  "map_options" => {"auto_zoom" => false, "zoom" => 18, "type" => 'SATELLITE' },
-				  "markers" => {"data" => @json }
-				})
-				%>
+				<div style="width:100%">
+					<%= gmaps({
+					  "map_options" => {"auto_zoom" => false, "zoom" => 18, "type" => 'SATELLITE' },
+					  "markers" => {"data" => @json }
+					})
+					%>
+				</div>
 				<% end %>
 			</div>
 

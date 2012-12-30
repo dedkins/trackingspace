@@ -98,13 +98,6 @@
 
 }
 
-@media screen and (max-device-width: 480px){
-    body{
-        -webkit-text-size-adjust:none;
-        padding:5px;
-    }
-}
-
 @media only screen and (max-width: 968px) and (orientation: landscape){
 	section#left {
 		display: none;
@@ -117,6 +110,7 @@
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px){
 	body { 
 		font-size: 1.5em;
+		-webkit-text-size-adjust:none;
 	}
 	header#top {
 		height: 80px;

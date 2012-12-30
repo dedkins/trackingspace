@@ -92,14 +92,10 @@
     </section>
 
       <section id="sidebar">
+          <div style="text-align:center;height:50px;background:#ffffff;vertical-align:middle;border:1px solid #888;box-shadow:2px 2px 2px #888">&copy 2012 Trackingspace <br/> <%= mail_to "dedkins@trackingspace.com", "Help", :subject => 'Need Help with TrackingSpace' %> | <%= link_to 'Privacy', privacy_path %></div>
           <%= yield :sidebar %>
             <%= render 'layouts/right_ads' %>
           <hr/>
-          <table width="100%">
-            <tr>
-              <td style="text-align:center;height:50px;background:#ffffff;vertical-align:middle;border:1px solid #888;box-shadow:2px 2px 2px #888">&copy 2012 Trackingspace <br/> <%= mail_to "dedkins@trackingspace.com", "Help", :subject => 'Need Help with TrackingSpace' %> | <%= link_to 'Privacy', privacy_path %></td>
-            </tr>
-          </table>
       </section>
 
 
