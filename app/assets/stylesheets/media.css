@@ -113,6 +113,10 @@
 		line-height: 1.5em;
 		-webkit-text-size-adjust:none;
 	}
+	section#search {
+		width: 100%;
+		margin-top: 20px;
+	}
 	header#top {
 		height: 80px;
 	}
