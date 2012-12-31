@@ -17,11 +17,12 @@ gem 'aws-sdk'
 gem "dynamic_form"
 gem 'gravatar_image_tag'
 gem 'paperclip', '~> 3.0'
-gem 'exception_notification', :require => 'exception_notifier'
 gem 'rails3-jquery-autocomplete'
 gem 'will_paginate', '~> 3.0.0'
 gem 'stripe'
 gem 'friendly_id'
+gem 'exception_notification', git: 'git://github.com/alanjds/exception_notification.git'
+
 
 group :development do
 	gem 'rspec-rails', '2.0.1'
