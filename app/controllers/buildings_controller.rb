@@ -156,7 +156,11 @@ class BuildingsController < ApplicationController
 
   def update
     @building = Building.find(params[:id])
+    if params[:video].present?
+    @micropost = current_user.microposts.build(typeof: 'Updated', content: 'Added a new video', building_id: @building.id,name: @current_user.name)
+    else
     @micropost = current_user.microposts.build(typeof: 'Updated', building_id: @building.id,name: @current_user.name)
+    end
 
     respond_to do |format|
       if @building.update_attributes(params[:building])

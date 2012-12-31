@@ -1,14 +1,16 @@
 <% if user_signed_in? %>
 	<%= form_for(@building) do |f| %>
-	<div style="width:100%;height:350px;border:1px solid orange;padding: 20px 0;background:#f3f3f3">
+	<div style="width:100%;height:300px;border:1px solid orange;padding: 20px 0;background:#f3f3f3">
 			<div style="padding-top: 100px; font-weight:bold; text-align:center"><%= f.label 'Add a YouTube Video Code for this Building' %></div>
 			<div style="text-align:center;padding-top:20px">  
-				<%=f.text_field :videourl, :placeholder => 'x9Jt0tyz', :class => 'rightpartialform' %>
+				<%= f.text_field :videourl, :placeholder => 'x9Jt0tyz', :class => 'rightpartialform' %>
 			</div>
 			<div style="text-align:center;padding:20px"><%= f.submit 'Save', :class => 'trackbutton' %></div>
+
+			<%= hidden_field_tag :video, '1' %>
 	<% end %>
 <% else %>
-<div style="width:100%;height:350px;border:1px solid orange;padding: 20px 0;background:#f3f3f3">
+<div style="width:100%;height:300px;border:1px solid orange;padding: 20px 0;background:#f3f3f3">
   <div style="padding-top:150px;text-align:center">
   	<%= button_to 'Please Sign In Before Adding a Video', new_user_session_path(:back_to => @building.id), :class => 'button' %>
   </div>

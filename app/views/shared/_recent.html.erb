@@ -1,14 +1,11 @@
 <% if user_signed_in? %>
 
 	<% unless @recent_items.empty? %>
-		<table width="100%">
-			<tr>
-				<td class="listbox_title">Recently Visited</td>
-			</tr>
-			<tr>
-				<td ><%= render :partial => 'shared/recent_item', :collection => @recent_items %></td>
-			</tr>
-		</table>
+		<div class="listbox_title">Recently Visited</div>
+			<div>
+				<div style="text-align:center;font-size:.9em;font-weight:bold;color:#0198E1">v = Building has a video</div>
+			</div>
+			<div><%= render :partial => 'shared/recent_item', :collection => @recent_items %></div>
 	<% end %>
 	
 <% end %>

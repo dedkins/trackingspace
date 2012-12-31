@@ -5,12 +5,21 @@
 				<%= render 'buildings/form_new' %>
 			<% end %>
 		<% end %>
+
+		<div style="float:left;position:absolute;margin-top:-33px;background:#ffffff">
+			<div class="top_words" style="float:left;padding-right:10px">
+				<%= render 'est_value' %>
+			</div>
+			<div class="top_words" style="float:right">
+				<%= render 'avg_rate' %>
+			</div>
+		</div>
 			<div style="float:left;padding-right:20px" class="title">
 			 <%= truncate(@building.address, :length => 20, :separator => ',', :omission => '') %>
 			</div>
 				
 			<div style="float:right;margin-top:-5px">
-			  		<%= link_to image_tag("https://github.com/intridea/authbuttons/raw/master/png/twitter_64.png", :size => "30x30", :alt => "Twitter"), "http://twitter.com/home?status=@trackingspace Found this on Trackingspace: http://#{request.host+request.fullpath}", :target => '_blank', :title => 'Share with Twitter' %>
+			  		<%= link_to image_tag("https://github.com/intridea/authbuttons/raw/master/png/twitter_64.png", :size => "30x30", :alt => "Twitter"), "http://twitter.com/home?status=Found this on @trackingspace: http://#{request.host+request.fullpath}", :target => '_blank', :title => 'Share with Twitter' %>
 				  	<%= link_to image_tag("http://github.com/intridea/authbuttons/raw/master/png/facebook_64.png", :size => "30x30"), "http://www.facebook.com/sharer.php?u=http://#{request.host+request.fullpath}", :target => '_blank', :title => 'Share with FaceBook' %>
 			</div>
 
@@ -32,17 +41,10 @@
 			
 			<table width="100%">
 				<tr>
-					<td width="25%">
-							<div class="top_words">
-								<%= render 'est_value' %>
-							</div>
-						</td>
-						<td width="12%">
-							<div class="top_words" id="avgrate">
-								<%= render 'avg_rate' %>
-							</div>
-						</td>
 					<td style="text-align:right">
+						<div class="viewbuttoncontainer">
+							<%= button_to 'Management', '#', :class => 'viewbutton', :remote => true, :method => 'get' %>
+						</div>
 						<div class="viewbuttoncontainer">
 							<%= button_to 'News', '#', :class => 'viewbutton', :remote => true, :method => 'get' %>
 						</div>
@@ -63,18 +65,8 @@
 					</td>
 				</tr>
 			</table>
-			<div id="buildingcenter">
-				<% if @building.videourl.present? %>
-					<%= render 'videoview' %>
-				<% else %>
-				<div style="width:100%">
-					<%= gmaps({
-					  "map_options" => {"auto_zoom" => false, "zoom" => 18, "type" => 'SATELLITE' },
-					  "markers" => {"data" => @json }
-					})
-					%>
-				</div>
-				<% end %>
+			<div id="buildingcenter" style="margin-top:5px;width:100%">
+					<%= render 'buildingcenter' %>
 			</div>
 
 			<table width="100%">
@@ -85,10 +77,6 @@
 				</tr>
 			</table>
 			<hr/>
-
-		<% if mobile_device? %>
-			<%= render 'buildings/spaces' %>
-		<% end %>
 			
 		<div class="feed">
 			<% if user_signed_in? %>

@@ -1,9 +1,7 @@
-<div style="width:100%">
 <%= gmaps({
   "map_options" => {"auto_zoom" => false, "zoom" => 18, "type" => 'SATELLITE' },
-  "markers" => {"data" => @json }, :last_map => false
+  "markers" => {"data" => @json }
 })
 %>
-</div>
 
 <%= yield :scripts %>

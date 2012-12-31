@@ -1,13 +1,5 @@
 <% if @spaces.any? %>
 
-<%= number_to_currency(@spaces.collect(&:monthly).inject(:+)/@spaces.collect(&:sf).inject(:+)) %>
-
-<% else %>
-
-	<% if user_signed_in? %>
-		<%= link_to '+ Space', new_building_space_path(@building) %>
-	<% else %>
-		<%= link_to 'Sign In', new_user_session_path %>
-	<% end %>
+  <%= number_to_currency(@spaces.collect(&:monthly).inject(:+)/@spaces.collect(&:sf).inject(:+)) %>/sf avg
 
 <% end %>

@@ -2,12 +2,4 @@
 
 $<%= number_to_human(@building.size*(@spaces.collect(&:monthly).inject(:+)/@spaces.collect(&:sf).inject(:+))*12*0.62/0.08) %>
 
-<% else %>
-
-	<% if user_signed_in? %>
-		<%= link_to 'Update SF', edit_building_path(@building.id) %>
-	<% else %>
-		<%= link_to 'Sign In', new_user_session_path %>
-	<% end %>
-
 <% end %>

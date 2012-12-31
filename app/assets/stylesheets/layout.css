@@ -351,13 +351,11 @@ section#search {
 }
 
 .top_words {
-  margin: auto;
-  padding: 5px;
   font-size: 1.25em;
   text-shadow: 1px 1px 2px #fff;
   color: #0198E1;
   font-weight: bold;
-  text-align: center;
+  padding:-2px;
   }
   .value:hover,
   .value:active,
@@ -554,7 +552,7 @@ section#search {
     color: black;
     background: orange;
     height: 25px;
-    padding: 0 10px;
+    padding: 0 12px;
     font-size: .7em;
     border: 0px;
     vertical-align: bottom;

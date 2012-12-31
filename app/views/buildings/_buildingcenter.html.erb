@@ -1,0 +1,9 @@
+<% if @building.videourl != '' %>
+	<%= render 'videoview' %>
+<% else %>
+	<%= gmaps({
+	  "map_options" => {"auto_zoom" => false, "zoom" => 18, "type" => 'SATELLITE' },
+	  "markers" => {"data" => @json }
+	})
+	%>
+<% end %>
