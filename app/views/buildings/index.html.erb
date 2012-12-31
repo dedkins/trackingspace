@@ -1,3 +1,4 @@
+<% if user_signed_in? %>
 <%= currently_at 'Buildings' %>
 
 <%= content_for :search do %>
@@ -73,4 +74,8 @@
 <% end %>
 <%= yield :scripts %>
 
+<% else %>
 
+No Luck
+
+<% end %>
