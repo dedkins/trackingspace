@@ -138,9 +138,9 @@ class BuildingsController < ApplicationController
     @building.slug = @building.street_number+'-'+@building.route.parameterize+'-'+@building.locality.parameterize+'-'+@building.administrative_area_level_1.parameterize
     
     if user_signed_in?
-      @building = Building.find_or_initialize_by_latitude_and_longitude(:address => @building.address,:user_id => current_user.id, :latitude => @building.latitude,:longitude => @building.longitude,:street_number => @building.street_number,:slug => @building.slug,:locality => @building.locality,:administrative_area_level_1 => @building.administrative_area_level_1,:administrative_area_level_2 => @building.administrative_area_level_2,:postal_code => @building.postal_code,:country => @building.country)
+      @building = Building.find_or_initialize_by_address(:address => @building.address,:user_id => current_user.id, :latitude => @building.latitude,:longitude => @building.longitude,:street_number => @building.street_number,:slug => @building.slug,:locality => @building.locality,:administrative_area_level_1 => @building.administrative_area_level_1,:administrative_area_level_2 => @building.administrative_area_level_2,:postal_code => @building.postal_code,:country => @building.country)
     else
-      @building = Building.find_or_initialize_by_latitude_and_longitude(:address => @building.address,:latitude => @building.latitude,:longitude => @building.longitude,:street_number => @building.street_number,:slug => @building.slug,:locality => @building.locality,:administrative_area_level_1 => @building.administrative_area_level_1,:administrative_area_level_2 => @building.administrative_area_level_2,:postal_code => @building.postal_code,:country => @building.country)
+      @building = Building.find_or_initialize_by_address(:address => @building.address,:latitude => @building.latitude,:longitude => @building.longitude,:street_number => @building.street_number,:slug => @building.slug,:locality => @building.locality,:administrative_area_level_1 => @building.administrative_area_level_1,:administrative_area_level_2 => @building.administrative_area_level_2,:postal_code => @building.postal_code,:country => @building.country)
     end
 
       respond_to do |format|
