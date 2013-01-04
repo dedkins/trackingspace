@@ -34,7 +34,7 @@ class LeasesController < ApplicationController
   # GET /leases/new
   # GET /leases/new.json
   def new
-    @user = current_user.id
+    @user = User.find(current_user.id)
     @space = Space.find(params[:space_id])
     @lease = Lease.new
   end

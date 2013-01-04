@@ -386,6 +386,22 @@
 				"buffer_size": 1723,
 				"line_ending": "Windows"
 			}
+		},
+		{
+			"file": "app/views/buildings/_form_new.html",
+			"settings":
+			{
+				"buffer_size": 1164,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/controllers/buildings_controller.rb",
+			"settings":
+			{
+				"buffer_size": 6447,
+				"line_ending": "Windows"
+			}
 		}
 	],
 	"build_system": "",
@@ -412,6 +428,8 @@
 	},
 	"file_history":
 	[
+		"/C/Users/david/trackingspace/app/views/buildings/index.html.erb",
+		"/C/Users/david/trackingspace/app/views/buildings/new.html.erb",
 		"/C/Users/david/trackingspace/app/views/buildings/_avg_rate.html.erb",
 		"/C/Users/david/trackingspace/app/views/buildings/_est_value.html.erb",
 		"/C/Users/david/trackingspace/app/views/buildings/_buildingcenter.html.erb",
@@ -459,7 +477,6 @@
 		"/C/Users/david/trackingspace/app/views/pages/_follow_users.html.erb",
 		"/C/Users/david/trackingspace/app/assets/stylesheets/gmaps4rails.css",
 		"/C/Users/david/trackingspace/app/views/buildings/home.html.erb",
-		"/C/Users/david/trackingspace/app/views/buildings/index.html.erb",
 		"/C/Users/david/trackingspace/app/views/buildings/_form_new.html",
 		"/C/Users/david/trackingspace/app/views/pages/buildings_main.html.erb",
 		"/C/Users/david/trackingspace/app/views/pages/index.html.erb",
@@ -538,8 +555,7 @@
 		"/C/Users/david/trackingspace/config/environments/development.rb",
 		"/C/Users/david/trackingspace/app/assets/javascripts/subscriptions.js.coffee",
 		"/C/Users/david/trackingspace/app/views/subscriptions/new.html.erb",
-		"/C/Users/david/trackingspace/app/views/users/_upgrade.html.erb",
-		"/C/Users/david/trackingspace/app/assets/javascripts/users.js.coffee"
+		"/C/Users/david/trackingspace/app/views/users/_upgrade.html.erb"
 	],
 	"find":
 	{
@@ -630,7 +646,7 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 5,
 			"sheets":
 			[
 				{
@@ -737,6 +753,61 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 196.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/views/buildings/_form_new.html",
+					"settings":
+					{
+						"buffer_size": 1164,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								402,
+								402
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/controllers/buildings_controller.rb",
+					"settings":
+					{
+						"buffer_size": 6447,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4629,
+								4629
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1584.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

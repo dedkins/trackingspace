@@ -1,5 +1,7 @@
-<% if user_signed_in? %>
+
 <%= currently_at 'Buildings' %>
+
+<% if user_signed_in? %>
 
 <%= content_for :search do %>
   <% if mobile_device? %>
