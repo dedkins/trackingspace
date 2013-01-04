@@ -2,8 +2,12 @@ class UsersController < ApplicationController
   autocomplete :user, :name, :full => true
 
   def index
-    @title = "Users"
-  	@users = User.all
+    if current_user.access == 'Admin'
+      @title = "Users"
+    	@users = User.all
+    else
+      redirect_to home_path
+    end
   end
 
   def leases
