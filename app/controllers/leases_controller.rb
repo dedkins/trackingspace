@@ -18,6 +18,7 @@ class LeasesController < ApplicationController
   # GET /leases/1
   # GET /leases/1.json
   def show
+    @user = User.find(current_user.id)
     @space = Space.find(params[:space_id])
     @lease = Lease.find(params[:id])
     
@@ -41,7 +42,7 @@ class LeasesController < ApplicationController
 
   # GET /leases/1/edit
   def edit
-    @user = current_user.id
+    @user = User.find(current_user.id)
     @space = Space.find(params[:space_id])
     @lease = Lease.find(params[:id])
   end
@@ -50,7 +51,7 @@ class LeasesController < ApplicationController
   # POST /leases.json
   
   def create
-    @user = current_user.id
+    @user = User.find(current_user.id)
     @space = Space.find(params[:space_id])
     @lease = Lease.new(params[:lease])
     respond_to do |format|
@@ -67,7 +68,7 @@ class LeasesController < ApplicationController
   # PUT /leases/1
   # PUT /leases/1.json
   def update
-    @user = current_user.id
+    @user = User.find(current_user.id)
     @space = Space.find(params[:space_id])
     @lease = Lease.find(params[:id])
 
