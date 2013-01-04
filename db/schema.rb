@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130104200544) do
+ActiveRecord::Schema.define(:version => 20130104210316) do
 
   create_table "ads", :force => true do |t|
     t.integer  "building_id"
@@ -179,6 +179,8 @@ ActiveRecord::Schema.define(:version => 20130104200544) do
     t.string   "phone"
     t.string   "website"
     t.string   "access"
+    t.float    "latitude"
+    t.float    "longitude"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
