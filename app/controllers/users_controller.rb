@@ -2,9 +2,13 @@ class UsersController < ApplicationController
   autocomplete :user, :name, :full => true
 
   def index
-    if current_user.access == 'Admin'
-      @title = "Users"
-    	@users = User.all
+    if user_signed_in?
+      if current_user.access == 'Admin'
+        @title = "Users"
+      	@users = User.all
+      else
+        redirect_to home_path
+      end
     else
       redirect_to home_path
     end
@@ -27,8 +31,7 @@ class UsersController < ApplicationController
     @authentications = Authentication.find_by_user_id(@user.id)
     @building_ads = @user.building_ads
     @space_ads = @user.space_ads  
-    @leases = @user.leases if signed_in?            
-    
+    @leases = @user.leases if signed_in?
   end 
 
   def search
