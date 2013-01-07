@@ -1,4 +1,4 @@
-<% if @building.videourl != '' %>
+<% if @building.videourl != '' or @building.videourl != nil %>
 	<%= render 'videoview' %>
 <% else %>
 	<%= gmaps({
