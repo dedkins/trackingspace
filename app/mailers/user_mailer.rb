@@ -17,4 +17,16 @@ class UserMailer < ActionMailer::Base
     mail(:to => 'dedkins@edkinsgroup.com', :subject => "New Upgrade!")
   end
 
+  def new_building_post(building)
+    @building = Building.find(building)
+    @micropost = Micropost.where('building_id = ?', @building.id).first
+    @user_url = "http://www.trackingspace.com/users/#{@micropost.user.id}"
+    @url  = "http://www.trackingspace.com/buildings/#{@building.id}"
+    @followers = BuildingRelationship.find_all_by_building_id(@building)
+    @users = @followers.map(&:user_id)
+    emails = User.find_all_by_id(@users)
+    email = emails.map(&:email)
+    mail(:bcc => email, :subject => 'New Comment for '+@building.address)
+  end
+
 end

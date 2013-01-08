@@ -1,6 +1,6 @@
 <% if user_signed_in? %>
 
-	<% if @recent_items != nil %>
+	<% if @recent_items.present? %>
 		<div class="listbox_title">Recently Visited</div>
 			<div>
 				<div style="text-align:center;font-size:.9em;font-weight:bold;color:#0198E1">v = Building has a video</div>

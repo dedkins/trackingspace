@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body>
+  	<h2><%= @building.address %></h2>
+  	<p>New Comment from <%= link_to @micropost.user.name, @user_url %>: "<%= @micropost.content %>"</p>
+    <p>Go to check it out: <%= link_to 'Click Here', @url %></p>
+    <p></p>
+    <p style="font-size:.8">You received this message because you are tracking this building on <%= link_to 'TrackingSpace', 'http://www.trackingspace.com' %></p>
+  </body>
+</html>
