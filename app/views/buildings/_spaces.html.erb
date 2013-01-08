@@ -13,7 +13,7 @@
   <tr>
     <td style="text-align:center" width="30px">
       <% if space.user.present? %>
-      <%= link_to gravatar_image_tag(space.user.email, :gravatar => {:size => '30x30'}, :title => "Click to see #{space.user.name}\'s profile", :alt => space.user.name), user_path(space.user) %>
+      <%= link_to gravatar_image_tag(space.user.email, :gravatar => {:size => '40x40'}, :title => "Click to see #{space.user.name}\'s profile", :alt => space.user.name), user_path(space.user) %>
       <% end %>
     </td>
     <td style="text-align:center" width="100px"><%= link_to space.suite, building_space_path(@building.id,space) %></td>

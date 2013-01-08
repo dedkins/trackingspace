@@ -1,4 +1,4 @@
-		
+<% if recent_item.building.present? %>
 		<table width="100%" >
 			<tr>
 				<td width="8px">
@@ -11,4 +11,4 @@
 					<td class="lists_right"><%= link_to recent_item.building.microposts.count, '', :title => "What's the activity?" %></td>
 			</tr>
 		</table>
-		 
+<% end %>
