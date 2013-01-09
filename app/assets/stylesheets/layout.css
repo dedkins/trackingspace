@@ -564,10 +564,10 @@ section#search {
   .trackbutton {
     color:#ffffff;
     background: #0198E1;
-    height: 20px;
-    padding: 0 5px;
+    padding: 2px 8px;
     font-size: .7em;
-    border:0px;
+    border:1px solid #f0f0f0;
+    border-radius: 3px;
     vertical-align: bottom;
     -webkit-appearance: none;
     -webkit-border-radius: 0;
@@ -575,10 +575,9 @@ section#search {
   .untrackbutton {
     color:red;
     background: #f0f0f0;
-    height: 20px;
-    width: 50px;
+    padding: 2px 8px;
     font-size: .7em;
-    border:0px;
+    border:1px solid #d0d0d0;
     vertical-align: bottom;
     -webkit-appearance: none;
     -webkit-border-radius: 0;

@@ -7,10 +7,10 @@
 		<% end %>
 
 		<div style="float:left;position:absolute;margin-top:-33px;background:#ffffff">
-			<div class="top_words" style="float:left;padding-right:10px">
+			<div class="top_words" style="float:left;padding:0 5px">
 				<%= render 'est_value' %>
 			</div>
-			<div class="top_words" style="float:right;padding-right:10px" id="avgrate">
+			<div class="top_words" style="float:right;padding:0 5px" id="avgrate">
 				<%= render 'avg_rate' %>
 			</div>
 		</div>
@@ -25,7 +25,7 @@
 
 			<% if user_signed_in? %>
 				<div>
-					<div id="building_follow_form">
+					<div id="building_follow_form" style="width:100%">
 						<% if current_user.building_following?(@building) %>
 							<%= render 'pages/building_unfollow' %>
 						<% else %>
