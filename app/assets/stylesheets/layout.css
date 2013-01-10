@@ -2,6 +2,11 @@
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro|Open+Sans);
 @import url(http://fonts.googleapis.com/css?family=Syncopate);
 
+/*  top blue =    #C3E4ED
+    title blue =  #0198E1
+*/
+
+
 /*html {
   background: url(/assets/SanDiegoSkyline.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -59,7 +64,18 @@ header#top {
 .top{}
   a.top:link {color: #C3E4ED;}
   a.top:visited { color: #C3E4ED;}
-  a.top:hover {text-decoration: underline;}
+  a.top:hover {
+    text-decoration: none;
+    border-bottom: 1px dotted #888
+  }
+
+.list_title{}
+  a.list_title:link {color: #0198E1;}
+  a.list_title:visited { color: #0198E1;}
+  a.list_title:hover {
+    text-decoration: none;
+    border-bottom: 1px dotted #888
+  }
 
 .title{}
   a.title:link {color: #C3E4ED;}

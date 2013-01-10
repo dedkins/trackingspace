@@ -62,9 +62,7 @@
       <% content_tag :div, msg, :id => "flash_#{name}" %>
     <% end %>
 
-  
   <div class="container">
-    
     <section id="left">
       <table width="100%">
           <tr>
@@ -92,7 +90,7 @@
     </section>
 
       <section id="sidebar">
-          <div style="background-image:url(<%= asset_path 'steelbackground.jpg' %>);color:#000000;text-align:center;height:50px;vertical-align:middle;border:1px solid #888;box-shadow:2px 2px 2px #888">&copy 2012 Trackingspace <br/> <%= mail_to "dedkins@trackingspace.com", "Help", :subject => 'Need Help with TrackingSpace' %> | <%= link_to 'Privacy', privacy_path %></div>
+          <div style="background-image:url(<%= asset_path 'steelbackground.jpg' %>);color:#000000;text-align:center;height:50px;vertical-align:middle;border:1px solid #888;box-shadow:2px 2px 2px #888">&copy 2013 Trackingspace <br/> <%= mail_to "dedkins@trackingspace.com", "Help", :subject => 'Need Help with TrackingSpace' %> | <%= link_to 'Privacy', privacy_path %></div>
           <%= yield :sidebar %>
             <%= render 'layouts/right_ads' %>
           <hr/>

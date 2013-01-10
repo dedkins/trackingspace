@@ -1,16 +1,27 @@
-<table width="100%">
-			
-	<div >
-		<tr>
-			<td class="listbox_title">New Comments</td>
-		</tr>
-	</div>
+<div style="border:1px solid #0198E1;padding:5px">
 
-	<% @allnewposts.each do |m| %>
-	<tr>
-		<td style="font-size:.9em"><%= link_to '"'+truncate(m.content, :size => 20, :omission => '...')+'"', user_path(m.user.id) %></td>
-	</tr>
-	<tr>
-		<td style="text-transform:uppercase;font-size:.7em;text-align:right;font-variant:italic"><%= link_to m.user.name, user_path(m.user_id) %></td>
+<div class="title" style="font-size:1.25em;text-align:center;padding-bottom:10px;margin-top:-15px;background:#ffffff">Comments</div>
+
+<% @allnewposts.each do |m| %>
+
+<div style="text-transform:uppercase;font-size:.85em;text-align:left;padding-left:4px;height:20px;background:#efefef">
+	<% if m.building_id.present? %>
+		<%= link_to truncate(m.building.address, :size => 10, :separator => ',', :omission => ''), building_path(m.building_id), :class => 'list_title' %>
+	<% else %>
+	 	<%= link_to truncate(m.postforuser.name, :size => 10, :omission => ''), user_path(m.postforuser_id), :class => 'list_title' %>
 	<% end %>
-</table>
+</div>
+<div style="font-size:.85em;padding-left:4px">
+	<% if m.building_id.present? %>
+		<%= auto_link(m.content) %>
+	<% else %>
+		<%= auto_link(m.content) %>
+	<% end %>
+</div>
+<div style="text-transform:uppercase;font-size:.7em;text-align:right">
+	by: <%= link_to m.user.name, user_path(m.user_id) %>
+</div>
+
+<% end %>
+
+</div>
