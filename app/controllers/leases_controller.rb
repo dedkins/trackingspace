@@ -3,6 +3,8 @@ class LeasesController < ApplicationController
   require 'paperclip'
   require 'aws-sdk'
 
+  before_filter :authenticate_user!
+
   # GET /leases
   # GET /leases.json
   def index
