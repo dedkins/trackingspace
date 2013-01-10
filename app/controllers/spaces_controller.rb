@@ -2,6 +2,7 @@ class SpacesController < ApplicationController
 
 
   before_filter :load_building
+  before_filter :authenticate_user!, :only => [:show, :update, :create]
 
   # GET /spaces
   # GET /spaces.json
