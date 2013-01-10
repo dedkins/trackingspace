@@ -1,6 +1,8 @@
 class PagesController < ApplicationController
 	autocomplete :user, :name, :full => true
 
+	before_filter :authenticate_user!, :only => [:upgrade] 
+
 	def index
 		if user_signed_in?
 			@user = User.find(current_user.id)
