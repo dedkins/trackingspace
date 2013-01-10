@@ -18,6 +18,7 @@ class LeasesController < ApplicationController
   # GET /leases/1
   # GET /leases/1.json
   def show
+    @user = current_user
     @space = Space.find(params[:space_id])
     @lease = Lease.find(params[:id])
     

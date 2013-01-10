@@ -23,6 +23,7 @@ class PagesController < ApplicationController
 	end
 
 	def upgrade
+		@user = current_user
 	end
 
 	def earlyadopter

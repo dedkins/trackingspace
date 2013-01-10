@@ -32,7 +32,7 @@
 		<div id="stripe_error">
 	    	<noscript>JavaScript is not enabled and is required for this form. First enable it in your web browser settings.</noscript>
 	  	</div>	
-	  	<%= f.hidden_field :email, :value => current_user.email %>
+	  	<%= f.hidden_field :email, :value => @user.email %>
 	  	<%= f.hidden_field :stripe_card_token %>
 		<%= f.hidden_field :plan_id, :value => '59' %>
 		<%= f.hidden_field :plan_name, :value => 'Upgrade59' %>

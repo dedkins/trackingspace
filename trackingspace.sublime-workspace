@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"font",
+				"font-weight"
+			],
+			[
+				"list",
+				"list_title"
+			],
+			[
+				"borde",
+				"border-bottom"
+			],
+			[
 				"paddin",
 				"padding"
 			],
@@ -18,10 +30,6 @@
 			[
 				"padd",
 				"padding-top"
-			],
-			[
-				"font",
-				"font-size"
 			],
 			[
 				"margin",
@@ -359,7 +367,7 @@
 			"file": "app/views/buildings/show.html.erb",
 			"settings":
 			{
-				"buffer_size": 4011,
+				"buffer_size": 3996,
 				"line_ending": "Windows"
 			}
 		},
@@ -380,18 +388,10 @@
 			}
 		},
 		{
-			"file": "app/views/shared/_micropost_form.html.erb",
-			"settings":
-			{
-				"buffer_size": 732,
-				"line_ending": "Windows"
-			}
-		},
-		{
 			"file": "app/assets/stylesheets/layout.css",
 			"settings":
 			{
-				"buffer_size": 14845,
+				"buffer_size": 15124,
 				"line_ending": "Windows"
 			}
 		},
@@ -399,7 +399,15 @@
 			"file": "app/views/layouts/_allnewposts.html.erb",
 			"settings":
 			{
-				"buffer_size": 964,
+				"buffer_size": 1042,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/views/layouts/application.html.erb",
+			"settings":
+			{
+				"buffer_size": 3554,
 				"line_ending": "Windows"
 			}
 		}
@@ -428,6 +436,7 @@
 	},
 	"file_history":
 	[
+		"/C/Users/david/trackingspace/app/views/shared/_micropost_form.html.erb",
 		"/C/Users/david/trackingspace/app/views/spaces/_newspace.html.erb",
 		"/C/Users/david/trackingspace/app/views/buildings/_mapview.html.erb",
 		"/C/Users/david/trackingspace/app/views/buildings/_spacestab.html.erb",
@@ -529,7 +538,6 @@
 		"/C/Users/david/trackingspace/app/views/users/spaceads.js.erb",
 		"/C/Users/david/trackingspace/app/views/users/leases.js.erb",
 		"/C/Users/david/trackingspace/app/views/shared/_feed.html.erb",
-		"/C/Users/david/trackingspace/app/views/shared/_micropost_form.html.erb",
 		"/C/Users/david/trackingspace/app/views/microposts/create.js.erb",
 		"/C/Users/david/trackingspace/app/views/microposts/mbuilding_post.js.erb",
 		"/C/Users/david/trackingspace/app/views/shared/create.js.erb",
@@ -647,7 +655,7 @@
 	"groups":
 	[
 		{
-			"selected": 5,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -655,15 +663,15 @@
 					"file": "app/views/buildings/show.html.erb",
 					"settings":
 					{
-						"buffer_size": 4011,
+						"buffer_size": 3996,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1330,
-								1330
+								555,
+								555
 							]
 						],
 						"settings":
@@ -734,44 +742,18 @@
 				},
 				{
 					"buffer": 3,
-					"file": "app/views/shared/_micropost_form.html.erb",
-					"settings":
-					{
-						"buffer_size": 732,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								23,
-								23
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
 					"file": "app/assets/stylesheets/layout.css",
 					"settings":
 					{
-						"buffer_size": 14845,
+						"buffer_size": 15124,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								454,
-								434
+								3319,
+								3319
 							]
 						],
 						"settings":
@@ -781,25 +763,25 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 2331.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 4,
 					"file": "app/views/layouts/_allnewposts.html.erb",
 					"settings":
 					{
-						"buffer_size": 964,
+						"buffer_size": 1042,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								763,
-								763
+								164,
+								164
 							]
 						],
 						"settings":
@@ -809,6 +791,34 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/views/layouts/application.html.erb",
+					"settings":
+					{
+						"buffer_size": 3554,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2926,
+								2926
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 840.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
