@@ -21,7 +21,7 @@
       </td>
       <td class="title">Suite <%= @space.suite %></td>
       <td style="text-align:right" width="120px">
-        <% if @leases.present? %>
+        <% if @lease.present? %>
           <% if user_signed_in? && @lease.user_id == current_user.id %>
             <%= link_to 'See Lease', space_lease_path(@space,@lease) %>
           <% end %>  
