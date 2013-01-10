@@ -90,10 +90,13 @@
     </section>
 
       <section id="sidebar">
-          <div style="background-image:url(<%= asset_path 'steelbackground.jpg' %>);color:#000000;text-align:center;height:50px;vertical-align:middle;border:1px solid #888;box-shadow:2px 2px 2px #888">&copy 2013 Trackingspace <br/> <%= mail_to "dedkins@trackingspace.com", "Help", :subject => 'Need Help with TrackingSpace' %> | <%= link_to 'Privacy', privacy_path %></div>
+        <div style="border:1px solid #0198E1">
+          <div style="margin:-10px 45px 0 45px;background:#ffffff;text-align:center;color:#0198E1">&copy 2013 Trackingspace</div>
+
+          <div style="color:#000000;text-align:center;vertical-align:middle"><%= mail_to "dedkins@trackingspace.com", "Help", :subject => 'Need Help with TrackingSpace' %> | <%= link_to 'Privacy', privacy_path %></div>
           <%= yield :sidebar %>
             <%= render 'layouts/right_ads' %>
-          <hr/>
+        </div>
       </section>
 
 
