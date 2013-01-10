@@ -8,6 +8,10 @@ def new_stuff
   @allnewusers = User.new_users.limit(8).order('created_at desc')
   @allnewbuildings = Building.new_buildings.limit(8)
   @allnewposts = Micropost.new_posts.limit(10)
+  if user_signed_in?
+    @user = User.find(current_user.id)
+    @leases = @user.leases
+  end
 end
 
 private 

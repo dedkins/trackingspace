@@ -133,6 +133,12 @@ header#top {
   text-transform: uppercase;
 }
 
+.bluebox {
+  border:1px solid #0198E1;
+  padding:8px;
+  margin:15px 0 10px;
+}
+
 /*header#content_title {
   position: fixed;
   width: 100%;

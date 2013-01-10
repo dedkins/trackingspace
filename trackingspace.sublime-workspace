@@ -391,7 +391,7 @@
 			"file": "app/assets/stylesheets/layout.css",
 			"settings":
 			{
-				"buffer_size": 15124,
+				"buffer_size": 15203,
 				"line_ending": "Windows"
 			}
 		},
@@ -404,19 +404,12 @@
 			}
 		},
 		{
-			"file": "app/controllers/pages_controller.rb",
+			"file": "app/views/users/_leasewidget.html.erb",
 			"settings":
 			{
-				"buffer_size": 1274,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/views/layouts/application.html.erb",
-			"settings":
-			{
-				"buffer_size": 3563,
-				"line_ending": "Windows"
+				"buffer_size": 848,
+				"line_ending": "Windows",
+				"name": "<div class=\"bluebox\">"
 			}
 		}
 	],
@@ -444,11 +437,12 @@
 	},
 	"file_history":
 	[
+		"/C/Users/david/trackingspace/app/controllers/application_controller.rb",
+		"/C/Users/david/trackingspace/app/views/layouts/application.html.erb",
+		"/C/Users/david/trackingspace/app/controllers/pages_controller.rb",
 		"/C/Users/david/trackingspace/app/views/subscriptions/_upgrade.html.erb",
 		"/C/Users/david/trackingspace/app/controllers/leases_controller.rb",
 		"/C/Users/david/trackingspace/app/controllers/subscriptions_controller.rb",
-		"/C/Users/david/trackingspace/app/views/layouts/application.html.erb",
-		"/C/Users/david/trackingspace/app/controllers/pages_controller.rb",
 		"/C/Users/david/trackingspace/app/models/subscription.rb",
 		"/C/Users/david/trackingspace/app/views/shared/_micropost_form.html.erb",
 		"/C/Users/david/trackingspace/app/views/spaces/_newspace.html.erb",
@@ -531,7 +525,6 @@
 		"/C/Users/david/trackingspace/app/views/leases/show.html.erb",
 		"/C/Users/david/trackingspace/app/views/layouts/home_html.html.erb",
 		"/C/Users/david/trackingspace/app/views/buildings/_new_buildings.html.erb",
-		"/C/Users/david/trackingspace/app/controllers/application_controller.rb",
 		"/C/Users/david/trackingspace/db/migrate/20121112041357_add_slug_to_building.rb",
 		"/C/Users/david/trackingspace/vendor/assets/javascripts/jquery.ui.addresspicker.js",
 		"/C/Users/david/trackingspace/db/migrate/20121110014819_add_addressing_detail_to_building.rb",
@@ -663,7 +656,7 @@
 	"groups":
 	[
 		{
-			"selected": 6,
+			"selected": 5,
 			"sheets":
 			[
 				{
@@ -753,15 +746,15 @@
 					"file": "app/assets/stylesheets/layout.css",
 					"settings":
 					{
-						"buffer_size": 15124,
+						"buffer_size": 15203,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3319,
-								3319
+								2528,
+								2528
 							]
 						],
 						"settings":
@@ -771,7 +764,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 2331.0,
+						"translation.y": 1472.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -788,8 +781,8 @@
 						"selection":
 						[
 							[
-								164,
-								164
+								210,
+								1033
 							]
 						],
 						"settings":
@@ -805,55 +798,27 @@
 				},
 				{
 					"buffer": 5,
-					"file": "app/controllers/pages_controller.rb",
+					"file": "app/views/users/_leasewidget.html.erb",
 					"settings":
 					{
-						"buffer_size": 1274,
+						"buffer_size": 848,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								636,
-								636
+								511,
+								511
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"auto_name": "<div class=\"bluebox\">",
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "app/views/layouts/application.html.erb",
-					"settings":
-					{
-						"buffer_size": 3563,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2927,
-								2927
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 847.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

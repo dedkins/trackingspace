@@ -1,0 +1,24 @@
+<div class="bluebox">
+
+	<div class="title" style="font-size:1.25em;text-align:center;padding-bottom:10px;margin:-15px 60px 0 60px;background:#ffffff">Leases</div>
+
+	<% if @leases.present? %>
+
+		<% @leases.each do |m| %>
+
+		<div style="text-transform:uppercase;font-size:.85em;text-align:left;padding-left:4px;height:20px;background:#efefef">
+			<%= link_to truncate(m.space.building.address, :size => '2', :separator => ',', :omission => ''), building_path(m.space.building_id), :class => 'list_title' %>, #<%= link_to m.space.suite, building_space_path(m.space.building.id,m.space.id) %>
+		</div>
+		<div style="font-size:.85em;padding-left:4px;text-align:center">
+			<%= link_to 'View', space_lease_path(m.space,m) %> | <%= m.size %>sf | $<%= m.current_rate %>/mo | exp: <%= m.expiration %>
+		</div>
+
+		<% end %>
+
+	<% else %>
+
+	<div style="padding:0 5px 10px 5px;text-align:center">If you created a lease or one was shared with you, they will show up here.</div>
+
+	<% end %>
+
+</div>
