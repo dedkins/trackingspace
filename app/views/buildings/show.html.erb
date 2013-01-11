@@ -25,12 +25,7 @@
 
 			<% if user_signed_in? %>
 				<div style="float:left;width:100%">
-					<div style="float:left;font-size:.9em;color:#666666">
-						<%= @building.address %>  |  
-						<% if user_signed_in? %>
-							<%= link_to "Edit Details", edit_building_path(@building) %>
-						<% end %>
-					</div>
+					<%= render 'buildings/buildingstats' %>
 					<div style="float:right">
 						<div id="building_follow_form" >
 							<% if current_user.building_following?(@building) %>
@@ -45,6 +40,7 @@
 			<br/>
 			<div style="float:left;font-size:.9em;color:#666666"><%= @building.address %></div>
 			<% end %>
+
 			
 			<table width="100%">
 				<tr>

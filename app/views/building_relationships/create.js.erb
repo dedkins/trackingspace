@@ -1,1 +1,2 @@
-$("#building_follow_form").html("<%= escape_javascript(render('pages/building_unfollow')) %>")
+$("#building_follow_form").html("<%= j(render('pages/building_unfollow')) %>")
+$('#building_stats').html("<%= j(render('buildings/buildingstats')) %>")
