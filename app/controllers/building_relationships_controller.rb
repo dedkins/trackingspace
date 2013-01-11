@@ -13,15 +13,10 @@ class BuildingRelationshipsController < ApplicationController
 	def destroy
 		@user = current_user
 		@br = BuildingRelationship.find(params[:id])
-		if params[:id].present?
-			@building = Building.find(@br.building_id)
-		end
-		if params[:slug].present?
-			@building = Building.find_by_slug(params[:slug])
-		end
+		@building = Building.find(@br.building_id)
 		current_user.building_relationships.find(@br).destroy
 		respond_to do |format|
-			format.html { redirect_to building_path(@br.building_id) }
+			format.html { redirect_to building_path(@building.building_id) }
 			format.js
 		end
 	end
