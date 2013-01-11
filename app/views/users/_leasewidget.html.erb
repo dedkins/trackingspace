@@ -9,9 +9,15 @@
 		<div style="text-transform:uppercase;font-size:.85em;text-align:left;padding-left:4px;height:20px;background:#efefef">
 			<%= link_to truncate(m.space.building.address, :size => '2', :separator => ',', :omission => ''), building_path(m.space.building_id), :class => 'list_title', :title => 'Click to see the Building' %>, <%= link_to m.space.suite, building_space_path(m.space.building.id,m.space.id), :class => 'list_title', :title => 'Click to see the Space' %>
 		</div>
+		<% if Date.today > m.expiration-90.days or m.expiration < Date.today %>
+		<div style="font-size:.85em;padding-left:4px;text-align:center;color:red;text-transform:italic">
+			<%= link_to 'View', space_lease_path(m.space,m) %> | <%= m.size %>sf | $<%= m.current_rate %>/mo | exp: <%= m.expiration %>
+		</div>
+		<% else %>
 		<div style="font-size:.85em;padding-left:4px;text-align:center">
 			<%= link_to 'View', space_lease_path(m.space,m) %> | <%= m.size %>sf | $<%= m.current_rate %>/mo | exp: <%= m.expiration %>
 		</div>
+		<% end %>
 
 		<% end %>
 
