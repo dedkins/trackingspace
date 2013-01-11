@@ -16,7 +16,7 @@ class BuildingRelationshipsController < ApplicationController
 		@building = Building.find(@br.building_id)
 		current_user.building_relationships.find(@br).destroy
 		respond_to do |format|
-			format.html { redirect_to building_path(@building.building_id) }
+			format.html { redirect_to @building }
 			format.js
 		end
 	end
