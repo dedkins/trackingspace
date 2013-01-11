@@ -73,15 +73,6 @@ class BuildingsController < ApplicationController
     @building = Building.find(params[:id])
   end
 
-  def buildingstats
-    if params[:id].present?
-      @building = Building.find(params[:id])
-    end
-    if params[:slug].present?
-      @building = Building.find_by_slug(params[:slug])
-    end
-  end
-
   def map
   end
 
