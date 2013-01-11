@@ -21,7 +21,7 @@ class BuildingRelationshipsController < ApplicationController
 		end
 		current_user.building_relationships.find(@br).destroy
 		respond_to do |format|
-			format.html { redirect_to building_path(@building) }
+			format.html { redirect_to building_path(@br.building_id) }
 			format.js
 		end
 	end
