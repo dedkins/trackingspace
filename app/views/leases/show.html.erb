@@ -2,46 +2,40 @@
 
 <% if current_user.id == @lease.user_id %>
 
-<table width="100%">
-	<tr>
-		<td><%= button_to 'Share It', '', :class => 'button' %></td>
-		<td colspan="2" style="text-align:right;font-size:.9em">
-				<%= link_to 'Edit', edit_space_lease_path(@space,@lease) %> |
-				<%= link_to 'Download Copy', @lease.file.url %> |
-				<%= link_to 'See Space', building_space_path(@space.building_id,@space) %>
-		</td>
-	</tr>
-	<tr height="12px"/>
-	<tr>
-		<td style="font-size: 2em;text-align:center" colspan="3">L  E  A  S  E</td>
-	</tr>
-	<tr height="12px" style="font-size:.8em;text-align:center">
-		<td colspan="3" ><%= link_to truncate(@lease.space.building.address, :length => 25, :separator => ',', :omission => ''), building_path(@lease.space.building) %>, Suite: <%= @lease.space.suite %></td>
-	</tr>
-	<tr>
-		<td colspan="3"><hr/></td>
-	</tr>
-	<tr>
-		<td width="33%" class="top_words"><%= number_with_delimiter(@lease.size) %>sf</td>
-		<td width="33%" class="top_words"><%= number_to_currency(@lease.current_rate) %></td>
-		<td width="33%" class="top_words"><%= l @lease.expiration %></td>
-	</tr>
-	<tr>
-		<td style="text-align:center">Size</td>
-		<td style="text-align:center">Current Monthly</td>
-		<td style="text-align:center">Expiration</td>
-	</tr>
-	<tr>
-		<td colspan="3"><hr/></td>
-	</tr>
-</table>
+<div style="float:left;position:absolute;margin-top:-33px;background:#ffffff">
+	<div class="top_words" style="float:left;padding:0 5px">
+		Exp: <%= l @lease.expiration %>
+	</div>
+	<div class="top_words" style="float:left;padding:0 5px" id="avgrate">
+		<%= number_to_currency(@lease.current_rate) %>/mo
+	</div>
+	<div class="top_words" style="float:left;padding:0 5px" id="avgrate">
+		<%= number_with_delimiter(@lease.size) %>sf
+	</div>
+</div>
 
+<div style="float:right;position:relative;margin-top:-33px;background:#ffffff">
+	<div class="title">Lease</div>
+</div>
 
-<%= render 'leases/pdf' %>
+<div style="float:left;position:relative" class="title">
+	<%= link_to truncate(@lease.space.building.address, :separator => ',', :omission => ''), building_path(@lease.space.building) %>, Suite: <%= @lease.space.suite %>
+</div>
 
-<% content_for :sidebar do %>
+<div style="float:right;padding-left:20px">
+	<%= button_to 'Share It', '', :class => 'trackbutton' %>
+</div>
 
-<% end %>
+<div style="float:left">
+	<%= link_to 'Edit', edit_space_lease_path(@space,@lease) %> |
+	<%= link_to 'Download Copy', @lease.file.url %> |
+	<%= link_to 'See Space', building_space_path(@space.building_id,@space) %>
+</div>
+
+<div style="margin-top:60px">
+	<hr/>
+	<%= render 'leases/pdf' %>
+</div>
 
 <% else %>
 

@@ -24,16 +24,23 @@
 			</div>
 
 			<% if user_signed_in? %>
-				<div>
-					<div id="building_follow_form" style="width:100%">
-						<% if current_user.building_following?(@building) %>
-							<%= render 'pages/building_unfollow' %>
-						<% else %>
-							<%= render 'pages/building_follow' %>
+				<div style="float:left;width:100%">
+					<div style="float:left;font-size:.9em;color:#666666">
+						<%= @building.address %>  |  
+						<% if user_signed_in? %>
+							<%= link_to "Edit Details", edit_building_path(@building) %>
 						<% end %>
 					</div>
+					<div style="float:right">
+						<div id="building_follow_form" >
+							<% if current_user.building_following?(@building) %>
+								<%= render 'pages/building_unfollow' %>
+							<% else %>
+								<%= render 'pages/building_follow' %>
+							<% end %>
+						</div>
+					</div>
 				</div>
-				<div style="float:left;font-size:.9em;color:#666666"><%= @building.address %></div>
 			<% else %>
 			<br/>
 			<div style="float:left;font-size:.9em;color:#666666"><%= @building.address %></div>
@@ -94,14 +101,6 @@
 
 	<% unless mobile_device? %>
 		<%= content_for :sidebar do %>
-		<table>
-			<tr>
-				<td height="10px"/>
-			</tr>
-			<% if user_signed_in? %>
-			<%= link_to "Edit Building", edit_building_path(@building) %>
-			<% end %>
-		</table>
 			<% if user_signed_in? %>
 	          <%= render 'shared/recent' %>
 	        <% end %>
