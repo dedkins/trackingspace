@@ -31,7 +31,6 @@ class UsersController < ApplicationController
     @authentications = Authentication.find_by_user_id(@user.id)
     @building_ads = @user.building_ads
     @space_ads = @user.space_ads  
-    @leases = @user.leases if signed_in?
   end 
 
   def search
