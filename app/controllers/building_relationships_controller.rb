@@ -13,7 +13,7 @@ class BuildingRelationshipsController < ApplicationController
 	def destroy
 		@user = current_user
 		@br = BuildingRelationship.find(params[:id])
-		@building = Building.find(@br.building_id)
+		@building = Building.find(params[:building_id])
 		current_user.building_relationships.find(@br).destroy
 		respond_to do |format|
 			format.html { redirect_to @building }

@@ -1,3 +1,4 @@
 <%= form_for current_user.building_relationships.find_by_user_id(@user), :html => { :method => :delete }, :remote => true do |f|  %>
+	<%= text_field_tag :building_id, @building.id %>
 	<%= f.submit "Untrack It", :class => 'untrackbutton' %>
 <% end %>
