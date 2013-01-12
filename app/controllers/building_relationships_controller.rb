@@ -14,7 +14,7 @@ class BuildingRelationshipsController < ApplicationController
 		@user = current_user
 		@br = BuildingRelationship.find(params[:id])
 		@building = Building.find(params[:building_id])
-		current_user.building_relationships.find(@br).destroy
+		current_user.building_relationships.find(@br.id).destroy
 		respond_to do |format|
 			format.html { redirect_to @building.id }
 			format.js
