@@ -3,4 +3,9 @@
 	<div id="feeditems">
 		<%= render :partial => 'shared/feed_item', :collection => @feed_items %>
 	</div>
+	<% else %>
+
+	<div style="padding:50px">
+		As you start following people or tracking buildings and spaces, activities related to those things or persons will automatically show up here.  <p>Try it now - look to the left at the recent comments in the system and click a building or person's name, track or follow them and come back here (the home screen) and you should see it update with new information.</p>
+	</div>
 	<% end %>

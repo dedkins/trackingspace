@@ -23,7 +23,11 @@
 
 	<% else %>
 
-	<div style="padding:0 5px 10px 5px;text-align:center">If you created a lease or one was shared with you, they will show up here.</div>
+	<div style="padding:0 5px 10px 5px;text-align:center">If you created a lease or one was shared with you, they will show up here.
+		<% unless user_signed_in? %>
+			<p>But first you need to <%= button_to 'Sign-In', new_user_session_path, :class => 'trackbutton' %> or <%= button_to 'Become a Member', new_user_registration_path, :class => 'trackbutton' %></p>
+		<% end %>
+	</div>
 
 	<% end %>
 

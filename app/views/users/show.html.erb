@@ -31,7 +31,7 @@
 			<td style="text-align:left;">
 				<span class="title"><%= @user.name %></span>
 				<% if @user.upgrade == 'Upgrade59' %>
-				<span class="premium">premium</span>
+				<span class="premium">premium member</span>
 				<% end %>
 				<br/>
 				<span style="font-size:.8em;text-transform:uppercase">Member Since: <%= @user.created_at.strftime("%b %d, %Y") %></span>
@@ -69,7 +69,7 @@
 				</table>
 			</td>
 			<td style="text-align:right">
-		  		<%= link_to image_tag("https://github.com/intridea/authbuttons/raw/master/png/twitter_64.png", :size => "30x30", :alt => "Twitter"), "http://twitter.com/home?status=Saw this on Trackingspace: http://#{request.host+request.fullpath}", :target => '_blank' %>
+		  		<%= link_to image_tag("https://github.com/intridea/authbuttons/raw/master/png/twitter_64.png", :size => "30x30", :alt => "Twitter"), "http://twitter.com/home?status=Take a look at this on @Trackingspace: http://#{request.host+request.fullpath}", :target => '_blank' %>
 			  	<%= link_to image_tag("http://github.com/intridea/authbuttons/raw/master/png/facebook_64.png", :size => "30x30"), "http://www.facebook.com/sharer.php?u=http://#{request.host+request.fullpath}", :target => '_blank' %>
 			</td>
 		</tr>	
@@ -79,41 +79,49 @@
 			</td>
 		</tr>
 		<% end %>
+	</table>
+	<table width="100%">
 		<tr>
-			<td colspan="3" style="padding-left:8px;text-align:center;padding-top:10px">
-				
+			<td style="text-align:right">
+				<div class="viewbuttoncontainer">
+					<%= button_to 'Activity', showfeed_user_path, :class => 'viewbutton', :remote => true, :method => 'get' %>
+				</div>
 				<% if @leases and @user.id == current_user.id %>
-				Leases: <%= link_to @user.leases.count, leases_user_path, :remote => true %> |
+				<div class="viewbuttoncontainer">
+					<%= button_to 'Leases', leases_user_path, :class => 'viewbutton', :remote => true, :method => 'get' %>
+				</div>
 				<% end %>
-				Following: <%= link_to @user.following.count, following_user_path, :remote => true %>  |
-				Followers: <%= link_to @user.followers.count, followers_user_path, :remote => true %> | 
+				<div class="viewbuttoncontainer">
+					<%= button_to "Following", following_user_path, :class => 'viewbutton', :remote => true, :method => 'get' %>
+				</div>
+				<div class="viewbuttoncontainer">
+					<%= button_to "Followers", followers_user_path, :class => 'viewbutton', :remote => true, :method => 'get' %>
+				</div>
 				<% if @user.upgrade == 'Upgrade59' %>
-					Buildings: <%= link_to @building_ads.count, buildingads_user_path, :remote => true %> |
-					Spaces: <%= link_to @space_ads.count, spaceads_user_path, :remote => true %> |
+					<div class="viewbuttoncontainer">
+						<%= button_to "Buildings", buildingads_user_path, :class => 'viewbutton', :remote => true, :method => 'get' %>
+					</div>
+					<div class="viewbuttoncontainer">
+						<%= button_to "Spaces", spaceads_user_path, :class => 'viewbutton', :remote => true, :method => 'get' %>
+					</div>
 				<% end %>
-				Buildings Tracked: <%= link_to @user.building_relationships.count, trackingbuildings_user_path, :remote => true %>
-				<% if user_signed_in? && mobile_device? %> |
-					<%= link_to 'SignOut', destroy_user_session_path(@user), :method => 'delete' %>
-				<% end %>
+				<div class="viewbuttoncontainer">
+							<%= button_to "Tracking", trackingbuildings_user_path, :class => 'viewbutton', :remote => true, :method => 'get' %>
+				</div>
 			</td>
 		</tr>
-		<tr>
-			<td height="10px"/>
-		</tr>
+	</table>
 		<% if user_signed_in? %>
 			<% unless current_user == @user %>
-				<tr><td colspan="3"><hr/><hr/></td></tr>
-				<tr>
-					<td colspan="3">
+				<div style="padding:8px">
 									Add a comment about this person:
 								<%= render '/shared/micropost_form' %>
-					</td>
-				</tr>
+					</div>
 			<% else %>
+				<div style="padding:8px"/>
 			<% end %>
 		<% end %>
-	</table>
-	<div id="partials">
+	<div id="partials" style="border:1px solid orange;margin-top:-3px;width:101%">
 		<%= render 'shared/feed' %>
 	</div>
 

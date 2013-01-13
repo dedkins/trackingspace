@@ -60,6 +60,15 @@ class UsersController < ApplicationController
     end
   end
 
+  def showfeed
+    @user = User.find(params[:id])
+    @feed_items = @user.feed
+    
+    respond_to do |format|               
+      format.js
+    end  
+  end
+
   def following
     @title = 'Following'
     @user = User.find(params[:id])
