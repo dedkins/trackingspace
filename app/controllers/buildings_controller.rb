@@ -116,11 +116,15 @@ class BuildingsController < ApplicationController
   end
 
   def home
+    @ip = request.ip
+    @city = request.location.city
+    @state = request.location.state
     if user_signed_in?
       redirect_to home_path
     else
       render :layout => "home_html"
     end
+    UserMailer.newhomevisitor(@ip,@city,@state).deliver
   end
 
   def create
