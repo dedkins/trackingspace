@@ -121,7 +121,6 @@ class BuildingsController < ApplicationController
     else
       render :layout => "home_html"
     end
-    UserMailer.newhomevisitor(request).deliver
   end
 
   def create
