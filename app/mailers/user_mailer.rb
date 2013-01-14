@@ -2,7 +2,7 @@ class UserMailer < ActionMailer::Base
   default :from => 'dedkins@trackingspace.com'
 
   def newhomevisitor
-    mail(:to => 'dedkins@trackingspace', :subject => "New Visitor")
+    mail(:to => 'dedkins@trackingspace.com', :subject => "New Visitor")
   end
 
   def welcome_email(user)
