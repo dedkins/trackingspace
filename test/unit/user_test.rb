@@ -22,6 +22,9 @@
 #  description            :text
 #  phone                  :string(255)
 #  website                :string(255)
+#  access                 :string(255)
+#  latitude               :float
+#  longitude              :float
 #
 
 require 'test_helper'

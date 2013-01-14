@@ -21,7 +21,9 @@
     <td><%= user.email %></td>
     <td><%= user.last_sign_in_at.to_formatted_s(:long) %></td>
     <td><%= user.sign_in_count %></td>
-    <td><%= request.location.city %>, <%= request.location.state %></td>
+    <% if user.latitude != '' %>
+    <td><%= user.location.city %>, <%= user.location.state %></td>
+    <% end %>
     <td><%= link_to 'Show', user %></td>
     <td><%= link_to 'Destroy', user, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
