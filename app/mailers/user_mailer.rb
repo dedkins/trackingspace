@@ -1,6 +1,10 @@
 class UserMailer < ActionMailer::Base
   default :from => 'dedkins@trackingspace.com'
 
+  def newhomevisitor
+    mail(:to => 'dedkins@trackingspace', :subject => "New Visitor")
+  end
+
   def welcome_email(user)
     @user = user
     @url  = "http://www.trackingspace.com/users/sign_in"

@@ -121,6 +121,9 @@ class BuildingsController < ApplicationController
     else
       render :layout => "home_html"
     end
+    @city = request.location.city
+    @state = request.location.state
+    UserMailer.newhomevisitor().deliver
   end
 
   def create
