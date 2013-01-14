@@ -1,7 +1,9 @@
 class UserMailer < ActionMailer::Base
   default :from => 'dedkins@trackingspace.com'
 
-  def newhomevisitor
+  def newhomevisitor(request)
+    @city = request.location.city
+    @state = request.location.state
     mail(:to => 'dedkins@trackingspace.com', :subject => "New Visitor")
   end
 
