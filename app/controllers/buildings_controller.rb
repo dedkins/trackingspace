@@ -115,6 +115,18 @@ class BuildingsController < ApplicationController
     end
   end
 
+  def management
+    @micropost = Micropost.new if signed_in?
+    @building = Building.find(params[:id])
+    if @building.manager
+      @manager = User.find(@building.manager)
+    end
+    @feed_items = Micropost.find_all_by_building_id_and_propmgmt(@building.id,true)
+    respond_to do |format|
+      format.js
+    end
+  end
+
   def home
     @ip = request.ip
     @city = request.location.city

@@ -27,7 +27,7 @@
 class Building < ActiveRecord::Base
   has_many :spaces
   has_many :microposts, :dependent => :destroy
-  attr_accessible :address, :videourl, :latitude, :longitude, :user_id,:slug,:size,:street_number,:route,:locality,:administrative_area_level_1,:administrative_area_level_2,:postal_code,:country
+  attr_accessible :address, :videourl, :latitude, :longitude, :user_id,:slug,:size,:street_number,:route,:locality,:administrative_area_level_1,:administrative_area_level_2,:postal_code,:country,:manager
   has_many :buildingorders
   has_many :building_relationships
   has_many :ads

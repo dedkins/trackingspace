@@ -40,12 +40,16 @@ class SpacesController < ApplicationController
   
   def create
     @user = current_user
+    @tracking = BuildingRelationship.find_by_building_id_and_user_id(@building.id,@user.id)
     @space = @building.spaces.new(params[:space])
     @micropost = current_user.microposts.build(typeof: 'Created', building_id: @building.id,space_id: @space.id,address: @building.address,name: @user.name, suite: @space.suite)
-
+    unless @tracking.present?
+      @tracking = current_user.building_relationships.build(building_id: @building.id)
+    end
     respond_to do |format|
       if @space.save
         @micropost.save!
+        @tracking.save!
         format.html { redirect_to spacesview_building_path(@space.building_id) }
         format.json { render json: [@building], status: :created, location: @space }
         @building = Building.find(@space.building.id)

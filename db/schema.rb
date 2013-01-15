@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130104210316) do
+ActiveRecord::Schema.define(:version => 20130115062110) do
 
   create_table "ads", :force => true do |t|
     t.integer  "building_id"
@@ -70,6 +70,7 @@ ActiveRecord::Schema.define(:version => 20130104210316) do
     t.string   "pretty_url"
     t.string   "slug"
     t.string   "videourl"
+    t.integer  "manager"
   end
 
   add_index "buildings", ["slug"], :name => "index_buildings_on_slug"
@@ -102,6 +103,7 @@ ActiveRecord::Schema.define(:version => 20130104210316) do
     t.string   "name"
     t.string   "typeof"
     t.integer  "postforuser_id"
+    t.boolean  "propmgmt"
   end
 
   add_index "microposts", ["user_id"], :name => "index_microposts_on_user_id"

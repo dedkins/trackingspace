@@ -415,15 +415,15 @@
 			"file": "app/views/users/index.html.erb",
 			"settings":
 			{
-				"buffer_size": 732,
+				"buffer_size": 714,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "app/views/buildings/home.html.erb",
+			"file": "app/controllers/users_controller.rb",
 			"settings":
 			{
-				"buffer_size": 1846,
+				"buffer_size": 2522,
 				"line_ending": "Windows"
 			}
 		}
@@ -452,6 +452,7 @@
 	},
 	"file_history":
 	[
+		"/C/Users/david/trackingspace/app/views/buildings/home.html.erb",
 		"/C/Users/david/trackingspace/app/mailers/user_mailer.rb",
 		"/C/Users/david/trackingspace/app/views/user_mailer/newhomevisitor.html.erb",
 		"/C/Users/david/trackingspace/app/views/users/show.html.erb",
@@ -534,7 +535,6 @@
 		"/C/Users/david/trackingspace/app/assets/stylesheets/home_html.css",
 		"/C/Users/david/trackingspace/app/views/pages/_follow_users.html.erb",
 		"/C/Users/david/trackingspace/app/assets/stylesheets/gmaps4rails.css",
-		"/C/Users/david/trackingspace/app/views/buildings/home.html.erb",
 		"/C/Users/david/trackingspace/app/views/pages/buildings_main.html.erb",
 		"/C/Users/david/trackingspace/app/views/pages/index.html.erb",
 		"/C/Users/david/trackingspace/app/views/ads/_slot1.html.erb",
@@ -671,7 +671,7 @@
 	"groups":
 	[
 		{
-			"selected": 5,
+			"selected": 6,
 			"sheets":
 			[
 				{
@@ -816,15 +816,15 @@
 					"file": "app/views/users/index.html.erb",
 					"settings":
 					{
-						"buffer_size": 732,
+						"buffer_size": 714,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								574,
-								574
+								528,
+								528
 							]
 						],
 						"settings":
@@ -841,23 +841,23 @@
 				},
 				{
 					"buffer": 6,
-					"file": "app/views/buildings/home.html.erb",
+					"file": "app/controllers/users_controller.rb",
 					"settings":
 					{
-						"buffer_size": 1846,
+						"buffer_size": 2522,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								36,
-								36
+								250,
+								250
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},

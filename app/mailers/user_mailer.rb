@@ -36,4 +36,11 @@ class UserMailer < ActionMailer::Base
     mail(:bcc => email, :subject => 'New Comment for '+@building.address)
   end
 
+  def propmgmt(building)
+    @building = Building.find(building)
+    @propmgr = User.find(@building.manager)
+    @micropost = Micropost.where('building_id = ? and propmgmt = true', @building.id).first
+    mail(:to => @propmgr.email, :subject => "New Msg for #{@building.address}")
+  end
+
 end

@@ -18,7 +18,7 @@
 #
 
 class Micropost < ActiveRecord::Base
-  attr_accessible :content, :building_id, :space_id, :lease_id, :address, :name, :suite, :typeof, :postforuser_id
+  attr_accessible :content, :building_id, :space_id, :lease_id, :address, :name, :suite, :typeof, :postforuser_id, :propmgmt
 
   belongs_to :user, :class_name => "User"
   belongs_to :postforuser, :class_name => "User"

@@ -1,0 +1,33 @@
+<div style="width:100%;height:100%">
+
+	<% if @building.manager.present? %>
+		<div style="background:#333333;color:#ffffff;padding:3px 8px">Managed By:</div>
+		<div style="float:right;padding-right:8px"><%= link_to 'No Longer Managing', '#', :title => 'Click if No Longer Managing' %></div>
+		<div style="float:left;padding:8px">
+			<%= gravatar_image_tag(@user.email, :gravatar => {:size => '60x60'}) %>
+		</div>
+		<div class="title" style="padding:10px"><%= link_to @manager.name, user_path(@manager.id), :target => '_blank', :title => "Click to go to #{@manager.name}'s Profile" %></div>
+		<div class="title"><%= @manager.phone %></div>
+		<hr/>
+		<div style="float:left;width:93%;padding:0 10px">Post an Issue or Question: <%= render 'shared/micropost_topropmanager' %></div>
+		<div style="float:left;font-size:.9em;padding:0 0 20px 10px">**The manager will be emailed immediately.</div>
+		<% if @feed_items.present? %>
+			<div style="float:left;width:93%;background:#333333;color:#ffffff;margin: 15px 20px;padding-left:10px">Posts to the Manager</div>
+			<div style="width:93%;float:left;margin:0 20px;">
+				<%= render 'shared/feed' %>
+			</div>
+		<% end %>
+	<% else %>
+	<div style="padding:50px;text-align:center;min-height:200px;border:1px solid orange">
+		No Manager Referenced - Are You the Manager?
+		<p>If so, 
+			<% if user_signed_in? and current_user.upgrade != 'Upgrade59' %>
+			<%= link_to 'click here to upgrade and communicate better with your tenants', upgrade_path %>
+			<% end %>
+			<% if user_signed_in? and current_user.upgrade == 'Upgrade59' %>
+			<%= link_to 'click here to claim yourself as the manager for this building', '#' %>
+			<% end %>
+	</div>
+	<% end %>
+
+</div>

@@ -46,7 +46,7 @@
 				<tr>
 					<td style="text-align:right">
 						<div class="viewbuttoncontainer">
-							<%= button_to 'Management', '#', :class => 'viewbutton', :remote => true, :method => 'get' %>
+							<%= button_to 'Management', management_building_path(@building.id), :class => 'viewbutton', :remote => true, :method => 'get' %>
 						</div>
 						<div class="viewbuttoncontainer">
 							<%= button_to 'News', '#', :class => 'viewbutton', :remote => true, :method => 'get' %>

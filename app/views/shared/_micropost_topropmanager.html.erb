@@ -1,0 +1,10 @@
+<%= form_for @micropost do |f| %>
+
+	<%= f.hidden_field :building_id, :value => @building.id %>
+	<%= f.hidden_field :propmgmt, :value => true %>
+	<%= hidden_field_tag "back_to", building_path(@building) %>
+
+<%= f.text_field :content, :placeholder => 'Add your issue or question here...', :class => 'comment_input' %>
+<%= f.submit "Submit", :class => 'trackbutton' %>
+
+<% end %>
