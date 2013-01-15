@@ -17,11 +17,7 @@
 				<%= render 'shared/feed' %>
 			</div>
 		<% end %>
-	<% elsif %>
-	<div style="padding:50px;text-align:center;min-height:200px;border:1px solid orange">
-		No Manager Referenced Yet - Do you know the manager?  If so, let them know they should improve their tenant communication by becoming a member and annoucing they are the proud manager of this property.
-	</div>
-
+	<% elsif user_signed_in? %>
 	<div style="padding:50px;text-align:center;min-height:200px;border:1px solid orange">
 		No Manager Referenced - Are You the Manager?
 		<p>If so, 
@@ -32,6 +28,11 @@
 			<%= link_to 'click here to claim yourself as the manager for this building', '#' %>
 			<% end %>
 	</div>
+	<% else %>
+	<div style="padding:50px;text-align:center;min-height:200px;border:1px solid orange">
+		No Manager Referenced Yet. <p/> Do you know the manager?  <p/>If so, let them know they should improve their tenant communication by becoming a member and annoucing they are the proud manager of this property.
+	</div>
+	
 	<% end %>
 
 </div>
