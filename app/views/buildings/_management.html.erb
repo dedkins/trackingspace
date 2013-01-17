@@ -1,4 +1,4 @@
-<div style="width:100%;height:100%">
+<div style="float:left;border:1px solid orange;min-height:400px;width:100%">
 
 	<% if @building.manager.present? %>
 		<div style="background:#333333;color:#ffffff;padding:3px 8px">Managed By:</div>
@@ -12,7 +12,7 @@
 			<div style="float:left;width:93%;padding:0 10px">Post an Issue or Question: <%= render 'shared/micropost_topropmanager' %></div>
 			<div style="float:left;font-size:.9em;padding:0 0 20px 10px">**The manager will be emailed immediately.</div>
 		<% else %>
-			<div style="width:100%;padding:20px;text-align:center"><%= button_to 'Please sign in to leave a message for the manager', new_user_session_path, :class => 'button', :method => 'get' %></div>
+			<div style="width:100%;padding:100px 20px 20px 20px;text-align:center"><%= button_to 'Please sign in to leave a message for the manager', new_user_session_path, :class => 'button', :method => 'get' %></div>
 		<% end %>
 		<% if @feed_items.present? %>
 			<div style="float:left;width:93%;background:#333333;color:#ffffff;margin: 15px 20px;padding-left:10px">Posts to the Manager</div>

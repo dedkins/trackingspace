@@ -25,6 +25,7 @@
 #  access                 :string(255)
 #  latitude               :float
 #  longitude              :float
+#  license                :string(255)
 #
 
 require 'test_helper'

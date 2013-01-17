@@ -1,12 +1,12 @@
 <% if @allnewusers.present? %>
 
-<div style="border:1px solid #0198E1;padding:5px;margin-top:20px">
+<div style="float:left;width:90%;border:1px solid #0198E1;padding:10px;margin-top:20px">
 
-	<div class="title" style="font-size:1.25em;text-align:center;padding-bottom:10px;margin:-15px 20px 0 20px;background:#ffffff">New</div>
+	<div class="title" style="font-size:1.25em;text-align:center;margin:-20px 20px 0 20px;background:#ffffff">New Peeps</div>
 
 	<% @allnewusers.each do |u| %>
 		<div style="float:left;font-size:.9em"><%= link_to u.name, user_path(u.id) %></div>
-		<div style="float:right;font-size:.9em;text-align:right"><%= time_ago_in_words(u.created_at) %></div>
+		<div style="float:right;font-size:.9em"><%= time_ago_in_words(u.created_at) %></div>
 	<% end %>
 
 </div>
