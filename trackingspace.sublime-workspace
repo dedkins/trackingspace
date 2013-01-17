@@ -402,6 +402,14 @@
 				"buffer_size": 15053,
 				"line_ending": "Windows"
 			}
+		},
+		{
+			"file": "app/views/buildings/_management.html.erb",
+			"settings":
+			{
+				"buffer_size": 2164,
+				"line_ending": "Windows"
+			}
 		}
 	],
 	"build_system": "",
@@ -428,14 +436,14 @@
 	},
 	"file_history":
 	[
-		"/C/Users/david/trackingspace/app/models/micropost.rb",
+		"/C/Users/david/trackingspace/app/views/buildings/_comingsoon.html.erb",
 		"/C/Users/david/trackingspace/app/views/layouts/_allnewusers.html.erb",
+		"/C/Users/david/trackingspace/app/models/micropost.rb",
 		"/C/Users/david/trackingspace/db/migrate/20130117164407_add_license_to_users.rb",
 		"/C/Users/david/trackingspace/app/controllers/application_controller.rb",
 		"/C/Users/david/trackingspace/app/views/buildings/_management.html.erb",
 		"/C/Users/david/trackingspace/app/mailers/user_mailer.rb",
 		"/C/Users/david/trackingspace/app/views/user_mailer/propmgmt.html.erb",
-		"/C/Users/david/trackingspace/app/views/buildings/_comingsoon.html.erb",
 		"/C/Users/david/trackingspace/app/views/buildings/_spaces.html.erb",
 		"/C/Users/david/trackingspace/app/views/layouts/_allnewbuildings.html.erb",
 		"/C/Users/david/trackingspace/app/models/building.rb",
@@ -648,7 +656,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -673,7 +681,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 518.0,
+						"translation.y": 900.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -730,6 +738,33 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 850.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/views/buildings/_management.html.erb",
+					"settings":
+					{
+						"buffer_size": 2164,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1409,
+								1409
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

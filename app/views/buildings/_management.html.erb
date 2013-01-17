@@ -21,7 +21,7 @@
 			</div>
 		<% end %>
 	<% elsif user_signed_in? %>
-	<div style="padding:50px;text-align:center;min-height:200px;border:1px solid orange">
+	<div style="padding:50px;text-align:center">
 		No Manager Referenced - Are You the Manager?
 		<p>If so, 
 			<% if user_signed_in? and current_user.upgrade != 'Upgrade59' %>
