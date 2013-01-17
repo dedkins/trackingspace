@@ -391,7 +391,7 @@
 			"file": "app/controllers/buildings_controller.rb",
 			"settings":
 			{
-				"buffer_size": 7222,
+				"buffer_size": 7262,
 				"line_ending": "Windows"
 			}
 		},
@@ -407,7 +407,7 @@
 			"file": "app/views/buildings/_management.html.erb",
 			"settings":
 			{
-				"buffer_size": 2164,
+				"buffer_size": 2140,
 				"line_ending": "Windows"
 			}
 		}
@@ -656,7 +656,7 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -691,15 +691,15 @@
 					"file": "app/controllers/buildings_controller.rb",
 					"settings":
 					{
-						"buffer_size": 7222,
+						"buffer_size": 7262,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3702,
-								3702
+								3858,
+								3858
 							]
 						],
 						"settings":
@@ -709,7 +709,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1485.0,
+						"translation.y": 1759.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -747,15 +747,15 @@
 					"file": "app/views/buildings/_management.html.erb",
 					"settings":
 					{
-						"buffer_size": 2164,
+						"buffer_size": 2140,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1409,
-								1409
+								1955,
+								1955
 							]
 						],
 						"settings":
@@ -764,7 +764,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 244.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
