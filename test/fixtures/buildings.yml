@@ -22,6 +22,7 @@
 #  pretty_url                  :string(255)
 #  slug                        :string(255)
 #  videourl                    :string(255)
+#  manager                     :integer
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html

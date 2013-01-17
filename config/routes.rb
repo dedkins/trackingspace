@@ -42,7 +42,8 @@ Trackingspace::Application.routes.draw do
 
   resources :buildings do
     member do
-      get :mapview, :videoview, :spacesview, :newspace, :addvideo, :management
+      get :mapview, :videoview, :spacesview, :newspace, :addvideo, :management, :comingsoon
+      put :claimpropmgmt
     end
     resources :spaces
   end

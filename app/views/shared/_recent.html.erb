@@ -1,11 +1,15 @@
 <% if user_signed_in? %>
 
 	<% if @recent_items.present? %>
-		<div class="listbox_title">Recently Visited</div>
-			<div>
-				<div style="text-align:center;font-size:.9em;font-weight:bold;color:#0198E1">v = Building has a video</div>
-			</div>
-			<div><%= render :partial => 'shared/recent_item', :collection => @recent_items %></div>
+	
+	<div style="border:1px solid #0198E1;padding:5px;margin-top:20px">
+
+		<div class="title" style="font-size:1.25em;text-align:center;padding-bottom:10px;margin:-15px 20px 0 20px;background:#ffffff">Last Viewed</div>
+		<div style="text-align:center;font-size:.9em;font-weight:bold;color:#0198E1">v = Building has a video</div>
+		<div><%= render :partial => 'shared/recent_item', :collection => @recent_items %></div>
+	
+	</div>
+	
 	<% end %>
 	
 <% end %>

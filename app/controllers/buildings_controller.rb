@@ -127,6 +127,18 @@ class BuildingsController < ApplicationController
     end
   end
 
+  def claimpropmgmt
+    @micropost = Micropost.new if signed_in?
+    @user = User.find(current_user.id)
+    @building = Building.find(params[:id])
+    @building.manager = @user.id
+    @building.save!
+    @manager = User.find(@building.manager)
+    respond_to do |format|
+      format.js
+    end
+  end
+
   def home
     @ip = request.ip
     @city = request.location.city

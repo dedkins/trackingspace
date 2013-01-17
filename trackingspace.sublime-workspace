@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"claim",
+				"claimpropmgmt"
+			],
+			[
+				"feed",
+				"feed_items"
+			],
+			[
+				"up",
+				"upgrade"
+			],
+			[
+				"building",
+				"building_relationships"
+			],
+			[
 				"build",
 				"building_relationships"
 			],
@@ -50,10 +66,6 @@
 			[
 				"buildin",
 				"building_id"
-			],
-			[
-				"building",
-				"building_space_path"
 			],
 			[
 				"spaces",
@@ -206,10 +218,6 @@
 			[
 				"curr",
 				"current_user"
-			],
-			[
-				"up",
-				"upgrade_path"
 			],
 			[
 				"password",
@@ -375,15 +383,7 @@
 			"file": "app/views/buildings/show.html.erb",
 			"settings":
 			{
-				"buffer_size": 3857,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/assets/stylesheets/media.css",
-			"settings":
-			{
-				"buffer_size": 1757,
+				"buffer_size": 3892,
 				"line_ending": "Windows"
 			}
 		},
@@ -391,7 +391,7 @@
 			"file": "app/controllers/buildings_controller.rb",
 			"settings":
 			{
-				"buffer_size": 6594,
+				"buffer_size": 7222,
 				"line_ending": "Windows"
 			}
 		},
@@ -404,26 +404,10 @@
 			}
 		},
 		{
-			"file": "app/views/pages/index.html.erb",
+			"file": "app/views/user_mailer/propmgmt.html.erb",
 			"settings":
 			{
-				"buffer_size": 2900,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/views/users/index.html.erb",
-			"settings":
-			{
-				"buffer_size": 714,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/controllers/users_controller.rb",
-			"settings":
-			{
-				"buffer_size": 2522,
+				"buffer_size": 629,
 				"line_ending": "Windows"
 			}
 		}
@@ -452,17 +436,41 @@
 	},
 	"file_history":
 	[
-		"/C/Users/david/trackingspace/app/views/buildings/home.html.erb",
+		"/C/Users/david/trackingspace/app/views/buildings/claimpropmgmt.js.erb",
+		"/C/Users/david/trackingspace/config/routes.rb",
+		"/C/Users/david/trackingspace/app/views/buildings/_claimpropmgmt.html.erb",
+		"/C/Users/david/trackingspace/app/views/buildings/_management.html.erb",
+		"/C/Users/david/trackingspace/app/views/buildings/update.js.erb",
+		"/C/Users/david/trackingspace/app/assets/stylesheets/media.css",
+		"/C/Users/david/trackingspace/app/views/buildings/mapview.js.erb",
+		"/C/Users/david/trackingspace/app/views/buildings/_claimpropmgmt.js.erb",
+		"/C/Users/david/trackingspace/app/controllers/microposts_controller.rb",
 		"/C/Users/david/trackingspace/app/mailers/user_mailer.rb",
+		"/C/Users/david/trackingspace/app/views/user_mailer/propmgmt.html.erb",
+		"/C/Users/david/trackingspace/app/models/micropost.rb",
+		"/C/Users/david/trackingspace/app/views/shared/_micropost_topropmanager.html.erb",
+		"/C/Users/david/trackingspace/db/migrate/20130115062110_adding_propmgmt_to_micropost.rb",
+		"/C/Users/david/trackingspace/app/views/shared/_micropost_form.html.erb",
+		"/C/Users/david/trackingspace/app/views/buildings/management.js.erb",
+		"/C/Users/david/trackingspace/app/models/building.rb",
+		"/C/Users/david/trackingspace/db/migrate/20130115042903_adding_management_to_building.rb",
+		"/C/Users/david/trackingspace/app/views/pages/index.html.erb",
+		"/C/Users/david/trackingspace/app/controllers/users_controller.rb",
+		"/C/Users/david/trackingspace/app/controllers/spaces_controller.rb",
+		"/C/Users/david/trackingspace/app/views/ads/_space_slot2.html.erb",
+		"/C/Users/david/trackingspace/app/views/ads/_space_slot3.html.erb",
+		"/C/Users/david/trackingspace/app/views/ads/_slot3.html.erb",
+		"/C/Users/david/trackingspace/app/views/ads/_slot2.html.erb",
+		"/C/Users/david/trackingspace/app/views/ads/_space_slot1.html.erb",
+		"/C/Users/david/trackingspace/app/views/ads/_slot1.html.erb",
+		"/C/Users/david/trackingspace/app/views/users/index.html.erb",
+		"/C/Users/david/trackingspace/app/views/buildings/home.html.erb",
 		"/C/Users/david/trackingspace/app/views/user_mailer/newhomevisitor.html.erb",
 		"/C/Users/david/trackingspace/app/views/users/show.html.erb",
 		"/C/Users/david/trackingspace/app/views/users/_leases.html.erb",
-		"/C/Users/david/trackingspace/app/controllers/users_controller.rb",
 		"/C/Users/david/trackingspace/app/models/user.rb",
 		"/C/Users/david/trackingspace/app/views/shared/_feed.html.erb",
 		"/C/Users/david/trackingspace/app/views/users/_show_follow.html.erb",
-		"/C/Users/david/trackingspace/app/views/shared/_micropost_form.html.erb",
-		"/C/Users/david/trackingspace/config/routes.rb",
 		"/C/Users/david/trackingspace/app/views/users/showfeed.js.erb",
 		"/C/Users/david/trackingspace/app/views/users/show.js.erb",
 		"/C/Users/david/trackingspace/app/views/users/_follow.html.erb",
@@ -482,7 +490,6 @@
 		"/C/Users/david/trackingspace/Gemfile",
 		"/C/Users/david/trackingspace/app/views/layouts/_allnewposts.html.erb",
 		"/C/Users/david/trackingspace/app/views/spaces/show.html.erb",
-		"/C/Users/david/trackingspace/app/controllers/spaces_controller.rb",
 		"/C/Users/david/trackingspace/app/controllers/application_controller.rb",
 		"/C/Users/david/trackingspace/app/controllers/pages_controller.rb",
 		"/C/Users/david/trackingspace/app/views/subscriptions/_upgrade.html.erb",
@@ -491,7 +498,6 @@
 		"/C/Users/david/trackingspace/app/views/spaces/_newspace.html.erb",
 		"/C/Users/david/trackingspace/app/views/buildings/_mapview.html.erb",
 		"/C/Users/david/trackingspace/app/views/buildings/_spacestab.html.erb",
-		"/C/Users/david/trackingspace/app/controllers/microposts_controller.rb",
 		"/C/Users/david/trackingspace/app/views/user_mailer/new_building_post.html.erb",
 		"/C/Users/david/trackingspace/app/mailers/building_mailer.rb",
 		"/C/Users/david/trackingspace/app/views/buildings/_spaces.html.erb",
@@ -501,9 +507,7 @@
 		"/C/Users/david/trackingspace/app/assets/stylesheets/layout.css",
 		"/C/Users/david/trackingspace/app/assets/javascripts/gmaps4rails.googlemaps.js.coffee",
 		"/C/Users/david/trackingspace/app/assets/javascripts/gmaps4rails.base.js.coffee",
-		"/C/Users/david/trackingspace/app/views/buildings/mapview.js.erb",
 		"/C/Users/david/trackingspace/app/views/buildings/_buildingcenter.html.erb",
-		"/C/Users/david/trackingspace/app/views/users/index.html.erb",
 		"/C/Users/david/trackingspace/db/migrate/20130104200544_add_type_to_user.rb",
 		"/C/Users/david/trackingspace/app/controllers/buildings_controller.rb",
 		"/C/Users/david/trackingspace/app/views/buildings/_form_new.html",
@@ -515,7 +519,6 @@
 		"/C/Users/david/trackingspace/app/views/buildings/_videoview.html.erb",
 		"/C/Users/david/trackingspace/app/views/buildings/_addvideo.html.erb",
 		"/C/Users/david/trackingspace/app/views/buildings/addvideo.js.erb",
-		"/C/Users/david/trackingspace/app/assets/stylesheets/media.css",
 		"/C/Users/david/trackingspace/app/views/pages/people_main.html.erb",
 		"/C/Users/david/trackingspace/app/views/buildings/show.html.erb",
 		"/C/Users/david/trackingspace/app/models/space.rb",
@@ -536,14 +539,6 @@
 		"/C/Users/david/trackingspace/app/views/pages/_follow_users.html.erb",
 		"/C/Users/david/trackingspace/app/assets/stylesheets/gmaps4rails.css",
 		"/C/Users/david/trackingspace/app/views/pages/buildings_main.html.erb",
-		"/C/Users/david/trackingspace/app/views/pages/index.html.erb",
-		"/C/Users/david/trackingspace/app/views/ads/_slot1.html.erb",
-		"/C/Users/david/trackingspace/app/views/ads/_slot2.html.erb",
-		"/C/Users/david/trackingspace/app/views/ads/_slot3.html.erb",
-		"/C/Users/david/trackingspace/app/views/ads/_space_slot1.html.erb",
-		"/C/Users/david/trackingspace/app/views/ads/_space_slot2.html.erb",
-		"/C/Users/david/trackingspace/app/views/ads/_space_slot3.html.erb",
-		"/C/Users/david/trackingspace/app/models/building.rb",
 		"/C/Users/david/trackingspace/app/views/layouts/_allnewbuildings.html.erb",
 		"/C/Users/david/trackingspace/app/views/layouts/_allnewusers.html.erb",
 		"/C/Users/david/trackingspace/app/views/pages/earlyadopter.html.erb",
@@ -568,18 +563,7 @@
 		"/C/Users/david/trackingspace/app/views/microposts/mbuilding_post.js.erb",
 		"/C/Users/david/trackingspace/app/views/shared/create.js.erb",
 		"/C/Users/david/trackingspace/app/views/user_mailer/welcome_email.html.erb",
-		"/C/Users/david/trackingspace/app/views/users/building_ads.js.erb",
-		"/C/Users/david/trackingspace/app/views/users/trackingbuildings.js.erb",
-		"/C/Users/david/trackingspace/app/views/users/followers.js.erb",
-		"/C/Users/david/trackingspace/app/views/layouts/_user_links.html.erb",
-		"/C/Users/david/trackingspace/app/views/ads/_form.html.erb",
-		"/C/Users/david/trackingspace/app/controllers/ads_controller.rb",
-		"/C/Users/david/trackingspace/app/models/ad.rb",
-		"/C/Users/david/trackingspace/app/views/spaces/new.html.erb",
-		"/C/Users/david/trackingspace/app/models/micropost.rb",
-		"/C/Users/david/trackingspace/config/application.rb",
-		"/C/Users/david/trackingspace/app/views/pages/spaces_main.html.erb",
-		"/C/Users/david/trackingspace/config/initializers/stripe.rb"
+		"/C/Users/david/trackingspace/app/views/users/building_ads.js.erb"
 	],
 	"find":
 	{
@@ -602,6 +586,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"title",
 			"untrack",
 			"Orbitron",
 			"&amp;",
@@ -671,7 +656,7 @@
 	"groups":
 	[
 		{
-			"selected": 6,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -679,47 +664,20 @@
 					"file": "app/views/buildings/show.html.erb",
 					"settings":
 					{
-						"buffer_size": 3857,
+						"buffer_size": 3892,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3011,
-								2986
+								1949,
+								1949
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 651.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "app/assets/stylesheets/media.css",
-					"settings":
-					{
-						"buffer_size": 1757,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								470,
-								470
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
@@ -729,19 +687,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 2,
+					"buffer": 1,
 					"file": "app/controllers/buildings_controller.rb",
 					"settings":
 					{
-						"buffer_size": 6594,
+						"buffer_size": 7222,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3251,
-								3251
+								3702,
+								3702
 							]
 						],
 						"settings":
@@ -751,13 +709,13 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1339.0,
+						"translation.y": 1401.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 2,
 					"file": "app/assets/stylesheets/layout.css",
 					"settings":
 					{
@@ -768,8 +726,8 @@
 						"selection":
 						[
 							[
-								6708,
-								6708
+								1564,
+								1569
 							]
 						],
 						"settings":
@@ -779,87 +737,30 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 5120.0,
+						"translation.y": 850.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "app/views/pages/index.html.erb",
+					"buffer": 3,
+					"file": "app/views/user_mailer/propmgmt.html.erb",
 					"settings":
 					{
-						"buffer_size": 2900,
+						"buffer_size": 629,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								174,
-								174
+								590,
+								590
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "app/views/users/index.html.erb",
-					"settings":
-					{
-						"buffer_size": 714,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								528,
-								528
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "app/controllers/users_controller.rb",
-					"settings":
-					{
-						"buffer_size": 2522,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								250,
-								250
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,

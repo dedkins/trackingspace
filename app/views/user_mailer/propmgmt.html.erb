@@ -4,8 +4,14 @@
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
   </head>
   <body>
-    <h3><%= @building.address %></h3>
-    <p><%= @micropost.content %></p>
-    <br>By: <%= @micropost.user.name %></br>
+  	<div>New Property Management Message:</div>
+  	<div style="font-size:1.25em">
+		For <%= link_to truncate(@building.address, :size => 20, :separator => ',', :omission => ''), @url %>
+
+  		<div style="padding:10px">
+  			"<%= @micropost.content %>"
+  		</div>
+
+    <div style="font-size:.9em"><%= link_to @micropost.user.name, @user_url %></div>
   </body>
 </html>

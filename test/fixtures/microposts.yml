@@ -15,6 +15,7 @@
 #  name           :string(255)
 #  typeof         :string(255)
 #  postforuser_id :integer
+#  propmgmt       :boolean
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html

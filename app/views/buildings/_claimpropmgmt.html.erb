@@ -1,0 +1,4 @@
+<%= form_for @building, :url => claimpropmgmt_building_path(@building.id), :remote => true do |f| %>
+	<%= f.hidden_field :manager, :value => @user.id %>
+	<%= f.submit "Click here to claim yourself as the manager", :class => 'trackbutton' %>
+<% end %>

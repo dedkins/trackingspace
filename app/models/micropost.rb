@@ -15,6 +15,7 @@
 #  name           :string(255)
 #  typeof         :string(255)
 #  postforuser_id :integer
+#  propmgmt       :boolean
 #
 
 class Micropost < ActiveRecord::Base
@@ -40,11 +41,5 @@ class Micropost < ActiveRecord::Base
                          WHERE user_id = :user_id"
     where("building_id IN (#{followed_building_ids})",user_id: user.id)
   end
-
-  scope :new_posts, lambda {
-    {
-      :conditions => ["created_at >= ?", Time.now.prev_month]&&["content != ''"]
-    }
-  }
 
 end

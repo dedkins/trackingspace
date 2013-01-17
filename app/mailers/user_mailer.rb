@@ -40,7 +40,9 @@ class UserMailer < ActionMailer::Base
     @building = Building.find(building)
     @propmgr = User.find(@building.manager)
     @micropost = Micropost.where('building_id = ? and propmgmt = true', @building.id).first
-    mail(:to => @propmgr.email, :subject => "New Msg for #{@building.address}")
+    @user_url = "http://www.trackingspace.com/users/#{@micropost.user.id}"
+    @url  = "http://www.trackingspace.com/buildings/#{@building.id}"
+    mail(:to => @propmgr.email, :subject => "New Request for #{@building.address}")
   end
 
 end

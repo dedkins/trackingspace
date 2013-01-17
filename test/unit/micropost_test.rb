@@ -15,6 +15,7 @@
 #  name           :string(255)
 #  typeof         :string(255)
 #  postforuser_id :integer
+#  propmgmt       :boolean
 #
 
 require 'test_helper'

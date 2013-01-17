@@ -1,14 +1,10 @@
-<table width="100%">
-			
-	<div >
-		<tr>
-			<td class="listbox_title">New Buildings</td>
-		</tr>
-	</div>
+<% if @allnewbuildings.present? %>
+<div style="border:1px solid #0198E1;padding:5px;margin-top:20px">
+
+	<div class="title" style="font-size:1.25em;text-align:center;padding-bottom:10px;margin:-15px 20px 0 20px;background:#ffffff">New</div>
 
 	<% @allnewbuildings.each do |b| %>
-	<tr>
-		<td style="font-size:.9em"><%= link_to truncate(b.address, :size => 20, :separator => ',', :omission => ''), b %></td>
-	</tr>
+		<div style="padding:2px 10px 8px 10px;text-align:center"><%= link_to truncate(b.address, :size => 20, :separator => ',', :omission => ''), b %></div>
 	<% end %>
-</table>
+</div>
+<% end %>

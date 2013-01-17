@@ -49,10 +49,10 @@
 							<%= button_to 'Management', management_building_path(@building.id), :class => 'viewbutton', :remote => true, :method => 'get' %>
 						</div>
 						<div class="viewbuttoncontainer">
-							<%= button_to 'News', '#', :class => 'viewbutton', :remote => true, :method => 'get' %>
+							<%= button_to 'News', comingsoon_building_path(@building.id), :class => 'viewbutton', :remote => true, :method => 'get' %>
 						</div>
 						<div class="viewbuttoncontainer">
-							<%= button_to 'Details', '#', :class => 'viewbutton', :remote => true, :method => 'get' %>
+							<%= button_to 'Details', comingsoon_building_path(@building.id), :class => 'viewbutton', :remote => true, :method => 'get' %>
 						</div>
 						<div class="viewbuttoncontainer">
 									<% if @building.videourl.present? %>

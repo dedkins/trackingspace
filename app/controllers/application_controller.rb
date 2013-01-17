@@ -7,7 +7,7 @@ before_filter :new_stuff
 def new_stuff
   @allnewusers = User.new_users.limit(8).order('created_at desc')
   @allnewbuildings = Building.new_buildings.limit(8)
-  @allnewposts = Micropost.new_posts.limit(10)
+  @allnewposts = Micropost.where("created_at >= ?", Time.now.prev_month).where(:propmgmt => [false,nil]).where("content != ''").limit(10)
   if user_signed_in?
     @user = User.find(current_user.id)
     @leases = @user.leases

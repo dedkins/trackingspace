@@ -6,11 +6,11 @@ def create
 	@back_to = params[:back_to]
 	
 	if @micropost.save
-		if @micropost.building_id.present? and @micropost.content.present? and @micropost.propmgmt = false
+		if @micropost.building_id.present? and @micropost.content.present? and @micropost.propmgmt != true
 			@building = Building.find(@micropost.building_id)
 			UserMailer.new_building_post(@building).deliver
 		end
-		if @micropost.propmgmt = true
+		if @micropost.propmgmt == true
 			@building = Building.find(@micropost.building_id)
 			UserMailer.propmgmt(@building).deliver
 		end

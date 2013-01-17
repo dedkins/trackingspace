@@ -22,6 +22,7 @@
 #  pretty_url                  :string(255)
 #  slug                        :string(255)
 #  videourl                    :string(255)
+#  manager                     :integer
 #
 
 class Building < ActiveRecord::Base
@@ -52,7 +53,7 @@ class Building < ActiveRecord::Base
     end
 
   def feed
-    Micropost.where("building_id = ?", id)
+    Micropost.where("building_id = ?", id).where(:propmgmt => [false,nil])
   end
 
   scope :new_buildings, lambda {

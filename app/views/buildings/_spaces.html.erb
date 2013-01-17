@@ -1,8 +1,8 @@
 <% if @spaces.any? %>
 <table width="100%" style="border:1px solid orange">
 
-  <tr style="background:#888888;color:white;text-align:center;font-size:.9em;border:0px">
-    <th>Added By</th>
+  <tr style="background:#888888;color:white;text-align:center;font-weight:normal;font-size:.9em;border:0px">
+    <th></th>
     <th>Suite</th>
     <th>Sq Ft</th>
     <th>Status</th>
@@ -13,7 +13,7 @@
   <tr>
     <td style="text-align:center" width="30px">
       <% if space.user.present? %>
-      <%= link_to gravatar_image_tag(space.user.email, :gravatar => {:size => '40x40'}, :title => "Click to see #{space.user.name}\'s profile", :alt => space.user.name), user_path(space.user) %>
+      <%= link_to gravatar_image_tag(space.user.email, :gravatar => {:size => '40x40'}, :title => "Added by #{space.user.name}.  Click here to see profile", :alt => space.user.name), user_path(space.user) %>
       <% end %>
     </td>
     <td style="text-align:center" width="100px"><%= link_to space.suite, building_space_path(@building.id,space) %></td>
