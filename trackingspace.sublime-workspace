@@ -391,7 +391,7 @@
 			"file": "app/controllers/buildings_controller.rb",
 			"settings":
 			{
-				"buffer_size": 7262,
+				"buffer_size": 7263,
 				"line_ending": "Windows"
 			}
 		},
@@ -408,6 +408,14 @@
 			"settings":
 			{
 				"buffer_size": 2140,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/views/buildings/_spaces.html.erb",
+			"settings":
+			{
+				"buffer_size": 1459,
 				"line_ending": "Windows"
 			}
 		}
@@ -586,6 +594,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"10px",
+			"25",
 			"title",
 			"untrack",
 			"Orbitron",
@@ -656,7 +666,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 4,
 			"sheets":
 			[
 				{
@@ -681,7 +691,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 900.0,
+						"translation.y": 88.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -691,15 +701,15 @@
 					"file": "app/controllers/buildings_controller.rb",
 					"settings":
 					{
-						"buffer_size": 7262,
+						"buffer_size": 7263,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3858,
-								3858
+								3954,
+								3954
 							]
 						],
 						"settings":
@@ -726,8 +736,8 @@
 						"selection":
 						[
 							[
-								1564,
-								1569
+								6429,
+								6438
 							]
 						],
 						"settings":
@@ -737,7 +747,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 850.0,
+						"translation.y": 302.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -754,8 +764,8 @@
 						"selection":
 						[
 							[
-								1955,
-								1955
+								196,
+								117
 							]
 						],
 						"settings":
@@ -764,7 +774,35 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 244.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/views/buildings/_spaces.html.erb",
+					"settings":
+					{
+						"buffer_size": 1459,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								758,
+								749
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 64.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

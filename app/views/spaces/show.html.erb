@@ -3,79 +3,52 @@
 <%= content_for :search do %>
 <% if user_signed_in? %>
   <% unless @lease.present? %>
-    <table width="100%">
-      <tr>
-        <td style="background:#FFFF7E;padding:8px;text-align:center;box-shadow:5px 5px 5px #888">Do you have the lease for this space? <%= link_to 'Click Here', new_space_lease_path(@space) %></td>
-      </tr>
-    </table>
+    <div style="background:#FFFF7E;padding:8px;text-align:center;box-shadow:5px 5px 5px #888">Do you have the lease for this space? <%= link_to 'Click Here', new_space_lease_path(@space) %></td>
+    </div>
   <% end %>
 <% end %>
 <% end %>
 
-  <table width="100%">
-    <tr>
-      <td style="text-align:left" width="120px">
-        <% if user_signed_in? %>
-          <%= link_to 'Edit Space Details', edit_building_space_path(@building.id,@space) %>
-        <% end %>
-      </td>
-      <td class="title">Suite <%= @space.suite %></td>
-      <td style="text-align:right" width="120px">
-        <% if @lease.present? %>
-          <% if user_signed_in? && @lease.user_id == current_user.id %>
-            <%= link_to 'See Lease', space_lease_path(@space,@lease) %>
-          <% end %>  
-        <% end %>
+  <div style="float:left;position:absolute;margin-top:-33px;background:#ffffff">
+    <div class="top_words" style="float:left;padding:0 5px">
+      <%= number_with_delimiter(@space.sf) %> sq.ft.
+    </div>
+    <div class="top_words" style="float:right;padding:0 5px" id="avgrate">
+      <%= number_to_currency(@space.monthly) %>
+    </div>
+  </div>
 
-        <%= link_to image_tag("https://github.com/intridea/authbuttons/raw/master/png/twitter_64.png", :size => "30x30", :alt => "Twitter"), "http://twitter.com/home?status=@trackingspace Found this on Trackingspace: http://#{request.host+request.fullpath}", :target => '_blank' %>
+  <div style="float:right;margin-top:-8px">
+    <%= link_to image_tag("https://github.com/intridea/authbuttons/raw/master/png/twitter_64.png", :size => "30x30", :alt => "Twitter"), "http://twitter.com/home?status=@trackingspace Found this on Trackingspace: http://#{request.host+request.fullpath}", :target => '_blank' %>
         <%= link_to image_tag("http://github.com/intridea/authbuttons/raw/master/png/facebook_64.png", :size => "30x30"), "http://www.facebook.com/sharer.php?u=http://#{request.host+request.fullpath}", :target => '_blank' %>
-    </td>
-    </tr>
-    <tr>
-      <td style="text-align:center" colspan="3"><%= link_to @space.building.address, building_path(@space.building.id) %></td>
-  </table>
+  </div>
+
+  <div class="title">Suite <%= @space.suite %></div>
+
+  <div><%= link_to @space.building.address, building_path(@building) %></div>
+
+  <% if user_signed_in? %>
+    <div style="float:right;margin-top:-20px">
+      <%= link_to 'Edit Space Details', edit_building_space_path(@building.id,@space) %>
+    </div>
+  <% end %>
+  
+  
+  <% if @lease.present? %>
+    <div style="float:right;margin-top:-20px">
+      <% if user_signed_in? && @lease.user_id == current_user.id %>
+        <%= link_to 'See Lease | ', space_lease_path(@space,@lease) %>
+      <% end %> 
+    </div> 
+  <% end %>
+
   <hr/>
-      <table>
-        <tr>
-          <td >
-            <div class="top_words">
-              <%= number_with_delimiter(@space.sf) %> sq.ft.
-            </div>
-          </td>
-          <td >
-            <div class="top_words">
-              <%= number_to_currency(@space.monthly) %>
-            </div>
-          </td>
-          <td >
-            <div class="top_words">
-              <%= @space.microposts.count %>
-            </div>
-          </td>
-          <td >
-            <div class="top_words">
-              <% unless @lease.present? %>No
-              <% else %>Yes
-              <% end %>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td width="25%" style="font-size:0.8em;text-align:center">Size</td>
-          <td width="15%" style="font-size:0.8em;text-align:center">Monthly</td>
-          <td width="15%" style="font-size:0.8em;text-align:center">Activity</td>
-          <td width="15%" style="font-size:0.8em;text-align:center">Lease on Record</td>
-        </tr>
-      </table>
-      <hr/>
-  <% if mobile_device? && @space.videourl %>
-    <table width="100%">
-      <tr>
-        <td >
-          <object width="100%" height="500px"><param name="movie" value=<%= "http://www.youtube.com/v/"+@space.videourl+"?version=3&amp;autoplay=1&amp;hl=en_US" %>></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src=<%= "http://www.youtube.com/v/"+@space.videourl+"?version=3&amp;autoplay=1&amp;hl=en_US" %> type="application/x-shockwave-flash" width="100%" height="500px" allowscriptaccess="always" allowfullscreen="true"></embed></object>
-        </td>
-      </tr>
-    </table>
+  <% if @space.videourl.present? %>
+      <div>
+          <object width="100%" height="400px"><param name="movie" value=<%= "http://www.youtube.com/v/"+@space.videourl+"?version=3&amp;autoplay=1&amp;hl=en_US" %>></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src=<%= "http://www.youtube.com/v/"+@space.videourl+"?version=3&amp;autoplay=1&amp;hl=en_US" %> type="application/x-shockwave-flash" width="100%" height="400px" allowscriptaccess="always" allowfullscreen="true"></embed></object>
+      </div>
+  <% else %>
+      <div style="height:300px;text-align:center;padding-top:100px" class="title">No Video or Floorplan Added Yet</div>
   <% end %>
 <table width="100%">
   <tr>
