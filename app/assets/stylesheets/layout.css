@@ -676,7 +676,8 @@ section#search {
 */
 
 #slides {
-  position:absolute;
+  width:100%;
+  margin:0 auto;
   top:15px;
   left:4px;
   z-index:100;
@@ -689,8 +690,11 @@ section#search {
   Set to display none, prevents content flash
 */
 
-.slides_container {
-  width:570px;
+/*.slides_container {
+  border:1px solid red;
+  padding:10px;
+  width:770px;
+  height:470px;
   overflow:hidden;
   position:relative;
   display:none;
@@ -703,6 +707,12 @@ section#search {
   If height not specified height will be set by the slide content
   Set to display block
 */
+
+.slides_container div.slide {
+    /*width:570px;*/
+    /*height:270px;*/
+    display:block;
+}
 
 .slides_container a {
   width:570px;
@@ -737,8 +747,8 @@ section#search {
 */
 
 .pagination {
-  margin:26px auto 0;
-  width:100px;
+  margin:16px auto 0;
+  width:150px;
 }
 
 .pagination li {
@@ -752,7 +762,7 @@ section#search {
   width:12px;
   height:0;
   padding-top:12px;
-  background-image:url(../img/pagination.png);
+  background-image:url(../assets/pagination.png);
   background-position:0 0;
   float:left;
   overflow:hidden;
