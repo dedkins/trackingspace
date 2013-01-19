@@ -15,6 +15,10 @@ class PagesController < ApplicationController
 		@feed_items = Micropost.where("user_id IS NOT NULL").order('created_at DESC').limit(10)
 	end
 
+	def learnmore
+		render :layout => false
+	end
+
 	def spaces_main
 		if user_signed_in?
 		@leases = Lease.find_all_by_user_id(current_user.id)
