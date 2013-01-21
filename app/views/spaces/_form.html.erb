@@ -36,6 +36,10 @@
     <td><%= f.select( :status, ["Available","Leased","Possible"], {}, {:class => "field"}) %></td>
   </tr>
   <tr>
+    <td valign="top"><%= f.label :description %></td>
+    <td><%= f.text_area :description, :class => 'field' %></td>
+  </tr>
+  <tr>
     <td><%= f.label '3D Floorplan URL' %></td>
     <td><%= f.text_field :_3dplanurl, :class => 'field', :title => 'If you have a 3d floorplan url, enter it here' %></td>
   </tr>

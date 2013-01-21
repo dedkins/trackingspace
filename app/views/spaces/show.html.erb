@@ -10,6 +10,15 @@
 <% end %>
 
   <div style="float:left;position:absolute;margin-top:-33px;background:#ffffff">
+    <% if @space.status == 'Available' %>
+    <div class="top_words" style="float:right;padding:0 10px;color:green" id="status">
+      <%= @space.status %>
+    </div>
+    <% else %>
+    <div class="top_words" style="float:right;padding:0 10px" id="status">
+      <%= @space.status %>
+    </div>
+    <% end %>
     <div class="top_words" style="float:left;padding:0 5px">
       <%= number_with_delimiter(@space.sf) %> sq.ft.
     </div>
