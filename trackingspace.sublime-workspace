@@ -399,15 +399,7 @@
 			"file": "app/assets/stylesheets/layout.css",
 			"settings":
 			{
-				"buffer_size": 16435,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/views/buildings/home.html.erb",
-			"settings":
-			{
-				"buffer_size": 1838,
+				"buffer_size": 16362,
 				"line_ending": "Windows"
 			}
 		}
@@ -436,6 +428,20 @@
 	},
 	"file_history":
 	[
+		"/C/Users/david/trackingspace/config/routes.rb",
+		"/C/Users/david/trackingspace/app/controllers/sessions_controller.rb",
+		"/C/Users/david/trackingspace/app/views/devise/sessions/new.html.erb",
+		"/C/Users/david/trackingspace/app/views/registrations/new.html.erb",
+		"/C/Users/david/trackingspace/app/views/registrations/edit.html.erb",
+		"/C/Users/david/trackingspace/app/controllers/registrations_controller.rb",
+		"/C/Users/david/trackingspace/app/views/devise/sessions/_twitter_sign_in.html.erb",
+		"/C/Users/david/trackingspace/app/views/devise/sessions/_linkedin_sign_in.html.erb",
+		"/C/Users/david/trackingspace/app/views/devise/sessions/_facebook_sign_in.html.erb",
+		"/C/Users/david/trackingspace/app/views/spaces/show.html.erb",
+		"/C/Users/david/trackingspace/app/views/spaces/_form.html.erb",
+		"/C/Users/david/trackingspace/app/views/pages/index.html.erb",
+		"/C/Users/david/trackingspace/app/views/user_mailer/upgrade_email.html.erb",
+		"/C/Users/david/trackingspace/app/views/buildings/home.html.erb",
 		"/C/Users/david/trackingspace/app/views/pages/learnmore.html.erb",
 		"/C/Users/david/trackingspace/app/views/buildings/_spaces.html.erb",
 		"/C/Users/david/trackingspace/app/assets/images/IntroductionSlide.png",
@@ -447,9 +453,7 @@
 		"/C/Users/david/Desktop/JS_slides/Slides/README.textile",
 		"/C/Users/david/Desktop/JS_slides/Slides/examples/Carousel/js/slides.min.jquery.js",
 		"/C/Users/david/trackingspace/app/controllers/application_controller.rb",
-		"/C/Users/david/trackingspace/config/routes.rb",
 		"/C/Users/david/trackingspace/app/views/buildings/_management.html.erb",
-		"/C/Users/david/trackingspace/app/views/spaces/show.html.erb",
 		"/C/Users/david/trackingspace/app/views/spaces/edit.html.erb",
 		"/C/Users/david/trackingspace/app/views/buildings/_comingsoon.html.erb",
 		"/C/Users/david/trackingspace/app/views/layouts/_allnewusers.html.erb",
@@ -473,7 +477,6 @@
 		"/C/Users/david/trackingspace/app/views/shared/_micropost_form.html.erb",
 		"/C/Users/david/trackingspace/app/views/buildings/management.js.erb",
 		"/C/Users/david/trackingspace/db/migrate/20130115042903_adding_management_to_building.rb",
-		"/C/Users/david/trackingspace/app/views/pages/index.html.erb",
 		"/C/Users/david/trackingspace/app/controllers/users_controller.rb",
 		"/C/Users/david/trackingspace/app/controllers/spaces_controller.rb",
 		"/C/Users/david/trackingspace/app/views/ads/_space_slot2.html.erb",
@@ -483,7 +486,6 @@
 		"/C/Users/david/trackingspace/app/views/ads/_space_slot1.html.erb",
 		"/C/Users/david/trackingspace/app/views/ads/_slot1.html.erb",
 		"/C/Users/david/trackingspace/app/views/users/index.html.erb",
-		"/C/Users/david/trackingspace/app/views/buildings/home.html.erb",
 		"/C/Users/david/trackingspace/app/views/user_mailer/newhomevisitor.html.erb",
 		"/C/Users/david/trackingspace/app/views/users/show.html.erb",
 		"/C/Users/david/trackingspace/app/views/users/_leases.html.erb",
@@ -540,7 +542,6 @@
 		"/C/Users/david/trackingspace/app/views/buildings/spacesview.js.erb",
 		"/C/Users/david/trackingspace/app/views/spaces/spacesview.js.erb",
 		"/C/Users/david/trackingspace/app/views/buildings/newspace.js.erb",
-		"/C/Users/david/trackingspace/app/views/spaces/_form.html.erb",
 		"/C/Users/david/trackingspace/app/assets/images/cross-hatch-bg.png",
 		"/C/Users/david/trackingspace/app/views/buildings/_newspace.html.erb",
 		"/C/Users/david/trackingspace/app/views/layouts/_main_nav.html.erb",
@@ -554,16 +555,7 @@
 		"/C/Users/david/trackingspace/app/assets/stylesheets/gmaps4rails.css",
 		"/C/Users/david/trackingspace/app/views/pages/buildings_main.html.erb",
 		"/C/Users/david/trackingspace/app/views/pages/earlyadopter.html.erb",
-		"/C/Users/david/trackingspace/app/views/users/_spaceads.html.erb",
-		"/C/Users/david/trackingspace/app/views/leases/_form.html.erb",
-		"/C/Users/david/trackingspace/app/views/layouts/home_html.html.erb",
-		"/C/Users/david/trackingspace/app/views/buildings/_new_buildings.html.erb",
-		"/C/Users/david/trackingspace/db/migrate/20121112041357_add_slug_to_building.rb",
-		"/C/Users/david/trackingspace/vendor/assets/javascripts/jquery.ui.addresspicker.js",
-		"/C/Users/david/trackingspace/db/migrate/20121110014819_add_addressing_detail_to_building.rb",
-		"/C/Users/david/trackingspace/app/views/devise/sessions/new.html.erb",
-		"/C/Users/david/trackingspace/app/controllers/user_relationships_controller.rb",
-		"/C/Users/david/trackingspace/app/assets/stylesheets/application.css"
+		"/C/Users/david/trackingspace/app/views/users/_spaceads.html.erb"
 	],
 	"find":
 	{
@@ -586,6 +578,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"64x64",
 			"10px",
 			"25",
 			"title",
@@ -658,7 +651,6 @@
 	"groups":
 	[
 		{
-			"selected": 3,
 			"sheets":
 			[
 				{
@@ -721,15 +713,15 @@
 					"file": "app/assets/stylesheets/layout.css",
 					"settings":
 					{
-						"buffer_size": 16435,
+						"buffer_size": 16362,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								16104,
-								16104
+								6132,
+								6132
 							]
 						],
 						"settings":
@@ -739,35 +731,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 10142.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "app/views/buildings/home.html.erb",
-					"settings":
-					{
-						"buffer_size": 1838,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1779,
-								1779
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 23.0,
+						"translation.y": 4532.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

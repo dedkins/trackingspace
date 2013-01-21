@@ -1,7 +1,33 @@
-<% currently_at 'myStuff' %>
+<head>
+    <%= stylesheet_link_tag 'application' %>
+</head>
+<body>
+    <div style="float:left;height:50px;padding:8px 10px 8px 60px">
+        <%= image_tag("logo_ts.png", :size => "40x40") %>
+    </div>
+    <div style="float:left;padding-top:25px" class="title">TrackingSpace
+    </div>
+    <div style="float:right;padding:25px 60px 0 0">
+        <%= link_to 'Sign-In', new_user_session_path, :class => 'trackbutton', :style => 'color:white;text-decoration:none', :method => 'get' %>
+    </div>
+    <div style="float:right;padding:25px 8px 0 0">
+        <%= link_to 'Become a Member', new_user_registration_path, :class => 'trackbutton', :style => 'color:white;text-decoration:none', :method => 'get' %>
+    </div>
 
-<div class="title">Edit My Profile</div>
-<hr/>
+
+<div style="float:left;margin-top:60px">
+  <div>
+  <% if notice %>
+    <p class="notification notice">
+      <%= notice %>
+    </p>
+  <% end %>
+  <% if alert %>
+    <p class="notification alert">
+      <%= alert %>
+    </p>
+  <% end %>
+</div>
 
 <table width="100%">
   <tr>
@@ -10,15 +36,15 @@
         <div style="font-size:.7em">Makes signing in easier in the future</div>
 
       <a href="/auth/twitter" class="auth_provider">
-        <%= image_tag "https://github.com/intridea/authbuttons/raw/master/png/twitter_64.png", :size => "64x64", :alt => "Twitter" %>
+        <%= image_tag "https://github.com/intridea/authbuttons/raw/master/png/twitter_64.png", :size => "32x32", :alt => "Twitter" %>
       </a>
 
       <a href="/auth/facebook" class="auth_provider">
-        <%= image_tag "http://github.com/intridea/authbuttons/raw/master/png/facebook_64.png", :size => "64x64", :alt => "Facebook" %>
+        <%= image_tag "http://github.com/intridea/authbuttons/raw/master/png/facebook_64.png", :size => "32x32", :alt => "Facebook" %>
       </a>
 
       <a href="/auth/linkedin" class="auth_provider">
-        <%= image_tag "http://github.com/intridea/authbuttons/raw/master/png/linkedin_64.png", :size => "64x64", :alt => "LinkedIn" %>
+        <%= image_tag "http://github.com/intridea/authbuttons/raw/master/png/linkedin_64.png", :size => "32x32", :alt => "LinkedIn" %>
       </a>
     </td>
     <td style="padding-left:20px">
@@ -29,7 +55,7 @@
             <div style="font-size:.7em">Click to Remove</div>
             <% for authentication in @authentications %>
               <td style="display:inline">
-                <%= link_to (image_tag "https://github.com/intridea/authbuttons/raw/master/png/#{authentication.provider}_64.png", :size => "64x64"), authentication, :confirm => 'Are you sure you want to remove this association?', :method => :delete, :class => "remove", :title => "Click to Remove" %>
+                <%= link_to (image_tag "https://github.com/intridea/authbuttons/raw/master/png/#{authentication.provider}_64.png", :size => "32x32"), authentication, :confirm => 'Are you sure you want to remove this association?', :method => :delete, :class => "remove", :title => "Click to Remove" %>
               </td>
             <% end %>
             </tr>

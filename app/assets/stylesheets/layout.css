@@ -344,21 +344,18 @@ section#search {
 }
 
 .form_box {
-  margin: 20px;
+  margin: 30px 0 auto;
   background: #edeae6;
-  border: 1.5px solid #888;
+  border: 1.25px solid #888;
   border-radius: 5px;
   padding: 30px;
-  font-size: 1.2em;
   box-shadow: 5px 5px 5px #888;
+  width:550px;
 }
 
 .field {
   padding: 8px;
-  border-radius: 8px;
   margin: 10px;
-  font-weight: bold;
-  width:80%;
   vertical-align: top;
 }
 
