@@ -1,5 +1,6 @@
-
-<object class="pdf" data="<%= @lease.file.url %>" width="100%" height="600px" type="application/pdf">
+<div style="width:100%">
+	<object class="pdf" data="<%= @lease.file.url %>" width="100%" height="600px" type="application/pdf">
+</div>
 <div style="height:600px;background:#efefef;text-align:center; padding: 100px 40px">
   It appears your Web browser is not configured to display PDF files. 
   <br/>No worries, just <%= link_to 'click here to download the PDF file.', @lease.file.url %>
