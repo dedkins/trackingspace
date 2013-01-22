@@ -32,11 +32,14 @@
 </head>
 <body>
     <div style="float:left;height:50px;padding:8px 10px 8px 60px">
-        <%= image_tag("logo_ts.png", :size => "40x40") %>
+        <%= link_to image_tag("logo_ts.png", :size => "40x40"), home_path %>
     </div>
     <div style="float:left;padding-top:25px" class="title">TrackingSpace
     </div>
     <div style="float:right;padding:25px 60px 0 0">
+        <%= link_to 'Shhh...Sneak In This Way', home_path, :class => 'trackbutton', :style => 'color:white;text-decoration:none', :method => 'get' %>
+    </div>
+    <div style="float:right;padding:25px 8px 0 0">
         <%= link_to 'Sign-In', new_user_session_path, :class => 'trackbutton', :style => 'color:white;text-decoration:none', :method => 'get' %>
     </div>
     <div style="float:right;padding:25px 8px 0 0">
