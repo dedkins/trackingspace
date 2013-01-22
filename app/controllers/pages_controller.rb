@@ -16,16 +16,10 @@ class PagesController < ApplicationController
 	end
 
 	def learnmore
-		if request.remote_ip
-	      @ip = request.ip
-	      @city = request.location.city
-	      @state = request.location.state
-	    end
 		if user_signed_in?
 	      redirect_to home_path
 	    else
 	      render :layout => false
-	      UserMailer.newhomevisitor(@ip,@city,@state).deliver
 	    end
 	end
 
