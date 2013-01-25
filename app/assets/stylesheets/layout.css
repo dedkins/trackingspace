@@ -726,8 +726,7 @@ section#search {
 
 #slides .next,#slides .prev {
   position:absolute;
-  top:107px;
-  left:-39px;
+  top:340px;
   width:24px;
   height:43px;
   display:block;
@@ -735,7 +734,7 @@ section#search {
 }
 
 #slides .next {
-  left:585px;
+  margin-left:750px;
 }
 
 /*
@@ -767,3 +766,4 @@ section#search {
 .pagination li.current a {
   background-position:0 -12px;
 }
+

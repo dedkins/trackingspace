@@ -402,6 +402,14 @@
 				"buffer_size": 16362,
 				"line_ending": "Windows"
 			}
+		},
+		{
+			"file": "app/views/pages/learnmore.html.erb",
+			"settings":
+			{
+				"buffer_size": 3152,
+				"line_ending": "Windows"
+			}
 		}
 	],
 	"build_system": "",
@@ -651,6 +659,7 @@
 	"groups":
 	[
 		{
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -675,7 +684,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 105.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -732,6 +741,34 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 4532.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/views/pages/learnmore.html.erb",
+					"settings":
+					{
+						"buffer_size": 3152,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2808,
+								2808
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 645.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
