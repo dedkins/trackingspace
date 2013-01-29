@@ -1,3 +1,23 @@
+<head>
+
+    <%= javascript_include_tag "http://code.jquery.com/jquery-latest.min.js", "http://gsgd.co.uk/sandbox/jquery/easing/jquery.easing.1.3.js", "slides.jquery.js" %>
+
+    <script>
+        $(function(){
+            $("#slides").slides({
+                preload: true,
+                preloadImage: 'assets/loading.gif',
+                play: 5000,
+                pause: 1500,
+                hoverPause: true
+            });
+        });
+    </script>
+
+
+</head>
+
+<body>
 <% currently_at 'Home' %>
 
 <%= content_for :search do %>
@@ -6,8 +26,6 @@
 	<% end %>
 <% end %>	
 
-<div class="title">TrackingSpace</div>
-<hr/>
 <% if user_signed_in? %>
 	<% if @feed_items %>
 	<div class="listbox_title">Recent Activity</div>
@@ -20,33 +38,40 @@
 
 <% unless user_signed_in? %>
 
-<table width="100%" style="border:1px dashed #888;border-radius:5px;padding:10px;background:#FFFFCC">
-	<tr>
-		<td class="title" style="color:red">attention</td>
-	</tr>
-	<tr>
-		<td style="padding:10px">We are currently in pre-release...shaping and forming the final release product. 
-		&nbsp;&nbsp;In the meantime, we are offering a sneak peak to those that tend to pride themselves as early adopters.&nbsp;&nbsp;The site is free for the casual user; and will remain that way.&nbsp;&nbsp;For those that intend on advertising their listings or services on buildings and spaces...this is a tremendous opportunity to plaster their name everywhere for one low monthly fee.&nbsp;&nbsp;We are looking forward to building the best commercial real estate system available...and it starts with people like you.&nbsp;&nbsp;Thank you.&nbsp;&nbsp;You can read the early-adopter invite here: <%= link_to 'Early Adopter Invite', earlyadopter_path %>&nbsp;&nbsp;You can follow us on twitter at: <%= link_to '@trackingspace', 'http://www.twitter.com/@trackingspace', :target=>"_blank" %></td>
-	</tr>
-</table>
+	<div style="float:left;width:100%;margin:0 0 20px 0;padding-bottom:20px;background:#efefef">
+        <div id="slides" style="width:600px">
+            <div class="slides_container">
+                <div>
+                    <%= image_tag("IntroductionSlide.png", :size => "600x350") %>
+                </div>
+                <div>
+                    <%= image_tag("KeyFeatures.png", :size => "600x350") %>
+                </div>
+                <div>
+                    <%= image_tag("ForTenants.png", :size => "600x350") %>
+                </div>
+                <div>
+                    <%= image_tag("ForBrokers.png", :size => "600x350") %>
+                </div>
+                <div>
+                    <%= image_tag("ForPropertyManagers.png", :size => "600x350") %>
+                </div>
+                <div>
+                    <%= image_tag("BasicLayout.png", :size => "600x350") %>
+                </div>
+                <div>
+                    <%= link_to image_tag("BecomeMember.png", :size => "600x350"), new_user_registration_path %>
+                </div>
+            </div>
+        </div>
+    </div>
 
-<h3>The Non-Listing Service</h3>
-<p>
-TrackingSpace is not another listing service.  It is not a listing service at all.  It is a means by which businesses leasing commercial real estate space can track not only the leases on their space but other spaces as well.  Additionally, members of this service can observe changes that occur with buildings, spaces and other members.  Access is free.  Only those that wish to show their connection with a given building/space may opt for an upgrade.  Otherwise, feel free to become a member and start tracking. 
-<p>
-
-<h3>Where to Start?</h3>
-<p>
-	Everything is driven off addresses.  Start by typing an address in the search box at the top of this page.  Be sure to complete (or select) the address before clicking "Go".  This will take you to the building detail page.  From here you can add your space if its not already there, and add/upload your lease.
-</p>
-<hr/>
-<div class="title">Recent Activity</div>
-<hr/>
-<%= render 'shared/feed' %>
+	<%= render 'shared/feed' %>
 <% end %>
 
 <%= content_for :sidebar do %>
 	<%= render 'shared/recent' %>
 <% end %>
 
+</body>
 

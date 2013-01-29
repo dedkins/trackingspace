@@ -1,6 +1,7 @@
 
 	<% unless @feed_items.empty? %>
-	<div id="feeditems">
+	<div id="feeditems" style="margin-top:20px">
+		<div class="title">Recent Activity</div>
 		<%= render :partial => 'shared/feed_item', :collection => @feed_items %>
 	</div>
 	<% else %>
