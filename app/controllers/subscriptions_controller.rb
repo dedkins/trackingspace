@@ -11,7 +11,7 @@ class SubscriptionsController < ApplicationController
 			@user = User.find(current_user.id)
 			@subscription = Subscription.new(params[:subscription])
 				if @subscription.save_with_payment
-					@user.upgrade = 'Upgrade59'
+					@user.upgrade = 'Upgrade129'
 					@user.save!
 					UserMailer.upgrade_email(@user).deliver
 					UserMailer.upgrade_notification(@user).deliver
