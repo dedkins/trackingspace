@@ -38,6 +38,10 @@ class PagesController < ApplicationController
 	def earlyadopter
 	end
 
+	def brokers
+		render :layout => false
+	end
+
 	def people_main
 	    @users = User.last(20).reverse
 	    if user_signed_in?

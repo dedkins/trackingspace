@@ -8,8 +8,8 @@
             $("#slides").slides({
                 preload: true,
                 preloadImage: 'assets/loading.gif',
-                play: 5000,
-                pause: 1500,
+                play: 8000,
+                pause: 5000,
                 hoverPause: true
             });
         });
@@ -49,25 +49,16 @@
         <div id="slides" style="width:770px">
             <div class="slides_container">
                 <div>
-                    <%= image_tag("IntroductionSlide.png", :size => "770x500") %>
+                    <%= image_tag("ForBrokers1.png", :size => "770x500") %>
                 </div>
                 <div>
-                    <%= image_tag("KeyFeatures.png", :size => "770x500") %>
+                    <%= image_tag("ForBrokers2.png", :size => "770x500") %>
                 </div>
                 <div>
-                    <%= image_tag("ForTenants.png", :size => "770x500") %>
+                    <%= image_tag("ForBrokers3.png", :size => "770x500") %>
                 </div>
                 <div>
-                    <%= image_tag("ForBrokers.png", :size => "770x500") %>
-                </div>
-                <div>
-                    <%= image_tag("ForPropertyManagers.png", :size => "770x500") %>
-                </div>
-                <div>
-                    <%= image_tag("BasicLayout.png", :size => "770x500") %>
-                </div>
-                <div>
-                    <%= link_to image_tag("BecomeMember.png", :size => "770x500"), new_user_registration_path %>
+                    <%= link_to image_tag("ForBrokers4.png", :size => "770x500"), upgrade_path %>
                 </div>
             </div>
             <div class="prev"><%= link_to image_tag("arrow-prev.png", :size => "24x43"), '#' %></div>
@@ -75,6 +66,6 @@
         </div>
     </div>
     <div style="float:left;padding-top:10px;color:#888888;width:100%;text-align:center">
-        &copy 2013 Trackingspace  |  <%= link_to 'Broker Info', brokers_path %>
+        &copy 2013 Trackingspace
     </div>
 </body>
