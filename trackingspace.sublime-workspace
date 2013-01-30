@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"ja",
+				"javascript_include_tag"
+			],
+			[
 				"ForBr",
 				"ForBrokers"
 			],
@@ -396,18 +400,26 @@
 			}
 		},
 		{
-			"file": "app/controllers/buildings_controller.rb",
-			"settings":
-			{
-				"buffer_size": 7263,
-				"line_ending": "Windows"
-			}
-		},
-		{
 			"file": "app/assets/stylesheets/layout.css",
 			"settings":
 			{
 				"buffer_size": 16357,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/views/layouts/application.html.erb",
+			"settings":
+			{
+				"buffer_size": 5359,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/views/pages/index.html.erb",
+			"settings":
+			{
+				"buffer_size": 599,
 				"line_ending": "Windows"
 			}
 		}
@@ -436,6 +448,8 @@
 	},
 	"file_history":
 	[
+		"/C/Users/david/trackingspace/app/assets/javascripts/application.js",
+		"/C/Users/david/trackingspace/app/controllers/buildings_controller.rb",
 		"/C/Users/david/trackingspace/app/views/pages/learnmore.html.erb",
 		"/C/Users/david/trackingspace/app/views/layouts/application.html.erb",
 		"/C/Users/david/trackingspace/app/views/pages/brokers.html.erb",
@@ -465,7 +479,6 @@
 		"/C/Users/david/trackingspace/app/views/user_mailer/upgrade_email.html.erb",
 		"/C/Users/david/trackingspace/app/views/buildings/_spaces.html.erb",
 		"/C/Users/david/trackingspace/app/assets/images/IntroductionSlide.png",
-		"/C/Users/david/trackingspace/app/assets/javascripts/application.js",
 		"/C/Users/david/trackingspace/app/assets/javascripts/slides.jquery.js",
 		"/C/Users/david/Desktop/JS_slides/Slides/.DS_Store",
 		"/C/Users/david/Desktop/JS_slides/Slides/README.textile",
@@ -537,7 +550,6 @@
 		"/C/Users/david/trackingspace/app/assets/javascripts/gmaps4rails.base.js.coffee",
 		"/C/Users/david/trackingspace/app/views/buildings/_buildingcenter.html.erb",
 		"/C/Users/david/trackingspace/db/migrate/20130104200544_add_type_to_user.rb",
-		"/C/Users/david/trackingspace/app/controllers/buildings_controller.rb",
 		"/C/Users/david/trackingspace/app/views/buildings/_form_new.html",
 		"/C/Users/david/trackingspace/app/views/buildings/index.html.erb",
 		"/C/Users/david/trackingspace/app/views/buildings/new.html.erb",
@@ -661,7 +673,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -693,34 +705,6 @@
 				},
 				{
 					"buffer": 1,
-					"file": "app/controllers/buildings_controller.rb",
-					"settings":
-					{
-						"buffer_size": 7263,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3858,
-								3733
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1724.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
 					"file": "app/assets/stylesheets/layout.css",
 					"settings":
 					{
@@ -743,6 +727,62 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 10015.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/views/layouts/application.html.erb",
+					"settings":
+					{
+						"buffer_size": 5359,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								620,
+								620
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 397.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/views/pages/index.html.erb",
+					"settings":
+					{
+						"buffer_size": 599,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								483,
+								483
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 133.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

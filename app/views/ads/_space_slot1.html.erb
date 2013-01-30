@@ -23,16 +23,16 @@
 <% else %>
 	<% if user_signed_in? %>
 		<% if @user_ad_availability %>
-		This is blank, but you've used your ad allotment for this building
-		<% elsif @user.upgrade %>
+		This is blank, but you've used your ad allotment for this space
+		<% elsif %>
 		<div style="padding:30px">
-			<%= link_to 'Available Ad Slot - You are a premium member so you can add your name here for free (click here to build your ad)', new_ad_path(:sid => @space.id,:s => 's1') %>
+			<%= link_to 'Available Ad Slot - Click here to build your ad', new_ad_path(:sid => @space.id,:s => 's1') %>
 		</div>
 		<% else %>
 		<%= link_to 'Your Name or Property Advertised Here', upgrade_path %>
 		<% end %>
 	<% else %>
-	Premium members can shamelessly advertise how great they are here.  <%= link_to 'Click here to become a member first.', new_user_registration_path %>
+	Members can shamelessly advertise how great they are here.  <%= link_to 'Click here to become a member first.', new_user_registration_path %>
 	<% end %>
 
 <% end %>

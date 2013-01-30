@@ -3,6 +3,8 @@
 		<%= content_for :search do %>
 			<% if mobile_device? %>
 				<%= render 'buildings/form_new' %>
+			<% else %>
+				<div style="background:#FFFF7E;padding:8px;margin-bottom:30px;text-align:center;box-shadow:5px 5px 5px #888">With membership, you can see and do more with this building -> <%= link_to 'Click Here', new_user_registration_path %></div>
 			<% end %>
 		<% end %>
 
