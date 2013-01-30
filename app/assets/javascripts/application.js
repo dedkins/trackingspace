@@ -20,3 +20,4 @@
 //= require autocomplete-rails
 //= require html5shiv
 //= require subscriptions
+
