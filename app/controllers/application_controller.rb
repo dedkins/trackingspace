@@ -12,10 +12,6 @@ def new_stuff
     @user = User.find(current_user.id)
     @leases = @user.leases
   end
-  @city = request.location.city
-  if @city != '' and @city.near("Sacramento, California")
-    @region = "Sacramento"
-  end
 end
 
 private 
