@@ -34,10 +34,7 @@
           <td width="300px" style="text-align:right">
             <nav id="utility">
                 <% if user_signed_in? %>
-                  <%= current_user.email %> |
-                  <% unless current_user.upgrade == 'Upgrade59' %>
-                    <%= link_to 'Upgrade', upgrade_path, :class => 'top' %> |
-                  <% end %>
+                  <%= current_user.email %>
                   <%= link_to "Sign Out", destroy_user_session_path, :method => 'delete', :class => 'top' %>
                 <% else %>
                   <%= link_to "Become a Member", new_user_registration_path, :class => 'top' %> | <%= link_to "Sign In", new_user_session_path, :class => 'top' %>
