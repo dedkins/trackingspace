@@ -50,7 +50,7 @@ class UserMailer < ActionMailer::Base
     @sponsoredby = User.find(@sponsorid.sponsored_by)
     @email = @sponsorid.email
     @url = "http://www.trackingspace.com/sponsors/#{@sponsorid.id}/accept"
-    @sponsorurl = "http://www.trackingspace.com/users/#{@sponsoredby}"
+    @sponsorurl = "http://www.trackingspace.com/users/#{@sponsoredby.id}"
     mail(:to => @email, :subject => "#{@sponsoredby.name} would like to sponsor you on TrackingSpace") do |format|
       format.html 
     end
