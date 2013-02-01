@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+  </head>
+  <body>
+  	<h2><%= @sponsoredby.name %> would like to sponsor you.</h2>
+  	<p><%= button_to 'Click here to accept', @url, :style => 'color:#ffffff;
+      background: #0198E1;
+      padding: 2px 8px;
+      font-size: .7em;
+      border:1px solid #0198E1;
+      /*border:1px solid #f0f0f0;
+      border-radius: 3px;*/
+      vertical-align: bottom;
+      -webkit-appearance: none;
+      -webkit-border-radius: 0', :method => 'get' %></p>
+    <p>What does this mean to you?</p>
+    By allowing <%= @sponsoredby.name %> to sponsor you, you will now have a new personalized view of the buildings and spaces within TrackingSpace.  You will have a special homepage with direct access to <%= @sponsoredby.name %> as well as custom tailored recommendations.  If you want to see who <%= @sponsoredby.name %> is, <%= link_to 'click here to see their profile', @sponsorurl %>.
+    <p>
+      If you are not familiar with TrackingSpace.  You can check it out here: http://www.trackingspace.com.
+    </p>
+    We hope to see you soon.
+    <p/>
+    Regards,
+    <p/>
+    The TrackingSpace Team
+    <p/><p/>
+  </body>
+</html>

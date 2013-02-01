@@ -8,6 +8,11 @@ Trackingspace::Application.routes.draw do
 
   get "ads/show"
 
+  resources :sponsors 
+
+  post "sponsors/sendsponsoremail"
+  match "sponsors/:id/accept" => 'sponsors#accept', :as => 'acceptsponsor'
+
   resources :subscriptions
 
   devise_for :users, :controllers => {:registrations => 'registrations', :sessions => 'sessions'}
@@ -49,8 +54,6 @@ Trackingspace::Application.routes.draw do
     end
     resources :spaces
   end
-
-  
 
   resources :ads
 

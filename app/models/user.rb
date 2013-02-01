@@ -40,6 +40,8 @@ class User < ActiveRecord::Base
   has_many :building_relationships, :dependent => :destroy
   has_one  :subscription
   has_many :ads, :dependent => :destroy
+  has_many :sponsors, :foreign_key => "sponsored_by", :dependent => :destroy
+  has_many :reverse_sponsors, :foreign_key => "sponsored_member", :class_name => "Sponsor", :dependent => :destroy
   
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
@@ -92,6 +94,10 @@ class User < ActiveRecord::Base
 
   def unfollow!(followed)
     user_relationships.find_by_followed_id(followed).destroy
+  end
+
+  def sponsoring?(sponsoring)
+    sponsors.find_by_sponsored_by(sponsoring)
   end
 
   scope :new_users, lambda {

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130117164407) do
+ActiveRecord::Schema.define(:version => 20130131203617) do
 
   create_table "ads", :force => true do |t|
     t.integer  "building_id"
@@ -137,6 +137,16 @@ ActiveRecord::Schema.define(:version => 20130117164407) do
     t.string   "status"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "sponsors", :force => true do |t|
+    t.integer  "sponsored_by"
+    t.integer  "sponsored_member"
+    t.boolean  "accepted"
+    t.date     "date_accepted"
+    t.string   "email"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
   end
 
   create_table "subscriptions", :force => true do |t|

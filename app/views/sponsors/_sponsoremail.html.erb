@@ -1,0 +1,5 @@
+<div style="float:left">Send Email to Sponsor Client Access:</div><%= button_to "?", '#', :title => "As a broker you can sponsor others to view TrackingSpace under your sponsored pages - in essence, they become your de-facto clients.  Clicking send, sends an email to the person you want to sponsor, they will click a link in acceptance.  Once they do, they will be added to your client list", :style => "border-radius:6px;background:light-grey;color:red;margin-left:5px;float:left" %>
+<%= form_tag(:controller => 'sponsors', :action => 'sendsponsoremail') do %>
+	<%= email_field_tag :email %>
+	<%= submit_tag "Send Email", :class => 'trackbutton' %>
+<% end %>
