@@ -2,7 +2,7 @@
 
 <div style="float:left;width:90%;border:1px solid #0198E1;padding:10px;margin-top:20px">
 
-	<div class="title" style="font-size:1.25em;text-align:center;margin:-20px 20px 0 20px;background:#ffffff">New Peeps</div>
+	<div class="title" style="font-size:1.25em;text-align:center;margin:-20px 20px 0 20px;background:#ffffff">Who's New?</div>
 
 	<% @allnewusers.each do |u| %>
 		<div style="float:left;font-size:.9em"><%= link_to u.name, user_path(u.id) %></div>

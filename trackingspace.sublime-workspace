@@ -423,7 +423,7 @@
 			"file": "app/assets/stylesheets/layout.css",
 			"settings":
 			{
-				"buffer_size": 16486,
+				"buffer_size": 16510,
 				"line_ending": "Windows"
 			}
 		},
@@ -447,7 +447,7 @@
 			"file": "app/views/layouts/application.html.erb",
 			"settings":
 			{
-				"buffer_size": 5434,
+				"buffer_size": 5481,
 				"line_ending": "Windows"
 			}
 		}
@@ -713,15 +713,15 @@
 					"file": "app/assets/stylesheets/layout.css",
 					"settings":
 					{
-						"buffer_size": 16486,
+						"buffer_size": 16510,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2169,
-								2169
+								1031,
+								1031
 							]
 						],
 						"settings":
@@ -731,7 +731,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1163.0,
+						"translation.y": 522.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -794,15 +794,15 @@
 					"file": "app/views/layouts/application.html.erb",
 					"settings":
 					{
-						"buffer_size": 5434,
+						"buffer_size": 5481,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								5213,
-								5213
+								2690,
+								2690
 							]
 						],
 						"settings":
@@ -812,7 +812,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1694.0,
+						"translation.y": 784.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

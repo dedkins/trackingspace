@@ -1,14 +1,18 @@
 <% currently_at 'Buildings' %>
 
 <%= content_for :search do %>
+
 <% if user_signed_in? %>
   <% unless @lease.present? %>
-    <div style="background:#FFFF7E;padding:8px;text-align:center;box-shadow:5px 5px 5px #888">Do you have the lease for this space? <%= link_to 'Click Here', new_space_lease_path(@space) %></td>
+    <div style="margin:-20px 0 20px 0;height:70px">
+      <div style="background:#FFFF7E;padding:8px;text-align:center;box-shadow:5px 5px 5px #888">Do you have the lease for this space? <%= link_to 'Click Here', new_space_lease_path(@space) %></td>
+      </div>
     </div>
   <% end %>
 <% end %>
 <% end %>
 
+<div id="middlecontent">
   <div style="float:left;position:absolute;margin-top:-33px;background:#ffffff">
     <% if @space.status == 'Available' %>
     <div class="top_words" style="float:right;padding:0 10px;color:green" id="status">
@@ -84,6 +88,7 @@
   			<%= render 'shared/feed' %>
   		<% end %>
 </table>
+</div>
 
 <%= content_for :sidebar do %>
 
