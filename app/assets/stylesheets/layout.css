@@ -43,10 +43,19 @@ body {
   line-height: 22px;
 }
 
+.sponsor {
+  float: left;
+  position: relative;
+  width:96%;
+  padding:20px;
+  margin:40px 0px -20px 0;
+  border:2px solid red
+}
+
 .container {
-  position: absolute;
-  height: 90%;
-  width: 98%;
+  position: relative;
+  float:left;
+  width: 99%;
   z-index: 5;
 }
 
@@ -55,7 +64,7 @@ header#top {
   width: 100%;
   z-index: 9999;
   color: #fff;
-  margin: -20px 0px 0px -8px;
+  margin: -10px 0px 0px -8px;
   font-size: 1em;
   background: #000000;
   height: 42px;
@@ -157,7 +166,7 @@ header#top {
 section#content {
   margin-left: 320px;
   margin-right: 300px;
-  margin-top: 20px;
+  margin-top:-20px;
   background: #fff;
   padding: 20px 30px 30px 30px;
   border: 1px solid #0198E1;

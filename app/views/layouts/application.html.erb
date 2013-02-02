@@ -58,11 +58,17 @@
 <body>
   <%= render 'layouts/header' %>
 
-    <% flash.each do |name, msg| %>
-      <% content_tag :div, msg, :id => "flash_#{name}" %>
-    <% end %>
+    <% if @sponsor_record %>
+        <div class="sponsor">
+          This person is sponsored by <%= @sponsor.name %> (<%= @sponsor.email %>)
+        </div>
+      <% else %>
+        <div style="padding:10px">
+        </div>
+      <% end %>
 
-  <div class="container">
+  <div class="container">    
+
     <section id="left">
       <div>
         <%= render 'layouts/allnewposts' %>
@@ -82,9 +88,13 @@
           <div style="color:#000000;text-align:center;vertical-align:middle"><%= mail_to "dedkins@trackingspace.com", "Help", :subject => 'Need Help with TrackingSpace' %> | <%= link_to 'Privacy', privacy_path %></div>
         </div>
 
-        <div>
-          <%= render "sponsors/sponsoremail" %>
-        </div>
+        <% if user_signed_in? %>
+          <% if current_user.broker == true %>
+            <div id="sponsoremail">
+              <%= render "sponsors/sponsoremail" %>
+            </div>
+          <% end %>
+        <% end %>
 
             <%= render 'users/leasewidget' %>
 
@@ -131,10 +141,11 @@
         
       </section>
 
-
-    <section id="search">
-      <%= yield :search %>
-    </section>
+    <% if :search != '' %>
+      <section id="search">
+        <%= yield :search %>
+      </section>
+    <% end %>
 
     <section id="content">
         <%= yield %>
