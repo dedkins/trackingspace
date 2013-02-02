@@ -59,15 +59,13 @@
   <%= render 'layouts/header' %>
 
     <% if @sponsor_record %>
-        <div class="sponsor">
+        <div class="sponsor" style="position:fixed;z-index:99999">
           This person is sponsored by <%= @sponsor.name %> (<%= @sponsor.email %>)
         </div>
-      <% else %>
-        <div style="padding:10px">
-        </div>
-      <% end %>
-
-  <div class="container">    
+      <div class="container" style="margin-top:70px;z-index:5">
+    <% else %>
+      <div class="container"> 
+    <% end %>
 
     <section id="left">
       <div>
