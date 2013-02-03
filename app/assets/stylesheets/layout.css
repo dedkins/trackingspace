@@ -46,11 +46,11 @@ body {
 .sponsor {
   float: left;
   position: relative;
-  width:95%;
+  width:100%;
   padding:20px;
-  margin:40px 0px -20px 0;
-  border:2px solid red;
-  background: #ffffff;
+  margin:35px -10px -10px -10px;
+  background-image: url('crosshatchbg.png');
+  color:#ffffff;
 }
 
 .container {
