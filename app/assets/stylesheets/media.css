@@ -48,26 +48,25 @@
 		display:none;
 	}
 	.container {
-		position: relative;
 		float: left;
 		width: 95%;
 		padding-top:5px;
 	}
 	section#content {
-		position: relative;
 		float: left;
 		width: 95%;
+	}
+	section#search {
+		width:100%;
 	}
 	.search {
 		margin:10px 0;
 		float:left;
-		border:2px solid black;
 	}
 	.ui-autocomplete-input, .input input {
 	  background: white;
 	  border: 0; 
 	  height: 65px;
-	  width: 78%;
 	  padding-top: 5px;
 	}
 
@@ -99,7 +98,8 @@
 	.searchglass {
 		float: right;
 		width: 120px;
-		margin-top: 8px;
+		margin-top: -78px;
+		margin-right:0;
 		padding-top: 10px;
 	}
 	.lists_title {
