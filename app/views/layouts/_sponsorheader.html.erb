@@ -1,3 +1,15 @@
 <div class="sponsor" style="position:fixed;z-index:9999">
-  You are sponsored by <%= @sponsor.name %> (<%= @sponsor.email %>)
+	<table width="100%">
+		<tr>
+			<td rowspan="2" width="30px"><%= link_to gravatar_image_tag(@sponsor.email, :gravatar => {:size => "55x55"}), user_path(@sponsor) %></td>
+			<td style="padding-left:5px">
+				<div style="font-size:.8em;margin:-3px 0">Your Personalized Expert:</div>
+				<div style="font-family:'Syncopate';font-size:1.1em;margin:-3px 0">
+					<%= @sponsor.name %>
+				</div>
+				<div style="font-size:.8em">
+					<%= @sponsor.phone %> |  <%= link_to @sponsor.email, @sponsor.email, :class => 'top' %>
+				</div>
+			</td>
+	</table>
 </div>

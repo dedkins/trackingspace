@@ -47,10 +47,11 @@ body {
   float: left;
   position: relative;
   width:100%;
-  padding:20px;
+  padding:2px 20px;
   margin:35px -10px -10px -10px;
   background-image: url('crosshatchbg.png');
   color:#ffffff;
+  box-shadow: 0 5px 5px #888;
 }
 
 .container {
