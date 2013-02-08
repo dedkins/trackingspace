@@ -69,6 +69,7 @@
         <%= yield :search %>
       </section>
 
+    <% unless mobile_device? %>
       <section id="sidebar">
 
         <% if user_signed_in? %>
@@ -126,6 +127,7 @@
           </div>
         
       </section>
+    <% end %>
     
     <section id="content">
         <%= yield %>
