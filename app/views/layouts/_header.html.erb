@@ -1,7 +1,8 @@
   <header id="top">
+    <div style="margin:0 auto;width:960px">
     <table width="100%">
       <tr>
-        <td width="420px">
+        <td width="400px">
           <%= yield :main_navigation %>
         </td>
         <% unless mobile_device? %>
@@ -44,4 +45,5 @@
         <% end %>
       </tr>
     </table>
+  </div>
   </header>

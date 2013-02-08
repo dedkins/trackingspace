@@ -17,7 +17,7 @@
 
 html {
   /*background: #e9e9e9;*/
-  background: #ffffff;
+  background: #dddddd;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -44,11 +44,10 @@ body {
 }
 
 .sponsor {
-  float: left;
   position: relative;
-  width:100%;
+  width:920px;
   padding:2px 20px;
-  margin:35px -10px -10px -10px;
+  margin:-35px auto 0;
   background-image: url('crosshatchbg.png');
   color:#ffffff;
   box-shadow: 0 5px 5px #888;
@@ -56,17 +55,20 @@ body {
 
 .container {
   position: relative;
-  float:left;
-  width: 99%;
+  /*float:left;*/
+  margin:0 auto;
+  width: 960px;
   z-index: 5;
+  top: 50px;
 }
 
 header#top {
   position: fixed;
-  width: 100%;
+  width: 102%;
   z-index: 9999;
   color: #fff;
-  margin: -10px 0px 0px -8px;
+  top:0;
+  left:-8px;
   font-size: 1em;
   background: #000000;
   height: 45px;
@@ -146,9 +148,11 @@ header#top {
 }
 
 .bluebox {
-  border:1px solid #0198E1;
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 2px 2px #888888;
   padding:8px;
-  margin:15px 0 10px;
+  margin:0 0 10px;
 }
 
 /*header#content_title {
@@ -167,12 +171,9 @@ header#top {
 
 
 section#content {
-  margin-left: 320px;
-  margin-right: 300px;
-  margin-top:-20px;
-  background: #ffffff;
-  padding: 20px 30px 30px 30px;
-  border: 1px solid #0198E1;
+  /*margin-left: 320px;*/
+  margin-right: 290px;
+  margin-top:15px;
 }
 
 a {
@@ -189,13 +190,14 @@ a {
       text-decoration: underline;
     }
 
-section#left {
+/*section#left {
   float: left;
   width: 270px;
-  /*background-color: #edeae6;*/
+  /*background-color: #edeae6;
   color:#666;
   padding: 5px;
-}
+}*/
+
 
 section#recent_right {
   font-size: 1.1em;
@@ -213,7 +215,17 @@ section#sidebar {
     weight: normal;
   }
 }
-
+.boxtitle {
+  text-transform: uppercase;
+  font-family: 'Syncopate';
+  position: relative;
+  margin:-10px 0 0 -10px;
+  background:#666666;
+  color:white;
+  text-align:center;
+  padding:8px;
+  width:100px
+}
 .listbox_title {
   padding:3px;
   background: #4c4c4c;
@@ -273,10 +285,8 @@ section#sidebar {
 
 footer#page_footer {
   color: black;
-  height: 120px;
   padding: 10px 20px;
-  margin: 10px auto auto auto;
-  background-color:#ffffff;
+  text-align: center;
   ul {
     margin-left: -10px;
     padding: 0;
@@ -312,9 +322,6 @@ footer#page_footer {
 }*/
 section#search {
   font-size: 1.1em;
-  margin-top: 20px;
-  margin-left: 265px;
-  margin-right: 300px;
 }
 
 .searchgo {

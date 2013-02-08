@@ -59,30 +59,17 @@
   <%= render 'layouts/header' %>
 
     <% if @sponsor_record %>
+      <div class="container" style="margin-top:80px;z-index:5">
         <%= render 'layouts/sponsorheader' %>
-      <div class="container" style="margin-top:70px;z-index:5">
     <% else %>
       <div class="container"> 
     <% end %>
 
-    <section id="left">
-      <div>
-        <%= render 'layouts/allnewposts' %>
-      </div>
-      <div>
-        <%= render 'layouts/allnewbuildings' %>
-      </div>
-      <div>
-        <%= render 'layouts/allnewusers' %>
-      </div>
-      <%= yield :left %>
-    </section>
+    <section id="search">
+        <%= yield :search %>
+      </section>
 
       <section id="sidebar">
-        <div style="border:1px solid #0198E1;padding:5px;margin-bottom:10px">
-          <div style="margin:-15px 45px 0 45px;background:#ffffff;text-align:center;color:#0198E1">&copy 2013 Trackingspace</div>
-          <div style="color:#000000;text-align:center;vertical-align:middle"><%= mail_to "dedkins@trackingspace.com", "Help", :subject => 'Need Help with TrackingSpace' %> | <%= link_to 'Privacy', privacy_path %></div>
-        </div>
 
         <% if user_signed_in? %>
           <% if current_user.broker == true %>
@@ -134,12 +121,10 @@
               src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
             </script>
           </div>
+          <div class="bluebox">
+            <%= render 'layouts/footer' %>
+          </div>
         
-      </section>
-
-    
-      <section id="search">
-        <%= yield :search %>
       </section>
     
     <section id="content">
@@ -148,8 +133,7 @@
 
   </div>    
 </div>
- 
-  
 <div class="clear"/>
+
 </body>
 </html>

@@ -4,17 +4,18 @@
 <% else %>
 	<%= currently_at 'People' %>
 <% end %> 
+	<div class="bluebox">
 	<table width="100%">
 		<tr>
 			<% unless mobile_device? %>
 				<% if user_signed_in? %>
 					<% if current_user == @user %>
-						<td rowspan="2" style="padding-top:10px;vertical-align:top" width="90px"><%= link_to gravatar_image_tag(@user.email), 'http://www.gravatar.com', :title => 'Click to Update Pic', :class => 'profile_pic', :target => '_blank' %></td>
+						<td rowspan="2" style="padding:-10px 10px 0 -10px;vertical-align:top" width="120px"><%= link_to gravatar_image_tag(@user.email, :gravatar => {:size => '120x120'}), 'http://www.gravatar.com', :title => 'Click to Update Pic', :class => 'profile_pic', :target => '_blank' %></td>
 					<% else %>
-						<td rowspan="2" style="padding-top:10px;vertical-align:top" width="90px"><%= gravatar_image_tag(@user.email) %></td>
+						<td rowspan="2" style="padding:-10px 10px 0 -10px;;vertical-align:top" width="120px"><%= gravatar_image_tag(@user.email, :gravatar => {:size => '120x120'}) %></td>
 					<% end %>
 				<% else %>
-					<td rowspan="2" style="padding-top:10px;vertical-align:top" width="90px"><%= gravatar_image_tag(@user.email) %></td>
+					<td rowspan="2" style="padding:-10px 10px 0 -10px;;vertical-align:top" width="120px"><%= gravatar_image_tag(@user.email, :gravatar => {:size => '120x120'}) %></td>
 				<% end %>
 			<% else %>
 				<% if user_signed_in? %>
@@ -97,7 +98,7 @@
 				<div class="viewbuttoncontainer">
 					<%= button_to "Followers", followers_user_path, :class => 'viewbutton', :remote => true, :method => 'get' %>
 				</div>
-				<% if @user.upgrade == 'Upgrade59' %>
+				<% if @user.upgrade == 'Upgrade' %>
 					<div class="viewbuttoncontainer">
 						<%= button_to "Buildings", buildingads_user_path, :class => 'viewbutton', :remote => true, :method => 'get' %>
 					</div>
@@ -111,16 +112,24 @@
 			</td>
 		</tr>
 	</table>
+</div>
+<div class="bluebox">
 		<% if user_signed_in? %>
 			<% unless current_user == @user %>
-				<div style="padding:8px">
-									Add a comment about this person:
-								<%= render '/shared/micropost_form' %>
-					</div>
+				<div class="boxtitle" style="float:left;margin-bottom:10px">
+					COMMENT
+				</div>
+				<div style="float:left;padding-left:20px;color:#888888">Add a comment about this person below</div>
+				<div style="padding:20px 20px 10px 30px;margin-top:10px">
+					<%= render '/shared/micropost_form' %>
+				</div>
 			<% else %>
 				<div style="padding:8px"/>
 			<% end %>
 		<% end %>
+
+</div>
+<div class="bluebox">
 	<div id="partials" style="border:1px solid orange;margin-top:5px;width:101%">
 		<%= render 'shared/feed' %>
 	</div>
@@ -131,4 +140,4 @@
 
 	<%= content_for :search do %>
 	<% end %>
-	</table>
+</div>

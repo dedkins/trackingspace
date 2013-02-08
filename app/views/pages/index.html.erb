@@ -7,20 +7,22 @@
 	<% end %>
 <% end %>	
 
-<% if user_signed_in? %>
-	<% if @feed_items %>
-	<div class="listbox_title">Recent Activity</div>
-	<%= render 'shared/feed' %>
-	<% else %>
-	<hr/>
-	As you follow or track people and buildings, you will develop a list of activities related to these people or places.  This would show up here.
+<div class="bluebox">
+	<% if user_signed_in? %>
+		<% if @feed_items %>
+		<%= render 'shared/feed' %>
+		<% else %>
+		<hr/>
+		As you follow or track people and buildings, you will develop a list of activities related to these people or places.  This would show up here.
+		<% end %>
 	<% end %>
-<% end %>
 
 <% unless user_signed_in? %>
-
 	<%= render 'shared/feed' %>
 <% end %>
+
+</div>
+
 
 <%= content_for :sidebar do %>
 	<%= render 'shared/recent' %>

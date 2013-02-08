@@ -2,17 +2,10 @@
 	section#left {
 		width: 17.5%;
 	}
-	section#content {
-		margin-left: 20%;
-	}
-	section#search {
-		margin-left: 20%;
-	}
 	.container {
 		position: relative;
-		margin:auto;
+		margin:0 auto;
 		max-width: 1370px;
-		top:50px;
 	}
 }
 

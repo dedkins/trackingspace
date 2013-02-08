@@ -5,26 +5,19 @@
 				<%= render 'buildings/form_new_mobile' %>
 			<% elsif user_signed_in? %>
 			<% else %>
-				<div style="margin:-20px 0 20px 0;height:70px;width:100%">
+				<div style="width:100%">
 			      <div style="background:#FFFF7E;padding:8px;text-align:center;box-shadow:5px 5px 5px #888">With membership, you can see and do more with this building -> <%= link_to 'Click Here', new_user_registration_path %></td>
 			      </div>
 			    </div>
 			<% end %>
 		<% end %>
 
-		<div style="float:left;position:absolute;margin-top:-33px;background:#ffffff">
-			<div class="top_words" style="float:left;padding:0 5px">
-				<%= render 'est_value' %>
-			</div>
-			<div class="top_words" style="float:right;padding:0 5px" id="avgrate">
-				<%= render 'avg_rate' %>
-			</div>
-		</div>
-			<div style="float:left;padding-right:20px" class="title">
+		<div class="bluebox">
+			<div style="width:100.5%;font-family:'Syncopate';text-align:left" class="boxtitle">
 			 <%= truncate(@building.address, :separator => ',', :omission => '') %>
 			</div>
 				
-			<div style="float:right;margin-top:-5px">
+			<div style="position:absolute;right:0;margin:-35px 310px 0 0">
 			  		<%= link_to image_tag("https://github.com/intridea/authbuttons/raw/master/png/twitter_64.png", :size => "30x30", :alt => "Twitter"), "http://twitter.com/home?status=Take a look at this on @trackingspace: http://#{request.host+request.fullpath}", :target => '_blank', :title => 'Share with Twitter' %>
 				  	<%= link_to image_tag("http://github.com/intridea/authbuttons/raw/master/png/facebook_64.png", :size => "30x30"), "http://www.facebook.com/sharer.php?u=http://#{request.host+request.fullpath}", :target => '_blank', :title => 'Share with FaceBook' %>
 			</div>
@@ -86,19 +79,21 @@
 				</tr>
 			</table>
 			<hr/>
-			
-		<div class="feed">
-			<% if user_signed_in? %>
-			<h3>Add a comment about this building:</h3>
-				<%= render '/shared/micropost_form' %>
-			<% end %>
-			<p/>
-			<hr/>
-			<% unless @building.microposts.empty? %>
-				<div class="feeditems" id="feeditems">
-					<%= render 'shared/feed' %>
-				</div>
-			<% end %>
+		</div>
+		<div class="bluebox">
+			<div class="feed">
+				<% if user_signed_in? %>
+				<h3>Add a comment about this building:</h3>
+					<%= render '/shared/micropost_form' %>
+				<% end %>
+				<p/>
+				<hr/>
+				<% unless @building.microposts.empty? %>
+					<div class="feeditems" id="feeditems">
+						<%= render 'shared/feed' %>
+					</div>
+				<% end %>
+			</div>
 		</div>
 
 	<% unless mobile_device? %>

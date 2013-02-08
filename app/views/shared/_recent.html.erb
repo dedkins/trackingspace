@@ -2,10 +2,10 @@
 
 	<% if @recent_items.present? %>
 	
-	<div style="border:1px solid #0198E1;padding:5px;margin-top:20px">
+	<div class="bluebox">
 
-		<div class="title" style="font-size:1.25em;text-align:center;padding-bottom:10px;margin:-15px 20px 0 20px;background:#ffffff">Last Viewed</div>
-		<div style="text-align:center;font-size:.9em;font-weight:bold;color:#0198E1">v = Building has a video</div>
+		<div class="boxtitle" style="float:left">recent</div>
+		<div style="float:left;text-align:right;font-size:.9em;font-weight:bold;color:#0198E1;padding-left:5px">v = Building has video</div>
 		<div><%= render :partial => 'shared/recent_item', :collection => @recent_items %></div>
 	
 	</div>

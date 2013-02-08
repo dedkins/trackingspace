@@ -2,7 +2,7 @@
 	<table width="100%">
 		<tr>
 			<td rowspan="2" width="55px"><%= link_to gravatar_image_tag(@sponsor.email, :gravatar => {:size => "55x55"}), user_path(@sponsor) %></td>
-			<td style="padding-left:5px">
+			<td style="padding-left:5px" width="250px">
 				<div style="font-size:.8em;margin:-3px 0">Your Personal Expert:</div>
 				<div style="font-family:'Syncopate';font-size:1.1em;margin:-3px 0">
 					<%= @sponsor.name %>
@@ -11,5 +11,24 @@
 					<%= @sponsor.phone %> |  <%= link_to @sponsor.email, @sponsor.email, :class => 'top' %>
 				</div>
 			</td>
+			<td>
+				<div style="font-size:2em;color:#ffffff;text-align:center;padding-bottom:5px">
+					<%= @buildingstracked.count %>
+				</div>
+				<div style="text-align:center">Tracking</div>
+			</td>
+			<td>
+				<div style="font-size:2em;color:#ffffff;text-align:center;padding-bottom:5px">
+					<%= @following.count %>
+				</div>
+				<div style="text-align:center">Following</div>
+			</td>
+			<td>
+				<div style="font-size:2em;color:#ffffff;text-align:center;padding-bottom:5px">
+					<%= @followers.count %>
+				</div>
+				<div style="text-align:center">Following Me</div>
+			</td>
+		</tr>
 	</table>
 </div>

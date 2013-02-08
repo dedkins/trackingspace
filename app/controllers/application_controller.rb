@@ -11,7 +11,10 @@ def new_stuff
   if user_signed_in?
     @user = User.find(current_user.id)
     @leases = @user.leases
+    @buildingstracked = @user.building_relationships
     @sponsor_record = Sponsor.find_by_sponsored_member(current_user.id)
+    @following = @user.following
+    @followers = @user.followers
     if @sponsor_record
       @sponsor = User.find(@sponsor_record.sponsored_by)
     end
