@@ -113,26 +113,33 @@
 		</tr>
 	</table>
 </div>
-<div class="bluebox">
-		<% if user_signed_in? %>
-			<% unless current_user == @user %>
-				<div class="boxtitle" style="float:left;margin-bottom:10px">
-					COMMENT
-				</div>
-				<div style="float:left;padding-left:20px;color:#888888">Add a comment about this person below</div>
-				<div style="padding:20px 20px 10px 30px;margin-top:10px">
-					<%= render '/shared/micropost_form' %>
-				</div>
-			<% else %>
-				<div style="padding:8px"/>
-			<% end %>
-		<% end %>
 
-</div>
+<% if user_signed_in? %>
+	<div class="bluebox">
+		<% unless current_user == @user %>
+			<div class="boxtitle" style="float:left;margin-bottom:10px">
+				COMMENT
+			</div>
+			<div style="float:left;padding-left:20px;color:#888888">Add a comment about this person below</div>
+			<div style="padding:20px 20px 10px 30px;margin-top:10px">
+				<%= render '/shared/micropost_form' %>
+			</div>
+		<% else %>
+			<div style="padding:8px"/>
+		<% end %>
+	</div>
+<% end %>
+<% unless user_signed_in? %>
 <div class="bluebox">
-	<div id="partials" style="border:1px solid orange;margin-top:5px;width:101%">
+	<div id="partials" style="margin-top:5px;width:101%">
 		<%= render 'shared/feed' %>
 	</div>
+</div>
+<% else %>
+	<div id="partials" style="margin-top:5px;width:101%">
+		<%= render 'shared/feed' %>
+	</div>
+<% end %>
 
 		<%= content_for :sidebar do %>
 			
@@ -140,4 +147,3 @@
 
 	<%= content_for :search do %>
 	<% end %>
-</div>

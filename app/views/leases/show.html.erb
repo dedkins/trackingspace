@@ -2,44 +2,44 @@
 
 <% if current_user.id == @lease.user_id %>
 
-<div style="float:left;position:absolute;margin-top:-33px;background:#ffffff">
-	<div class="top_words" style="float:left;padding:0 5px">
-		Exp: <%= l @lease.expiration %>
+<div class="bluebox">
+	<div class="boxtitle" style="margin-bottom:10px">lease</div>
+
+	<div style="float:left;position:absolute;right:0;margin:-32px 310px 0 0">
+		<div class="top_words" style="float:left;padding:0 5px">
+			Exp: <%= l @lease.expiration %>
+		</div>
+		<div class="top_words" style="float:left;padding:0 5px" id="avgrate">
+			<%= number_to_currency(@lease.current_rate) %>/mo
+		</div>
+		<div class="top_words" style="float:left;padding:0 5px" id="avgrate">
+			<%= number_with_delimiter(@lease.size) %>sf
+		</div>
 	</div>
-	<div class="top_words" style="float:left;padding:0 5px" id="avgrate">
-		<%= number_to_currency(@lease.current_rate) %>/mo
+
+	<div style="float:left;position:relative" class="title">
+		<%= link_to truncate(@lease.space.building.address, :separator => ',', :omission => ''), building_path(@lease.space.building) %>, Suite: <%= @lease.space.suite %>
 	</div>
-	<div class="top_words" style="float:left;padding:0 5px" id="avgrate">
-		<%= number_with_delimiter(@lease.size) %>sf
+
+	<div style="float:right;padding-left:20px">
+		<%= button_to 'Share It', '', :class => 'trackbutton' %>
 	</div>
+
+	<div style="float:left">
+		<%= link_to 'Edit', edit_space_lease_path(@space,@lease) %> |
+		<%= link_to 'Download Copy', @lease.file.url %> |
+		<%= link_to 'See Space', building_space_path(@space.building_id,@space) %>
+	</div>
+
+	<div style="margin-top:60px">
+		<hr/>
+		<%= render 'leases/pdf' %>
+	</div>
+
+	<% else %>
+
+	Oops.  Somehow we ended up here.  To look at this lease, you need to either have created it, or had it shared with you.  
+		
+
+	<% end %>
 </div>
-
-<div style="float:right;position:relative;margin-top:-33px;background:#ffffff">
-	<div class="title">Lease</div>
-</div>
-
-<div style="float:left;position:relative" class="title">
-	<%= link_to truncate(@lease.space.building.address, :separator => ',', :omission => ''), building_path(@lease.space.building) %>, Suite: <%= @lease.space.suite %>
-</div>
-
-<div style="float:right;padding-left:20px">
-	<%= button_to 'Share It', '', :class => 'trackbutton' %>
-</div>
-
-<div style="float:left">
-	<%= link_to 'Edit', edit_space_lease_path(@space,@lease) %> |
-	<%= link_to 'Download Copy', @lease.file.url %> |
-	<%= link_to 'See Space', building_space_path(@space.building_id,@space) %>
-</div>
-
-<div style="margin-top:60px">
-	<hr/>
-	<%= render 'leases/pdf' %>
-</div>
-
-<% else %>
-
-Oops.  Somehow we ended up here.  To look at this lease, you need to either have created it, or had it shared with you.  
-	
-
-<% end %>

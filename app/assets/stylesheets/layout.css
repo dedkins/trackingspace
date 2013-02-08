@@ -45,8 +45,8 @@ body {
 
 .sponsor {
   position: relative;
-  width:920px;
-  padding:2px 20px;
+  width:940px;
+  padding:0 10px;
   margin:-35px auto 0;
   background-image: url('crosshatchbg.png');
   color:#ffffff;
@@ -224,7 +224,7 @@ section#sidebar {
   color:white;
   text-align:center;
   padding:8px;
-  width:100px
+  width: 100px;
 }
 .listbox_title {
   padding:3px;
@@ -322,6 +322,8 @@ footer#page_footer {
 }*/
 section#search {
   font-size: 1.1em;
+  width: 100%;
+  margin-bottom: 15px;
 }
 
 .searchgo {

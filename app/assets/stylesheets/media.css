@@ -33,26 +33,28 @@
 		height: 60px;
 	}
 	.sponsor {
-		margin-top: 50px;
-		margin-bottom: -20px;
+		margin-top: -33px;
+		margin-left: -10px;
+		width: 98%;
 	}
 	section#sidebar {
 		display:none;
 	}
 	.container {
 		float: left;
-		width: 95%;
+		width: 100%;
 		padding-top:5px;
 	}
 	section#content {
 		float: left;
-		width: 95%;
+		width: 98%;
+		margin-top: -20px;
 	}
 	section#search {
-		width:100%;
+		width:95%;
 	}
 	.search {
-		margin:10px 0;
+		margin:50px 0;
 		float:left;
 	}
 	.ui-autocomplete-input, .input input {
@@ -90,7 +92,7 @@
 	.searchglass {
 		float: right;
 		width: 120px;
-		margin-top: -78px;
+		margin-top: -118px;
 		margin-right:0;
 		padding-top: 10px;
 	}

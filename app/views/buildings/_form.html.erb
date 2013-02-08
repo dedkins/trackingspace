@@ -1,4 +1,6 @@
-<%= form_for(@building) do |f| %>
+<div class="bluebox">
+
+  <%= form_for(@building) do |f| %>
   <% if @building.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@building.errors.count, "error") %> prohibited this building from being saved:</h2>
@@ -29,3 +31,5 @@
       
       <p></P>
 <% end %>
+
+</div>

@@ -1,34 +1,36 @@
 <div class="sponsor" style="position:fixed;z-index:9999">
-	<table width="100%">
-		<tr>
-			<td rowspan="2" width="55px"><%= link_to gravatar_image_tag(@sponsor.email, :gravatar => {:size => "55x55"}), user_path(@sponsor) %></td>
-			<td style="padding-left:5px" width="250px">
-				<div style="font-size:.8em;margin:-3px 0">Your Personal Expert:</div>
-				<div style="font-family:'Syncopate';font-size:1.1em;margin:-3px 0">
-					<%= @sponsor.name %>
-				</div>
-				<div style="font-size:.8em">
-					<%= @sponsor.phone %> |  <%= link_to @sponsor.email, @sponsor.email, :class => 'top' %>
-				</div>
-			</td>
-			<td>
-				<div style="font-size:2em;color:#ffffff;text-align:center;padding-bottom:5px">
-					<%= @buildingstracked.count %>
-				</div>
-				<div style="text-align:center">Tracking</div>
-			</td>
-			<td>
-				<div style="font-size:2em;color:#ffffff;text-align:center;padding-bottom:5px">
-					<%= @following.count %>
-				</div>
-				<div style="text-align:center">Following</div>
-			</td>
-			<td>
-				<div style="font-size:2em;color:#ffffff;text-align:center;padding-bottom:5px">
-					<%= @followers.count %>
-				</div>
-				<div style="text-align:center">Following Me</div>
-			</td>
-		</tr>
-	</table>
+	<div style="float:left;width:400px">
+		<div style="float:left;padding-right:20px">
+			<%= link_to gravatar_image_tag(@sponsor.email, :gravatar => {:size => "65x65"}), user_path(@sponsor) %>
+		</div>
+		<div style="padding:5px">
+			<div style="margin:-3px 0;font-size:.8em">Your Personal Expert:</div>
+			<div style="font-family:'Syncopate';font-size:1.2em;margin:-3px 0">
+				<%= @sponsor.name %>
+			</div>
+			<div>
+				<%= @sponsor.phone %> |  <%= link_to @sponsor.email, @sponsor.email, :class => 'top' %>
+			</div>
+		</div>
+	</div>
+	<div style="right:0">
+		<div style="float:left">
+			<div style="padding:5px 10px;font-size:2em;color:#ffffff;text-align:center">
+				<%= @buildingstracked.count %>
+			</div>
+			<div style="text-align:center;padding:5px 10px">Tracking</div>
+		</div>
+		<div style="float:right">
+			<div style="padding:5px 10px;font-size:2em;color:#ffffff;text-align:center">
+				<%= @following.count %>
+			</div>
+			<div style="text-align:center;padding:5px 10px">Following</div>
+		</div>
+		<div >
+			<div style="padding:5px 10px;font-size:2em;color:#ffffff;text-align:center">
+				<%= @followers.count %>
+			</div>
+			<div style="text-align:center;padding:5px 10px">Following Me</div>
+		</div>
+	</div>
 </div>
