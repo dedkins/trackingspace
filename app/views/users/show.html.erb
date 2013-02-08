@@ -30,7 +30,7 @@
 
 			<td style="text-align:left;">
 				<span class="title"><%= @user.name %></span>
-				<% if @user.upgrade == 'Upgrade59' %>
+				<% if @user.upgrade == 'Upgrade' %>
 				<span class="premium">premium member</span>
 				<% end %>
 				<br/>
@@ -54,7 +54,7 @@
 				<% end %>
 			</td>
 		</tr>
-		<% if @user.upgrade == 'Upgrade59' %>
+		<% if @user.upgrade == 'Upgrade' %>
 		<tr>
 			<td style="vertical-align:top">
 				<table width="100%">

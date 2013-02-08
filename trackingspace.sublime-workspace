@@ -423,7 +423,7 @@
 			"file": "app/assets/stylesheets/layout.css",
 			"settings":
 			{
-				"buffer_size": 16550,
+				"buffer_size": 16587,
 				"line_ending": "Windows"
 			}
 		},
@@ -447,15 +447,15 @@
 			"file": "app/views/layouts/_sponsorheader.html.erb",
 			"settings":
 			{
-				"buffer_size": 132,
+				"buffer_size": 606,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "app/assets/stylesheets/media.css",
+			"file": "app/views/users/show.html.erb",
 			"settings":
 			{
-				"buffer_size": 2116,
+				"buffer_size": 5309,
 				"line_ending": "Windows"
 			}
 		}
@@ -484,13 +484,13 @@
 	},
 	"file_history":
 	[
+		"/C/Users/david/trackingspace/app/assets/stylesheets/media.css",
 		"/C/Users/david/trackingspace/app/views/sponsors/_sponsoremail.html.erb",
 		"/C/Users/david/trackingspace/app/views/buildings/_form_new_mobile.html",
 		"/C/Users/david/trackingspace/app/views/buildings/show.html.erb",
 		"/C/Users/david/trackingspace/app/views/layouts/_allnewusers.html.erb",
 		"/C/Users/david/trackingspace/app/views/spaces/show.html.erb",
 		"/C/Users/david/trackingspace/app/controllers/application_controller.rb",
-		"/C/Users/david/trackingspace/app/assets/stylesheets/media.css",
 		"/C/Users/david/trackingspace/app/views/pages/people_main.html.erb",
 		"/C/Users/david/trackingspace/app/views/pages/index.html.erb",
 		"/C/Users/david/trackingspace/app/views/pages/buildings_main.html.erb",
@@ -722,15 +722,15 @@
 					"file": "app/assets/stylesheets/layout.css",
 					"settings":
 					{
-						"buffer_size": 16550,
+						"buffer_size": 16587,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1145,
-								1145
+								3117,
+								3117
 							]
 						],
 						"settings":
@@ -740,7 +740,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 205.0,
+						"translation.y": 1888.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -794,7 +794,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 574.0,
+						"translation.y": 238.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -804,20 +804,21 @@
 					"file": "app/views/layouts/_sponsorheader.html.erb",
 					"settings":
 					{
-						"buffer_size": 132,
+						"buffer_size": 606,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								132,
-								132
+								115,
+								115
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -827,27 +828,27 @@
 				},
 				{
 					"buffer": 4,
-					"file": "app/assets/stylesheets/media.css",
+					"file": "app/views/users/show.html.erb",
 					"settings":
 					{
-						"buffer_size": 2116,
+						"buffer_size": 5309,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								594,
-								594
+								1829,
+								1829
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 425.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
