@@ -1,4 +1,5 @@
 <div class="viewbuttoncontainer" id="buildingspacestab">
+	<div style="position:absolute;margin-top:-7px"><%= button_to '', '#', :title => 'Click these buttons along the top to get more information about the building.  If they are blue, details need to be added, if they are orange, they should have additional information to show when clicked. Once a member, you can update this information.', :class => 'pulsing' %></div>
 		<% if @spaces.present? %>
 			<%= button_to "Spaces (#{@spaces.size})", spacesview_building_path(@building.id), :class => 'viewbutton', :remote => true, :method => 'get' %>
 		<% else %>

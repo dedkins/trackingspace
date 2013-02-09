@@ -1,6 +1,6 @@
 <head>
 
-    <%= stylesheet_link_tag 'application' %>
+    <%= stylesheet_link_tag 'landing', 'notification' %>
 
     <script type="text/javascript">
 
@@ -18,16 +18,9 @@
 	
 </head>
 <body>
-    <div style="float:left;height:50px;padding:8px 10px 8px 60px">
-        <%= link_to image_tag("logo_ts.png", :size => "40x40"), home_path %>
-    </div>
-    <div style="float:left;padding-top:25px" class="title">TrackingSpace
-    </div>
-    <div style="float:right;padding:25px 60px 0 0">
-        <%= link_to 'Sign-In', new_user_session_path, :class => 'trackbutton', :style => 'color:white;text-decoration:none', :method => 'get' %>
-    </div>
-    <div style="float:right;padding:25px 8px 0 0">
-        <%= link_to 'Become a Member', new_user_registration_path, :class => 'trackbutton', :style => 'color:white;text-decoration:none', :method => 'get' %>
+   <div style="width:960px;margin:0 auto">
+    <div style="position:absolute;left:50%;margin:60px 0 0 -220px">
+        <%= link_to image_tag("FullLogo.png", :size => "400x40"), home_path %>
     </div>
 
 
@@ -44,37 +37,39 @@
 		</p>
 	<% end %>
 </div>
+<div class="signinupbox" style="box-shadow:0 20px 60px 20px #C3E4ED">
+	<div class="boxtitle" style="margin-bottom:20px">
+		Membership is Free.<br/>Simply complete the form below to start tracking.
+	</div>		
 
-<div style="margin: 65px 0 20px auto; width:600px; border:1px solid #888888;padding:10px;text-align:center" class="title">
-	Membership is Free.<br/>Simply complete the form below to start tracking.
-</div>		
+	<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
 
-<div class="form_box" style="margin:0 auto">
+		<table width="100%">
+			<tr>
+				<td style="vertical-align:middle;text-align:right"><%= f.label :name %></td>
+				<td><%= f.text_field :name, :class => 'field' %></td>
+			</tr>
+			<tr>
+				<td style="vertical-align:middle;text-align:right"><%= f.label :email %></td>
+				<td><%= f.email_field :email, :class => 'field' %></td>
+			</tr>
+			<tr>
+				<td style="vertical-align:middle;text-align:right"><%= f.label :password %></td>
+				<td><%= f.password_field :password, :class => 'field' %></td>
+			</tr>
+			<tr>
+				<td style="vertical-align:middle;text-align:right"><%= f.label :password_confirmation %></td>
+				<td><%= f.password_field :password_confirmation, :class => 'field' %></td>
+			</tr>
+			<tr height="15px"/>
+		</table>
+	  
+	  <div style="text-align:center"><%= f.submit "Sign up", :class => 'buttonorange' %></div>
+	  <%= link_to 'Opps, I Meant to Sign-In', new_user_session_path %>
+	<% end %>
 
-<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
-
-	<table width="90%">
-		<tr>
-			<td style="vertical-align:middle;text-align:right"><%= f.label :name %></td>
-			<td><%= f.text_field :name, :class => 'field' %></td>
-		</tr>
-		<tr>
-			<td style="vertical-align:middle;text-align:right"><%= f.label :email %></td>
-			<td><%= f.email_field :email, :class => 'field' %></td>
-		</tr>
-		<tr>
-			<td style="vertical-align:middle;text-align:right"><%= f.label :password %></td>
-			<td><%= f.password_field :password, :class => 'field' %></td>
-		</tr>
-		<tr>
-			<td style="vertical-align:middle;text-align:right"><%= f.label :password_confirmation %></td>
-			<td><%= f.password_field :password_confirmation, :class => 'field' %></td>
-		</tr>
-		<tr height="15px"/>
-	</table>
-  
-  <div style="text-align:center"><%= f.submit "Sign up", :class => 'button' %></div>
-<% end %>
+	</div>
+</div>
 
 </div>
 </div>

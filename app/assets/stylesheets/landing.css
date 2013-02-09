@@ -1,0 +1,166 @@
+@import url(http://fonts.googleapis.com/css?family=Syncopate);
+
+html {
+	background-image: url('crosshatchbg.png');
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover; 
+}
+
+.boxtitle {
+  text-transform: uppercase;
+  font-family: 'Syncopate';
+  position: relative;
+  margin:-10px 0 0 -10px;
+  background:#666666;
+  color:white;
+  text-align:center;
+  padding:8px;
+  width: 100.5%;
+}
+
+body {
+  background:transparent;
+  font-family: 'Source Sans Pro', sans-serif;
+  /*font-family: 'Open Sans', sans-serif;*/
+  font-size: 15px;
+  line-height: 22px;
+}
+
+.buttonblue {
+    color:#ffffff;
+    background: #0198E1;
+    padding: 3px 10px;
+    font-size: .7em;
+    border:1px solid #0198E1;
+    /*border:1px solid #f0f0f0;
+    border-radius: 3px;*/
+    vertical-align: bottom;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+  }
+
+  .buttonorange {
+    color:#000000;
+    background: orange;
+    padding: 3px 10px;
+    font-size: .7em;
+    border:1px solid #888888;
+    /*border:1px solid #f0f0f0;
+    border-radius: 3px;*/
+    vertical-align: bottom;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+  }
+
+  .signinupbox {
+  	position: absolute;
+  	left:50%;
+  background: #ffffff;
+  border: 2px solid #888888;
+  box-shadow: 0 2px 2px #888888;
+  padding:8px;
+  margin:150px 0 0 -280px;
+  width:500px;
+}
+
+/*
+  Slideshow
+*/
+
+#slides {
+  width:100%;
+  margin:0 auto;
+  top:15px;
+  left:4px;
+  z-index:100;
+}
+
+/*
+  Slides container
+  Important:
+  Set the width of your slides container
+  Set to display none, prevents content flash
+*/
+
+/*.slides_container {
+  border:1px solid red;
+  padding:10px;
+  width:770px;
+  height:470px;
+  overflow:hidden;
+  position:relative;
+  display:none;
+}
+
+/*
+  Each slide
+  Important:
+  Set the width of your slides
+  If height not specified height will be set by the slide content
+  Set to display block
+*/
+
+.slides_container div.slide {
+    /*width:570px;*/
+    /*height:270px;*/
+    display:block;
+}
+
+.slides_container a {
+  width:570px;
+  height:270px;
+  display:block;
+}
+
+.slides_container a img {
+  display:block;
+}
+
+/*
+  Next/prev buttons
+*/
+
+#slides .next,#slides .prev {
+  position:absolute;
+  top:340px;
+  width:24px;
+  height:43px;
+  display:block;
+  z-index:101;
+}
+
+#slides .next {
+  margin-left:750px;
+}
+
+/*
+  Pagination
+*/
+
+.pagination {
+  margin:16px auto 0;
+  width:150px;
+}
+
+.pagination li {
+  float:left;
+  margin:0 1px;
+  list-style:none;
+}
+
+.pagination li a {
+  display:block;
+  width:12px;
+  height:0;
+  padding-top:12px;
+  background-image:url(../assets/pagination.png);
+  background-position:0 0;
+  float:left;
+  overflow:hidden;
+}
+
+.pagination li.current a {
+  background-position:0 -12px;
+}

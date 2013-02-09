@@ -1,5 +1,5 @@
 <head>
-    <%= stylesheet_link_tag 'application' %>
+    <%= stylesheet_link_tag 'landing', 'notification' %>
     <script type="text/javascript">
 
 	  var _gaq = _gaq || [];
@@ -16,38 +16,29 @@
 	
 </head>
 <body>
-    <div style="float:left;height:50px;padding:8px 10px 8px 60px">
-        <%= image_tag("logo_ts.png", :size => "40x40") %>
-    </div>
-    <div style="float:left;padding-top:25px" class="title">TrackingSpace
-    </div>
-    <div style="float:right;padding:25px 60px 0 0">
-        <%= link_to 'Sign-In', new_user_session_path, :class => 'trackbutton', :style => 'color:white;text-decoration:none', :method => 'get' %>
-    </div>
-    <div style="float:right;padding:25px 8px 0 0">
-        <%= link_to 'Become a Member', new_user_registration_path, :class => 'trackbutton', :style => 'color:white;text-decoration:none', :method => 'get' %>
+    <div style="width:960px;margin:0 auto">
+    <div style="position:absolute;left:50%;margin:60px 0 0 -220px">
+        <%= link_to image_tag("FullLogo.png", :size => "400x40"), home_path %>
     </div>
 
+<div class="signinupbox" style="box-shadow:0 20px 60px 20px #C3E4ED">
+	<div class="boxtitle" style="margin-bottom:20px">
+		Sign In Below.
+	</div>	
 
-<div style="float:left;margin-top:60px">
-	<div>
-	<% if notice %>
-		<p class="notification notice">
-			<%= notice %>
-		</p>
-	<% end %>
-	<% if alert %>
-		<p class="notification alert">
-			<%= alert %>
-		</p>
-	<% end %>
-</div>
+	<div style="margin-bottom:20px">
+		<% if notice %>
+			<p class="notification notice">
+				<%= notice %>
+			</p>
+		<% end %>
+		<% if alert %>
+			<p class="notification alert">
+				<%= alert %>
+			</p>
+		<% end %>
+	</div>
 
-<div style="margin: 25px 0 20px auto; width:600px; border:1px solid #888888;padding:10px;text-align:center" class="title">
-	Sign In Below.
-</div>	
-
-<div class="form_box" style="margin:0 auto">
 
 <table width="100%">
 	<tr>
@@ -76,7 +67,7 @@
 	</tr>
 	<tr>
 		<td colspan="2" style="text-align:center;padding:10px">
-			<div><%= f.submit "Sign in", :class => 'trackbutton' %></div>
+			<div><%= f.submit "Sign in", :class => 'buttonorange' %></div>
 			<% end %>
 		</td>
 	</tr>
@@ -93,6 +84,7 @@
 <p/>
 <%= render :partial => "devise/shared/links" %>
 
+</div>
 </div>
 </div>
 

@@ -7,6 +7,19 @@
 	<% end %>
 <% end %>	
 
+<% unless user_signed_in? %>
+	<div style="position:fixed;margin:50px 0 0 20%;z-index:99999">
+		<div class="calloutpoint-pink">
+			This is where you start the journey.  Start typing your address above.
+			Then select the address and click the magnifying glass or press return.
+			<p>You can also start clicking/touching addresses, names and pictures
+				on this page to get a feel for it.
+			</p>
+		</div>
+	</div>	
+<% end %>
+
+
 <div class="bluebox">
 	<% if user_signed_in? %>
 		<% if @feed_items %>
