@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"text",
+				"text-decoration"
+			],
+			[
 				"rever",
 				"reverse_lease_shares"
 			],
@@ -54,10 +58,6 @@
 			[
 				"margin",
 				"margin-top"
-			],
-			[
-				"text",
-				"text-transform"
 			],
 			[
 				"marg",
@@ -459,42 +459,7 @@
 			"file": "app/assets/stylesheets/layout.css",
 			"settings":
 			{
-				"buffer_size": 18264,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/models/user.rb",
-			"settings":
-			{
-				"buffer_size": 4693,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "class LeaseSharesController < ApplicationController\n\n	before_filter :authenticate_user!\n\n	def new\n		@leaseshare = LeaseShare.new\n	end\n\n	def create\n		@lease = Lease.find(params[:lease])\n		@space = Space.find(params[:space])\n		@sharedwithExistingUser = User.find_by_email(params[:email])\n		@exist = LeaseShare.find_by_sharedfrom_id_and_email(current_user.id,params[:email])\n		if @sharedwithExistingUser != nil\n			@shared = LeaseShare.create!(:lease_id => @lease.id, :space_id => @space.id, :sharedfrom_id => current_user.id, :sharedto_id => @sharedwithExistingUser.id)\n			@sharedto = User.find(@shared.sharedto_id)\n			UserMailer.leaseshare_email_existing(@shared).deliver\n			respond_to do |format|\n				flash[:notice] = \"Lease has been shared with #{@sharedto.email}!\"\n				format.html { redirect_to(:back) }\n			end	\n		else \n			LeaseShare.create!(:lease_id => @lease.id, :sharedfrom_id => @sharedfrom_id.id,:email => params[:email])\n			@shared = LeaseShare.where('sharedfrom_id = ?', @sharedfrom_id.id).last\n			UserMailer.leaseshare_email(@shared).deliver\n			respond_to do |format|\n				flash[:notice] = \"Lease will be shared once #{@shared.email} becomes a member!\"\n				format.html { redirect_to(:back) }\n			end	\n		end\n	end\n\n	def accept\n		@leaseshareid = LeaseShare.find(params[:id])\n		@sharedto = User.find_by_email(@leaseshareid.email)\n		if @sponsored != nil\n			@sponsored_id = User.find(@sponsored.id)\n			@already = Sponsor.find_by_sponsored_member(@sponsored_id.id)\n			if @already != nil\n				flash[:alert] = \"Looks like you are already sponsored!\"\n			else\n				@sponsorid.update_attributes(:sponsored_member => @sponsored_id.id, :date_accepted => Time.now, :accepted => true)\n			end\n		end\n		respond_to do |format|\n			format.html { redirect_to @user }\n			format.js\n		end\n	end\n\n	def destroy\n		@leaseshare = LeaseShare.find(params[:id])\n		@lease = @leaseshare.lease_id\n	    @leaseshare.destroy\n\n	    respond_to do |format|\n	      format.html { redirect_to(:back) }\n	      format.json { head :no_content }\n	    end\n	  end\n\nend",
-			"file": "app/controllers/lease_shares_controller.rb",
-			"file_size": 2074,
-			"file_write_time": 130051094665860000,
-			"settings":
-			{
-				"buffer_size": 2021,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/mailers/user_mailer.rb",
-			"settings":
-			{
-				"buffer_size": 3082,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/views/leases/show.html.erb",
-			"settings":
-			{
-				"buffer_size": 2776,
+				"buffer_size": 18263,
 				"line_ending": "Windows"
 			}
 		}
@@ -523,11 +488,19 @@
 	},
 	"file_history":
 	[
+		"/C/Users/david/trackingspace/app/models/user.rb",
+		"/C/Users/david/trackingspace/app/controllers/lease_shares_controller.rb",
+		"/C/Users/david/trackingspace/app/mailers/user_mailer.rb",
+		"/C/Users/david/trackingspace/app/views/leases/show.html.erb",
+		"/C/Users/david/trackingspace/app/views/leases/_pdf.html.erb",
+		"/C/Users/david/trackingspace/app/controllers/leases_controller.rb",
+		"/C/Users/david/trackingspace/app/views/user_mailer/leaseshare_email.html.erb",
+		"/C/Users/david/trackingspace/app/views/pages/index.html.erb",
+		"/C/Users/david/trackingspace/config/routes.rb",
+		"/C/Users/david/trackingspace/app/views/user_mailer/leaseshare_email_existing.html.erb",
 		"/C/Users/david/trackingspace/app/controllers/application_controller.rb",
 		"/C/Users/david/trackingspace/app/views/user_mailer/sponsor_email.html.erb",
-		"/C/Users/david/trackingspace/app/controllers/leases_controller.rb",
 		"/C/Users/david/trackingspace/app/views/buildings/_spaces.html.erb",
-		"/C/Users/david/trackingspace/app/views/leases/_pdf.html.erb",
 		"/C/Users/david/trackingspace/app/models/lease_share.rb",
 		"/C/Users/david/trackingspace/app/views/users/_show_follow.html.erb",
 		"/C/Users/david/trackingspace/db/migrate/20130211173720_create_lease_shares.rb",
@@ -535,14 +508,11 @@
 		"/C/Users/david/trackingspace/app/models/lease.rb",
 		"/C/Users/david/trackingspace/app/views/shared/_recent_item.html.erb",
 		"/C/Users/david/trackingspace/app/views/shared/_recent.html.erb",
-		"/C/Users/david/trackingspace/app/views/user_mailer/leaseshare_email_existing.html.erb",
 		"/C/Users/david/trackingspace/app/controllers/users_controller.rb",
 		"/C/Users/david/trackingspace/app/views/users/_leasewidget.html.erb",
 		"/C/Users/david/trackingspace/app/views/layouts/_sponsorheader.html.erb",
 		"/C/Users/david/trackingspace/app/models/space.rb",
 		"/C/Users/david/trackingspace/app/models/building.rb",
-		"/C/Users/david/trackingspace/app/views/leases/show.html.erb",
-		"/C/Users/david/trackingspace/config/routes.rb",
 		"/C/Users/david/trackingspace/app/controllers/sponsors_controller.rb",
 		"/C/Users/david/trackingspace/app/views/users/show.html.erb",
 		"/C/Users/david/trackingspace/app/assets/stylesheets/media.css",
@@ -553,7 +523,6 @@
 		"/C/Users/david/trackingspace/app/views/registrations/edit.html.erb",
 		"/C/Users/david/trackingspace/app/views/buildings/_spacestab.html.erb",
 		"/C/Users/david/trackingspace/app/views/buildings/show.html.erb",
-		"/C/Users/david/trackingspace/app/views/pages/index.html.erb",
 		"/C/Users/david/trackingspace/app/views/layouts/landing.html.erb",
 		"/C/Users/david/trackingspace/app/views/users/_spaceads.html.erb",
 		"/C/Users/david/trackingspace/app/views/sponsors/_sponsoremail.html.erb",
@@ -568,7 +537,6 @@
 		"/C/Users/david/trackingspace/app/views/layouts/_footer.html.erb",
 		"/C/Users/david/trackingspace/app/assets/stylesheets/navigation.css.scss",
 		"/C/Users/david/trackingspace/app/views/layouts/_header.html.erb",
-		"/C/Users/david/trackingspace/app/models/user.rb",
 		"/C/Users/david/trackingspace/app/controllers/subscriptions_controller.rb",
 		"/C/Users/david/trackingspace/app/views/subscriptions/_upgrade.html.erb",
 		"/C/Users/david/trackingspace/app/models/subscription.rb",
@@ -580,7 +548,6 @@
 		"/C/Users/david/trackingspace/app/views/buildings/_form_new.html",
 		"/C/Users/david/trackingspace/public/500.html",
 		"/C/Users/david/trackingspace/app/views/layouts/user_mailer.html.erb",
-		"/C/Users/david/trackingspace/app/mailers/user_mailer.rb",
 		"/C/Users/david/trackingspace/app/views/sponsors/accept.html.erb",
 		"/C/Users/david/trackingspace/app/models/building_order.rb",
 		"/C/Users/david/trackingspace/app/models/user_relationship.rb",
@@ -648,9 +615,7 @@
 		"/C/Users/david/trackingspace/Gemfile",
 		"/C/Users/david/trackingspace/app/views/layouts/_allnewposts.html.erb",
 		"/C/Users/david/trackingspace/app/views/spaces/_newspace.html.erb",
-		"/C/Users/david/trackingspace/app/views/buildings/_mapview.html.erb",
-		"/C/Users/david/trackingspace/app/mailers/building_mailer.rb",
-		"/C/Users/david/trackingspace/app/views/shared/_feed_item.html.erb"
+		"/C/Users/david/trackingspace/app/views/buildings/_mapview.html.erb"
 	],
 	"find":
 	{
@@ -756,7 +721,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -764,15 +729,15 @@
 					"file": "app/assets/stylesheets/layout.css",
 					"settings":
 					{
-						"buffer_size": 18264,
+						"buffer_size": 18263,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1121,
-								1121
+								730,
+								730
 							]
 						],
 						"settings":
@@ -782,117 +747,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 399.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "app/models/user.rb",
-					"settings":
-					{
-						"buffer_size": 4693,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3660,
-								3660
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 900.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "app/controllers/lease_shares_controller.rb",
-					"settings":
-					{
-						"buffer_size": 2021,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1333,
-								1333
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 48.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "app/mailers/user_mailer.rb",
-					"settings":
-					{
-						"buffer_size": 3082,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2615,
-								2615
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 411.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "app/views/leases/show.html.erb",
-					"settings":
-					{
-						"buffer_size": 2776,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1581,
-								1581
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 484.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

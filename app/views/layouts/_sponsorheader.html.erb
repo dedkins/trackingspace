@@ -1,8 +1,18 @@
 <div class="sponsor" style="position:fixed;z-index:9999">
+	<% unless mobile_device? %>
 	<div style="float:left;width:400px">
+	<% else %>
+	<div style="float:left;width:80%;padding-left:40px;font-size:1.2em">
+	<% end %>
+		<% unless mobile_device? %>
 		<div style="float:left;padding-right:20px">
 			<%= link_to gravatar_image_tag(@sponsor.email, :gravatar => {:size => "65x65"}), user_path(@sponsor) %>
 		</div>
+		<% else %>
+		<div style="float:left;padding-right:20px">
+			<%= link_to gravatar_image_tag(@sponsor.email, :gravatar => {:size => "100x100"}), user_path(@sponsor) %>
+		</div>
+		<% end %>
 		<div style="padding:5px">
 			<div style="margin:-3px 0;font-size:.8em">Your Personal Expert:</div>
 			<div style="font-family:'Syncopate';font-size:1.2em;margin:-3px 0">
@@ -13,6 +23,7 @@
 			</div>
 		</div>
 	</div>
+	<% unless mobile_device? %>
 	<div style="right:0">
 		<div style="float:left">
 			<div style="padding:5px 10px;font-size:2em;color:#ffffff;text-align:center">
@@ -33,4 +44,5 @@
 			<div style="text-align:center;padding:5px 10px">Following Me</div>
 		</div>
 	</div>
+	<% end %>
 </div>
