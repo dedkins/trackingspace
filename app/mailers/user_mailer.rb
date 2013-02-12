@@ -54,4 +54,24 @@ class UserMailer < ActionMailer::Base
     @sponsorurl = "http://www.trackingspace.com/users/#{@sponsoredby.id}"
     mail(:to => @email, :subject => "#{@sponsoredby.name} would like to sponsor you on TrackingSpace")
   end
+
+  def leaseshare_email_existing(shared)
+    @leaseshareid = LeaseShare.find(shared.id)
+    @shared_from = User.find(@leaseshareid.sharedfrom_id)
+    @shared_to = User.find(@leaseshareid.sharedto_id)
+    @space = Space.find(@leaseshareid.space)
+    @email = @shared_to.email
+    @sharedurl = "http://www.trackingspace.com/spaces/#{@leaseshareid.space_id}/leases/#{@leaseshareid.lease_id}"
+    mail(:to => @email, :subject => "#{@shared_from.name} has shared a lease with you")
+  end
+
+  def leaseshare_email(shared)
+    @leaseshareid = LeaseShare.find(shared.id)
+    @space = Space.find(@leaseshareid.space)
+    @shared_from = User.find(@leaseshareid.sharedfrom_id)
+    @email = @leaseshareid.email
+    @url = "http://www.trackingspace.com/lease_shares/#{@leaseshareid.id}/accept"
+    @sharedfromurl = "http://www.trackingspace.com/users/#{@shared_from.id}"
+    mail(:to => @email, :subject => "#{@shared_from.name} is sharing a lease with you")
+  end
 end

@@ -18,12 +18,15 @@
 #
 
 class Lease < ActiveRecord::Base
-  has_many :users
+  belongs_to :user
+  has_many :users, :through => :lease_shares
   belongs_to :space
+  has_many :lease_shares, :dependent => :destroy
 
   validates_attachment_content_type :file, :content_type => ['image/jpeg', 'image/png', 'image/gif','application/pdf']
   
   attr_accessible :current_rate, :expiration, :size, :space_id, :user_id, :file
+
 
   #paperclip
   has_attached_file :file,

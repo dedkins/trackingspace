@@ -7,6 +7,7 @@
 #  sponsored_member :integer
 #  accepted         :boolean
 #  date_accepted    :date
+#  email            :string(255)
 #  created_at       :datetime         not null
 #  updated_at       :datetime         not null
 #

@@ -1,8 +1,8 @@
 <%= currently_at 'myStuff' %>
 
-<% if current_user.id == @lease.user_id %>
+<% if @auth == true %>
 
-<div class="bluebox">
+<div class="bluebox" style="height:100px">
 	<div class="boxtitle" style="margin-bottom:10px">lease</div>
 
 	<div style="float:left;position:absolute;right:0;margin:-32px 310px 0 0">
@@ -17,12 +17,8 @@
 		</div>
 	</div>
 
-	<div style="float:left;position:relative" class="title">
+	<div style="float:left;position:relative;margin-bottom:10px" class="title">
 		<%= link_to truncate(@lease.space.building.address, :separator => ',', :omission => ''), building_path(@lease.space.building) %>, Suite: <%= @lease.space.suite %>
-	</div>
-
-	<div style="float:right;padding-left:20px">
-		<%= button_to 'Share It', '', :class => 'trackbutton' %>
 	</div>
 
 	<div style="float:left">
@@ -30,16 +26,61 @@
 		<%= link_to 'Download Copy', @lease.file.url %> |
 		<%= link_to 'See Space', building_space_path(@space.building_id,@space) %>
 	</div>
+</div>
+	<div class="bluebox">
+		<div class="boxtitle" style="width:320px">Who can access this lease?</div>
+		<div style="float:right;padding-left:20px;margin-top:-30px">
+			<%= form_tag(:controller => 'lease_shares', :action => 'create') do %>
+			<%= email_field_tag :email %>
+			<%= hidden_field_tag :lease, @lease.id %>
+			<%= hidden_field_tag :space, @space.id %>
+			<%= submit_tag "Share It", :class => 'trackbutton' %>
+		<% end %>
+		</div>
+		<div style="width:100%">
+			<table width="100%">
+				<tr>
+					<td>Creator (the person that added it first):
+						<% if @lease.user_id == current_user.id %> You Of Course!
+						<% else %>
+						<%= @lease.user.name %>
+						<% end %></td>
+				</tr>
+				<% @leaseshares.each do |l| %>
+				<% if l.sharedto != nil %>
+					<tr>
+						<td>
+							<% if l.sharedfrom.id == current_user.id %>
+							You 
+							<% else %>
+							<%= link_to l.sharedfrom.name, user_path(l.sharedfrom) %>
+							<% end %> invited 
+							<% if l.sharedto.id == current_user.id %> you
+							<% else %>
+							<%= link_to l.sharedto.name, user_path(l.sharedto) %>
+							<% end %> to the party <%= time_ago_in_words(l.created_at) %> ago
+						</td>
+						<td style="text-align:right">
+							<% if l.sharedfrom_id == current_user.id || @lease.user_id == current_user.id %>
+							<%= link_to 'Remove their access', lease_share_path(l.id), :method => :delete, :confirm => "Are You Sure?" %>
+							<% end %>
+						</td>
+					</tr>
+				<% end %>
+				<% end %>
+			</table>
+		</div>
+	</div>
 
-	<div style="margin-top:60px">
-		<hr/>
+	<div class="bluebox">
 		<%= render 'leases/pdf' %>
 	</div>
 
 	<% else %>
 
+	<div class="bluebox">
 	Oops.  Somehow we ended up here.  To look at this lease, you need to either have created it, or had it shared with you.  
-		
+	</div>
 
 	<% end %>
 </div>

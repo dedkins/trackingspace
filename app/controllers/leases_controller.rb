@@ -23,6 +23,16 @@ class LeasesController < ApplicationController
     @user = current_user
     @space = Space.find(params[:space_id])
     @lease = Lease.find(params[:id])
+    @leaseshares = LeaseShare.where("lease_id = ?",@lease.id).all
+    @leaseshare = LeaseShare.find_by_lease_id_and_sharedto_id(@lease.id,current_user.id)
+    if @leaseshare != nil
+      @auth = true
+    elsif @lease.user_id == current_user.id
+      @auth = true
+    else 
+      @auth = false
+    end
+
     
     respond_to do |format|
       format.html # show.html.erb

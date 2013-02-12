@@ -22,6 +22,7 @@ class Space < ActiveRecord::Base
   has_many :leases, :dependent => :destroy
   has_many :microposts, :dependent => :destroy
   belongs_to :user
+  has_many :lease_shares
 
   attr_accessible :monthly, :sf, :suite, :company, :status, :_3dplanurl, :videourl, :user_id
 

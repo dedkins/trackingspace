@@ -1,4 +1,4 @@
-<% if @spaces.any? %>
+
 
   <div style="background:#333333;color:#ffffff;padding:3px 8px">Spaces
     <div style="float:right">
@@ -11,6 +11,8 @@
   </div>
 
   <div style="float:left;width:100%;border:1px solid orange;min-height:400px;padding:10px -10px 10px 10px">
+
+<% if @spaces.any? %>
 
     <% @spaces.each do |space| %> 
 
@@ -36,6 +38,13 @@
       </tr>
     </table>
     <% end %>
+
+  <% else %>
+
+    <div style="width:100%;text-align:center;padding-top:100px">
+      Looks like we need to add some spaces here.  
+      <p>Click that blue button up there that says "Add New Space"</p>
+    </div>
   </div>
 
 <% end %>

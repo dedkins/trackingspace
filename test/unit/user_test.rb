@@ -26,6 +26,7 @@
 #  latitude               :float
 #  longitude              :float
 #  license                :string(255)
+#  broker                 :boolean
 #
 
 require 'test_helper'

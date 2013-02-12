@@ -4,6 +4,8 @@
 
 /*  top blue =    #C3E4ED
     title blue =  #0198E1
+    yellow callout = #FFFF7E
+    pink = #e10279
 */
 
 
@@ -45,9 +47,10 @@ body {
 
 .sponsor {
   position: relative;
+  left:50%;
   width:940px;
   padding:0 10px;
-  margin:-35px auto 0;
+  margin:-35px 0 0 -480px;
   background-image: url('crosshatchbg.png');
   color:#ffffff;
   box-shadow: 0 5px 5px #888;
@@ -57,9 +60,9 @@ body {
   position: relative;
   /*float:left;*/
   margin:0 auto;
+  top:50px;
   width: 960px;
   z-index: 5;
-  top: 50px;
 }
 
 header#top {
@@ -789,21 +792,22 @@ section#search {
 }
 
 .calloutpoint-pink {
-    background:#e10279;
+    background:#FFFF7E;
     padding:24px;
     width: 349px;
-    margin: -2px 0 0 30%;
+    margin: -50px 0 0 30%;
     border-radius:3px;
     position:absolute;
-    color:white;
-    box-shadow: 0px 0px 20px rgba(0,0,0,0.5);
+    color:#000000;
+    font-size: 1.1em;
+    box-shadow: 0px 0px 20px #000000;
 }
 .calloutpoint-pink:after{
     content:"";
     position:absolute;
     top: -10px;
     left: 65%;
-    background: #e10279;
+    background: #FFFF7E;
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
     -o-transform: rotate(45deg);
@@ -813,7 +817,7 @@ section#search {
     display:block;
     width: 24px;
     height: 24px;
-    box-shadow: 0px 0px 20px rgba(0,0,0,0.5);
+    box-shadow: 0px 0px 20px #000000;
     z-index: -10;
 }
 .calloutpoint-pink:before{
@@ -821,7 +825,7 @@ section#search {
     position:absolute;
     top: -10px;
     left: 65%;
-    background: #e10279;
+    background: #FFFF7E;
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
     -o-transform: rotate(45deg);
