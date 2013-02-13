@@ -7,12 +7,15 @@
 	<% else %>
 
 	<% unless user_signed_in? %>
-		<div class="calloutpoint-pink">
+		<div class="calloutpoint-pink" >
 			This is where you start the journey.  Start typing your address above,
 			then select the address and click the magnifying glass or press return.
 			Feel free to take a look around.  As a basic free member, you can start tracking
 			unlimited buildings and people.  Becoming a member is no risk plus it gives you 
-			a greater perspective of how this system works.
+			a greater perspective of how this system works. 
+			<div style="margin-top:10px">
+			<%= button_to 'Start your free basic membership', new_user_registration_path, :class => 'trackbutton', :method => 'get' %>
+			</div>
 		</div>
 	<% end %>
 
