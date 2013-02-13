@@ -1,7 +1,9 @@
 <div class="bluebox">
 
   <%= form_for(@building) do |f| %>
-  <% if @building.errors.any? %>
+  <div class="bluebox">
+
+    <% if @building.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@building.errors.count, "error") %> prohibited this building from being saved:</h2>
 
@@ -11,12 +13,9 @@
       <% end %>
       </ul>
     </div>
-  <% end %>
+    <% end %>
   
-  
-  <div>
-
-      <div class='field'>
+  <div class='field'>
         <%= f.label "Building Size" %> <%= f.number_field :size %>  
       </div>
       <div class='field'>
@@ -29,7 +28,5 @@
         <%= f.label "YouTube Video Embed Code" %> <%=f.text_field :videourl, :placeholder => 'x9Jt0tyz' %> <%= f.submit %>
       </div>
       
-      <p></P>
-<% end %>
-
-</div>
+  <% end %>
+  </div>

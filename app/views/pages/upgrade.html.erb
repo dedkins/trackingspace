@@ -1,51 +1,11 @@
 <%= currently_at 'myStuff' %>
 
-<table width="100%">
-	<tr>
-		<td class="title">upgrade to benefits</td>
-	</tr>
-	<tr>
-		<td><hr/></td>
-	</tr>
-	<tr style="background:#888888">
-					<td style="text-align:center;color:#ffffff;font-weight:bold;padding:8px">What do you get for $29.95/mo?</td>
-				</tr>
-	<tr>
-		<td>
-			<table width="95%">
-				<tr>
-					<td>
-						<ul>
-							<li><div style="text-transform:uppercase;color:#333333;font-weight:bold">Unlimited premium ads for buildings and spaces</div>
-								<p/>We have three prime advertising opportunity slots for our upgraded members.  If you look at any building or space, these ad slots are directly beneath the satellite view.  Stake your claim to as many buildings and spaces as you can find and want to associate with.  Are you a tenant rep, property manager, listing agent, own or represent the space, or would like to own or represent the space?  Allow those looking at the building or space to see your name and click to get more information.  This is like the early days of the gold rush - stake your claim early to keep it generating as the system gets bigger.  
-							
-							<li><div style="text-transform:uppercase;color:#333333;font-weight:bold">Additional information fields</div>
-								<p/>Standard users only show their name, picture and some simple stats in their profile.  Upgraded members have additional fields such as link to other websites, email address, phone number and description.  You don't have to fill all of these out - but it will help if you want to get contacted by others.  Additionally, upgraded members have the ability to add addtional information to their spaces and buildings - such as flyers, website links, etc.
-							
-							<li><div style="text-transform:uppercase;color:#333333;font-weight:bold">Direct Response to others searching for buildings and spaces</div>
-								<p/>To be released in Q2 of 2012.  Our system will allow for direct communication with those looking for buildings and spaces.
+<div id="upgrade">
+	<div class="boxtitle" style="width:98%">
+		Upgrade to benefits
+	</div>
+<%= render 'upgrade' %>
 
-							<li><div style="text-transform:uppercase;color:#333333;font-weight:bold">Greater visibility to member interaction</div>
-								<p/>Upgraded members will have the ability to see who has recently viewed buildings, spaces and people...as well as who's tracking what
+<%= render 'subscriptions/upgrade' %>
 
-							<li><div style="text-transform:uppercase;color:#333333;font-weight:bold">Direct Support</div>
-								<p/>As an upgraded member, you will have direct access to our core team, including the creator/founder/president/owner, for any questions and suggestions to make it better for you.
-
-							<li><div style="text-transform:uppercase;color:#333333;font-weight:bold">More in the future</div>
-								<p/>These are the early days - we have many additional features and benefits in the pipeline.  Lock in your pricing.  Stake your claim.  Upgrade now.
-
-						</ul>
-					</td>
-				</tr>
-			</table>
-		</td>
-	</tr>
-	<tr>
-		<td style="text-align:center"><%= render 'subscriptions/upgrade' %></td>
-	</tr>
-	<tr>
-		<td style="padding:8px"><hr/></td>
-	</tr>
-	<tr>
-		<td style="font-size:.8em;color:#888888;padding:15px">Upgraded membership is on a pre-paid basis.  Your credit card will be charged today and each month you maintain your upgraded membership.  Each of your ads will stay in effect until your upgraded membership is downgraded or canceled, in which case, all ads will be removed.  If, for some reason, a payment fails in the future, we allow several days for payment to be rectified before canceling or downgrading your account.  Thank you for your support - we look forward to helping you grow your business.</td> 
-</table>
+</div>

@@ -4,7 +4,7 @@
 
   <% if user_signed_in? %>
     <% unless @lease.present? %>
-      <div style="margin:-20px 0 20px 0;height:70px">
+      <div style="height:40px">
         <div style="background:#FFFF7E;padding:8px;text-align:center;box-shadow:5px 5px 5px #888">Do you have the lease for this space? <%= link_to 'Click Here', new_space_lease_path(@space) %></td>
         </div>
       </div>

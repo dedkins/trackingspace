@@ -5,7 +5,17 @@
 <div class="bluebox" style="height:100px">
 	<div class="boxtitle" style="margin-bottom:10px">lease</div>
 
-	<div style="float:left;position:absolute;right:0;margin:-32px 310px 0 0">
+	<div style="float:right;margin-top:-40px">
+		<%= link_to 'Edit', edit_space_lease_path(@space,@lease) %> |
+		<%= link_to 'Download Copy', @lease.file.url %> |
+		<%= link_to 'See Space', building_space_path(@space.building_id,@space) %>
+	</div>
+
+	<div style="float:left;position:relative;margin-bottom:10px" class="title">
+		<%= link_to truncate(@lease.space.building.address, :separator => ',', :omission => ''), building_path(@lease.space.building) %><br/> Suite: <%= @lease.space.suite %>
+	</div>
+
+	<div style="float:left;position:absolute;right:0;margin:32px 300px 0 0">
 		<div class="top_words" style="float:left;padding:0 5px">
 			Exp: <%= l @lease.expiration %>
 		</div>
@@ -16,16 +26,7 @@
 			<%= number_with_delimiter(@lease.size) %>sf
 		</div>
 	</div>
-
-	<div style="float:left;position:relative;margin-bottom:10px" class="title">
-		<%= link_to truncate(@lease.space.building.address, :separator => ',', :omission => ''), building_path(@lease.space.building) %>, Suite: <%= @lease.space.suite %>
-	</div>
-
-	<div style="float:left">
-		<%= link_to 'Edit', edit_space_lease_path(@space,@lease) %> |
-		<%= link_to 'Download Copy', @lease.file.url %> |
-		<%= link_to 'See Space', building_space_path(@space.building_id,@space) %>
-	</div>
+	
 </div>
 	<div class="bluebox">
 		<div class="boxtitle" style="width:320px">Who can access this lease?</div>
@@ -40,11 +41,13 @@
 		<div style="width:100%">
 			<table width="100%">
 				<tr>
-					<td>Creator (the person that added it first):
-						<% if @lease.user_id == current_user.id %> You Of Course!
+					<td>Update(s):
+						<% if @lease.user_id == current_user.id %>You
 						<% else %>
 						<%= @lease.user.name %>
-						<% end %></td>
+						<% end %>
+						last updated it <%= time_ago_in_words(@lease.updated_at) %> ago
+					</td>
 				</tr>
 				<% @leaseshares.each do |l| %>
 				<% if l.sharedto != nil %>

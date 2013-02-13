@@ -61,6 +61,8 @@ class UserMailer < ActionMailer::Base
     @shared_to = User.find(@leaseshareid.sharedto_id)
     @space = Space.find(@leaseshareid.space)
     @email = @shared_to.email
+    @buildingurl = "http://www.trackingspace.com/buildings/#{@leaseshareid.space.building.id}"
+    @spaceurl = "http://www.trackingspace.com/buildings/#{@leaseshareid.space.building.id}/spaces/#{@leaseshareid.space_id}"
     @sharedurl = "http://www.trackingspace.com/spaces/#{@leaseshareid.space_id}/leases/#{@leaseshareid.lease_id}"
     mail(:to => @email, :subject => "#{@shared_from.name} has shared a lease with you")
   end
@@ -70,6 +72,8 @@ class UserMailer < ActionMailer::Base
     @space = Space.find(@leaseshareid.space)
     @shared_from = User.find(@leaseshareid.sharedfrom_id)
     @email = @leaseshareid.email
+    @buildingurl = "http://www.trackingspace.com/buildings/#{@leaseshareid.space.building.id}"
+    @spaceurl = "http://www.trackingspace.com/buildings/#{@leaseshareid.space.building.id}/spaces/#{@leaseshareid.space_id}"
     @url = "http://www.trackingspace.com/lease_shares/#{@leaseshareid.id}/accept"
     @sharedfromurl = "http://www.trackingspace.com/users/#{@shared_from.id}"
     mail(:to => @email, :subject => "#{@shared_from.name} is sharing a lease with you")

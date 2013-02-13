@@ -1,18 +1,16 @@
 <% currently_at 'Spaces' %>
-
-<table>
-	<tr>
-		<td style="text-align:center">
+<div class="bluebox">
+	<div class="boxtitle">
+				Edit
+			</div>
+	<div style="float:right;margin-top:-30px">
 			<%= link_to 'Go Back to the Space', building_space_path %> |
 			<%= link_to 'Go Back to the Building', building_path(@building) %>
-		</td>
-	</tr>
-	<tr>
-		<td class="title">Edit<br/> <%= truncate(@building.address, :size => 1, :separator => ',', :omission => '') %> Number <%= @space.suite %></td>
-	</tr>
-</table>
-
-<hr/>
+	</div>
+	<div class="title" style="margin-top:10px">
+		<%= truncate(@building.address, :size => 1, :separator => ',', :omission => '') %> Number <%= @space.suite %>
+	</div>
+</div>
 
 <%= render 'form' %>
 

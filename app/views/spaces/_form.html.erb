@@ -13,7 +13,7 @@
   <% end %>
 <% end %>
 
-<div class="form_box">
+<div class="bluebox" style="padding:30px">
 <table width="100%">
   <tr>
     <td width="45%"><%= f.label :suite %></td>
@@ -37,18 +37,15 @@
   </tr>
   <tr>
     <td valign="top"><%= f.label :description %></td>
-    <td><%= f.text_area :description, :class => 'field' %></td>
+    <td><%= f.text_area :description, :class => 'field', :size => '50x10' %></td>
   </tr>
   <tr>
     <td><%= f.label '3D Floorplan URL' %></td>
-    <td><%= f.text_field :_3dplanurl, :class => 'field', :title => 'If you have a 3d floorplan url, enter it here' %></td>
+    <td><%= f.text_field :_3dplanurl, :class => 'field', :size => '50x1', :title => 'If you have a 3d floorplan url, enter it here' %> <div style="float:right;padding-right:20px"><%= link_to 'Get One', "http://www.propertizing.com", :target => "_blank" %></div></td>
   </tr>
   <tr>
     <td><%= f.label 'YouTube Video URL' %></td>
-    <td><%= f.text_field :videourl, :class => 'field', :title => 'Only the last part where the numbers and letters are', :placeholder => 'x8JmfiwOz <---just that part' %></td>
-  </tr>
-  <tr>
-    <td/><td style="padding-left:15px;font-size:.9em"><%= link_to 'Learn more about 3D plans', 'http://www.propertizing.com', :target => '_blank' %></td>
+    <td><%= f.text_field :videourl, :class => 'field', :size => '50x1', :title => 'Only the last part where the numbers and letters are', :placeholder => 'x8JmfiwOz <---just that part' %></td>
   </tr>
   <tr><td colspan="2"><hr/></td></tr>
 
