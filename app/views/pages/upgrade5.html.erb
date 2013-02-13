@@ -1,0 +1,93 @@
+<%= currently_at 'myStuff' %>
+
+<%= form_for Subscription.new do |f| %>
+<div class="bluebox">
+	<div class="boxtitle" style="width:300px">
+		Upgrading to Fiver
+	</div>
+	<div style="padding:20px">
+		<table width="100%">
+			<tr style="text-align:left">
+				<th>Upgrade Level</th>
+				<th>Frequency</th>
+				<th>Starting</th>
+				<th>Price</th>
+			</tr>
+			<tr>
+				<td>Fiver</td>
+				<td>Monthly</td>
+				<td><%= l Date.today %></td>
+				<td>$5.00</td>
+			</tr>
+			<tr>
+				<td colspan="3">
+					<div style="border:1px solid #888;padding:10px;margin-top:10px;color:#333">
+					Includes: Sponsor 5 people, share 5 leases, advertise on 5 buildings, advertise on 5 spaces, unlimited commenting, unlimited adding of leases, unlimited adding of spaces...etc.
+					</div>
+				</td>
+			</tr>
+			<tr height="20px"/>
+			<tr>
+				<td colspan="3"/>
+				<td></td>
+			</tr>
+			<tr>
+				<td colspan="2"/>
+				<td>Total Due Today:</td>
+				<td>$5.00</td>
+			</tr>
+			<tr>
+				<td colspan="3"/>
+				<td></td>
+			</tr>
+		</table>
+	</div>
+</div>
+<div class="bluebox">
+<table width="100%">
+	
+		<tr>
+			<td colspan="3" style="text-transform:uppercase;letter-spacing:3px">Secure Payment Processing</td>
+		</tr>
+		<tr>
+			<td colspan="3"><hr/></td>
+		</tr>
+		<tr>
+			<td width="35%" style="font-weight:bold;font-size:.9em;text-align:left;padding-left:50px"><%= label_tag :card_number, "Card Number" %></td>
+			<td width="50%"><%= text_field_tag :card_number, nil, name: nil, :class => 'field' %></td>
+			<td width="30px" style="text-align:left;padding-left:10px"><%= image_tag('secure-lock.png', :title => 'Your Information Is Secure', :size => '30x30') %></td>
+		</tr>
+		<tr>
+			<td style="font-weight:bold;font-size:.9em;text-align:left;padding-left:50px"><%= label_tag :card_code, "CVV Code" %></td>
+			<td><%= text_field_tag :card_code, nil, name: nil, :class => 'field' %></td>
+			<td style="text-align:left;padding-left:10px"><%= image_tag('cvv2.png', :size => '45x30') %></td>
+		</tr>
+		<tr>
+			<td style="font-weight:bold;font-size:.9em;text-align:left;padding-left:50px"><%= label_tag :card_month, "Card Expiration" %></td>
+			<td colspan="2" style="text-align:left;padding-left:20px"><%= select_month nil, {add_month_numbers: true}, {name: nil, id: "card_month", :class => 'expiration'} %>
+			<%= select_year nil, {start_year: Date.today.year, end_year: Date.today.year+15}, {name: nil, id: "card_year", :class => 'expiration'} %></td>
+		</tr>
+		<tr>
+			<td height="10px"/>
+		</tr>
+</table>
+		<div id="stripe_error">
+	    	<noscript>JavaScript is not enabled and is required for this form. First enable it in your web browser settings.</noscript>
+	  	</div>
+	  	<%= f.hidden_field :user_id, :value => current_user.id %>
+	  	<%= f.hidden_field :plan_id, :value => '5' %>
+	  	<%= f.hidden_field :plan_name, :value => 'Upgrade5' %>
+	  	<%= f.hidden_field :email, :value => current_user.email %>
+	  	<%= f.hidden_field :stripe_card_token %>
+	
+	</div>
+	<div style="text-align:center">
+		<%= f.submit "Upgrade Now", :class => 'button' %>
+	</div>
+	
+	<div style="font-size:.8em;color:#333333;padding:15px">Upgraded membership is on a pre-paid basis.  Your credit card will be charged today and each month you maintain your upgraded membership.  If, for some reason, a payment fails in the future, we allow several days for payment to be rectified before canceling or downgrading your account.  Thank you for your business - we look forward to helping you grow yours.
+	</div>
+
+
+</div>
+<% end %>
