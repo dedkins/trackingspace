@@ -9,12 +9,26 @@
 			<%= notice %>
 		</div>
 	<% end %>
-
+	<% if @sponsorleft != 0 %>
 	<div style="float:left">Send Email to Sponsor Client Access:</div><%= button_to "?", '#', :title => "As a broker you can sponsor others to view TrackingSpace under your sponsored pages - in essence, they become your de-facto clients.  Clicking send, sends an email to the person you want to sponsor, they will click a link in acceptance.  Once they do, they will be added to your client list", :style => "height:20px;width:20px;border-radius:8px;background:light-grey;color:red;margin-left:5px;float:left;font-weight:bold;border:0" %>
 
 	<%= form_tag(:controller => 'sponsors', :action => 'sendsponsoremail', :remote => true) do %>
 		<%= email_field_tag :email %>
 		<%= submit_tag "Send Email", :class => 'trackbutton' %>
 	<% end %>
+	<% else %>
+            <div style="background:#FFFF7E;margin:2px;color:black;padding:8px">
+              You've hit your limit for sponsoring - <%= link_to 'Upgrade for more', upgrade_path %>
+            </div>
+    <% end %>
+	<div style="float:left;padding:5px 10px 0;font-size:.9em">
+		Sponsored: <%= @sponsorcount %>
+	</div>
+	<div style="float:left;padding:5px 10px 0;font-size:.9em">
+		Left to Sponsor: 
+		<% if current_user.upgrade == 'Upgrade100' %> Unlim
+		<% else %><%= @sponsorleft %><% end %>
+	</div>
+	<div style="clear:left"/>
 
 </div>

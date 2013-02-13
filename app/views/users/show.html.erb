@@ -31,7 +31,7 @@
 
 			<td style="text-align:left;">
 				<span class="title"><%= @user.name %></span>
-				<% if @user.upgrade == 'Upgrade' %>
+				<% if @user.upgrade != nil %>
 				<span class="premium">premium member</span>
 				<% end %>
 				<br/>
@@ -55,7 +55,7 @@
 				<% end %>
 			</td>
 		</tr>
-		<% if @user.upgrade == 'Upgrade' %>
+		<% if @user.upgrade != nil %>
 		<tr>
 			<td style="vertical-align:top">
 				<table width="100%">
@@ -129,17 +129,11 @@
 		<% end %>
 	</div>
 <% end %>
-<% unless user_signed_in? %>
+
 <div class="bluebox">
 	<div id="partials" style="margin-top:5px;width:101%">
 		<%= render 'shared/feed' %>
 	</div>
-</div>
-<% else %>
-	<div id="partials" style="margin-top:5px;width:101%">
-		<%= render 'shared/feed' %>
-	</div>
-<% end %>
 
 		<%= content_for :sidebar do %>
 			

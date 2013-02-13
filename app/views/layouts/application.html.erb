@@ -73,11 +73,16 @@
       <section id="sidebar">
 
         <% if user_signed_in? %>
-          <% if current_user.broker == true %>
+          <% if @sponsoravail == true %>
             <div id="sponsoremail">
               <%= render "sponsors/sponsoremail" %>
             </div>
           <% end %>
+        <% else %>
+          <div style="background:black;color:white;padding:8px;margin-bottom:15px">
+            SPONSORING
+            <br/>Once a member, there will be an option in this space to email others and "sponsor" their access.  Doing this will place your information in a banner at the top of their pages.  Free basic memberhip includes sponsoring 2 people.
+          </div>
         <% end %>
 
             <%= render 'users/leasewidget' %>

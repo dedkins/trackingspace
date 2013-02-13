@@ -5,6 +5,7 @@ class SponsorsController < ApplicationController
 	def sendsponsoremail
 		@sponsoring = User.find(current_user.id)
 		@exist = Sponsor.find_by_sponsored_by_and_email(@sponsoring.id,params[:email])
+		@existother = Sponsor.find_by_email(params[:email])
 		if @exist != nil and @exist.accepted != true
 			respond_to do |format|
 				flash[:alert] = "Wow. You must really like them...looks like you've already sent a request to #{params[:email]} - check your outstanding list!"
@@ -12,8 +13,14 @@ class SponsorsController < ApplicationController
 				format.js
 			end
 		elsif @exist != nil and @exist.accepted == true
-			respond to do |format|
+			respond_to do |format|
 				flash[:alert] = "Looks like they are already your client!"
+				format.html { redirect_to(:back) }
+				format.js
+			end
+		elsif @existother.accepted == true
+			respond_to do |format|
+				flash[:alert] = "Looks like #{params[:email]} has already been sponsored!"
 				format.html { redirect_to(:back) }
 				format.js
 			end

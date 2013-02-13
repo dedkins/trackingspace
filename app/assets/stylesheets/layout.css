@@ -789,10 +789,9 @@ section#search {
 }
 
 .calloutpoint-pink {
-    position:absolute;
     background:#FFFF7E;
     padding:24px;
-    width: 349px;
+    width: 94%;
     border-radius:3px;
     color:#000000;
     font-size: 1.1em;
@@ -801,8 +800,8 @@ section#search {
 .calloutpoint-pink:after{
     content:"";
     position:absolute;
-    top: -10px;
-    left: 65%;
+    top: -5px;
+    left: 45%;
     background: #FFFF7E;
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
@@ -819,8 +818,8 @@ section#search {
 .calloutpoint-pink:before{
     content:"";
     position:absolute;
-    top: -10px;
-    left: 65%;
+    top: -5px;
+    left: 45%;
     background: #FFFF7E;
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);

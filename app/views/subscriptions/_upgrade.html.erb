@@ -1,6 +1,48 @@
 
 <%= form_for Subscription.new do |f| %>
-<div class="form_box">
+<div class="bluebox">
+	<div class="boxtitle" style="width:300px">
+		Upgrading to Fiver
+	</div>
+	<div style="padding:20px">
+		<table width="100%">
+			<tr style="text-align:left">
+				<th>Upgrade Level</th>
+				<th>Frequency</th>
+				<th>Starting</th>
+				<th>Price</th>
+			</tr>
+			<tr>
+				<td>Fiver</td>
+				<td>Monthly</td>
+				<td><%= l Date.today %></td>
+				<td>$5.00</td>
+			</tr>
+			<tr>
+				<td colspan="3">
+					<div style="border:1px solid #888;padding:10px;margin-top:10px;color:#333">
+					Includes: Sponsor 5 people, share 5 leases, advertise on 5 buildings, advertise on 5 spaces, unlimited commenting, unlimited adding of leases, unlimited adding of spaces...etc.
+					</div>
+				</td>
+			</tr>
+			<tr height="20px"/>
+			<tr>
+				<td colspan="3"/>
+				<td></td>
+			</tr>
+			<tr>
+				<td colspan="2"/>
+				<td>Total Due Today:</td>
+				<td>$5.00</td>
+			</tr>
+			<tr>
+				<td colspan="3"/>
+				<td></td>
+			</tr>
+		</table>
+	</div>
+</div>
+<div class="bluebox">
 <table width="100%">
 	
 		<tr>
@@ -27,19 +69,23 @@
 		<tr>
 			<td height="10px"/>
 		</tr>
-
+</table>
 		<div id="stripe_error">
 	    	<noscript>JavaScript is not enabled and is required for this form. First enable it in your web browser settings.</noscript>
 	  	</div>
 	  	<%= f.hidden_field :user_id, :value => current_user.id %>
-	  	<%= f.hidden_field :plan_id, :value => '29' %>
+	  	<%= f.hidden_field :plan_id, :value => '5' %>
 	  	<%= f.hidden_field :email, :value => current_user.email %>
 	  	<%= f.hidden_field :stripe_card_token %>
 	
-<table>
 	</div>
-	<%= f.submit "Upgrade Now", :class => 'button' %>
+	<div style="text-align:center">
+		<%= f.submit "Upgrade Now", :class => 'button' %>
+	</div>
+	
+	<div style="font-size:.8em;color:#333333;padding:15px">Upgraded membership is on a pre-paid basis.  Your credit card will be charged today and each month you maintain your upgraded membership.  If, for some reason, a payment fails in the future, we allow several days for payment to be rectified before canceling or downgrading your account.  Thank you for your business - we look forward to helping you grow yours.
+	</div>
 
-	<div style="font-size:.8em;color:#888888;padding:15px">Upgraded membership is on a pre-paid basis.  Your credit card will be charged today and each month you maintain your upgraded membership.  Each of your ads will stay in effect until your upgraded membership is downgraded or canceled, in which case, all ads will be removed.  If, for some reason, a payment fails in the future, we allow several days for payment to be rectified before canceling or downgrading your account.  Thank you for your support - we look forward to helping you grow your business.
-	</div>
+
+</div>
 <% end %>

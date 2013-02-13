@@ -48,6 +48,10 @@ Trackingspace::Application.routes.draw do
   match 'early_adopter' => 'pages#earlyadopter', :as => 'earlyadopter'
   match 'learnmore' => 'pages#learnmore', :as => 'learnmore'
   match 'brokers' => 'pages#brokers', :as => 'brokers'
+  match 'upgrade5' => 'pages#upgrade5', :as => 'upgrade5'
+  match 'upgrade30' => 'pages#upgrade30', :as => 'upgrade30'
+  match 'upgrade100' => 'pages#upgrade100', :as => 'upgrade100'
+
 
   resources :authentications
 

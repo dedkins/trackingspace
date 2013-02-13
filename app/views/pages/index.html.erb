@@ -4,20 +4,20 @@
 <%= content_for :search do %>
 	<% if mobile_device? %>
 		<%= render 'buildings/form_new_mobile' %>
+	<% else %>
+
+	<% unless user_signed_in? %>
+		<div class="calloutpoint-pink">
+			This is where you start the journey.  Start typing your address above,
+			then select the address and click the magnifying glass or press return.
+			Feel free to take a look around.  As a basic free member, you can start tracking
+			unlimited buildings and people.  Becoming a member is no risk plus it gives you 
+			a greater perspective of how this system works.
+		</div>
+	<% end %>
+
 	<% end %>
 <% end %>	
-
-<% unless user_signed_in? %>
-	<div style="position:fixed;margin:10px 0 0 20%;z-index:99999">
-		<div class="calloutpoint-pink">
-			This is where you start the journey.  Start typing your address above.
-			Then select the address and click the magnifying glass or press return.
-			<p>You can also start clicking/touching addresses, names and pictures
-				on this page to get a feel for it.
-			</p>
-		</div>
-	</div>	
-<% end %>
 
 
 <div class="bluebox">

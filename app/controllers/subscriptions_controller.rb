@@ -7,11 +7,11 @@ class SubscriptionsController < ApplicationController
 	end
 
 	def create
-		begin
+		#begin
 			@user = User.find(current_user.id)
 			@subscription = Subscription.new(params[:subscription])
 				if @subscription.save_with_payment
-					@user.upgrade = 'Upgrade'
+					@user.upgrade = @subscription.plan_name
 					@user.save!
 					UserMailer.upgrade_email(@user).deliver
 					UserMailer.upgrade_notification(@user).deliver
@@ -20,9 +20,9 @@ class SubscriptionsController < ApplicationController
 				else
 				render :new
 				end
-		rescue Exception => e
-			redirect_to upgrade_path
-		end
+		#rescue Exception => e
+		#	redirect_to upgrade_path
+		#end
 	end
 
 end

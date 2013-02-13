@@ -24,24 +24,9 @@
 		</div>
 	</div>
 	<% unless mobile_device? %>
-	<div style="right:0">
-		<div style="float:left">
-			<div style="padding:5px 10px;font-size:2em;color:#ffffff;text-align:center">
-				<%= @buildingstracked.count %>
-			</div>
-			<div style="text-align:center;padding:5px 10px">Tracking</div>
-		</div>
-		<div style="float:right">
-			<div style="padding:5px 10px;font-size:2em;color:#ffffff;text-align:center">
-				<%= @following.count %>
-			</div>
-			<div style="text-align:center;padding:5px 10px">Following</div>
-		</div>
-		<div >
-			<div style="padding:5px 10px;font-size:2em;color:#ffffff;text-align:center">
-				<%= @followers.count %>
-			</div>
-			<div style="text-align:center;padding:5px 10px">Following Me</div>
+	<div style="right:0;float:left">
+		<div style="margin-top:5px;border: 2px dashed #666666;border-radius:5px;padding:15px 30px;text-align:center">
+			Your sponsor hasn't sent you a message yet - they will show up here
 		</div>
 	</div>
 	<% end %>

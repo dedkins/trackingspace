@@ -111,6 +111,30 @@ class User < ActiveRecord::Base
     sponsors.find_by_sponsored_by(sponsoring)
   end
 
+  def sponsoravail
+    if upgrade == nil and Sponsor.where('sponsored_by = ?', id).count < 3
+      true
+    elsif upgrade == 'Upgrade5' and Sponsor.where('sponsored_by = ?', id).count < 6
+      true
+    elsif upgrade == 'Upgrade30' and Sponsor.where('sponsored_by = ?', id).count < 31
+      true
+    elsif upgrade == 'Upgrade100'
+      true
+    else 
+      false
+    end
+  end
+
+  def sponsorleft
+    if upgrade == nil or upgrade == ''
+      2 - (Sponsor.where('sponsored_by = ?', id).count)
+    elsif upgrade == 'Upgrade5'
+      5 - (Sponsor.where('sponsored_by = ?', id).count)
+    elsif upgrade == 'Upgrade30'
+      30 - (Sponsor.where('sponsored_by = ?', id).count)
+    end
+  end
+
   scope :new_users, lambda {
     {
       :conditions => ["created_at >= ?", Time.now.prev_month]
