@@ -18,7 +18,7 @@ class SponsorsController < ApplicationController
 				format.html { redirect_to(:back) }
 				format.js
 			end
-		elsif @existother.accepted == true
+		elsif @existother != nil and @existother.accepted == true
 			respond_to do |format|
 				flash[:alert] = "Looks like #{params[:email]} has already been sponsored!"
 				format.html { redirect_to(:back) }

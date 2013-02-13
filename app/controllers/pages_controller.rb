@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
 	autocomplete :user, :name, :full => true
 
-	before_filter :authenticate_user!, :only => [:upgrade] 
+	before_filter :authenticate_user!, :only => [:upgrade,:upgrade1,:upgrade5,:upgrade30,:upgrade100] 
 
 	def index
 		if user_signed_in?
@@ -33,6 +33,18 @@ class PagesController < ApplicationController
 	end
 
 	def upgrade
+	end
+
+	def upgrade1
+	end
+
+	def upgrade5
+	end
+
+	def upgrade30
+	end
+
+	def upgrade100
 	end
 
 	def earlyadopter
