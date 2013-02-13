@@ -51,6 +51,7 @@ Trackingspace::Application.routes.draw do
   match 'upgrade5' => 'pages#upgrade5', :as => 'upgrade5'
   match 'upgrade30' => 'pages#upgrade30', :as => 'upgrade30'
   match 'upgrade100' => 'pages#upgrade100', :as => 'upgrade100'
+  match 'upgrade1' => 'pages#upgrade1', :as => 'upgrade1'
 
 
   resources :authentications
