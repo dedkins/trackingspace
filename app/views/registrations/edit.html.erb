@@ -1,3 +1,5 @@
+<%= currently_at 'myStuff' %>
+
 <head>
     <%= stylesheet_link_tag 'landing' %>
 
@@ -17,20 +19,8 @@
 
 </head>
 <body>
-    <div style="float:left;height:50px;padding:8px 10px 8px 60px">
-        <%= image_tag("logo_ts.png", :size => "40x40") %>
-    </div>
-    <div style="float:left;padding-top:25px" class="title">TrackingSpace
-    </div>
-    <div style="float:right;padding:25px 60px 0 0">
-        <%= link_to 'Sign-In', new_user_session_path, :class => 'trackbutton', :style => 'color:white;text-decoration:none', :method => 'get' %>
-    </div>
-    <div style="float:right;padding:25px 8px 0 0">
-        <%= link_to 'Become a Member', new_user_registration_path, :class => 'trackbutton', :style => 'color:white;text-decoration:none', :method => 'get' %>
-    </div>
-
-
-<div style="float:left;margin-top:60px">
+<div class="bluebox">
+  <div class="boxtitle" sytle="width:400px">Edit myProfile</div>
   <div>
   <% if notice %>
     <p class="notification notice">
@@ -52,10 +42,6 @@
 
       <a href="/auth/twitter" class="auth_provider">
         <%= image_tag "https://github.com/intridea/authbuttons/raw/master/png/twitter_64.png", :size => "32x32", :alt => "Twitter" %>
-      </a>
-
-      <a href="/auth/facebook" class="auth_provider">
-        <%= image_tag "http://github.com/intridea/authbuttons/raw/master/png/facebook_64.png", :size => "32x32", :alt => "Facebook" %>
       </a>
 
       <a href="/auth/linkedin" class="auth_provider">
@@ -82,7 +68,7 @@
   
 <hr/>
 
-<div class="form_box">
+<div class="form_box" style="margin:0 auto">
 
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
   
@@ -127,6 +113,14 @@
       </td>
       <td>
         <%= f.phone_field :phone, :class => 'field' %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="field"><%= f.label :license %></div>
+      </td>
+      <td>
+        <%= f.text_field :license, :class => 'field' %>
       </td>
     </tr>
     <tr>

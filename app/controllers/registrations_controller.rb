@@ -1,6 +1,6 @@
 class RegistrationsController < Devise::RegistrationsController
 
-	layout false
+	layout false, :except => [:edit] 
 
 	def new 
 	end
