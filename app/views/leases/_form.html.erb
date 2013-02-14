@@ -1,4 +1,4 @@
-<div class="form_box">
+<div style="padding:40px">
 
   <%= form_for ([@space, @lease]), :html => { :multipart => true } do |f| %>
   <% if @lease.errors.any? %>
@@ -17,25 +17,27 @@
     <%= f.hidden_field :user_id, :value => @current_user.id %>
     <%= f.hidden_field :space_id, :value => @space.id %>
   
-  <div class="field">
-    <%= f.label :size %>
-    <%= f.number_field :size, :class => 'field', :placeholder => 'How big is the space?...', :value => @space.sf %>
-  </div>
-  <div class="field">
-    <%= f.label 'Monthly Total' %>
-    <%= f.text_field :current_rate, :class => 'field', :placeholder => 'Amount you pay each month...', :value => @space.monthly %>
-  </div>
-  <div class="field">
-    <%= f.label :expiration %>
-    <%= f.date_select(:expiration,{:end_year => Time.now.year + 15, :start_year => Time.now.year}, {:class => 'field'}) %>
-  </div>
-  <div class="field">
-    <%= f.label 'Upload a Copy of the Lease' %>
-  <%= f.file_field(:file, {:class => 'field'}) %>
-  </div>
-  <div class="actions">
-    <%= f.submit 'Add It!', :class => 'button' %>
-  </div>
+  <table>
+    <tr>
+      <td width="300">Size of Space (sf)</td>
+      <td width="300"><%= f.label 'Monthly Total' %></div></td>
+    </tr>
+    <tr height="20px">
+      <td ><%= f.number_field :size, :placeholder => 'How big is the space?...', :value => @space.sf %>
+      <td> <%= f.text_field :current_rate, :placeholder => 'Amount you pay each month...', :value => @space.monthly %></td>
+    </tr>
+    <tr>
+      <td colspan="2">Expiration: <%= f.date_select(:expiration,{:end_year => Time.now.year + 15, :start_year => Time.now.year}, {:class => 'field'}) %></td>
+    </tr>
+    <tr>
+      <td><%= f.label 'Upload a Copy of the Lease' %></td>
+      <td><%= f.file_field(:file, {:class => 'field'}) %></td>
+    </tr>
+    <tr height="20px"/>
+    <tr>
+      <td colspan="2"><%= f.submit 'Save', :class => 'button' %></td>
+    </tr>
+  </table>
 <% end %>
 
 </div>

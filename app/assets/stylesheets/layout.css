@@ -382,11 +382,19 @@ section#search {
   width:550px;
 }
 
-/*.field {
-  padding: 8px;
+.field_label {
+  width:200px;
+  text-align: right;
+  padding: 5px 10px;
   margin: 10px;
   vertical-align: top;
-}*/
+}
+
+.field_data {
+  width:200px;
+  padding:5px 10px;
+  margin:10px;
+}
 
 .expiration {
   padding: 5px;

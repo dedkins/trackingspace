@@ -1,7 +1,9 @@
 <% currently_at 'Spaces' %>
 
-<div class="title">-  New lease  -</div>
-<div style="font-size:.9em;text-align:center"><%= @space.building.address %>, Suite <%= @space.suite %></div>
+<div class="bluebox">
+<div class="boxtitle" style="width:300px">New lease</div>
+<div class="title" style="margin:20px"><%= @space.building.address %>, Suite <%= @space.suite %></div>
 
 <%= render 'form' %>
 
+</div>
