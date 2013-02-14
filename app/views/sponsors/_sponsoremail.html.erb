@@ -22,7 +22,7 @@
             </div>
     <% end %>
 	<div style="float:left;padding:5px 10px 0;font-size:.9em">
-		Sponsored: <%= @sponsorcount %>
+		Sponsored: <%= link_to @sponsorcount, sponsored_path, :style => 'margin-left:5px;font-size:1.1em' %>
 	</div>
 	<div style="float:left;padding:5px 10px 0;font-size:.9em">
 		Left to Sponsor: 

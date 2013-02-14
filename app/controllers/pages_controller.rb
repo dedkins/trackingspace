@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
 	autocomplete :user, :name, :full => true
 
-	before_filter :authenticate_user!, :only => [:upgrade,:upgrade1,:upgrade5,:upgrade30,:upgrade100] 
+	before_filter :authenticate_user!, :only => [:sponsored,:upgrade,:upgrade1,:upgrade5,:upgrade30,:upgrade100] 
 
 	def index
 		if user_signed_in?
@@ -30,6 +30,12 @@ class PagesController < ApplicationController
 	end
 
 	def privacy
+	end
+
+	def sponsored
+		@list = Sponsor.where('sponsored_by = ?', current_user.id).all
+		@sponsored = User.find(@list.map(&:sponsored_member))
+		@pending = Sponsor.where('sponsored_by = ? and sponsored_member IS NULL', current_user.id)
 	end
 
 	def upgrade

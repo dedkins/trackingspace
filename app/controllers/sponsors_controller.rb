@@ -54,4 +54,10 @@ class SponsorsController < ApplicationController
 		end
 	end
 
+	def destroy
+		@sponsorid = Sponsor.find(params[:id])
+		@sponsorid.destroy
+		redirect_to sponsored_path
+	end
+
 end

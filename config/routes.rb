@@ -13,6 +13,7 @@ Trackingspace::Application.routes.draw do
   post "sponsors/sendsponsoremail"
   get "sponsors/sendsponsoremail"
   match "sponsors/:id/accept" => 'sponsors#accept', :as => 'acceptsponsor'
+  match 'sponsored' => 'pages#sponsored', :as => 'sponsored'
 
   resources :lease_shares
   match "lease_shares/:id/accept" => 'lease_shares#accept', :as => 'accept_leaseshare'
