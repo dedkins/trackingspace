@@ -13,10 +13,10 @@
 #
 
 class Sponsor < ActiveRecord::Base
-  attr_accessible :accepted, :date_accepted, :sponsored_by, :sponsored_member, :email
+  attr_accessible :accepted, :date_accepted, :sponsoredby_id, :sponsoredmember_id, :email
 
-  belongs_to :sponsorships, :class_name => "User"
-  belongs_to :sponsoring, :class_name => "User"
+  belongs_to :sponsoredby, :class_name => "User"
+  belongs_to :sponsoredmember, :class_name => "User"
 
 
 end

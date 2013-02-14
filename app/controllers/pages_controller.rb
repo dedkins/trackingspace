@@ -33,9 +33,8 @@ class PagesController < ApplicationController
 	end
 
 	def sponsored
-		@list = Sponsor.where('sponsored_by = ?', current_user.id).all
-		@sponsored = User.find(@list.map(&:sponsored_member))
-		@pending = Sponsor.where('sponsored_by = ? and sponsored_member IS NULL', current_user.id)
+		@list = Sponsor.where('sponsoredby_id = ? and sponsoredmember_id IS NOT NULL', current_user.id).all
+		@pending = Sponsor.where('sponsoredby_id = ? and sponsoredmember_id IS NULL', current_user.id)
 	end
 
 	def upgrade

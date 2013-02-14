@@ -48,12 +48,18 @@ class UserMailer < ActionMailer::Base
 
   def sponsor_email(sponsor)
     @sponsorid = Sponsor.find(sponsor.id)
-    @sponsoredby = User.find(@sponsorid.sponsored_by)
     @email = @sponsorid.email
     @url = "http://www.trackingspace.com/sponsors/#{@sponsorid.id}/accept"
-    @sponsorurl = "http://www.trackingspace.com/users/#{@sponsoredby.id}"
-    mail(:to => @email, :subject => "#{@sponsoredby.name} would like to sponsor you on TrackingSpace")
+    @sponsorurl = "http://www.trackingspace.com/users/#{@sponsorid.sponsoredby_id}"
+    mail(:to => @email, :subject => "#{@sponsorid.sponsoredby.name} would like to sponsor you on TrackingSpace")
   end
+
+  def sponsor_accept(sponsor)
+    @sponsorid = Sponsor.find(sponsor.id)
+    @membertoprofileurl = "http://www.trackingspace.com/users/#{@sponsorid.sponsoredby_id}"
+    mail(:to => @sponsorid.sponsoredby.email, :subject => "#{@sponsorid.sponsoredmember.name} has accepted your sponsor request!")
+  end
+
 
   def leaseshare_email_existing(shared)
     @leaseshareid = LeaseShare.find(shared.id)

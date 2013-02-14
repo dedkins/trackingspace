@@ -4,7 +4,7 @@ class SponsorsController < ApplicationController
 
 	def sendsponsoremail
 		@sponsoring = User.find(current_user.id)
-		@exist = Sponsor.find_by_sponsored_by_and_email(@sponsoring.id,params[:email])
+		@exist = Sponsor.find_by_sponsoredby_id_and_email(@sponsoring.id,params[:email])
 		@existother = Sponsor.find_by_email(params[:email])
 		if @exist != nil and @exist.accepted != true
 			respond_to do |format|
@@ -25,8 +25,7 @@ class SponsorsController < ApplicationController
 				format.js
 			end
 		else
-			Sponsor.create!(:sponsored_by => @sponsoring.id,:email => params[:email])
-			@sponsor = Sponsor.where('sponsored_by = ?', @sponsoring.id).last
+			@sponsor = Sponsor.create!(:sponsoredby_id => @sponsoring.id,:email => params[:email])
 			UserMailer.sponsor_email(@sponsor).deliver
 			respond_to do |format|
 				flash[:notice] = "Email has been sent to #{@sponsor.email}!"
@@ -37,15 +36,16 @@ class SponsorsController < ApplicationController
 	end
 
 	def accept
-		@sponsorid = Sponsor.find(params[:id])
-		@sponsored = User.find_by_email(@sponsorid.email)
+		@sponsor = Sponsor.find(params[:id])
+		@sponsored = User.find_by_email(@sponsor.email)
 		if @sponsored != nil
 			@sponsored_id = User.find(@sponsored.id)
-			@already = Sponsor.find_by_sponsored_member(@sponsored_id.id)
+			@already = Sponsor.find_by_sponsoredmember_id(@sponsored_id.id)
 			if @already != nil
 				flash[:alert] = "Looks like you are already sponsored!"
 			else
-				@sponsorid.update_attributes(:sponsored_member => @sponsored_id.id, :date_accepted => Time.now, :accepted => true)
+				@sponsor.update_attributes(:sponsoredmember_id => @sponsored_id.id, :date_accepted => Time.now, :accepted => true)
+				UserMailer.sponsor_accept(@sponsor).deliver
 			end
 		end
 		respond_to do |format|
@@ -55,8 +55,7 @@ class SponsorsController < ApplicationController
 	end
 
 	def destroy
-		@sponsorid = Sponsor.find(params[:id])
-		@sponsorid.destroy
+		@sponsorid = Sponsor.find(params[:id]).delete
 		redirect_to sponsored_path
 	end
 

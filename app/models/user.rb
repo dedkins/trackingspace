@@ -41,8 +41,10 @@ class User < ActiveRecord::Base
   has_many :building_relationships, :dependent => :destroy
   has_one  :subscription
   has_many :ads, :dependent => :destroy
-  has_many :sponsors, :foreign_key => "sponsored_by", :dependent => :destroy
-  has_many :reverse_sponsors, :foreign_key => "sponsored_member", :class_name => "Sponsor", :dependent => :destroy
+  has_many :sponsors, :foreign_key => "sponsoredby_id", :dependent => :destroy
+  has_many :sponsoredby, :through => :sponsors, :source => :sponsoredby, :dependent => :destroy
+  has_many :reverse_sponsors, :foreign_key => "sponsoredmember_id", :class_name => "Sponsor", :dependent => :destroy
+  has_many :sponsoredmember, :through => :reverse_sponsors, :dependent => :destroy
   has_many :lease_shares, :foreign_key => "sharedfrom_id", :dependent => :destroy
   has_many :sharedfrom, :through => :lease_shares, :source => :sharedfrom, :dependent => :destroy
   has_many :reverse_lease_shares, :foreign_key => "sharedto_id", :class_name => "LeaseShare", :dependent => :destroy
@@ -108,15 +110,15 @@ class User < ActiveRecord::Base
   end
 
   def sponsoring?(sponsoring)
-    sponsors.find_by_sponsored_by(sponsoring)
+    sponsors.find_by_sponsoredby_id(sponsoring)
   end
 
   def sponsoravail
-    if upgrade == nil and Sponsor.where('sponsored_by = ?', id).count < 3
+    if upgrade == nil and Sponsor.where('sponsoredby_id = ?', id).count < 3
       true
-    elsif upgrade == 'Upgrade5' and Sponsor.where('sponsored_by = ?', id).count < 6
+    elsif upgrade == 'Upgrade5' and Sponsor.where('sponsoredby_id = ?', id).count < 6
       true
-    elsif upgrade == 'Upgrade30' and Sponsor.where('sponsored_by = ?', id).count < 31
+    elsif upgrade == 'Upgrade30' and Sponsor.where('sponsoredby_id = ?', id).count < 31
       true
     elsif upgrade == 'Upgrade100'
       true
@@ -127,11 +129,11 @@ class User < ActiveRecord::Base
 
   def sponsorleft
     if upgrade == nil or upgrade == ''
-      2 - (Sponsor.where('sponsored_by = ?', id).count)
+      2 - (Sponsor.where('sponsoredby_id = ?', id).count)
     elsif upgrade == 'Upgrade5'
-      5 - (Sponsor.where('sponsored_by = ?', id).count)
+      5 - (Sponsor.where('sponsoredby_id = ?', id).count)
     elsif upgrade == 'Upgrade30'
-      30 - (Sponsor.where('sponsored_by = ?', id).count)
+      30 - (Sponsor.where('sponsoredby_id = ?', id).count)
     end
   end
 

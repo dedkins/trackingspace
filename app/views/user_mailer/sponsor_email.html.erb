@@ -1,5 +1,5 @@
 
-  	<h2><%= @sponsoredby.name %> would like to sponsor you.</h2>
+  	<h2><%= @sponsorid.sponsoredby.name %> would like to sponsor you.</h2>
   	<p><%= button_to 'Click here to accept', @url, :style => 'color:#ffffff;
       background: #0198E1;
       padding: 2px 8px;
@@ -11,7 +11,7 @@
       -webkit-appearance: none;
       -webkit-border-radius: 0', :method => 'get' %></p>
     <p>What does this mean to you?</p>
-    By allowing <%= @sponsoredby.name %> to sponsor you, you will now have a new personalized view of the buildings and spaces within TrackingSpace.  You will have a special homepage with direct access to <%= @sponsoredby.name %> as well as custom tailored recommendations.  If you want to see who <%= @sponsoredby.name %> is, <%= link_to 'click here to see their profile', @sponsorurl %>.
+    By allowing <%= @sponsorid.sponsoredby.name %> to sponsor you, you will now have a new personalized view of the buildings and spaces within TrackingSpace.  You will have a special homepage with direct access to <%= @sponsorid.sponsoredby.name %> as well as custom tailored recommendations.  If you want to see who <%= @sponsorid.sponsoredby.name %> is, <%= link_to 'click here to see their profile', @sponsorurl %>.
     <p>
       If you are not a member of Trackingspace yet, you will need to become a member first.  Clicking the "Accept" button above will take you to a sign-in/sign-up page.  Signing up is simple, just an email and password and you're in.  We look forward to seeing you.
     </p>

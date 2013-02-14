@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130211173720) do
+ActiveRecord::Schema.define(:version => 20130214023736) do
 
   create_table "ads", :force => true do |t|
     t.integer  "building_id"
@@ -150,13 +150,13 @@ ActiveRecord::Schema.define(:version => 20130211173720) do
   end
 
   create_table "sponsors", :force => true do |t|
-    t.integer  "sponsored_by"
-    t.integer  "sponsored_member"
+    t.integer  "sponsoredby_id"
+    t.integer  "sponsoredmember_id"
     t.boolean  "accepted"
     t.date     "date_accepted"
     t.string   "email"
-    t.datetime "created_at",       :null => false
-    t.datetime "updated_at",       :null => false
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
   end
 
   create_table "subscriptions", :force => true do |t|

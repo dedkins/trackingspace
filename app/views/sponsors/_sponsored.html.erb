@@ -11,6 +11,7 @@
 		<% end %>
 	</table>
 	<div style="padding:5px 5px;margin:20px 0 5px;width:98%;border-bottom:1px solid #888;font-weight:bold;font-size:1.2em;color:green">Currently Sponsored</div>
+	<% if @list %>
 	<table width="100%">
 		<tr style="text-align:left">
 			<th>Name</th>
@@ -18,14 +19,17 @@
 			<th>Last Log-In</th>
 			<th></th>
 		</tr>
-		<% @sponsored.each do |s| %>
+		<% @list.each do |s| %>
 		<tr>
-			<td><%= link_to s.name, user_path(s.id) %></td>
-			<td><%= s.email %></td>
-			<td><%= time_ago_in_words(s.last_sign_in_at) %> ago</td>
+			<td><%= link_to s.sponsoredmember.name, user_path(s.sponsoredmember_id) %></td>
+			<td><%= s.sponsoredmember.email %></td>
+			<td><%= time_ago_in_words(s.sponsoredmember.last_sign_in_at) %> ago</td>
 			<td><%= link_to 'Remove', s, :method => :delete, :confirm => "Are You Sure?" %></td>
 		</tr>
 		<% end %>
 	</table>
+	<% else %>
+	Nobody sponsored yet.  Get to work.  :)
+	<% end %>
 
 </div>
