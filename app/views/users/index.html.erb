@@ -1,12 +1,18 @@
 <div class="bluebox">
     <div class="boxtitle">Members</div>
 
+<%= gmaps({
+        "map_options" => {"auto_adjust" => true, "auto_zoom" => true, "type" => "ROADMAP" },
+        "markers" => {"data" => @json }
+      }) %>
+
 <table>
   <tr>
     <th>User</th>
     <th>Name</th>
     <th>Username</th>
     <th>Email</th>
+    <th>location</th>
     <th>Last Log-In</th>
     <th>Log-Ins</th>
     <th></th>
@@ -19,7 +25,7 @@
     <td><%= user.name %></td>
     <td><%= user.username %></td>
     <td><%= user.email %></td>
-    <td><%= user.address %></td>
+    <td><%= user.geocity %> <%= user.geostate %></td>
     <td><%= time_ago_in_words(user.last_sign_in_at) %></td>
     <td><%= user.sign_in_count %></td>
     <td><%= link_to 'Show', user %></td>
@@ -27,5 +33,6 @@
   </tr>
 <% end %>
 </table>
-
+<%= yield :scripts %>
 </div>
+

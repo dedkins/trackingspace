@@ -58,11 +58,32 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :username, :license, :email, :password, :password_confirmation, :remember_me, :name, :upgrade, :phone, :website, :description, :latitude, :longitude
+  attr_accessible :username, :address, :license, :email, :password, :password_confirmation, :remember_me, :name, :upgrade, :phone, :website, :description, :latitude, :longitude
   # attr_accessible :title, :body
 
-  geocoded_by :last_sign_in_ip
+  geocoded_by :current_sign_in_ip
     after_validation :geocode
+
+  reverse_geocoded_by :latitude, :longitude do |obj,results|
+    if geo = results.first
+      obj.geocity    = geo.city
+      obj.geozip     = geo.postal_code
+      obj.geostate   = geo.state_code
+      obj.geocountry = geo.country
+    end
+  end
+  after_validation :reverse_geocode
+
+  acts_as_gmappable
+  
+  def gmaps4rails_address
+  #describe how to retrieve the address from your model, if you use directly a db column, you can dry your code, see wiki
+    "#{self.latitude}, #{self.longitude}" 
+  end
+
+  def gmaps4rails_title
+    "#{self.name} - #{self.geocity}"
+  end
 
   def feed
     Micropost.from_users_followed_by(self)

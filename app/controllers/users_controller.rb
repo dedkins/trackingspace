@@ -6,6 +6,9 @@ class UsersController < ApplicationController
       if current_user.access == 'Admin'
         @title = "Members"
       	@users = User.all
+        @json = User.all.to_gmaps4rails do |user, marker|
+          marker.json "\"users\": #{user.id}"
+        end
       else
         redirect_to home_path
       end

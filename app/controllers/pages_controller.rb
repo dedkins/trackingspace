@@ -15,6 +15,11 @@ class PagesController < ApplicationController
 		@feed_items = Micropost.where("user_id IS NOT NULL").order('created_at DESC').limit(10)
 	end
 
+	def newpeople
+		@users = User.all
+		@local = User.near("#{current_user.latitude},#{current_user.longitude}",50)
+	end
+
 	def learnmore
 		if user_signed_in?
 	      redirect_to home_path
