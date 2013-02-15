@@ -25,6 +25,14 @@ class UserMailer < ActionMailer::Base
     mail(:to => 'dedkins@edkinsgroup.com', :subject => "New Upgrade!")
   end
 
+  def new_follower(user_relationship)
+    @user = User.find(user_relationship.followed)
+    @follower = User.find(user_relationship.follower)
+    @followerurl = "http://www.trackingspace.com/users/#{@follower.id}"
+    mail(:to => user_relationship.followed.email, :subject => "#{user_relationship.follower.name} is now following you!")
+  end
+
+
   def new_building_post(building)
     @building = Building.find(building)
     @micropost = Micropost.where('building_id = ?', @building.id).first
