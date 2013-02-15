@@ -15,9 +15,29 @@ class PagesController < ApplicationController
 		@feed_items = Micropost.where("user_id IS NOT NULL").order('created_at DESC').limit(10)
 	end
 
-	def newpeople
-		@users = User.find(:all, :order => "created_at desc", :limit => 5 )
-		@local = User.near("#{current_user.latitude},#{current_user.longitude}",50)
+	def people_main
+	    @users = User.find(:all, :order => "created_at desc", :limit => 5 )
+	    if user_signed_in?
+	    	@user = current_user
+	    	@feed_items = @user.feed
+	    	@local = User.near("#{current_user.latitude},#{current_user.longitude}",50, :order => "created_at desc", :limit => 5)
+	    else
+	    	@feed_items = Micropost.where("user_id IS NOT NULL").order('created_at DESC').limit(10)
+	    	s = Geocoder.search(request.ip)
+			@lat = s[0].latitude
+			@lon = s[0].longitude
+	    	@local = User.near("#{@lat},#{@lon}",50, :order => "created_at desc", :limit => 5)
+	    end
+	end
+
+	def buildings_main
+		if user_signed_in?
+			@user = User.find(current_user.id)
+			@recent_items = @user.recent
+			@feed_items = @user.building_feed
+		end
+		@newbuildings = Building.order('created_at DESC').limit(10)
+		@feed_items = Micropost.where("building_id IS NOT NULL").order('created_at DESC').limit(10)
 	end
 
 	def learnmore
@@ -64,24 +84,6 @@ class PagesController < ApplicationController
 		render :layout => false
 	end
 
-	def people_main
-	    @users = User.last(20).reverse
-	    if user_signed_in?
-	    	@user = current_user
-	    	@feed_items = @user.feed
-	    else
-	    	@feed_items = Micropost.where("user_id IS NOT NULL").order('created_at DESC').limit(10)
-	    end
-	end
-
-	def buildings_main
-		if user_signed_in?
-			@user = User.find(current_user.id)
-			@recent_items = @user.recent
-			@feed_items = @user.building_feed
-		end
-		@newbuildings = Building.order('created_at DESC').limit(10)
-		@feed_items = Micropost.where("building_id IS NOT NULL").order('created_at DESC').limit(10)
-	end
+	
 	
 end

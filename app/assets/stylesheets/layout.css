@@ -70,6 +70,17 @@ body {
   z-index: 5;
 }
 
+.newbox {
+  float:left;
+  width:300px;
+  height:300px;
+  border:2px solid #888;
+  padding:10px;
+  background:white;
+  margin:0 10px 15px 0;
+  box-shadow: 5px 5px 5px #888;
+}
+
 header#top {
   position: fixed;
   width: 102%;

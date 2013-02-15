@@ -1,6 +1,5 @@
-<% currently_at 'Home' %>
 
-	<div style="float:left;width:290px;height:290px;border:2px #888;box-shadow:0 5px 5px 5px #888;padding:10px;background:white;margin:10px">
+	<div class="newbox">
 		<div class="boxtitle" style="width:101%;text-align:right;padding-right:10px">newest members</div>
 		
 			<table width="100%">
@@ -15,8 +14,8 @@
 		
 	</div>
 
-	<div style="float:left;width:290px;height:290px;border:2px #888;box-shadow:0 5px 5px 5px #888;padding:10px;background:white;margin:10px">
-		<div class="boxtitle" style="width:101%;text-align:right;padding-right:10px">new around <%= current_user.geocity %></div>
+	<div class="newbox">
+		<div class="boxtitle" style="width:101%;text-align:right;padding-right:10px">new around you</div>
 		<table width="100%">
 			<% if @local %>
 				<% @local.each do |e| %>
