@@ -16,7 +16,7 @@ class PagesController < ApplicationController
 	end
 
 	def newpeople
-		@users = User.all
+		@users = User.find(:all, :order => "created_at desc", :limit => 5 )
 		@local = User.near("#{current_user.latitude},#{current_user.longitude}",50)
 	end
 
