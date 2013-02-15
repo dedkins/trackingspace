@@ -4,8 +4,8 @@ class RegistrationsController < Devise::RegistrationsController
 
 	def new
 		s = Geocoder.search(request.ip)
-		s[0].latitude = @s.latitude
-		s[0].longitude = @s.longitude
+		@lat = s[0].latitude
+		@lon = s[0].longitude
 	end
 
 	def edit
