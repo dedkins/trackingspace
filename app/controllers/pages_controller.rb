@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
 	autocomplete :user, :name, :full => true
 
-	before_filter :authenticate_user!, :only => [:sponsored,:upgrade,:upgrade1,:upgrade5,:upgrade30,:upgrade100] 
+	before_filter :authenticate_user!, :only => [:newpeople,:sponsored,:upgrade,:upgrade1,:upgrade5,:upgrade30,:upgrade100] 
 
 	def index
 		if user_signed_in?

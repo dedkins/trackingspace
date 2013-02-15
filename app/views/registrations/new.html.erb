@@ -64,6 +64,8 @@
 			<tr height="15px"/>
 		</table>
 	  
+	  <%= f.hidden_field :latitude, :value => @lat %>
+	  <%= f.hidden_field :longitude, :value => @lon %>
 	  <div style="text-align:center"><%= f.submit "Sign up", :class => 'buttonorange' %></div>
 	  <%= link_to 'Opps, I Meant to Sign-In', new_user_session_path %>
 	<% end %>

@@ -2,7 +2,10 @@ class RegistrationsController < Devise::RegistrationsController
 
 	layout false, :except => [:edit] 
 
-	def new 
+	def new
+		@s = Geocoder.search(request.ip)
+		@lat = @s.latitude
+		@lon = @s.longitude
 	end
 
 	def edit
