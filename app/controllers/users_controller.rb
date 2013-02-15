@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   def index
     if user_signed_in?
       if current_user.access == 'Admin'
-        @title = "Users"
+        @title = "Members"
       	@users = User.all
       else
         redirect_to home_path

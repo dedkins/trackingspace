@@ -62,7 +62,7 @@ class User < ActiveRecord::Base
   # attr_accessible :title, :body
 
   geocoded_by :last_sign_in_ip
-    after_validation :geocode, :if => :current_sign_in_at_changed? 
+    after_validation :geocode
 
   def feed
     Micropost.from_users_followed_by(self)
