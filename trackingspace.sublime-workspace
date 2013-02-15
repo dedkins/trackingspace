@@ -482,6 +482,22 @@
 				"buffer_size": 18216,
 				"line_ending": "Windows"
 			}
+		},
+		{
+			"file": "app/views/pages/learnmore.html.erb",
+			"settings":
+			{
+				"buffer_size": 3326,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/views/layouts/landing.html.erb",
+			"settings":
+			{
+				"buffer_size": 3347,
+				"line_ending": "Windows"
+			}
 		}
 	],
 	"build_system": "",
@@ -772,6 +788,62 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 5078.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/views/pages/learnmore.html.erb",
+					"settings":
+					{
+						"buffer_size": 3326,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1190,
+								1190
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/views/layouts/landing.html.erb",
+					"settings":
+					{
+						"buffer_size": 3347,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1204,
+								1204
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
