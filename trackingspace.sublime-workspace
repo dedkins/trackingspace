@@ -508,8 +508,9 @@
 	},
 	"file_history":
 	[
-		"/C/Users/david/trackingspace/app/views/pages/_newpeople.html.erb",
+		"/C/Users/david/trackingspace/app/views/layouts/_main_nav.html.erb",
 		"/C/Users/david/trackingspace/app/assets/stylesheets/media.css",
+		"/C/Users/david/trackingspace/app/views/pages/_newpeople.html.erb",
 		"/C/Users/david/trackingspace/app/views/buildings/index.html.erb",
 		"/C/Users/david/trackingspace/app/views/buildings/show.html.erb",
 		"/C/Users/david/trackingspace/app/views/buildings/new.html.erb",
@@ -533,7 +534,6 @@
 		"/C/Users/david/trackingspace/app/views/sponsors/_sponsoremail.html.erb",
 		"/C/Users/david/trackingspace/app/views/pages/learnmore.html.erb",
 		"/C/Users/david/trackingspace/app/views/layouts/landing.html.erb",
-		"/C/Users/david/trackingspace/app/views/layouts/_main_nav.html.erb",
 		"/C/Users/david/trackingspace/app/views/pages/privacy.html.erb",
 		"/C/Users/david/trackingspace/app/views/pages/buildings_main.html.erb",
 		"/C/Users/david/trackingspace/app/views/spaces/edit.html.erb",
