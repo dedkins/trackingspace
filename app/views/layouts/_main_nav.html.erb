@@ -8,6 +8,7 @@
         <%= nav_tab 'Places', buildings_main_path, current: current_tab%>
         <% if user_signed_in? %>
           <%= nav_tab 'myStuff', current_user, current: current_tab %>
+          <%= link_to "Sign Out", destroy_user_session_path, :method => 'delete', :class => 'top' %>
         <% end %>
       </ul>
      </nav>
