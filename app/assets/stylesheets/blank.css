@@ -1,0 +1,48 @@
+/*The non css*/
+
+body {
+  background:transparent;
+  font-family: 'Source Sans Pro', sans-serif;
+  /*font-family: 'Open Sans', sans-serif;*/
+  font-size: 15px;
+  line-height: 22px;
+}
+
+.trackbutton {
+    color:#ffffff;
+    background: #0198E1;
+    padding: 2px 8px;
+    font-size: .7em;
+    border:1px solid #0198E1;
+    /*border:1px solid #f0f0f0;
+    border-radius: 3px;*/
+    vertical-align: bottom;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+  }
+
+  .buttonblue {
+    color:#ffffff;
+    background: #0198E1;
+    padding: 3px 10px;
+    font-size: .7em;
+    border:1px solid #0198E1;
+    /*border:1px solid #f0f0f0;
+    border-radius: 3px;*/
+    vertical-align: bottom;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+  }
+
+  .buttonorange {
+    color:#000000;
+    background: orange;
+    padding: 3px 10px;
+    font-size: .7em;
+    border:1px solid #888888;
+    /*border:1px solid #f0f0f0;
+    border-radius: 3px;*/
+    vertical-align: bottom;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+  }

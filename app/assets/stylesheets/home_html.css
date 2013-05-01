@@ -7,7 +7,7 @@ html {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover; 
-  font-family: 'Syncopate', sans-serif;
+  font-family: arial;
 }
 html {
   background-image: url(/assets/SanDiegoSkyline.jpg) no-repeat center center fixed;
@@ -15,7 +15,7 @@ html {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover; 
-  font-family: 'Syncopate', sans-serif;
+  font-family: arial;
 }
 body {
   font-size:14px;
@@ -171,4 +171,54 @@ body {
 
 .ui-menu .ui-menu-item a {
   font-size: 1em;
+}
+
+.trackbutton {
+    color:#ffffff;
+    background: #0198E1;
+    padding: 2px 8px;
+    font-size: .7em;
+    border:1px solid #0198E1;
+    /*border:1px solid #f0f0f0;
+    border-radius: 3px;*/
+    vertical-align: bottom;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+  }
+
+.buttonblue {
+    color:#ffffff;
+    background: #0198E1;
+    padding: 3px 10px;
+    font-size: .7em;
+    border:1px solid #0198E1;
+    /*border:1px solid #f0f0f0;
+    border-radius: 3px;*/
+    vertical-align: bottom;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+  }
+
+  .buttonorange {
+    color:#000000;
+    background: orange;
+    padding: 3px 10px;
+    font-size: .7em;
+    border:1px solid #888888;
+    /*border:1px solid #f0f0f0;
+    border-radius: 3px;*/
+    vertical-align: bottom;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+  }
+
+  .signinupbox {
+    position: absolute;
+    left:50%;
+  background: #ffffff;
+  border: 2px solid #888888;
+  box-shadow: 0 2px 2px #888888;
+  padding:8px;
+  margin:150px 0 0 -280px;
+  width:500px;
 }

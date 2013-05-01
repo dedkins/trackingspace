@@ -48,6 +48,14 @@ class PagesController < ApplicationController
 	    end
 	end
 
+	def newlearnmore
+		if user_signed_in?
+	      redirect_to home_path
+	    else
+	      render :layout => 'blank'
+	    end
+	end
+
 	def spaces_main
 		if user_signed_in?
 		@leases = Lease.find_all_by_user_id(current_user.id)

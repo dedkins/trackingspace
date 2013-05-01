@@ -1,0 +1,94 @@
+<head>
+    <%= stylesheet_link_tag 'blank' %>
+</head>
+
+<body>
+    <div style="width:980px;margin:auto">
+        <div style="float:left;height:50px;padding:8px 10px 8px 20px">
+            <%= link_to image_tag("FullLogo.png", :size => "400x45"), home_path %>
+        </div>
+        <div style="float:right;padding:25px 8px 0 0">
+            <%= link_to 'Sign-In', new_user_session_path, :class => 'buttonblue', :style => 'color:white;text-decoration:none', :method => 'get' %>
+        </div>
+        <div style="float:right;padding:25px 8px 0 0">
+            <%= link_to 'Become a Member', new_user_registration_path, :class => 'buttonblue', :style => 'color:white;text-decoration:none', :method => 'get' %>
+        </div>
+    </div>
+
+    <div style="clear:both">
+        <table width="100%">
+            <tr height="20px"/>
+            <tr height="70px">
+                <td>
+                    <div style="color:#333333;width:100%;font-size:50px;text-align:center;font-family:calibri">Help Us.  Help You.</div>
+                </td>
+            </tr>
+        </table>
+        <div style="width:640px;margin:auto">
+            <table width="100%">
+                <tr>
+                    <td>The idea for TrackingSpace came from my years in leasing, buying and selling commercial real estate in the Sacramento area - and recently working on a company restructure.  The owner of the company would consistently ask me: "When are our leases up?"  
+                        <p>That got me thinking - wouldn't it be great if I could upload the lease and general information online and share it with him - so he could quickly see his lease info?  Then, what if the act of doing this across multiple businesses would provide an accurate and secure representation of real rates, values and availability in a given market.  TrackingSpace was born.</p>
+                        <p>I think it was Walt Disney that said...see what others are doing and do the opposite.  TrackingSpace is what could be considered a reverse listing service.  Start by looking up your building, add a space, add a YouTube video for the building and/or space, add a lease to a space and share it with someone to get a feel...then try sponsoring someone to see how that works and looks.</p>
+                        <p>NO ONE CAN SEE THE LEASES BUT YOU OR SOMEONE YOU SHARE IT WITH</p>
+                        <p>I've built the service to be free - you can enter your listing(s), add "ads" and "sponsor" a few people.  As we get more data, we will overlay aggregate information that will benefit all parties.  We do have an upgrade path - but it is geared only to people that want to sponsor a bunch of people.</p>
+                        <p>There is so much to do still and so little time.  I need help.</p>
+                        <p>I'm looking for support from people like you to help shape this into what I believe could be the most powerful tool that has ever been made available for commercial real estate.</p>
+                        <p>Will you help?  I hope so.  <%= link_to 'Become a member', new_user_registration_path %>, and/or <%= link_to 'Donate', 'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=7WSYGG57Y7BUA' %>.</p>
+                        <p>Thank you,</p>
+                        <p>David Edkins
+                        <br>Founder
+                        <br><%= link_to 'dedkins@edkinsgroup.com', 'mailto:dedkins@edkinsgroup.com' %></br>
+                    </td>
+                </tr>
+                <tr height="20px"/>
+            </table>
+        </div>
+        <div style="width:640px;margin:auto">
+            <table width="100%">
+                <tr>
+                    <td><div style="color:#333333;width:100%;font-size:50px;text-align:center;font-family:calibri">Feature Sample</div></td>
+                </tr>
+            </table>
+            <table width="100%">
+                <tr>
+                    <td width="50%">
+                        <div style="padding-top:8px;font-weight:bold;height:30px;margin:5px;background:orange;color:#333333;text-align:center">Upload Leases</div>
+                    </td>
+                    <td>
+                        <div style="padding-top:8px;font-weight:bold;height:30px;margin:5px;background:orange;color:#333333;text-align:center">Sponsor Others</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="50%">
+                        <div style="padding-top:8px;font-weight:bold;height:30px;margin:5px;background:orange;color:#333333;text-align:center">Advertise Yourself</div>
+                    </td>
+                    <td>
+                        <div style="padding-top:8px;font-weight:bold;height:30px;margin:5px;background:orange;color:#333333;text-align:center">Advertise Listings</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="50%">
+                        <div style="padding-top:8px;font-weight:bold;height:30px;margin:5px;background:orange;color:#333333;text-align:center">Share Leases</div>
+                    </td>
+                    <td>
+                        <div style="padding-top:8px;font-weight:bold;height:30px;margin:5px;background:orange;color:#333333;text-align:center">Add Videos</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="50%">
+                        <div style="padding-top:8px;font-weight:bold;height:30px;margin:5px;background:orange;color:#333333;text-align:center">Follow Buildings</div>
+                    </td>
+                    <td>
+                        <div style="padding-top:8px;font-weight:bold;height:30px;margin:5px;background:orange;color:#333333;text-align:center">Follow People</div>
+                    </td>
+                </tr>
+                <tr height="40px"/>
+            </table>
+        </div>
+    </div>
+</body>
+
+<div style="float:left;padding-top:10px;color:#888888;width:100%;text-align:center">
+        &copy 2013 Trackingspace  |  <%= link_to 'Privacy Statement', privacy_path %>
+    </div>
