@@ -22,6 +22,7 @@ outline: none;
 }
 
 html {
+  /*background: url('lightgreybackground.jpg') no-repeat center center fixed;
   /*background: #e9e9e9;*/
   background: #dddddd;
   -webkit-background-size: cover;
