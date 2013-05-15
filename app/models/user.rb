@@ -49,7 +49,7 @@ class User < ActiveRecord::Base
   has_many :sharedfrom, :through => :lease_shares, :source => :sharedfrom, :dependent => :destroy
   has_many :reverse_lease_shares, :foreign_key => "sharedto_id", :class_name => "LeaseShare", :dependent => :destroy
   has_many :sharedto, :through => :reverse_lease_shares, :dependent => :destroy
-  has_many :leases
+  has_many :leases, :order => "expiration ASC"
   
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,

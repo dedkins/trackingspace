@@ -24,7 +24,7 @@ class Space < ActiveRecord::Base
   belongs_to :user
   has_many :lease_shares
 
-  attr_accessible :monthly, :sf, :suite, :company, :status, :_3dplanurl, :videourl, :user_id
+  attr_accessible :monthly, :sf, :suite, :company, :status, :_3dplanurl, :videourl, :user_id, :description
 
   validates :suite, :presence => true
   validates :monthly, :presence => true

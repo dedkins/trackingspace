@@ -13,7 +13,7 @@ def new_stuff
     @sponsoravail = @user.sponsoravail
     @sponsorcount = Sponsor.where('sponsoredby_id = ?', @user.id).count
     @sponsorleft = @user.sponsorleft
-    @leases = @user.leases
+    @leases = @user.leases.order('expiration asc')
     @buildingstracked = @user.building_relationships
     @sponsor_record = Sponsor.find_by_sponsoredmember_id(current_user.id)
     @following = @user.following

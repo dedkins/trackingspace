@@ -20,7 +20,7 @@ class UsersController < ApplicationController
   def leases
     @title = 'My Leases'
     @user = User.find(current_user.id)
-    @leases = @user.leases
+    @leases = @user.leases(:order => 'expiration asc')
 
     respond_to do |format|               
       format.js
