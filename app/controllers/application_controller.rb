@@ -6,14 +6,14 @@ before_filter :new_stuff
 
 def new_stuff
   @allnewusers = User.new_users.limit(8).order('created_at desc')
-  @allnewbuildings = Building.new_buildings.limit(8)
+  @allnewbuildings = Building.new_buildings.limit(25)
   @allnewposts = Micropost.where("created_at >= ?", Time.now.prev_month).where(:propmgmt => [false,nil]).where("content != ''").limit(10)
   if user_signed_in?
     @user = User.find(current_user.id)
     @sponsoravail = @user.sponsoravail
     @sponsorcount = Sponsor.where('sponsoredby_id = ?', @user.id).count
     @sponsorleft = @user.sponsorleft
-    @leases = @user.leases.order('expiration asc')
+    @leases = @user.leases
     @buildingstracked = @user.building_relationships
     @sponsor_record = Sponsor.find_by_sponsoredmember_id(current_user.id)
     @following = @user.following
