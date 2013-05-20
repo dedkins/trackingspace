@@ -27,6 +27,8 @@ class Lease < ActiveRecord::Base
   
   attr_accessible :current_rate, :expiration, :size, :space_id, :user_id, :file
 
+  default_scope order('expiration ASC')
+
 
   #paperclip
   has_attached_file :file,

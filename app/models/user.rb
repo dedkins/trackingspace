@@ -108,9 +108,9 @@ class User < ActiveRecord::Base
   def leases
     @shared = LeaseShare.where("sharedto_id = ? OR email = ?", id, email).all
     unless @shared.empty?
-      (Lease.where("user_id = ?", id).all.order('expiration asc') + Lease.find(@shared.map(&:lease_id).uniq)).uniq.order('expiration asc')
+      (Lease.where("user_id = ?", id).all + Lease.find(@shared.map(&:lease_id).uniq)).uniq
     else
-      Lease.where("user_id = ?", id).order('expiration ASC')
+      Lease.where("user_id = ?", id)
     end
   end
 
