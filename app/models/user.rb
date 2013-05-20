@@ -49,7 +49,7 @@ class User < ActiveRecord::Base
   has_many :sharedfrom, :through => :lease_shares, :source => :sharedfrom, :dependent => :destroy
   has_many :reverse_lease_shares, :foreign_key => "sharedto_id", :class_name => "LeaseShare", :dependent => :destroy
   has_many :sharedto, :through => :reverse_lease_shares, :dependent => :destroy
-  has_many :leases, :order => "expiration ASC"
+  has_many :leases
   
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
@@ -108,9 +108,9 @@ class User < ActiveRecord::Base
   def leases
     @shared = LeaseShare.where("sharedto_id = ? OR email = ?", id, email).all
     unless @shared.empty?
-      (Lease.where("user_id = ?", id).all + Lease.find(@shared.map(&:lease_id).uniq)).uniq
+      ((Lease.where("user_id = ?", id).all + Lease.find(@shared.map(&:lease_id).uniq)).uniq).order('expiration ASC')
     else
-      Lease.where("user_id = ?", id)
+      Lease.where("user_id = ?", id).order('expiration ASC')
     end
   end
 
