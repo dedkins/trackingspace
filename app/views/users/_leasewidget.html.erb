@@ -3,7 +3,7 @@
 	<div class="boxtitle">LEASES</div>
 	<% if @leases.present? %>
 
-		<% @leases.order('expiration ASC').each do |m| %>
+		<% @leases.each do |m| %>
 
 		<div style="text-transform:uppercase;font-size:.85em;text-align:left;padding-left:4px;height:20px;background:#efefef">
 			<%= link_to truncate(m.space.building.address, :size => '2', :separator => ',', :omission => ''), building_path(m.space.building_id), :class => 'list_title', :title => 'Click to see the Building' %>, <%= link_to m.space.suite, building_space_path(m.space.building.id,m.space.id), :class => 'list_title', :title => 'Click to see the Space' %>
