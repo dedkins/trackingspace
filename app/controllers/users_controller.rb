@@ -1,6 +1,8 @@
 class UsersController < ApplicationController
   autocomplete :user, :name, :full => true
 
+  before_filter :authenticate_user!
+
   def index
     if user_signed_in?
       if current_user.access == 'Admin'
