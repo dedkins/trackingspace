@@ -119,8 +119,14 @@
 	section#left {
 		display: none;
 	}
+	section#search {
+		padding:10px 0;
+	}
 	section#content {
 		margin-left: 10px;
+	}
+	.map_container {
+		width: 700px;
 	}
 }
 
@@ -132,11 +138,14 @@
 	}
 	section#search {
 		width: 100%;
-		padding-top: 20px;
+		padding-top: 10px;
 		height: 65px;
 	}
 	header#top {
 		height: 80px;
+	}
+	.map_container {
+		width:700px;
 	}
 	section#content {
 		width: 95%;
