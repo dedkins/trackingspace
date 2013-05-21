@@ -56,8 +56,8 @@
 
 </head>
 <body>
-  <% unless mobile_device? %>
-  <div style="position:fixed;left:0;top:48px">
+  <% unless mobile_device? or iPad? %>
+  <div style="position:fixed;left:0;top:48px" id="leftskyscraper">
           <script type="text/javascript"><!--
           google_ad_client = "ca-pub-5451064655705220";
           /* WideSkyscraperLeftSide */
@@ -70,7 +70,7 @@
           src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
           </script>
         </div>
-  <div style="position:fixed;right:0;top:48px">
+  <div style="position:fixed;right:0;top:48px" id="rightskyscraper">
     <script type="text/javascript"><!--
       google_ad_client = "ca-pub-5451064655705220";
       /* WideSkyscraperRightSide */
@@ -83,8 +83,8 @@
       src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
     </script>
   </div>
-  <% else %>
-    <div style="position:fixed;bottom:0;margin-left:40px;z-index:99999;padding-top:10px">
+  <% else mobile_device? %>
+    <div style="position:fixed;bottom:0;z-index:99999;padding-top:10px;width:728px;left:50%;margin-left:-364px">
       <script type="text/javascript"><!--
         google_ad_client = "ca-pub-5451064655705220";
         /* 728LeaderBoardTop */
@@ -108,10 +108,7 @@
       <div class="container">
     <% end %>
 
-    <section id="search">
-        <%= yield :search %>
-      </section>
-
+    <% unless mobile_device? %>
       <section id="sidebar">
 
         <% if user_signed_in? %>
@@ -125,6 +122,20 @@
             SPONSORING
             <br/>Once a member, there will be an option in this space to email others and "sponsor" their access.  Doing this will place your information in a banner at the top of their pages.  Free basic membership includes sponsoring 2 people.
           </div>
+        <% end %>
+
+        <% if iPad? %>
+          <script type="text/javascript"><!--
+            google_ad_client = "ca-pub-5451064655705220";
+            /* RightLinkAds */
+            google_ad_slot = "7560282264";
+            google_ad_width = 180;
+            google_ad_height = 90;
+            //-->
+            </script>
+            <script type="text/javascript"
+            src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+          </script>
         <% end %>
 
             <%= render 'users/leasewidget' %>
@@ -149,8 +160,13 @@
           </div>
         
       </section>
+    <% end %>
     
     <section id="content">
+      <section id="search">
+        <%= yield :search %>
+      </section>
+
         <%= yield %>
       </section>
 

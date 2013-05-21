@@ -44,6 +44,11 @@ def mobile_device?
 end
 helper_method :mobile_device?
 
+def iPad?
+  request.user_agent =~ /iPad/
+end
+helper_method :iPad?
+
 #layout :which_layout
 #  def which_layout
 #    mobile_device? ? 'mobile' : 'application'
