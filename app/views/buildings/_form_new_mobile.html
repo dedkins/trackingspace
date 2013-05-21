@@ -1,11 +1,4 @@
-<div style="
-		margin-top: -15px;
-		height: 80px;
-		width:100%;
-		margin-bottom:40px;
-		font-size: 1.5em">
-
-		
+	
 		<%= form_for Building.new do |f| %>
 		  	<%= f.error_messages %>
 		    <%= f.text_field :address, :class => "search", :id => "addresspicker_map", :placeholder => 'Find A Building By Address...'%>
@@ -26,5 +19,5 @@
 		      <% end %>
 		</div>
 		<% end %>
+		<div style="height:70px"/>
 
-</div>

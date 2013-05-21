@@ -1,33 +1,31 @@
 
-	<div class="newbox">
-		<div class="boxtitle" style="width:101%;text-align:right;padding-right:10px">newest members</div>
-		
-			<table width="100%">
-				<% @users.each do |u| %>
-				<tr>
-					<td><%= gravatar_image_tag(u.email, :gravatar => {:size => '40x40'}) %></td>
-					<td><%= link_to u.name, user_path(u.id) %></td>
-					<td style="text-align:right"><%= u.geocity %> <%= u.geostate %></td>
-				</tr>
-				<% end %>
-			</table>
-		
-	</div>
-	<div class="newbox">
-		<div class="boxtitle" style="width:101%;text-align:right;padding-right:10px">new around you</div>
-		<table width="100%">
-			<% if @local %>
-				<% @local.each do |e| %>
-				<tr>
-					<td><%= gravatar_image_tag(e.email, :gravatar => {:size => '40x40'}) %></td>
-					<td><%= link_to e.name, user_path(e.id) %></td>
-					<td style="text-align:right"><%= e.geocity %> <%= e.geostate %></td>
-				</tr>
-				<% end %>
-			<% else %>
-			Looks like we have got to get the word out
-			<% end %>
-			</table>
-	</div>
-
+			<div class="newbox" style="float:left">
+				<div class="boxtitle" style="width:100%;text-align:right;padding-right:10px">newest members</div>
+					<table width="100%">
+						<% @users.each do |u| %>
+						<tr>
+							<td><%= gravatar_image_tag(u.email, :gravatar => {:size => '40x40'}) %></td>
+							<td><%= link_to u.name, user_path(u.id) %></td>
+							<td style="text-align:right"><%= u.geocity %> <%= u.geostate %></td>
+						</tr>
+						<% end %>
+					</table>
+				
+			</div>
+			<div class="newbox" style="float:right">
+				<div class="boxtitle" style="width:100%;text-align:right;padding-right:10px">new around you</div>
+				<table width="100%">
+					<% if @local %>
+						<% @local.each do |e| %>
+						<tr>
+							<td><%= gravatar_image_tag(e.email, :gravatar => {:size => '40x40'}) %></td>
+							<td><%= link_to e.name, user_path(e.id) %></td>
+							<td style="text-align:right"><%= e.geocity %> <%= e.geostate %></td>
+						</tr>
+						<% end %>
+					<% else %>
+					Looks like we have got to get the word out
+					<% end %>
+					</table>
+			</div>
 

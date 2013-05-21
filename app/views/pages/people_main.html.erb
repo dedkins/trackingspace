@@ -1,8 +1,24 @@
 <% currently_at 'People' %>
 
-<div style="float:left">
+	<% if mobile_device? %>
+		<% if user_signed_in? %>
+          <% if @sponsoravail == true %>
+              <%= form_tag(:controller => 'sponsors', :action => 'sendsponsoremail', :remote => true) do %>
+		  	<%= email_field_tag :email, nil, :class => "search", :placeholder => 'Sponsor Someone by Typing Email...' %>
+
+			    <%= submit_tag "Send", :class => 'searchglass' %>
+			<% end %>
+          <% end %>
+        <% else %>
+          <div style="background:black;color:white;padding:8px;margin-bottom:15px">
+            SPONSORING
+            <br/>Once a member, there will be an option in this space to email others and "sponsor" their access.  Doing this will place your information in a banner at the top of their pages.  Free basic membership includes sponsoring 2 people.
+          </div>
+        <% end %>
+    <% end %>
+
 <%= render 'pages/newpeople' %>
-</div>
+
 <div style="float:left;width:99%">
 <% if user_signed_in? %>
 

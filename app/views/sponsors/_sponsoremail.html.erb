@@ -10,7 +10,7 @@
 		</div>
 	<% end %>
 	<% if @sponsorleft != 0 %>
-	<div style="float:left">Send Email to Sponsor Client Access:</div><%= button_to "?", sponsored_path, :title => "As a member you can sponsor others to view TrackingSpace under your sponsored pages.  Clicking send, sends an email to the person you want to sponsor, they will click a link in acceptance.  Once they do, they will have a banner at the top of their view with your picture and contact info", :style => "height:20px;width:20px;border-radius:8px;background:light-grey;color:red;margin-left:5px;float:left;font-weight:bold;border:0" %>
+	<div style="float:left">Send Email to Sponsor Client Access:</div>
 
 	<%= form_tag(:controller => 'sponsors', :action => 'sendsponsoremail', :remote => true) do %>
 		<%= email_field_tag :email %>

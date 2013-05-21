@@ -8,6 +8,12 @@
 		width: 98%;
 		padding: 10px 0;
 	}
+	.map_container {
+		height:500px;
+	}
+	.gmaps4rails_map {
+		height:500px;
+	}
 	header#top {
 		height: 80px;
 	}
@@ -29,8 +35,11 @@
 		margin-top: 0px;
 	}
 	.search {
-		margin:50px 0;
+		height:70px;
+		width: 97%;
+		margin: 15px 10px;
 		float:left;
+		font-size: 1.5em;
 	}
 	.ui-autocomplete-input, .input input {
 	  background: white;
@@ -67,9 +76,12 @@
 	.searchglass {
 		float: right;
 		width: 120px;
-		margin-top: -118px;
+		margin-top: -85px;
 		margin-right:0;
-		padding-top: 10px;
+		padding: 10px;
+		color:#ffffff;
+		border: none;
+		font-size: 1.5em;
 	}
 	.lists_title {
 		font-size: 1.6em;
