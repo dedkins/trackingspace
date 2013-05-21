@@ -1,7 +1,11 @@
 <% if @building.videourl != '' and @building.videourl != nil %>
 	<%= render 'videoview' %>
 <% else %>
+<% if mobile_device? %>
+	<div style="width:750px">
+<% else %>
 	<div style="width:100%">
+<% end %>
 		<%= gmaps({
 		  "map_options" => {"auto_zoom" => false, "zoom" => 18, "type" => 'SATELLITE' },
 		  "markers" => {"data" => @json }
