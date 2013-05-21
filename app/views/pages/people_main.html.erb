@@ -3,8 +3,8 @@
 	<% if mobile_device? %>
 		<% if user_signed_in? %>
 		<%= link_to 'Sponsored List', sponsored_path, :class => 'button' %>
-		<%= link_to 'Following', '#', :class => 'button' %>
-		<%= link_to 'Followers', '#', :class => 'button' %>
+		<%= link_to 'Following', showfollowing_path, :class => 'button' %>
+		<%= link_to 'Followers', showfollowers_path, :class => 'button' %>
 		<%= link_to 'Search', '#', :class => 'button' %>
           <% if @sponsoravail == true %>
               <%= form_tag(:controller => 'sponsors', :action => 'sendsponsoremail', :remote => true) do %>

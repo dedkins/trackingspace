@@ -132,4 +132,16 @@ class UsersController < ApplicationController
     end
   end
 
+  def showfollowing
+    @title = 'Following'
+    @user = User.find(current_user.id)
+    @users = @user.following
+  end
+
+  def showfollowers
+    @title = 'Followers'
+    @user = User.find(current_user.id)
+    @users = @user.followers
+  end
+
 end
