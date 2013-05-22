@@ -4,6 +4,9 @@
 		line-height: 1.5em;
 		-webkit-text-size-adjust:none;
 	}
+	.newbox {
+		width: 46%;
+	}
 	section#search {
 		width: 98%;
 		padding: 10px 0;
@@ -82,6 +85,8 @@
 		color:#ffffff;
 		border: none;
 		font-size: 1.5em;
+		-webkit-appearance: none;
+    	-webkit-border-radius: 0;
 	}
 	.lists_title {
 		font-size: 1.6em;
