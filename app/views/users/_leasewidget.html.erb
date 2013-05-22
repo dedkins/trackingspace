@@ -3,23 +3,33 @@
 	<div class="boxtitle">myLEASES</div>
 	<% if @leases.present? %>
 
+	<table width="100%">
 		<% @leases.each do |m| %>
-
-		<div style="text-transform:uppercase;font-size:.85em;text-align:left;padding-left:4px;height:20px;background:#efefef">
-			<%= link_to truncate(m.space.building.address, :size => '2', :separator => ',', :omission => ''), building_path(m.space.building_id), :class => 'list_title', :title => 'Click to see the Building' %>, <%= link_to m.space.suite, building_space_path(m.space.building.id,m.space.id), :class => 'list_title', :title => 'Click to see the Space' %>
-		</div>
+		<tr>
+			<td colspan="2">
+				<div style="text-transform:uppercase;font-size:.8em;text-align:left">
+					<%= link_to truncate(m.space.building.address, :separator => ',', :omission => ''), building_path(m.space.building_id), :class => 'list_title', :title => 'Click to see the Building' %> 
+				</div>
+			</td>
+		</tr>
+		<tr width="100%">
+			<td width="10px">
+				<% if Date.today > m.expiration-90.days or m.expiration < Date.today %>
+					<div style="background:red;width:10px;height:10px;margin-top:-8px" title="Expires in <%= distance_of_time_in_words(m.expiration, Date.today) %>"/>
+				<% else %>
+					<div style="background:green;width:10px;height:10px;margin-top:-8px" title="Expires in <%= distance_of_time_in_words(m.expiration, Date.today) %>"/>
+				<% end %>
+			</td>
+			<td>
+				<div style="font-size:.9em;margin-top:-8px">
+				<%= link_to "Suite #{m.space.suite}", building_space_path(m.space.building.id,m.space.id), :class => 'list_title', :title => 'Click to see the Space' %> | 
+				<%= link_to "View Lease", space_lease_path(m.space,m), :title => "#{m.space.company} | #{m.size}sf  |  $#{m.current_rate}  |  Exp: #{m.expiration}" %>
+			</div>
+			</td>
+		</tr>
 		
-		<% if Date.today > m.expiration-90.days or m.expiration < Date.today %>
-			<div style="font-size:.85em;padding-left:4px;text-align:center;color:red;text-transform:italic">
-				<%= link_to 'View', space_lease_path(m.space,m), :title => "#{m.space.company}" %> | <%= m.size %>sf | $<%= m.current_rate %>/mo | exp: <%= m.expiration %>
-			</div>
-		<% else %>
-			<div style="font-size:.85em;padding-left:4px;text-align:center">
-				<%= link_to 'View', space_lease_path(m.space,m), :title => "#{m.space.company}" %> | <%= m.size %>sf | $<%= m.current_rate %>/mo | exp: <%= m.expiration %>
-			</div>
 		<% end %>
-
-		<% end %>
+	</table>
 
 	<% else %>
 
