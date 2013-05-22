@@ -15,6 +15,7 @@
 		<div class="bluebox">
 			<div style="width:100%;font-family:'Syncopate';text-align:left" class="boxtitle">
 			 <%= truncate(@building.address, :separator => ',', :omission => '') %>
+			 <% if user_signed_in? %>
 
 			 <div style="float:right;font-size:1.2em;margin-top:-10px" id="building_follow_form">
 							<% if current_user.building_following?(@building) %>
@@ -25,8 +26,6 @@
 					</div>
 			</div>
 				
-
-			<% if user_signed_in? %>
 				<div style="float:left;width:100%">
 					<%= render 'buildings/buildingstats' %>
 					
