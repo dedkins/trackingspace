@@ -13,27 +13,23 @@
 		<% end %>
 
 		<div class="bluebox">
-			<div style="width:100.5%;font-family:'Syncopate';text-align:left" class="boxtitle">
+			<div style="width:100%;font-family:'Syncopate';text-align:left" class="boxtitle">
 			 <%= truncate(@building.address, :separator => ',', :omission => '') %>
-			</div>
-				
-			<div style="position:absolute;right:0;margin:-35px 310px 0 0">
-			  		<%= link_to image_tag("https://github.com/intridea/authbuttons/raw/master/png/twitter_64.png", :size => "30x30", :alt => "Twitter"), "http://twitter.com/home?status=Take a look at this on @trackingspace: http://#{request.host+request.fullpath}", :target => '_blank', :title => 'Share with Twitter' %>
-				  	<%= link_to image_tag("http://github.com/intridea/authbuttons/raw/master/png/facebook_64.png", :size => "30x30"), "http://www.facebook.com/sharer.php?u=http://#{request.host+request.fullpath}", :target => '_blank', :title => 'Share with FaceBook' %>
-			</div>
 
-			<% if user_signed_in? %>
-				<div style="float:left;width:100%">
-					<%= render 'buildings/buildingstats' %>
-					<div style="float:right">
-						<div id="building_follow_form" >
+			 <div style="float:right;font-size:1.2em;margin-top:-10px" id="building_follow_form">
 							<% if current_user.building_following?(@building) %>
 								<%= render 'pages/building_unfollow' %>
 							<% else %>
 								<%= render 'pages/building_follow' %>
 							<% end %>
-						</div>
 					</div>
+			</div>
+				
+
+			<% if user_signed_in? %>
+				<div style="float:left;width:100%">
+					<%= render 'buildings/buildingstats' %>
+					
 				</div>
 			<% else %>
 			<br/>

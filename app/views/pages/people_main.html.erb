@@ -2,7 +2,8 @@
 
 	<% if mobile_device? %>
 		<% if user_signed_in? %>
-		<%= link_to 'Sponsored List', sponsored_path, :class => 'button' %>
+		<%= link_to 'myProfile', user_path(current_user), :class => 'button' %>
+		<%= link_to 'Sponsored', sponsored_path, :class => 'button' %>
 		<%= link_to 'Following', showfollowing_path, :class => 'button' %>
 		<%= link_to 'Followers', showfollowers_path, :class => 'button' %>
 		<%= link_to 'Search', '#', :class => 'button' %>

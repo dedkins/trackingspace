@@ -10,11 +10,11 @@
 		</div>
 	<% end %>
 	<% if @sponsorleft != 0 %>
-	<div style="float:left">Send Email to Sponsor Client Access:</div>
+	<div style="float:left">Sponsor Client Access:</div>
 
 	<%= form_tag(:controller => 'sponsors', :action => 'sendsponsoremail', :remote => true) do %>
-		<%= email_field_tag :email %>
-		<%= submit_tag "Send Email", :class => 'trackbutton' %>
+		<%= email_field_tag :email, nil, :placeholder => 'info@trackingspace.com', :style => 'width:175px' %>
+		<%= submit_tag "Send", :class => 'trackbutton', :style => 'right:0;float:right' %>
 	<% end %>
 	<% else %>
             <div style="background:#FFFF7E;margin:2px;color:black;padding:8px">
@@ -22,12 +22,11 @@
             </div>
     <% end %>
 	<div style="float:left;padding:5px 10px 0;font-size:.9em">
-		Sponsored: <%= link_to @sponsorcount, sponsored_path, :style => 'margin-left:5px;font-size:1.1em' %>
+		<%= link_to @sponsorcount, sponsored_path, :style => 'padding:0 3px;background:#ffffff;color:red;font-weight:bold;font-size:.9em', :title => 'Click to see who you have sponsored or sent requests to' %> used
 	</div>
 	<div style="float:left;padding:5px 10px 0;font-size:.9em">
-		Remaining: 
-		<% if current_user.upgrade == 'Upgrade100' %> Unlim
-		<% else %><%= @sponsorleft %><% end %>
+		<% if current_user.upgrade == 'Upgrade100' %> &#x221E;
+		<% else %><%= @sponsorleft %><% end %> left
 	</div>
 	<div style="clear:left"/>
 

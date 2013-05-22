@@ -6,9 +6,7 @@
 						<div style="font-size:.9em;font-weight:bold;color:#0198E1">v</div>
 					<% end %>
 				</td>
-				<td class="lists_left"><%= link_to truncate(recent_item.building.address, :length => 20, :separator => ',', :omission => ''), building_path(id: recent_item.building_id), :title => "Go to the building detail" %><td>
-					<td class="lists_right"><%= recent_item.building.spaces.count %></td>
-					<td class="lists_right"><%= recent_item.building.microposts.count %></td>
+				<td class="lists_left"><%= link_to recent_item.building.address, building_path(id: recent_item.building_id), :title => "Go to the building detail" %><td>
 			</tr>
 		</table>
 <% end %>

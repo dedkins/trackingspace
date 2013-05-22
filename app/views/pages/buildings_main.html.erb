@@ -10,10 +10,10 @@
 <%= content_for :search do %>
 	<% if mobile_device? %>
 	<div style="margin-top:20px">
-		<%= link_to 'I\'m Tracking', sponsored_path, :class => 'button' %>
-		<%= link_to 'New Buildings', '#', :class => 'button' %>
+		<%= link_to 'Tracking', sponsored_path, :class => 'button' %>
+		<%= link_to 'Leases', '#', :class => 'button' %>
+		<%= link_to 'What\'s New?', '#', :class => 'button' %>
 		<%= link_to 'Around Me', '#', :class => 'button' %>
-		<%= link_to 'Search', '#', :class => 'button' %>
 	</div>
 
 		<%= render 'buildings/form_new_mobile' %>

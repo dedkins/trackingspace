@@ -17,6 +17,7 @@
   background-size: cover; 
 }*/
 
+
 a {
 outline: none;
 }
@@ -31,7 +32,11 @@ html {
   background-size: cover; 
   text-decoration: none;
 }
-
+.trackItImage {
+  position: absolute;
+  margin:-30px -205px;
+  z-index: 9999;
+}
 .logo {
   position: absolute;
   top:18px;
@@ -191,7 +196,7 @@ header#top {
 
 section#content {
   /*margin-left: 320px;*/
-  margin-right: 290px;
+  margin-right: 210px;
   margin-top:15px;
 }
 
@@ -227,7 +232,7 @@ section#recent_right {
 
 section#sidebar {
   float: right;
-  width: 280px;
+  width: 200px;
   color:#666;
   font: {
     size: 0.8em;
@@ -237,12 +242,13 @@ section#sidebar {
 .boxtitle {
   text-transform: uppercase;
   font-family: 'Syncopate';
+  font-size: .8em;
   position: relative;
   margin:-10px 0 0 -10px;
   background:#666666;
   color:white;
   text-align:center;
-  padding:8px;
+  padding:5px 10px;
   width: 100px;
 }
 .listbox_title {
@@ -367,7 +373,6 @@ section#search {
   padding:3px;
   text-align: left;
   font-variant: small-caps;
-  font-size:1.1em;
 }
 .lists_right {
   padding:3px;
