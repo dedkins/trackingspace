@@ -36,3 +36,16 @@
 	font-size: 1.8em;
 	font-family: syncopate;
 }
+.bluebutton {
+	background: #31b7ea;
+	padding: 10px;
+	text-align: center;
+	font-weight: bold;
+}
+.whitetrackbutton {
+	background: #ffffff;
+	padding: 10px;
+	text-align: center;
+	color: green;
+	font-weight: bold;
+}

@@ -2,10 +2,6 @@
 
 <%= stylesheet_link_tag 'new_mobile' %>
 
-<div style="position:fixed;margin-top:-40px;background:blue;color:white;height:80px;width:200px">
-	Track It
-</div>
-
 <table width="100%">
 	<tr>
 		<td colspan="2">
@@ -19,6 +15,26 @@
 		  "markers" => {"data" => @json }
 		})
 		%>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2">
+			<table width="100%">
+				<tr>
+					<td width="25%">
+						<div class="bluebutton">Photos</div>
+					</td>
+					<td width="25%">
+						<div class="bluebutton">Video</div>
+					</td>
+					<td width="25%">
+						<div class="bluebutton">Map</div>
+					</td>
+					<td width="25%">
+						<div class="whitetrackbutton">Track</div>
+					</td>
+				</tr>
+			</table>
 		</td>
 	</tr>
 	<tr>
