@@ -57,6 +57,8 @@ Trackingspace::Application.routes.draw do
   match 'showfollowing' => 'users#showfollowing', :as => 'showfollowing'
   match 'showfollowers' => 'users#showfollowers', :as => 'showfollowers'
 
+  match 'mobilebuilding/:id' => 'buildings#mobile_building_show', :as => 'mobilebuilding'
+
 
   resources :authentications
 

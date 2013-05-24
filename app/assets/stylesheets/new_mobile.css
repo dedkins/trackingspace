@@ -1,0 +1,12 @@
+.goodbox {
+	background:green;
+	color:white;
+	font-size:4em;
+	padding: 80px;
+}
+.badbox {
+	background: red;
+	color: white;
+	font-size: 4em;
+	padding: 80px;
+}

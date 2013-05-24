@@ -19,6 +19,9 @@ class BuildingsController < ApplicationController
   end
 
   def show
+    if mobile_device?
+     redirect_to(mobilebuilding_path) and return
+    end
     if user_signed_in?
       @user = User.find(current_user.id)
       if params[:id].present?
@@ -76,6 +79,15 @@ class BuildingsController < ApplicationController
   def map
   end
 
+  def mobile_building_show
+    if params[:id].present?
+      @building = Building.find(params[:id])
+      end
+    if params[:slug].present?
+        @building = Building.find_by_slug(params[:slug])
+      end
+    @json = Building.find(@building.id).to_gmaps4rails
+  end
   def mapview
     @building = Building.find(params[:id])
     @json = Building.find(@building.id).to_gmaps4rails

@@ -1,0 +1,32 @@
+<%= stylesheet_link_tag 'new_mobile' %>
+
+<div style="position:fixed;margin-top:-40px;background:blue;color:white;height:80px;width:200px">
+	Track It
+</div>
+
+<table width="100%">
+	<tr>
+		<td colspan="2">
+			<%= gmaps({
+		  "map_options" => {"auto_zoom" => false, "zoom" => 18, "type" => 'SATELLITE' },
+		  "markers" => {"data" => @json }
+		})
+		%>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="goodbox">$3.25
+			<div style="text-align:center;font-size:.4em;margin-top:40px">Avg Rate</div>
+			</div>
+		</td>
+		<td>
+			<div class="badbox">80%
+			<div style="text-align:center;font-size:.4em;margin-top:40px">Pct Leased</div>
+			</div>
+		</td>
+	</tr>
+
+</table>
+
+<%= yield :scripts %>
