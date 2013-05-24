@@ -12,7 +12,7 @@
 }
 .whitebox {
 	background: #ffffff;
-	padding:95px;
+	padding:103px 80px;
 }
 .bigletters {
 	color:white;
@@ -21,15 +21,18 @@
 }
 .biglettersgray {
 	color:gray;
-	font-size:2.8em;
+	font-size:2.5em;
 	text-align: center;
 	margin-bottom: 40px;
 }
 .bigletterdescriptor {
+	font-size: 1.5em;
 	text-align:center;
-	margin-top: 40px;
+	margin-top: 50px;
 	color:#ffffff;
 }
 .buildingtitle {
 	color:grey;
+	font-size: 1.8em;
+	font-family: syncopate;
 }

@@ -9,7 +9,7 @@
 <table width="100%">
 	<tr>
 		<td colspan="2">
-			<div class="buildingtitle"><%= truncate(@building.address, :separator => ',', :omission => '') %></div>
+			<div class="buildingtitle"><%= truncate(@building.address, :length => 20, :separator => ' ', :omission => '') %></div>
 		</td>
 	</tr>
 	<tr>
@@ -22,7 +22,7 @@
 		</td>
 	</tr>
 	<tr>
-		<td>
+		<td width="50%">
 			<div class="greybox">
 				<div class="bigletters">  
 					<% if @spaces.present? %>
@@ -36,7 +36,13 @@
 		</td>
 		<td>
 			<div class="badbox">
-				<div class="bigletters">80%</div>
+				<div class="bigletters">
+					<% if @building.size %>
+						$<%= number_to_human((@spaces.collect(&:sf))/@building.size) %>
+					<% else %>
+						n/a
+					<% end %>
+				</div>
 			<div class="bigletterdescriptor">Pct Leased</div>
 			</div>
 		</td>
@@ -64,7 +70,7 @@
 				<div class="bigletters">  
 					<%= @building.microposts.count %>
 				</div>
-				<div class="bigletterdescriptor">Feed Activity</div>
+				<div class="bigletterdescriptor">Feed Count</div>
 			</div>
 		</td>
 		<td>
