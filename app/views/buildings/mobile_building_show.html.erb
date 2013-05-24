@@ -1,3 +1,5 @@
+<% currently_at 'Places' %>
+
 <%= stylesheet_link_tag 'new_mobile' %>
 
 <div style="position:fixed;margin-top:-40px;background:blue;color:white;height:80px;width:200px">
@@ -5,6 +7,11 @@
 </div>
 
 <table width="100%">
+	<tr>
+		<td colspan="2">
+			<div class="buildingtitle"><%= truncate(@building.address, :separator => ',', :omission => '') %></div>
+		</td>
+	</tr>
 	<tr>
 		<td colspan="2">
 			<%= gmaps({
@@ -16,13 +23,55 @@
 	</tr>
 	<tr>
 		<td>
-			<div class="goodbox">$3.25
-			<div style="text-align:center;font-size:.4em;margin-top:40px">Avg Rate</div>
+			<div class="greybox">
+				<div class="bigletters">  
+					<% if @spaces.present? %>
+					<%= number_to_currency(@spaces.collect(&:monthly).inject(:+)/@spaces.collect(&:sf).inject(:+)) %>
+					<% else %>
+					n/a
+					<% end %>
+				</div>
+			<div class="bigletterdescriptor">Avg Rate</div>
 			</div>
 		</td>
 		<td>
-			<div class="badbox">80%
-			<div style="text-align:center;font-size:.4em;margin-top:40px">Pct Leased</div>
+			<div class="badbox">
+				<div class="bigletters">80%</div>
+			<div class="bigletterdescriptor">Pct Leased</div>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="whitebox">
+				<div class="biglettersgray">  
+					Broker
+				</div>
+			</div>
+		</td>
+		<td>
+			<div class="goodbox">
+				<div class="bigletters">
+					<%= @spaces.count %>
+				</div>
+			<div class="bigletterdescriptor">Avail Spaces</div>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div class="badbox">
+				<div class="bigletters">  
+					<%= @building.microposts.count %>
+				</div>
+				<div class="bigletterdescriptor">Feed Activity</div>
+			</div>
+		</td>
+		<td>
+			<div class="whitebox">
+				<div class="biglettersgray">
+					Manager
+				</div>
 			</div>
 		</td>
 	</tr>

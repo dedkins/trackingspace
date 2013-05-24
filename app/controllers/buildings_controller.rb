@@ -86,6 +86,7 @@ class BuildingsController < ApplicationController
     if params[:slug].present?
         @building = Building.find_by_slug(params[:slug])
       end
+      @spaces = Space.find_all_by_building_id(@building.id)
     @json = Building.find(@building.id).to_gmaps4rails
   end
   def mapview
