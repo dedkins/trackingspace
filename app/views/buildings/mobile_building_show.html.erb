@@ -31,7 +31,13 @@
 						<div class="bluebutton">Map</div>
 					</td>
 					<td width="25%">
-						<div class="whitetrackbutton">Track</div>
+						<div id="building_follow_form">
+							<% if current_user.building_following?(@building) %>
+								<%= render 'pages/building_unfollow' %>
+							<% else %>
+								<%= render 'pages/building_follow' %>
+							<% end %>
+						</div>
 					</td>
 				</tr>
 			</table>

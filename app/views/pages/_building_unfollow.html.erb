@@ -1,10 +1,24 @@
-<table width="100%">
-	<tr>
-		<td>
-		<%= form_for current_user.building_relationships.find_by_user_id(@user), :html => { :method => :delete }, :remote => true do |f|  %>
-			<%= hidden_field_tag :building_id, @building.id %>
-			<%= f.submit "Untrack It", :class => 'untrackbutton' %>
-		<% end %>
-		</td>
-	</tr>
-</table>
+<% unless mobile_device? %>
+	<table width="100%">
+		<tr>
+			<td>
+			<%= form_for current_user.building_relationships.find_by_user_id(@user), :html => { :method => :delete }, :remote => true do |f|  %>
+				<%= hidden_field_tag :building_id, @building.id %>
+				<%= f.submit "Untrack It", :class => 'untrackbutton' %>
+			<% end %>
+			</td>
+		</tr>
+	</table>
+<% else %>
+	<table width="100%">
+		<tr>
+			<td>
+			<%= form_for current_user.building_relationships.find_by_user_id(@user), :html => { :method => :delete }, :remote => true do |f|  %>
+				<%= hidden_field_tag :building_id, @building.id %>
+				<%= f.submit "Untrack It", :class => 'whitetrackbutton' %>
+			<% end %>
+			</td>
+		</tr>
+	</table>
+<% end %>
+

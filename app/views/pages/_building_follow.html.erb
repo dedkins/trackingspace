@@ -1,15 +1,28 @@
-
-<table width="100%">
-	<tr>
-		<td>
-			<img class="trackItImage" src="/assets/trackIt.png"></div>
-		</td>
-		<td>
-			<%= form_for current_user.building_relationships.build(:user_id => current_user.id,:building_id => @building.id), :remote => true do |f|  %>
-				<%= f.hidden_field :user_id %>
-				<%= f.hidden_field :building_id %>
-				<%= f.submit "Track It", :class => 'trackbutton', :style => 'margin-top:8px' %>
-			<% end %>
-		</td>
-	</tr>
-</table>
+<% unless mobile_device? %>
+	<table width="100%">
+		<tr>
+			<td>
+				<img class="trackItImage" src="/assets/trackIt.png"></div>
+			</td>
+			<td>
+				<%= form_for current_user.building_relationships.build(:user_id => current_user.id,:building_id => @building.id), :remote => true do |f|  %>
+					<%= f.hidden_field :user_id %>
+					<%= f.hidden_field :building_id %>
+					<%= f.submit "Track It", :class => 'trackbutton', :style => 'margin-top:8px' %>
+				<% end %>
+			</td>
+		</tr>
+	</table>
+<% else %>
+	<table width="100%">
+		<tr>
+			<td>
+				<%= form_for current_user.building_relationships.build(:user_id => current_user.id,:building_id => @building.id), :remote => true do |f|  %>
+					<%= f.hidden_field :user_id %>
+					<%= f.hidden_field :building_id %>
+					<%= f.submit "Track It", :class => 'whitetrackbutton', :style => 'margin-top:8px' %>
+				<% end %>
+			</td>
+		</tr>
+	</table>
+<% end %>
