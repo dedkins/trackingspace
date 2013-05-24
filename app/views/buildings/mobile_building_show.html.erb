@@ -32,10 +32,12 @@
 					</td>
 					<td width="25%">
 						<div id="building_follow_form">
-							<% if current_user.building_following?(@building) %>
-								<%= render 'pages/building_unfollow' %>
-							<% else %>
-								<%= render 'pages/building_follow' %>
+							<% if user_signed_in? %>
+								<% if current_user.building_following?(@building) %>
+									<%= render 'pages/building_unfollow' %>
+								<% else %>
+									<%= render 'pages/building_follow' %>
+								<% end %>
 							<% end %>
 						</div>
 					</td>
