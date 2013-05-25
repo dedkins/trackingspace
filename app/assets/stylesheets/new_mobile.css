@@ -32,9 +32,11 @@
 	color:#ffffff;
 }
 .buildingtitle {
-	color:grey;
-	font-size: 1.8em;
+	background: #31b7ea;
+	color:white;
+	font-size: 1.5em;
 	font-family: syncopate;
+	padding: 10px;
 }
 .bluebutton {
 	background: #31b7ea;

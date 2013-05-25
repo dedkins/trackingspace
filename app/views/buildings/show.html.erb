@@ -57,12 +57,10 @@
 						</div>
 						<%= render 'spacestab' %>
 						<div class="viewbuttoncontainer">
-									<%= button_to 'Map', mapview_building_path(@building.id), :class => 'viewbutton', :remote => true, :method => 'get' %>
-
 					</td>
 				</tr>
 			</table>
-			<div id="buildingcenter" style="margin-top:5px;width:100%">
+			<div id="buildingcenter" style="margin-top:5px;width:100%;height:300px">
 					<%= render 'buildingcenter' %>
 			</div>
 

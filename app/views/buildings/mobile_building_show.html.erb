@@ -5,13 +5,13 @@
 <table width="100%">
 	<tr>
 		<td colspan="2">
-			<div class="buildingtitle"><%= truncate(@building.address, :length => 20, :separator => ' ', :omission => '') %></div>
+			<div class="buildingtitle"><%= truncate(@building.address, :separator => ',', :omission => ' ') %></div>
 		</td>
 	</tr>
 	<tr>
-		<td colspan="2">
+		<td colspan="2" height="600px">
 			<%= gmaps({
-		  "map_options" => {"auto_zoom" => false, "zoom" => 18, "type" => 'SATELLITE' },
+		  "map_options" => {"auto_zoom" => false, "zoom" => 19, "type" => 'SATELLITE' },
 		  "markers" => {"data" => @json }
 		})
 		%>
@@ -61,7 +61,7 @@
 		<td>
 			<div class="badbox">
 				<div class="bigletters">
-					<% if @building.size %>
+					<% if @building.size and @spaces.present? %>
 						$<%= number_to_human((@spaces.collect(&:sf))/@building.size) %>
 					<% else %>
 						n/a
