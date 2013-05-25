@@ -9,7 +9,7 @@
 		</td>
 	</tr>
 	<tr>
-		<td colspan="2" height="600px">
+		<td colspan="2" height="550px">
 			<%= gmaps({
 		  "map_options" => {"auto_zoom" => false, "zoom" => 19, "type" => 'SATELLITE' },
 		  "markers" => {"data" => @json }
@@ -38,6 +38,8 @@
 								<% else %>
 									<%= render 'pages/building_follow' %>
 								<% end %>
+							<% else %>
+								<div class="whitetrackbutton">Sign In</div>
 							<% end %>
 						</div>
 					</td>

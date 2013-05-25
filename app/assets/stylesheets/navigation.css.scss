@@ -16,7 +16,7 @@ nav#main_nav {
 		&.active {
 			color: #333;
 			padding: 2px 15px;
-			border-bottom: 5px solid orange;
+			border-bottom: 5px solid #31b7ea;
 			a,
 			a:link,
 			a:visited {
@@ -38,8 +38,8 @@ nav#mobile_nav {
 		}
 		&.active {
 			color: #fff;
-			padding-bottom: 0px;
-			border-bottom: 5px solid orange;
+			padding-bottom: 12px;
+			border-bottom: 10px solid #31b7ea;
 			a,
 			a:link,
 			a:visited {
