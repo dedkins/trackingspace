@@ -19,6 +19,15 @@
 	section#search {
 		margin-left: 10px;
 	}
+	.mobile_bottom_ad  {
+	position:fixed;
+	bottom:0;
+	z-index:99999;
+	padding-top:10px;
+	height:100px;
+	width:728px;
+	left:5px;
+	}
 }
 
 @media screen and (max-width: 968px){
@@ -28,6 +37,15 @@
 	body { 
 		font-size: 1.2em;
 		line-height: 1.5;
+	}
+	.mobile_bottom_ad  {
+	position:fixed;
+	bottom:0;
+	z-index:99999;
+	padding-top:10px;
+	height:100px;
+	width:728px;
+	left:5px;
 	}
 	header#top {
 		height: 60px;

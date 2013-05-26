@@ -1,5 +1,19 @@
+/*  green: #849233
+		blue: #31b7ea
+		red: #fd4c46; */
+
+.mobile_bottom_ad  {
+	position:fixed;
+	bottom:0;
+	z-index:99999;
+	padding-top:10px;
+	height:100px;
+	width:728px;
+	margin-left:-364px;
+	left:50%;
+}
 .goodbox {
-	background:green;
+	background:#849233;
 	padding:80px;
 }
 .badbox {
