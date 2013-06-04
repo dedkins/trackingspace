@@ -3,39 +3,39 @@
 		<%= content_for :search do %>
 			<% if mobile_device? %>
 				<%= render 'buildings/form_new_mobile' %>
-			<% elsif user_signed_in? %>
-			<% else %>
-				<div style="width:100%">
-			      <div style="background:#FFFF7E;padding:8px;text-align:center;box-shadow:5px 5px 5px #888">With membership, you can see and do more with this building -> <%= link_to 'Click Here', new_user_registration_path %></td>
-			      </div>
-			    </div>
 			<% end %>
 		<% end %>
 
 		<div class="bluebox">
 			<div style="width:100%;font-family:'Syncopate';text-align:left" class="boxtitle">
 			 <%= truncate(@building.address, :separator => ',', :omission => '') %>
-			 <% if user_signed_in? %>
-
-			 <div style="float:right;font-size:1.2em;margin-top:-10px" id="building_follow_form">
-							<% if current_user.building_following?(@building) %>
-								<%= render 'pages/building_unfollow' %>
-							<% else %>
-								<%= render 'pages/building_follow' %>
-							<% end %>
-					</div>
 			</div>
+
+			 <% if user_signed_in? %>
+		 		<div style="float:right;font-size:1.2em;margin-top:-10px" id="building_follow_form">
+						<% if current_user.building_following?(@building) %>
+							<%= render 'pages/building_unfollow' %>
+						<% else %>
+							<%= render 'pages/building_follow' %>
+						<% end %>
+				</div>
+			
 				
 				<div style="float:left;width:100%">
 					<%= render 'buildings/buildingstats' %>
 					
 				</div>
 			<% else %>
-			<br/>
-			<div style="float:left;font-size:.9em;color:#666666"><%= @building.address %></div>
+			
+			<div style="float:left;font-size:.9em;color:#666666;margin:3px 0"><%= @building.address %> 
+				<% if @building.size %>
+				|  Size: <%= @building.size %>
+				<% end %>
+			</div>
 			<% end %>
 
 			
+			<% if false %>
 			<table width="100%">
 				<tr>
 					<td style="text-align:right">
@@ -60,10 +60,84 @@
 					</td>
 				</tr>
 			</table>
-			<div id="buildingcenter" style="margin-top:5px;width:100%;height:300px">
+			<% end %>
+			<div id="buildingcenter" style="margin:25px 0;width:100%;height:300px">
 					<%= render 'buildingcenter' %>
 			</div>
 
+			<table width="100%">
+				<tr>
+					<td width="25%">
+						<div class="trackbutton", style='padding: 5px;font-size:1.1em;margin-bottom:8px'>Photos</div>
+					</td>
+					<td width="25%">
+						<% if @building.videourl.present? %>
+							<%= button_to 'Video', videoview_building_path(@building.id), :class => 'trackbutton', :style => 'width:100%;height:100%;padding: 5px;font-size:1.1em;margin-bottom:8px', :remote => true, :method => 'get' %>
+						<% else %>
+							<%= button_to '+Video', addvideo_building_path(@building.id), :class => 'trackbutton', :style => 'width:100%;height:100%;padding: 5px;font-size:1.1em;margin-bottom:8px', :remote => true, :method => 'get', :title => 'Add a Video' %>
+						<% end %>
+						
+					</td>
+					<td width="25%">
+						<%= button_to 'Map', mapview_building_path(@building.id), :class => 'trackbutton', :style => 'width:100%;height:100%;padding: 5px;font-size:1.1em;margin-bottom:8px', :remote => true, :method => 'get', :title => 'Show the Map' %>
+					</td>
+					<td width="25%">
+						<div id="building_follow_form">
+							<% if user_signed_in? %>
+								<% if current_user.building_following?(@building) %>
+									<%= render 'pages/building_unfollow' %>
+								<% else %>
+									<%= render 'pages/building_follow' %>
+								<% end %>
+							<% else %>
+								<%= button_to 'Track It', new_user_session_path, :class => 'whitetrackbutton', :style => 'width:100%;font-weight:bold' %>
+							<% end %>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="25%">
+						<div class="greybox">
+							<div class="bigletters">  
+								<% if @spaces.present? %>
+								<%= number_to_currency(@spaces.collect(&:monthly).inject(:+)/@spaces.collect(&:sf).inject(:+)) %>
+								<% else %>
+								n/a
+								<% end %>
+							</div>
+						<div class="bigletterdescriptor">Avg Rate</div>
+						</div>
+					</td>
+					<td>
+						<div class="badbox">
+							<div class="bigletters">
+								<% if @building.size && @spaces.present? %>
+									<%= number_to_percentage((@spaces.sum(&:sf))/@building.size*100, :precision => 1) %>
+								<% else %>
+									n/a
+								<% end %>
+							</div>
+						<div class="bigletterdescriptor">Pct Leased</div>
+						</div>
+					</td>
+					<td>
+						<div class="whitebox">
+							<div class="biglettersgray">  
+								+Broker
+							</div>
+						</div>
+					</td>
+					<td>
+						<div class="whitebox">
+							<div class="biglettersgray">  
+								+Manager
+							</div>
+						</div>
+					</td>
+				</tr>
+			</table>
+
+			<% if false %> 
 			<table width="100%">
 				<tr>
 					<td class="building_contact_ads"><%= render 'ads/slot1' %></td>
@@ -71,7 +145,8 @@
 					<td class="building_contact_ads"><%= render 'ads/slot3' %></td>
 				</tr>
 			</table>
-			<hr/>
+			<% end %>
+
 		</div>
 		<div class="bluebox">
 			<div class="feed">
@@ -95,6 +170,10 @@
 	          <%= render 'shared/recent' %>
 	        <% end %>
 		<% end %>
+	<% end %>
+
+	<%= content_for :sidebar do %>
+	    <%= render 'buildings/buildingleasewidget' %>
 	<% end %>
 
 

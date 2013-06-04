@@ -16,7 +16,51 @@
   -o-background-size: cover;
   background-size: cover; 
 }*/
-
+.bluebutton {
+  background: #31b7ea;
+  padding:8px;
+  text-align: center;
+  border: 0;
+}
+.whitetrackbutton {
+  background: #ffffff;
+  padding: 8px;
+  text-align: center;
+  color: green;
+  font-weight: bold;
+  font-size: 1.1em;
+  border: 0;
+}
+.goodbox {
+  background:#849233;
+  padding:20px;
+}
+.badbox {
+  background: red;
+  padding:20px;
+}
+.greybox {
+  background: gray;
+  padding:20px;
+}
+.whitebox {
+  background: #ffffff;
+  padding:20px;
+}
+.bigletters {
+  color:white;
+  font-size:2em;
+  text-align: center;
+}
+.biglettersgray {
+  color:gray;
+  text-align: center;
+}
+.bigletterdescriptor {
+  text-align:center;
+  margin-top: 20px;
+  color:#ffffff;
+}
 
 a {
 outline: none;

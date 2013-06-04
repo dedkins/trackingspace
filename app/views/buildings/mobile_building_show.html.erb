@@ -64,7 +64,7 @@
 			<div class="badbox">
 				<div class="bigletters">
 					<% if @building.size and @spaces.present? %>
-						$<%= number_to_human((@spaces.collect(&:sf))/@building.size) %>
+						<%= number_to_percentage((@spaces.sum(&:sf))/@building.size * 100, :precision => 1) %>
 					<% else %>
 						n/a
 					<% end %>

@@ -1,0 +1,26 @@
+<div class="bluebox">
+
+	<div class="boxtitle" style="width:130px;margin-bottom:10px">Whos Here?</div>
+	<% if @spaces.present? %>
+
+	<table width="100%">
+		<% @spaces.each do |m| %>
+		<tr width="100%">
+			<td>
+				<div style="font-size:.9em;margin-top:-8px">
+				<%= link_to "Suite #{m.suite}", building_space_path(m.building.id,m.id), :class => 'list_title', :title => 'Click to see the Space' %>  |  <%= m.sf %>
+				<br/><% if m.company.present? %>
+						<%= m.company %>
+					<% else %>
+						Available
+					<% end %>
+			</div>
+			</td>
+		</tr>
+		
+		<% end %>
+	</table>
+
+	<% end %>
+
+</div>

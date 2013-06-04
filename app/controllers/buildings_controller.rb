@@ -43,6 +43,7 @@ class BuildingsController < ApplicationController
     @ad_slot2 = Ad.find_by_building_id_and_slot(@building.id,'2')
     @ad_slot3 = Ad.find_by_building_id_and_slot(@building.id,'3')
     @spaces = Space.find_all_by_building_id(@building.id)
+    @percent_leased = Space.find_all_by_building_id_and_status(@building.id, 'status = leased')
     @new_space = @building.spaces.build
     @json = Building.find(@building.id).to_gmaps4rails
     @newbuildings = Building.order('created_at DESC').limit(10)

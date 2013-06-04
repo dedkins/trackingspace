@@ -10,8 +10,8 @@
 			<%= hidden_field_tag :video, '1' %>
 	<% end %>
 <% else %>
-<div style="width:100%;height:300px;border:1px solid orange;padding: 20px 0;background:#f3f3f3">
-  <div style="padding-top:150px;text-align:center">
+<div style="width:100%;height:280px;border:1px solid orange;padding: 20px 0;background:#f3f3f3">
+  <div style="padding-top:120px;text-align:center">
   	<%= button_to 'Please Sign In Before Adding a Video', new_user_session_path(:back_to => @building.id), :class => 'button' %>
   </div>
  </div>

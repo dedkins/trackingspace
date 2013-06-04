@@ -59,6 +59,31 @@
 
 </script>
 
+<!-- Quantcast Tag -->
+<script type="text/javascript">
+var _qevents = _qevents || [];
+
+(function() {
+var elem = document.createElement('script');
+elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+elem.async = true;
+elem.type = "text/javascript";
+var scpt = document.getElementsByTagName('script')[0];
+scpt.parentNode.insertBefore(elem, scpt);
+})();
+
+_qevents.push({
+qacct:"p-RtxeKSYK7WAJA"
+});
+</script>
+
+<noscript>
+<div style="display:none;">
+<img src="//pixel.quantserve.com/pixel/p-RtxeKSYK7WAJA.gif" border="0" height="1" width="1" alt="Quantcast"/>
+</div>
+</noscript>
+<!-- End Quantcast tag -->
+
 </head>
 <body>
   <% unless mobile_device? or iPad? %>
@@ -88,21 +113,8 @@
       src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
     </script>
   </div>
-  <% else mobile_device? %>
-    <div class="mobile_bottom_ad">
-      <script type="text/javascript"><!--
-        google_ad_client = "ca-pub-5451064655705220";
-        /* 728LeaderBoardTop */
-        google_ad_slot = "9610595062";
-        google_ad_width = 728;
-        google_ad_height = 90;
-        //-->
-        </script>
-        <script type="text/javascript"
-        src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-      </script>
-    </div>
   <% end %>
+
   <%= render 'layouts/header' %>
 
     <% if @sponsor_record %>
@@ -116,6 +128,10 @@
     <% unless mobile_device? %>
       <section id="sidebar">
 
+        <%= button_to 'Add a New Lease', '#', :class => 'trackbutton', :style => 'width:100%;padding: 8px;font-size:1.1em;margin-bottom:8px' %>
+
+        <%= yield :sidebar %> 
+
         <% if user_signed_in? %>
           <% if @sponsoravail == true %>
             <div id="sponsoremail">
@@ -124,10 +140,11 @@
           <% end %>
         <% else %>
           <div style="background:black;color:white;padding:8px;margin-bottom:15px">
-            SPONSORING
-            <br/>Once a member, there will be an option in this space to email others and "sponsor" their access.  Doing this will place your information in a banner at the top of their pages.  Free basic membership includes sponsoring 2 people.
+            SPONSORING - <%= link_to 'What\'s This?', '#', :title => 'Sponsoring provides brokers additional promotional opportunities by placing a banner at the top of their client pages', :class => 'top' %>
           </div>
         <% end %>
+
+        <%= render 'users/leasewidget' %>
 
           <script type="text/javascript"><!--
             google_ad_client = "ca-pub-5451064655705220";
@@ -140,10 +157,6 @@
             <script type="text/javascript"
             src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
           </script>
-
-            <%= render 'users/leasewidget' %>
-
-          <%= yield :sidebar %>
           
             <script type="text/javascript"><!--
               google_ad_client = "ca-pub-5451064655705220";
@@ -176,5 +189,20 @@
 </div>
 <div class="clear"/>
 
+<% if mobile_device? %>
+    <div class="mobile_bottom_ad">
+      <script type="text/javascript"><!--
+        google_ad_client = "ca-pub-5451064655705220";
+        /* 728LeaderBoardTop */
+        google_ad_slot = "9610595062";
+        google_ad_width = 728;
+        google_ad_height = 90;
+        //-->
+        </script>
+        <script type="text/javascript"
+        src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+      </script>
+    </div>
+  <% end %>
 </body>
 </html>
