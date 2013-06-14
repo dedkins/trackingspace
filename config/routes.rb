@@ -8,6 +8,9 @@ Trackingspace::Application.routes.draw do
 
   get "ads/show"
 
+  resources :sitemaps, :only => :index
+  match "/sitemap.xml" => 'sitemaps#index', :format => :xml
+
   resources :sponsors 
 
   post "sponsors/sendsponsoremail"
