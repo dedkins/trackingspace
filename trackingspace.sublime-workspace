@@ -571,6 +571,14 @@
 				"buffer_size": 242,
 				"line_ending": "Windows"
 			}
+		},
+		{
+			"file": "config/initializers/devise.rb",
+			"settings":
+			{
+				"buffer_size": 10574,
+				"line_ending": "Unix"
+			}
 		}
 	],
 	"build_system": "",
@@ -847,7 +855,7 @@
 	"groups":
 	[
 		{
-			"selected": 7,
+			"selected": 10,
 			"sheets":
 			[
 				{
@@ -1118,6 +1126,34 @@
 						"settings":
 						{
 							"syntax": "Packages/Rails/Ruby on Rails.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "config/initializers/devise.rb",
+					"settings":
+					{
+						"buffer_size": 10574,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								781,
+								781
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
