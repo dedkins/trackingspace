@@ -23,7 +23,6 @@ gem 'will_paginate', '~> 3.0.0'
 gem 'stripe'
 gem 'friendly_id'
 gem 'exception_notification', git: 'git://github.com/alanjds/exception_notification.git'
-gem 'geocoder'
 gem 'rails_autolink'
 
 group :development do
