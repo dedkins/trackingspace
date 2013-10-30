@@ -500,84 +500,19 @@
 			}
 		},
 		{
-			"file": "app/views/buildings/show.html.erb",
+			"file": "app/assets/stylesheets/media.css",
 			"settings":
 			{
-				"buffer_size": 5784,
+				"buffer_size": 1875,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "app/views/buildings/_buildingleasewidget.html.erb",
+			"file": "app/views/user_mailer/welcome_email.html.erb",
 			"settings":
 			{
-				"buffer_size": 590,
+				"buffer_size": 1397,
 				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/controllers/application_controller.rb",
-			"settings":
-			{
-				"buffer_size": 1442,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/controllers/buildings_controller.rb",
-			"settings":
-			{
-				"buffer_size": 7578,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/models/space.rb",
-			"settings":
-			{
-				"buffer_size": 979,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/assets/stylesheets/layout.css",
-			"settings":
-			{
-				"buffer_size": 19169,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "config/routes.rb",
-			"settings":
-			{
-				"buffer_size": 4815,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "app/controllers/sitemaps_controller.rb",
-			"settings":
-			{
-				"buffer_size": 161,
-				"line_ending": "Windows",
-				"name": "class SitemapController < ApplicationController"
-			}
-		},
-		{
-			"file": "app/views/sitemaps/index.xml.builder",
-			"settings":
-			{
-				"buffer_size": 242,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "config/initializers/devise.rb",
-			"settings":
-			{
-				"buffer_size": 10574,
-				"line_ending": "Unix"
 			}
 		}
 	],
@@ -605,26 +540,31 @@
 	},
 	"file_history":
 	[
+		"/C/Users/david/trackingspace/Gemfile",
+		"/C/Users/david/trackingspace/config/initializers/devise.rb",
+		"/C/Users/david/trackingspace/app/views/sitemaps/index.xml.builder",
+		"/C/Users/david/trackingspace/app/controllers/sitemaps_controller.rb",
+		"/C/Users/david/trackingspace/config/routes.rb",
+		"/C/Users/david/trackingspace/app/assets/stylesheets/layout.css",
+		"/C/Users/david/trackingspace/app/models/space.rb",
+		"/C/Users/david/trackingspace/app/controllers/buildings_controller.rb",
+		"/C/Users/david/trackingspace/app/controllers/application_controller.rb",
+		"/C/Users/david/trackingspace/app/views/buildings/_buildingleasewidget.html.erb",
+		"/C/Users/david/trackingspace/app/views/buildings/show.html.erb",
+		"/C/Users/david/trackingspace/app/views/layouts/application.html.erb",
 		"/C/Users/david/trackingspace/app/views/index.xml.builder",
 		"/C/Users/david/trackingspace/app/views/buildings/mobile_building_show.html.erb",
 		"/C/Users/david/trackingspace/app/views/buildings/_addvideo.html.erb",
-		"/C/Users/david/trackingspace/app/assets/stylesheets/layout.css",
 		"/C/Users/david/trackingspace/app/views/buildings/_videoview.html.erb",
 		"/C/Users/david/trackingspace/app/models/user.rb",
 		"/C/Users/david/trackingspace/app/models/lease.rb",
 		"/C/Users/david/trackingspace/app/controllers/users_controller.rb",
 		"/C/Users/david/trackingspace/app/models/building.rb",
 		"/C/Users/david/trackingspace/app/views/devise/sessions/new.html.erb",
-		"/C/Users/david/trackingspace/app/views/buildings/show.html.erb",
-		"/C/Users/david/trackingspace/Gemfile",
-		"/C/Users/david/trackingspace/app/controllers/application_controller.rb",
 		"/C/Users/david/trackingspace/app/assets/stylesheets/media.css",
-		"/C/Users/david/trackingspace/app/controllers/buildings_controller.rb",
 		"/C/Users/david/trackingspace/app/assets/stylesheets/new_mobile.css",
-		"/C/Users/david/trackingspace/app/views/layouts/application.html.erb",
 		"/C/Users/david/trackingspace/app/assets/stylesheets/mobile_device.css",
 		"/C/Users/david/trackingspace/app/views/pages/_building_follow.html.erb",
-		"/C/Users/david/trackingspace/config/routes.rb",
 		"/C/Users/david/trackingspace/app/assets/stylesheets/navigation.css.scss",
 		"/C/Users/david/trackingspace/app/views/buildings/_buildingcenter.html.erb",
 		"/C/Users/david/trackingspace/app/assets/stylesheets/gmaps4rails.css",
@@ -651,7 +591,6 @@
 		"/C/Users/david/trackingspace/app/controllers/pages_controller.rb",
 		"/C/Users/david/trackingspace/app/views/layouts/blank.html.erb",
 		"/C/Users/david/trackingspace/app/views/buildings/home.html.erb",
-		"/C/Users/david/trackingspace/app/models/space.rb",
 		"/C/Users/david/trackingspace/app/assets/javascripts/application.js",
 		"/C/Users/david/trackingspace/app/views/user_mailer/new_follower.html.erb",
 		"/C/Users/david/trackingspace/app/views/layouts/home_html.html.erb",
@@ -728,11 +667,7 @@
 		"/C/Users/david/trackingspace/app/views/buildings/_form_new.html",
 		"/C/Users/david/trackingspace/public/500.html",
 		"/C/Users/david/trackingspace/app/views/sponsors/accept.html.erb",
-		"/C/Users/david/trackingspace/app/models/building_order.rb",
-		"/C/Users/david/trackingspace/db/migrate/20130131203617_create_sponsors.rb",
-		"/C/Users/david/trackingspace/app/controllers/spaces_controller.rb",
-		"/C/Users/david/trackingspace/app/views/user_mailer/new_building_post.html.erb",
-		"/C/Users/david/trackingspace/app/views/layouts/_sponsoremail.html.erb"
+		"/C/Users/david/trackingspace/app/models/building_order.rb"
 	],
 	"find":
 	{
@@ -855,7 +790,6 @@
 	"groups":
 	[
 		{
-			"selected": 10,
 			"sheets":
 			[
 				{
@@ -870,8 +804,8 @@
 						"selection":
 						[
 							[
-								5159,
-								5159
+								4345,
+								4345
 							]
 						],
 						"settings":
@@ -881,127 +815,17 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1843.0,
+						"translation.y": 1128.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "app/views/buildings/show.html.erb",
+					"file": "app/assets/stylesheets/media.css",
 					"settings":
 					{
-						"buffer_size": 5784,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								4294,
-								4388
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 949.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "app/views/buildings/_buildingleasewidget.html.erb",
-					"settings":
-					{
-						"buffer_size": 590,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								411,
-								411
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "app/controllers/application_controller.rb",
-					"settings":
-					{
-						"buffer_size": 1442,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								917,
-								917
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "app/controllers/buildings_controller.rb",
-					"settings":
-					{
-						"buffer_size": 7578,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1592,
-								1592
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 784.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "app/models/space.rb",
-					"settings":
-					{
-						"buffer_size": 979,
+						"buffer_size": 1875,
 						"regions":
 						{
 						},
@@ -1014,65 +838,8 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "app/assets/stylesheets/layout.css",
-					"settings":
-					{
-						"buffer_size": 19169,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								961,
-								961
-							]
-						],
-						"settings":
-						{
 							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 281.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "config/routes.rb",
-					"settings":
-					{
-						"buffer_size": 4815,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								190,
-								190
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1081,77 +848,24 @@
 					"type": "text"
 				},
 				{
-					"buffer": 8,
-					"file": "app/controllers/sitemaps_controller.rb",
+					"buffer": 2,
+					"file": "app/views/user_mailer/welcome_email.html.erb",
 					"settings":
 					{
-						"buffer_size": 161,
+						"buffer_size": 1397,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								14,
-								14
+								1155,
+								1081
 							]
 						],
 						"settings":
 						{
-							"auto_name": "class SitemapController < ApplicationController",
-							"syntax": "Packages/Ruby/Ruby.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "app/views/sitemaps/index.xml.builder",
-					"settings":
-					{
-						"buffer_size": 242,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								242,
-								242
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/Ruby on Rails.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "config/initializers/devise.rb",
-					"settings":
-					{
-						"buffer_size": 10574,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								781,
-								781
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},

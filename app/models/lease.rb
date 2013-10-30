@@ -23,8 +23,6 @@ class Lease < ActiveRecord::Base
   belongs_to :space
   has_many :lease_shares, :dependent => :destroy
 
-  validates_attachment_content_type :file, :content_type => ['image/jpeg', 'image/png', 'image/gif','application/pdf']
-  
   attr_accessible :current_rate, :expiration, :size, :space_id, :user_id, :file
 
   default_scope order('expiration ASC')
@@ -36,6 +34,8 @@ class Lease < ActiveRecord::Base
      :s3_credentials => "#{Rails.root}/config/s3.yml",
      :path => "#{Rails.root}/public/system/:attachment/:id/:style/:filename"
 
+  validates_attachment_content_type :file, :content_type => ['image/jpeg', 'image/png', 'image/gif','application/pdf']
+  
 end
 
 
