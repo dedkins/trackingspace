@@ -240,7 +240,7 @@ DEPENDENCIES
   omniauth-twitter
   paperclip (~> 3.0)
   pg
-  rails
+  rails (= 3.2.11)
   rails3-jquery-autocomplete
   rails_autolink
   rspec-rails (= 2.0.1)
