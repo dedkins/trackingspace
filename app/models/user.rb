@@ -61,18 +61,18 @@ class User < ActiveRecord::Base
   attr_accessible :username, :geocity, :geostate, :geocountry, :geozip, :license, :email, :password, :password_confirmation, :remember_me, :name, :upgrade, :phone, :website, :description, :latitude, :longitude
   # attr_accessible :title, :body
 
-  geocoded_by :current_sign_in_ip
-    after_validation :geocode
+#  geocoded_by :current_sign_in_ip
+#    after_validation :geocode
 
-  reverse_geocoded_by :latitude, :longitude do |obj,results|
-    if geo = results.first
-      obj.geocity    = geo.city
-      obj.geozip     = geo.postal_code
-      obj.geostate   = geo.state_code
-      obj.geocountry = geo.country
-    end
-  end
-  after_validation :reverse_geocode
+#  reverse_geocoded_by :latitude, :longitude do |obj,results|
+#    if geo = results.first
+#      obj.geocity    = geo.city
+#      obj.geozip     = geo.postal_code
+#      obj.geostate   = geo.state_code
+#      obj.geocountry = geo.country
+#    end
+#  end
+#  after_validation :reverse_geocode
 
   acts_as_gmappable :process_geocoding => false
   
