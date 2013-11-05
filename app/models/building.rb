@@ -38,7 +38,7 @@ class Building < ActiveRecord::Base
 
   default_scope :order => 'created_at DESC'
 
-#  acts_as_gmappable :process_geocoding => true
+  acts_as_gmappable :process_geocoding => false
 
   extend FriendlyId
   friendly_id :slug
