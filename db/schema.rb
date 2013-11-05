@@ -29,6 +29,9 @@ ActiveRecord::Schema.define(:version => 20130215170712) do
     t.integer  "user_id"
     t.string   "provider"
     t.string   "uid"
+    t.string   "index"
+    t.string   "create"
+    t.string   "destroy"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -67,7 +70,6 @@ ActiveRecord::Schema.define(:version => 20130215170712) do
     t.string   "administrative_area_level_2"
     t.string   "postal_code"
     t.string   "country"
-    t.string   "pretty_url"
     t.string   "slug"
     t.string   "videourl"
     t.integer  "manager"
@@ -88,12 +90,11 @@ ActiveRecord::Schema.define(:version => 20130215170712) do
   create_table "leases", :force => true do |t|
     t.integer  "user_id"
     t.integer  "size"
-    t.decimal  "current_rate",      :precision => 10, :scale => 2
+    t.decimal  "current_rate"
     t.date     "expiration"
     t.integer  "space_id"
-    t.datetime "created_at",                                       :null => false
-    t.datetime "updated_at",                                       :null => false
-    t.string   "file"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
     t.string   "file_file_name"
     t.string   "file_content_type"
     t.integer  "file_file_size"
@@ -133,7 +134,6 @@ ActiveRecord::Schema.define(:version => 20130215170712) do
     t.decimal  "monthly",     :precision => 10, :scale => 2
     t.datetime "created_at",                                 :null => false
     t.datetime "updated_at",                                 :null => false
-    t.integer  "building_id"
     t.string   "suite"
     t.integer  "user_id"
     t.string   "company"
@@ -141,12 +141,6 @@ ActiveRecord::Schema.define(:version => 20130215170712) do
     t.string   "_3dplanurl"
     t.string   "videourl"
     t.text     "description"
-  end
-
-  create_table "spacestatuses", :force => true do |t|
-    t.string   "status"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
   end
 
   create_table "sponsors", :force => true do |t|
@@ -193,7 +187,6 @@ ActiveRecord::Schema.define(:version => 20130215170712) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false
-    t.string   "rpx_indentifier"
     t.string   "name"
     t.string   "username"
     t.string   "upgrade"
