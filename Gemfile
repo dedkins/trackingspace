@@ -7,7 +7,7 @@ ruby "1.9.3"
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'pg'
-gem 'gmaps4rails'
+gem 'gmaps4rails', '<2.0'
 gem 'omniauth'
 gem 'omniauth-twitter'
 gem 'omniauth-facebook'
@@ -25,6 +25,7 @@ gem 'friendly_id'
 gem 'exception_notification', git: 'git://github.com/alanjds/exception_notification.git'
 gem 'geocoder'
 gem 'rails_autolink'
+gem 'thin'
 
 group :development do
 	gem 'rspec-rails', '2.0.1'
